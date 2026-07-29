@@ -1,0 +1,42 @@
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circle3"><circle cx="240" cy="240" r="220"/></clipPath>
+  </defs>
+  <g clip-path="url(#circle3)">
+    <rect width="480" height="480" fill="#EDE4D8"/>
+    <!-- Body - large rectangular -->
+    <ellipse cx="240" cy="350" rx="120" ry="100" fill="#8B7355"/>
+    <ellipse cx="240" cy="350" rx="90" ry="75" fill="#B8956A"/>
+    <!-- Chest ruff -->
+    <ellipse cx="240" cy="290" rx="70" ry="50" fill="#C4A882"/>
+    <!-- Head - broad, square muzzle -->
+    <path d="M170 170 Q170 120 240 115 Q310 120 310 170 L300 240 Q240 255 180 240 Z" fill="#8B7355"/>
+    <!-- Lighter muzzle area -->
+    <ellipse cx="240" cy="230" rx="55" ry="35" fill="#C4A882"/>
+    <!-- Nose -->
+    <path d="M232 220 L240 212 L248 220 Z" fill="#E8967A"/>
+    <!-- Eyes - large, expressive, gold/green -->
+    <ellipse cx="210" cy="190" rx="15" ry="14" fill="#C4A030"/>
+    <circle cx="210" cy="190" r="6" fill="#1A1A1A"/>
+    <circle cx="208" cy="187" r="2.5" fill="#FFF" opacity="0.7"/>
+    <ellipse cx="270" cy="190" rx="15" ry="14" fill="#C4A030"/>
+    <circle cx="270" cy="190" r="6" fill="#1A1A1A"/>
+    <circle cx="268" cy="187" r="2.5" fill="#FFF" opacity="0.7"/>
+    <!-- Lynx-tipped ears (Maine Coon signature) -->
+    <path d="M175 140 L155 80 L210 125 Z" fill="#8B7355"/>
+    <path d="M175 140 L160 90 L200 125 Z" fill="#E8C8A8"/>
+    <path d="M162 93 L158 80 L166 91 Z" fill="#3D3D3D"/>
+    <path d="M305 140 L325 80 L270 125 Z" fill="#8B7355"/>
+    <path d="M305 140 L320 90 L280 125 Z" fill="#E8C8A8"/>
+    <path d="M318 93 L322 80 L314 91 Z" fill="#3D3D3D"/>
+    <!-- Whiskers -->
+    <line x1="195" y1="220" x2="130" y2="212" stroke="#3D3D3D" stroke-width="1.5" opacity="0.4"/>
+    <line x1="195" y1="228" x2="125" y2="230" stroke="#3D3D3D" stroke-width="1.5" opacity="0.4"/>
+    <line x1="285" y1="220" x2="350" y2="212" stroke="#3D3D3D" stroke-width="1.5" opacity="0.4"/>
+    <line x1="285" y1="228" x2="355" y2="230" stroke="#3D3D3D" stroke-width="1.5" opacity="0.4"/>
+    <!-- Mouth -->
+    <path d="M228 242 Q240 252 252 242" stroke="#3D3D3D" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Bushy tail silhouette behind -->
+    <path d="M350 280 Q420 250 410 350 Q400 420 350 400" fill="#8B7355" opacity="0.6"/>
+  </g>
+</svg>

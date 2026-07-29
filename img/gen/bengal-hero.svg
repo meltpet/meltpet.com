@@ -1,0 +1,50 @@
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circle5"><circle cx="240" cy="240" r="220"/></clipPath>
+  </defs>
+  <g clip-path="url(#circle5)">
+    <rect width="480" height="480" fill="#F5EDE0"/>
+    <!-- Body - sleek, muscular -->
+    <ellipse cx="240" cy="350" rx="110" ry="105" fill="#D4A030"/>
+    <!-- Rosette spots on body -->
+    <circle cx="200" cy="330" r="12" fill="#8B6914" opacity="0.6"/>
+    <circle cx="200" cy="330" r="8" fill="#D4A030"/>
+    <circle cx="270" cy="370" r="10" fill="#8B6914" opacity="0.6"/>
+    <circle cx="270" cy="370" r="6" fill="#D4A030"/>
+    <circle cx="180" cy="380" r="11" fill="#8B6914" opacity="0.6"/>
+    <circle cx="180" cy="380" r="7" fill="#D4A030"/>
+    <circle cx="300" cy="340" r="9" fill="#8B6914" opacity="0.6"/>
+    <circle cx="300" cy="340" r="5" fill="#D4A030"/>
+    <circle cx="230" cy="400" r="10" fill="#8B6914" opacity="0.6"/>
+    <circle cx="230" cy="400" r="6" fill="#D4A030"/>
+    <!-- Chest -->
+    <ellipse cx="240" cy="295" rx="60" ry="45" fill="#F0E6C8"/>
+    <!-- Head - wedge-shaped, wild look -->
+    <path d="M175 175 Q175 125 240 118 Q305 125 305 175 L295 240 Q240 252 185 240 Z" fill="#D4A030"/>
+    <!-- Forehead stripes (tabby M) -->
+    <path d="M220 140 L225 155 L230 140 L235 155 L240 140 L245 155 L250 140 L255 155 L260 140" stroke="#8B6914" stroke-width="2.5" fill="none" opacity="0.6"/>
+    <!-- Lighter muzzle -->
+    <ellipse cx="240" cy="230" rx="50" ry="32" fill="#F0E6C8"/>
+    <!-- Nose -->
+    <path d="M234 218 L240 210 L246 218 Z" fill="#D4836A"/>
+    <!-- Eyes - almond, green (Bengal signature) -->
+    <ellipse cx="210" cy="190" rx="14" ry="11" fill="#7BA05B"/>
+    <circle cx="210" cy="190" r="5" fill="#1A1A1A"/>
+    <circle cx="208" cy="187" r="2" fill="#FFF" opacity="0.7"/>
+    <ellipse cx="270" cy="190" rx="14" ry="11" fill="#7BA05B"/>
+    <circle cx="270" cy="190" r="5" fill="#1A1A1A"/>
+    <circle cx="268" cy="187" r="2" fill="#FFF" opacity="0.7"/>
+    <!-- Ears - medium, slightly rounded tips -->
+    <path d="M180 160 L162 105 L215 145 Z" fill="#D4A030"/>
+    <path d="M180 158 L170 115 L208 148 Z" fill="#E8C8A8"/>
+    <path d="M300 160 L318 105 L265 145 Z" fill="#D4A030"/>
+    <path d="M300 158 L310 115 L272 148 Z" fill="#E8C8A8"/>
+    <!-- Whiskers -->
+    <line x1="195" y1="222" x2="125" y2="218" stroke="#666" stroke-width="1.5" opacity="0.35"/>
+    <line x1="195" y1="230" x2="120" y2="235" stroke="#666" stroke-width="1.5" opacity="0.35"/>
+    <line x1="285" y1="222" x2="355" y2="218" stroke="#666" stroke-width="1.5" opacity="0.35"/>
+    <line x1="285" y1="230" x2="360" y2="235" stroke="#666" stroke-width="1.5" opacity="0.35"/>
+    <!-- Mouth -->
+    <path d="M230 242 Q240 250 250 242" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

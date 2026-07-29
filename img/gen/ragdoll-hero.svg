@@ -1,0 +1,39 @@
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circle4"><circle cx="240" cy="240" r="220"/></clipPath>
+  </defs>
+  <g clip-path="url(#circle4)">
+    <rect width="480" height="480" fill="#E8E4F0"/>
+    <!-- Body - soft, rounded -->
+    <ellipse cx="240" cy="350" rx="115" ry="100" fill="#EDEDE8"/>
+    <!-- Chest fluff -->
+    <ellipse cx="240" cy="295" rx="70" ry="55" fill="#F8F6F2"/>
+    <!-- Head - round, soft -->
+    <ellipse cx="240" cy="200" rx="72" ry="65" fill="#EDEDE8"/>
+    <!-- Colorpoint mask (Ragdoll signature) -->
+    <ellipse cx="240" cy="210" rx="50" ry="40" fill="#8B7355"/>
+    <!-- Muzzle -->
+    <ellipse cx="240" cy="235" rx="38" ry="25" fill="#E8D5C0"/>
+    <!-- Nose -->
+    <path d="M234 222 L240 216 L246 222 Z" fill="#E8967A"/>
+    <!-- Eyes - big blue (Ragdoll signature) -->
+    <ellipse cx="212" cy="200" rx="16" ry="15" fill="#5B9BD5"/>
+    <circle cx="212" cy="200" r="7" fill="#1A3A5C"/>
+    <circle cx="210" cy="196" r="3" fill="#FFF" opacity="0.8"/>
+    <ellipse cx="268" cy="200" rx="16" ry="15" fill="#5B9BD5"/>
+    <circle cx="268" cy="200" r="7" fill="#1A3A5C"/>
+    <circle cx="266" cy="196" r="3" fill="#FFF" opacity="0.8"/>
+    <!-- Ears - medium, slightly rounded -->
+    <path d="M185 160 L170 105 L215 148 Z" fill="#8B7355"/>
+    <path d="M185 158 L176 115 L208 150 Z" fill="#E8C8A8"/>
+    <path d="M295 160 L310 105 L265 148 Z" fill="#8B7355"/>
+    <path d="M295 158 L304 115 L272 150 Z" fill="#E8C8A8"/>
+    <!-- Whiskers -->
+    <line x1="200" y1="228" x2="140" y2="220" stroke="#999" stroke-width="1.5" opacity="0.4"/>
+    <line x1="200" y1="235" x2="135" y2="238" stroke="#999" stroke-width="1.5" opacity="0.4"/>
+    <line x1="280" y1="228" x2="340" y2="220" stroke="#999" stroke-width="1.5" opacity="0.4"/>
+    <line x1="280" y1="235" x2="345" y2="238" stroke="#999" stroke-width="1.5" opacity="0.4"/>
+    <!-- Mouth -->
+    <path d="M230 246 Q240 254 250 246" stroke="#999" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

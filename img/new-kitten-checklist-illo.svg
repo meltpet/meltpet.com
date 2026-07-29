@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Kitten with checklist theme -->
+  <!-- Background: cozy room corner -->
+  <rect x="0" y="0" width="400" height="200" fill="#fff8f0"/>
+  <!-- Floor -->
+  <rect x="0" y="200" width="400" height="80" fill="#f5e8d8"/>
+  <line x1="0" y1="200" x2="400" y2="200" stroke="#e0d0b8" stroke-width="1.5"/>
+
+  <!-- Cozy bed -->
+  <ellipse cx="120" cy="230" rx="50" ry="14" fill="#e8d4c0"/>
+  <ellipse cx="120" cy="218" rx="40" ry="18" fill="#faf0e4" stroke="#d4b898" stroke-width="2"/>
+
+  <!-- 🐱 Kitten sitting on bed -->
+  <!-- Body -->
+  <ellipse cx="120" cy="200" rx="18" ry="22" fill="#f0d8b0" stroke="#5a4020" stroke-width="2"/>
+  <!-- Head -->
+  <circle cx="120" cy="175" r="17" fill="#f0d8b0" stroke="#5a4020" stroke-width="2"/>
+  <!-- Ears -->
+  <path d="M106 165 L98 140 L113 158" fill="#f0d8b0" stroke="#5a4020" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M134 165 L142 140 L127 158" fill="#f0d8b0" stroke="#5a4020" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Inner ears -->
+  <path d="M108 163 L102 145 L113 158" fill="#f2b8b0" stroke="none"/>
+  <path d="M132 163 L138 145 L127 158" fill="#f2b8b0" stroke="none"/>
+  <!-- Big kitten eyes -->
+  <ellipse cx="113" cy="174" rx="6" ry="7" fill="white" stroke="#5a4020" stroke-width="1.5"/>
+  <ellipse cx="127" cy="174" rx="6" ry="7" fill="white" stroke="#5a4020" stroke-width="1.5"/>
+  <circle cx="114" cy="175" r="3.5" fill="#4a6a2a"/>
+  <circle cx="128" cy="175" r="3.5" fill="#4a6a2a"/>
+  <ellipse cx="114" cy="175" rx="3.5" ry="1.2" fill="#1a1a1a"/>
+  <ellipse cx="128" cy="175" rx="3.5" ry="1.2" fill="#1a1a1a"/>
+  <!-- Eye highlights -->
+  <circle cx="112" cy="173" r="1.3" fill="white"/>
+  <circle cx="126" cy="173" r="1.3" fill="white"/>
+  <!-- Tiny nose -->
+  <path d="M118 180 L120 183 L122 180" fill="#f2a0a0" stroke="#f2a0a0" stroke-width="1"/>
+  <!-- Mouth -->
+  <path d="M116 183 Q120 186 120 183" stroke="#5a4020" stroke-width="1" fill="none"/>
+  <path d="M120 183 Q120 186 124 183" stroke="#5a4020" stroke-width="1" fill="none"/>
+  <!-- Whiskers -->
+  <g stroke="#c4b09a" stroke-width="1" stroke-linecap="round">
+    <line x1="108" y1="178" x2="92" y2="176"/>
+    <line x1="108" y1="180" x2="91" y2="181"/>
+    <line x1="132" y1="178" x2="148" y2="176"/>
+    <line x1="132" y1="180" x2="149" y2="181"/>
+  </g>
+  <!-- Stripes on kitten -->
+  <g stroke="#d4a860" stroke-width="1.5" stroke-linecap="round" fill="none">
+    <path d="M109 170 Q120 167 131 170"/>
+    <path d="M107 195 Q120 191 133 195"/>
+  </g>
+  <!-- Tail curling up -->
+  <path d="M102 215 Q80 220 75 195 Q72 185 80 178" stroke="#5a4020" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- 📋 Checklist floating -->
+  <g transform="translate(230 90)">
+    <!-- Clipboard -->
+    <rect x="0" y="0" width="130" height="160" rx="6" fill="white" stroke="#5a4020" stroke-width="2.5"/>
+    <!-- Clipboard top -->
+    <rect x="40" y="-10" width="50" height="16" rx="3" fill="#d4b898" stroke="#5a4020" stroke-width="2"/>
+    <circle cx="65" cy="-2" r="3" fill="#8a7050"/>
+    <!-- Lines -->
+    <g stroke="#d4c8b0" stroke-width="2" stroke-linecap="round">
+      <line x1="15" y1="30" x2="115" y2="30"/>
+      <line x1="15" y1="50" x2="100" y2="50"/>
+      <line x1="15" y1="70" x2="110" y2="70"/>
+      <line x1="15" y1="90" x2="90" y2="90"/>
+      <line x1="15" y1="110" x2="105" y2="110"/>
+    </g>
+    <!-- Checkmarks ✅ -->
+    <g stroke="#5a8a3c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M15 30 L20 36 L30 24"/>
+      <path d="M15 50 L20 56 L30 44"/>
+      <path d="M15 70 L20 76 L30 64"/>
+    </g>
+    <!-- Pencil -->
+    <line x1="100" y1="140" x2="125" y2="155" stroke="#f0b050" stroke-width="4" stroke-linecap="round"/>
+    <line x1="125" y1="155" x2="127" y2="158" stroke="#5a4020" stroke-width="2"/>
+  </g>
+
+  <!-- 🧶 Yarn ball (toy) -->
+  <circle cx="310" cy="215" r="16" fill="#e87070" stroke="#a04040" stroke-width="2"/>
+  <g stroke="#c05050" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <path d="M300 208 Q310 200 318 210"/>
+    <path d="M298 218 Q308 210 316 220"/>
+    <path d="M302 225 Q312 215 320 222"/>
+  </g>
+
+  <!-- 🥣 Food bowl -->
+  <ellipse cx="50" cy="235" rx="28" ry="8" fill="#d4b898" stroke="#8a7050" stroke-width="2"/>
+  <ellipse cx="50" cy="232" rx="25" ry="10" fill="#e8d4c0" stroke="#8a7050" stroke-width="2"/>
+  <ellipse cx="50" cy="231" rx="18" ry="7" fill="#c89860"/>
+  <!-- Kibble pieces -->
+  <circle cx="46" cy="230" r="2.5" fill="#8a6030"/>
+  <circle cx="52" cy="229" r="2" fill="#8a6030"/>
+  <circle cx="55" cy="232" r="2.5" fill="#8a6030"/>
+
+  <!-- 💕 Small hearts floating -->
+  <g fill="#f2a0a0" opacity="0.6">
+    <path d="M170 130 Q170 125 173 125 Q176 125 176 130 Q176 135 173 138 Q170 135 170 130Z" transform="scale(0.8) translate(30 20)"/>
+    <path d="M170 130 Q170 125 173 125 Q176 125 176 130 Q176 135 173 138 Q170 135 170 130Z" transform="scale(0.6) translate(280 80)"/>
+  </g>
+</svg>

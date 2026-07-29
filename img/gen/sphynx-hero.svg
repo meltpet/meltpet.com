@@ -1,0 +1,43 @@
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circle6"><circle cx="240" cy="240" r="220"/></clipPath>
+  </defs>
+  <g clip-path="url(#circle6)">
+    <rect width="480" height="480" fill="#F2EAE4"/>
+    <!-- Body - lean, visible muscle tone -->
+    <ellipse cx="240" cy="360" rx="105" ry="100" fill="#E8D5C8"/>
+    <!-- Skin folds on body -->
+    <path d="M170 340 Q200 335 230 340" stroke="#D4B8A8" stroke-width="2" fill="none"/>
+    <path d="M250 380 Q280 375 310 380" stroke="#D4B8A8" stroke-width="2" fill="none"/>
+    <!-- Chest - visible sternum -->
+    <ellipse cx="240" cy="300" rx="55" ry="45" fill="#EDDDD2"/>
+    <path d="M240 260 L240 340" stroke="#D4B8A8" stroke-width="1.5" opacity="0.4"/>
+    <!-- Head - wedge-shaped, prominent cheekbones -->
+    <path d="M170 175 Q170 125 240 118 Q310 125 310 175 L298 245 Q240 255 182 245 Z" fill="#E8D5C8"/>
+    <!-- Forehead wrinkles (Sphynx signature) -->
+    <path d="M200 140 Q220 135 240 140 Q260 135 280 140" stroke="#D4B8A8" stroke-width="2" fill="none"/>
+    <path d="M205 150 Q220 145 240 150 Q260 145 275 150" stroke="#D4B8A8" stroke-width="2" fill="none"/>
+    <path d="M210 160 Q225 155 240 160 Q255 155 270 160" stroke="#D4B8A8" stroke-width="1.5" fill="none"/>
+    <!-- Muzzle -->
+    <ellipse cx="240" cy="232" rx="42" ry="26" fill="#EDDDD2"/>
+    <!-- Nose -->
+    <path d="M233 218 L240 210 L247 218 Z" fill="#D4A090"/>
+    <!-- Eyes - large, lemon-shaped -->
+    <ellipse cx="208" cy="190" rx="15" ry="12" fill="#B8D8E8"/>
+    <circle cx="208" cy="190" r="6" fill="#2A4A3A"/>
+    <circle cx="206" cy="187" r="3" fill="#FFF" opacity="0.8"/>
+    <ellipse cx="272" cy="190" rx="15" ry="12" fill="#B8D8E8"/>
+    <circle cx="272" cy="190" r="6" fill="#2A4A3A"/>
+    <circle cx="270" cy="187" r="3" fill="#FFF" opacity="0.8"/>
+    <!-- Giant bat ears (Sphynx signature) -->
+    <path d="M168 160 L130 70 L195 140 Z" fill="#E8D5C8"/>
+    <path d="M168 158 L140 80 L190 142 Z" fill="#F0C8C0"/>
+    <path d="M312 160 L350 70 L285 140 Z" fill="#E8D5C8"/>
+    <path d="M312 158 L340 80 L290 142 Z" fill="#F0C8C0"/>
+    <!-- Whiskers - sparse/fine or absent (Sphynx often lacks whiskers) -->
+    <line x1="198" y1="224" x2="140" y2="222" stroke="#CCC" stroke-width="1" opacity="0.3"/>
+    <line x1="282" y1="224" x2="340" y2="222" stroke="#CCC" stroke-width="1" opacity="0.3"/>
+    <!-- Mouth -->
+    <path d="M230 244 Q240 252 250 244" stroke="#C4A090" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

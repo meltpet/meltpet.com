@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630">
+      <stop offset="0%" stop-color="#2c2416"/>
+      <stop offset="100%" stop-color="#4a3028"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="240" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="72" font-weight="800" fill="#fff">Melt<span fill="#e07b5a">Pet</span></text>
+  <text x="600" y="340" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="36" fill="#d6cec6">Find the pet that melts your heart</text>
+  <text x="600" y="420" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="22" fill="#9c8e82">Breed Finder · Cost Calculators · Evidence-Backed Guides</text>
+  <text x="1160" y="610" text-anchor="end" font-size="18" fill="#6b5d51">🐾</text>
+</svg>

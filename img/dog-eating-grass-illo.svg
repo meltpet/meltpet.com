@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Scene: dog eating grass outdoors -->
+  <!-- Sky -->
+  <rect x="0" y="0" width="400" height="180" fill="#e8f4e8"/>
+  <!-- Sun -->
+  <circle cx="340" cy="50" r="28" fill="#fde68a" opacity="0.7"/>
+  <!-- Ground -->
+  <ellipse cx="200" cy="240" rx="220" ry="60" fill="#d4e8c0"/>
+  <rect x="0" y="190" width="400" height="90" fill="#c8dca8"/>
+
+  <!-- Grass blades 🌿 -->
+  <g stroke="#5a8a3c" stroke-width="2.2" stroke-linecap="round" fill="none">
+    <path d="M60 200 Q65 170 58 150"/>
+    <path d="M68 200 Q72 165 75 145"/>
+    <path d="M90 198 Q85 168 92 148"/>
+    <path d="M110 195 Q115 160 108 140"/>
+    <path d="M130 196 Q128 165 135 145"/>
+    <path d="M150 198 Q155 170 148 152"/>
+    <!-- Grass near mouth -->
+    <path d="M215 195 Q220 168 212 148"/>
+    <path d="M225 193 Q230 165 225 142"/>
+    <path d="M235 192 Q240 162 232 143"/>
+    <path d="M245 190 Q248 160 240 140"/>
+    <path d="M270 192 Q265 165 272 148"/>
+    <path d="M300 190 Q295 160 305 142"/>
+    <path d="M320 192 Q318 165 325 148"/>
+    <path d="M350 195 Q348 168 355 150"/>
+    <path d="M370 198 Q375 170 368 152"/>
+  </g>
+
+  <!-- Dog body (profile, facing left toward grass) -->
+  <!-- Body -->
+  <ellipse cx="175" cy="175" rx="65" ry="40" fill="#e8c87a" stroke="#5a4020" stroke-width="2.5"/>
+  <!-- Back legs -->
+  <rect x="130" y="185" width="18" height="25" rx="6" fill="#d4b060" stroke="#5a4020" stroke-width="2.5"/>
+  <rect x="150" y="185" width="18" height="25" rx="6" fill="#d4b060" stroke="#5a4020" stroke-width="2.5"/>
+  <!-- Front legs -->
+  <rect x="195" y="185" width="16" height="22" rx="6" fill="#e8c87a" stroke="#5a4020" stroke-width="2.5"/>
+  <rect x="210" y="185" width="16" height="22" rx="6" fill="#e8c87a" stroke="#5a4020" stroke-width="2.5"/>
+  <!-- Tail (wagging up) -->
+  <path d="M115 165 Q100 130 108 120" stroke="#5a4020" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Head (tilted toward grass) -->
+  <ellipse cx="225" cy="155" rx="30" ry="28" fill="#e8c87a" stroke="#5a4020" stroke-width="2.5" transform="rotate(-15 225 155)"/>
+  <!-- Ear (floppy) -->
+  <ellipse cx="210" cy="130" rx="12" ry="18" fill="#c89840" stroke="#5a4020" stroke-width="2" transform="rotate(-25 210 130)"/>
+  <!-- Eye (looking at grass) -->
+  <ellipse cx="235" cy="148" rx="5" ry="5.5" fill="white" stroke="#5a4020" stroke-width="1.8"/>
+  <circle cx="234" cy="148" r="3" fill="#3a2010"/>
+  <circle cx="233" cy="146" r="1" fill="white"/>
+  <!-- Nose -->
+  <ellipse cx="248" cy="158" rx="6" ry="4.5" fill="#3a2010" transform="rotate(-15 248 158)"/>
+  <ellipse cx="246" cy="157" rx="2.5" ry="1.5" fill="#6b5040" transform="rotate(-15 246 157)"/>
+  <!-- Mouth (open, eating grass) -->
+  <path d="M240 165 Q245 172 252 168" stroke="#5a4020" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Grass in mouth -->
+  <g stroke="#5a8a3c" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M250 165 Q258 155 255 142"/>
+    <path d="M252 163 Q262 152 258 138"/>
+    <path d="M254 162 Q264 154 260 140"/>
+  </g>
+  <!-- Chest -->
+  <ellipse cx="215" cy="180" rx="22" ry="18" fill="#f5e8c8" stroke="none"/>
+  <!-- Collar -->
+  <path d="M210 135 Q218 142 232 135" stroke="#d44" stroke-width="3" fill="none"/>
+  <circle cx="221" cy="137" r="3" fill="#d44"/>
+
+  <!-- ? thought bubble -->
+  <ellipse cx="260" cy="90" rx="32" ry="22" fill="white" stroke="#999" stroke-width="1.2"/>
+  <circle cx="245" cy="112" r="4" fill="white" stroke="#999" stroke-width="1"/>
+  <circle cx="240" cy="120" r="2.5" fill="white" stroke="#999" stroke-width="0.9"/>
+  <text x="260" y="96" text-anchor="middle" font-size="20" font-family="sans-serif" fill="#555">?</text>
+</svg>

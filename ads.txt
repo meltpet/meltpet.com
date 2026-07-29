@@ -1,0 +1,3 @@
+# MeltPet ads.txt
+# AdSense not currently applied (2026-07). Affiliate (Amazon Associates) is the primary monetization channel.
+# google.com, pub-XXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0  — placeholder, uncomment when approved

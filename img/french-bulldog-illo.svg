@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- French Bulldog simple illustration -->
+  <!-- Shadow -->
+  <ellipse cx="200" cy="260" rx="90" ry="12" fill="#e8ddd0"/>
+  <!-- Body -->
+  <ellipse cx="205" cy="220" rx="75" ry="55" fill="#f5ede0" stroke="#4a3728" stroke-width="2.5"/>
+  <!-- Back legs -->
+  <rect x="155" y="240" width="22" height="28" rx="8" fill="#f5ede0" stroke="#4a3728" stroke-width="2.5"/>
+  <rect x="225" y="240" width="22" height="28" rx="8" fill="#f5ede0" stroke="#4a3728" stroke-width="2.5"/>
+  <!-- Front legs -->
+  <rect x="170" y="245" width="18" height="25" rx="7" fill="#ede0d0" stroke="#4a3728" stroke-width="2.5"/>
+  <rect x="212" y="245" width="18" height="25" rx="7" fill="#ede0d0" stroke="#4a3728" stroke-width="2.5"/>
+  <!-- Tail nub -->
+  <circle cx="275" cy="210" r="6" fill="#f5ede0" stroke="#4a3728" stroke-width="2"/>
+  <!-- Head -->
+  <ellipse cx="195" cy="165" rx="42" ry="40" fill="#f5ede0" stroke="#4a3728" stroke-width="2.5"/>
+  <!-- 🦇 Bat Ears (the defining Frenchie feature) -->
+  <path d="M162 140 L148 70 L175 125" fill="#f5ede0" stroke="#4a3728" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M228 140 L242 70 L215 125" fill="#f5ede0" stroke="#4a3728" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Inner ear -->
+  <path d="M164 135 L153 82 L174 125" fill="#f2d5c0" stroke="none"/>
+  <path d="M226 135 L237 82 L216 125" fill="#f2d5c0" stroke="none"/>
+  <!-- Wrinkles on forehead -->
+  <path d="M178 148 Q195 142 212 148" stroke="#c4b09a" stroke-width="1.2" fill="none"/>
+  <path d="M180 152 Q195 147 210 152" stroke="#c4b09a" stroke-width="1.2" fill="none"/>
+  <!-- Eyes (big, slightly buggy = Frenchie trademark) -->
+  <ellipse cx="183" cy="162" rx="8" ry="9" fill="white" stroke="#4a3728" stroke-width="2"/>
+  <ellipse cx="207" cy="162" rx="8" ry="9" fill="white" stroke="#4a3728" stroke-width="2"/>
+  <circle cx="184" cy="163" r="4.5" fill="#3a2718"/>
+  <circle cx="208" cy="163" r="4.5" fill="#3a2718"/>
+  <!-- Eye highlights -->
+  <circle cx="186" cy="161" r="1.8" fill="white"/>
+  <circle cx="210" cy="161" r="1.8" fill="white"/>
+  <!-- Nose (flat, wide) -->
+  <ellipse cx="195" cy="179" rx="10" ry="6" fill="#4a3728"/>
+  <ellipse cx="193" cy="177" rx="3" ry="2" fill="#6b5544"/>
+  <!-- Mouth / underbite hint -->
+  <path d="M185 186 Q195 191 205 186" stroke="#4a3728" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Whisker dots -->
+  <circle cx="178" cy="180" r="1.2" fill="#c4b09a"/>
+  <circle cx="175" cy="183" r="1.2" fill="#c4b09a"/>
+  <circle cx="212" cy="180" r="1.2" fill="#c4b09a"/>
+  <circle cx="215" cy="183" r="1.2" fill="#c4b09a"/>
+  <!-- Chest patch -->
+  <ellipse cx="200" cy="205" rx="25" ry="20" fill="#faf6f0" stroke="none"/>
+</svg>

@@ -1,0 +1,36 @@
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circle"><circle cx="240" cy="240" r="220"/></clipPath>
+  </defs>
+  <g clip-path="url(#circle)">
+    <rect width="480" height="480" fill="#E8E0D5"/>
+    <!-- Body -->
+    <ellipse cx="240" cy="360" rx="130" ry="110" fill="#7E8C9F"/>
+    <ellipse cx="190" cy="350" rx="40" ry="30" fill="#566374"/>
+    <ellipse cx="290" cy="380" rx="35" ry="25" fill="#566374"/>
+    <!-- White chest ruff -->
+    <ellipse cx="240" cy="300" rx="60" ry="50" fill="#F5F0EB"/>
+    <!-- Head -->
+    <ellipse cx="240" cy="200" rx="75" ry="68" fill="#7E8C9F"/>
+    <!-- White blaze on face -->
+    <path d="M240 135 L233 260 L247 260 Z" fill="#F5F0EB" opacity="0.75"/>
+    <!-- Muzzle -->
+    <ellipse cx="240" cy="235" rx="38" ry="26" fill="#E2CFC0"/>
+    <!-- Nose -->
+    <ellipse cx="240" cy="228" rx="13" ry="9" fill="#3D3D3D"/>
+    <!-- Eyes - amber -->
+    <ellipse cx="216" cy="195" rx="12" ry="10" fill="#C4873C"/>
+    <circle cx="216" cy="195" r="5" fill="#1A1A1A"/>
+    <circle cx="214" cy="193" r="2" fill="#FFF" opacity="0.6"/>
+    <ellipse cx="264" cy="195" rx="12" ry="10" fill="#C4873C"/>
+    <circle cx="264" cy="195" r="5" fill="#1A1A1A"/>
+    <circle cx="262" cy="193" r="2" fill="#FFF" opacity="0.6"/>
+    <!-- Ears - semi-prick (distinctive Aussie trait) -->
+    <path d="M182 170 L165 100 L215 148 Z" fill="#7E8C9F"/>
+    <path d="M180 165 L170 108 L205 150 Z" fill="#E2CFC0"/>
+    <path d="M298 170 L315 100 L265 148 Z" fill="#7E8C9F"/>
+    <path d="M300 165 L310 108 L275 150 Z" fill="#E2CFC0"/>
+    <!-- Mouth -->
+    <path d="M228 248 Q240 258 252 248" stroke="#3D3D3D" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

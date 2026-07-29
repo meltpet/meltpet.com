@@ -1,0 +1,458 @@
+/* 
+ * MeltPet.com — High-End Expert UI (2026)
+ * Core CSS Engine: Semantic, Responsive, Zero-Bloat
+ */
+
+/* ── 1. Top-Tier Typography ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap');
+
+:root {
+    /* ── Color Psychology: Vet Green & Amber ── */
+    --brand-dark: #12372A;       
+    --brand-darker: #0B241C;
+    --brand-accent: #F6851B;     
+    --brand-accent-hover: #E07312;
+    --brand-soft: rgba(246, 133, 27, 0.1);
+    
+    --bg-base: #F9F8F6;          
+    --bg-surface: #FFFFFF;
+    
+    --text-heading: #1A1A1A;
+    --text-body: #4A4A4A;
+    --text-muted: #8C8C8C;
+    --text-secondary: #64748B;
+    
+    --border-light: #EBEBEB;
+    --border-focus: #F6851B;
+    
+    /* ── Metrics & Shadows ── */
+    --radius-lg: 20px; 
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    
+    --shadow-sm: 0 4px 12px rgba(18, 55, 42, 0.05);
+    --shadow-md: 0 12px 32px rgba(18, 55, 42, 0.08);
+    --shadow-hover: 0 16px 40px rgba(246, 133, 27, 0.12);
+    
+    --nav-height: 64px;
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-serif: "Playfair Display", "Georgia", serif; 
+}
+
+/* ── 2. Base Resets & Global ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: var(--font-sans); 
+    background: var(--bg-base); 
+    color: var(--text-body); 
+    line-height: 1.65; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+a { text-decoration: none; color: inherit; transition: all 0.2s ease; }
+p { margin-bottom: 16px; }
+ul, ol { margin-bottom: 16px; padding-left: 24px; }
+
+/* Accessible Skip Link */
+.skip-link { position: absolute; top: -50px; left: 0; background: var(--brand-accent); color: white; padding: 12px 24px; z-index: 10000; font-weight: bold; transition: top 0.2s; }
+.skip-link:focus { top: 0; }
+
+/* Typography Hierarchy */
+h1, h2, .section-heading, .footer-brand h2 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.5px;
+    color: var(--text-heading);
+}
+h3, h4, h5 { font-family: var(--font-sans); color: var(--text-heading); }
+
+/* ── 3. Sticky Navigation (Premium Blur) ── */
+.site-nav {
+    position: sticky; top: 0; z-index: 1000; height: var(--nav-height);
+    background: rgba(249, 248, 246, 0.85);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(18, 55, 42, 0.08);
+    display: flex; align-items: center;
+}
+.nav-inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+.nav-brand { font-size: 1.4rem; font-weight: 800; color: var(--brand-dark); letter-spacing: -0.5px; font-family: var(--font-sans); }
+.nav-brand span { color: var(--brand-accent); }
+
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a { font-size: 0.95rem; font-weight: 600; color: var(--text-heading); transition: color 0.25s ease; }
+.nav-links a:hover { color: var(--brand-accent); }
+
+.nav-dropdown { position: relative; cursor: pointer; font-size: 0.95rem; font-weight: 600; color: var(--text-heading); padding: 10px 0; }
+.nav-dropdown:hover { color: var(--brand-accent); }
+.nav-dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--bg-surface); min-width: 220px; box-shadow: var(--shadow-md); border-radius: var(--radius-sm); border: 1px solid var(--border-light); padding: 8px 0; z-index: 100; }
+.nav-dropdown:hover .nav-dropdown-menu { display: flex; flex-direction: column; }
+.nav-dropdown-menu a { padding: 12px 20px; font-size: 0.9rem; font-weight: 500; display: block; color: var(--text-body); }
+.nav-dropdown-menu a:hover { background: var(--bg-base); color: var(--brand-accent); }
+
+.nav-actions { display: flex; align-items: center; gap: 16px; }
+.nav-search { padding: 10px 18px; border-radius: 20px; border: 1px solid var(--border-light); background: var(--bg-surface); font-size: 0.9rem; outline: none; transition: border-color 0.2s; width: 180px; }
+.nav-search:focus { border-color: var(--border-focus); box-shadow: 0 0 0 3px var(--brand-soft); }
+.btn-theme { background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--text-heading); transition: transform 0.2s; }
+.btn-theme:hover { transform: rotate(15deg); color: var(--brand-accent); }
+
+/* ── 4. Modern Hero Bento Box ── */
+.hero-bento {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 24px; 
+    margin: 48px 0 64px 0;
+}
+.bento-card {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bento-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(246, 133, 27, 0.2);
+}
+
+.bento-main {
+    grid-column: 1 / 3; grid-row: 1 / 3;
+    background: radial-gradient(circle at top right, #1d5240 0%, var(--brand-dark) 70%);
+    color: #FFFFFF; display: flex; flex-direction: column; justify-content: center;
+    border: none; box-shadow: 0 12px 32px rgba(18, 55, 42, 0.2);
+}
+.bento-main:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(18, 55, 42, 0.3); border-color: transparent; }
+.bento-main h1 { font-size: 3.2rem; font-weight: 700; line-height: 1.15; margin-bottom: 20px; color: #fff; }
+.bento-main h1 span { color: var(--brand-accent); font-style: italic; font-family: var(--font-serif); }
+.bento-main p { font-size: 1.15rem; color: rgba(255,255,255,0.85); max-width: 85%; margin-bottom: 36px; font-weight: 400; }
+
+.bento-tool h3 { font-size: 1.25rem; color: var(--text-heading); margin-bottom: 8px; font-weight: 700; }
+.bento-tool p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0; }
+.bento-icon { font-size: 2.2rem; margin-bottom: 20px; display: inline-block; }
+
+/* Buttons & Micro-interactions */
+.cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-primary, .btn-secondary {
+    padding: 16px 32px; border-radius: var(--radius-sm); font-weight: 600; font-size: 1rem;
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px; 
+    transition: all 0.3s ease; cursor: pointer; border: none; font-family: var(--font-sans);
+}
+.btn-primary { background: var(--brand-accent); color: #fff; box-shadow: 0 4px 14px rgba(246, 133, 27, 0.3); }
+.btn-primary:hover { background: var(--brand-accent-hover); box-shadow: 0 6px 20px rgba(246, 133, 27, 0.4); transform: translateY(-2px); color: #fff; }
+.btn-secondary { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(4px); }
+.btn-secondary:hover { background: rgba(255,255,255,0.15); transform: translateY(-2px); color: #fff; }
+
+.btn-primary span, .btn-secondary span { transition: transform 0.3s ease; }
+.btn-primary:hover span, .btn-secondary:hover span { transform: translateX(4px); }
+
+/* ── 5. Main Layout & Guide Cards ── */
+.main-grid { display: grid; grid-template-columns: 1fr 340px; gap: 48px; margin-bottom: 80px; }
+.section-heading { font-size: 1.8rem; font-weight: 700; color: var(--brand-dark); margin-bottom: 28px; display: flex; align-items: center; gap: 16px; }
+.section-heading::after { content: ''; flex: 1; height: 1px; background: var(--border-light); }
+
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px; }
+.guide-card {
+    background: var(--bg-surface); padding: 28px; border-radius: var(--radius-md); 
+    border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); 
+    transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%;
+}
+.guide-card:hover { border-color: var(--brand-dark); box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+
+.guide-tag { 
+    align-self: flex-start; padding: 6px 12px; font-size: 0.75rem; font-weight: 700; 
+    text-transform: uppercase; letter-spacing: 0.5px; border-radius: 6px; margin-bottom: 16px;
+}
+.tag-dog { background: var(--brand-soft); color: var(--brand-accent); }
+.tag-cat { background: #E8F4F0; color: var(--brand-dark); }
+.tag-calc { background: #F3EEF5; color: #6B4C8A; }
+
+.guide-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-heading); margin-bottom: 12px; line-height: 1.4; font-family: var(--font-serif); }
+.guide-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0; flex-grow: 1; }
+
+/* ── 6. Sidebar (Sticky EEAT Widgets) ── */
+.sidebar { display: flex; flex-direction: column; gap: 32px; position: sticky; top: calc(var(--nav-height) + 32px); height: max-content; }
+.widget { background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm); }
+.widget-title { font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--brand-dark); margin-bottom: 20px; font-family: var(--font-sans); }
+
+.cost-row { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border-light); align-items: baseline; }
+.cost-row:last-child { border-bottom: none; padding-bottom: 0; }
+.cost-label { font-size: 0.95rem; font-weight: 600; color: var(--text-heading); }
+.cost-value { font-family: var(--font-sans); font-size: 1.15rem; font-weight: 800; color: var(--brand-accent); }
+.cost-value span { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+
+.widget-link { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border-light); transition: padding-left 0.3s ease; }
+.widget-link:last-child { border-bottom: none; padding-bottom: 0; }
+.widget-link:hover { padding-left: 8px; }
+.widget-link-text { font-size: 0.95rem; font-weight: 600; color: var(--text-body); transition: color 0.2s; }
+.widget-link:hover .widget-link-text { color: var(--brand-accent); }
+
+/* ── 7. Inner Article & Tool Pages ── */
+.breadcrumb { font-size: 0.9rem; color: var(--text-muted); margin: 32px 0; font-weight: 500; }
+.breadcrumb a { color: var(--brand-dark); font-weight: 600; }
+.breadcrumb a:hover { color: var(--brand-accent); text-decoration: underline; }
+.breadcrumb .sep { margin: 0 8px; color: #CCC; }
+
+.tool-hero { text-align: center; margin: 40px 0 60px; }
+.tool-hero h1 { font-size: 3.2rem; margin-bottom: 16px; color: var(--brand-dark); line-height: 1.2; font-family: var(--font-serif); }
+.tool-hero h1 span { color: var(--brand-accent); font-style: italic; }
+.tool-hero p { font-size: 1.15rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+
+.article-section { max-width: 800px; margin: 0 auto 48px; }
+.article-section h2 { font-size: 1.9rem; color: var(--brand-dark); margin: 40px 0 20px; line-height: 1.3; font-family: var(--font-serif); }
+.article-section h3 { font-size: 1.4rem; color: var(--text-heading); margin: 28px 0 16px; }
+.article-section p { font-size: 1.05rem; line-height: 1.75; margin-bottom: 20px; color: var(--text-body); }
+.article-section ul, .article-section ol { font-size: 1.05rem; line-height: 1.75; margin-bottom: 20px; padding-left: 24px; color: var(--text-body); }
+.article-section li { margin-bottom: 10px; }
+
+/* Journal-quality research blockquote */
+.article-section blockquote {
+    margin: 32px 0; padding: 24px 32px;
+    background: #F4F6F8; border-left: 4px solid #94A3B8;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-style: italic; color: var(--text-secondary); line-height: 1.75;
+}
+.article-section blockquote cite {
+    display: block; margin-top: 12px; font-style: normal; font-size: 0.85rem;
+    color: var(--text-muted); font-weight: 600;
+}
+[data-theme="dark"] .article-section blockquote,
+body.dark-theme .article-section blockquote {
+    background: #1E293B; border-left-color: #64748B; color: #CBD5E1;
+}
+
+/* Progress bar for cost breakdown */
+.progress-stack { margin: 16px 0; }
+.progress-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; font-size: 0.88rem; }
+.progress-row .progress-label { width: 100px; font-weight: 600; color: var(--text-heading); flex-shrink: 0; }
+.progress-row .progress-track { flex: 1; height: 10px; background: #E2E8F0; border-radius: 5px; overflow: hidden; }
+.progress-row .progress-fill { height: 100%; border-radius: 5px; transition: width 0.6s ease; }
+.progress-fill.baseline { background: linear-gradient(90deg, #34D399, #10B981); }
+.progress-fill.medical  { background: linear-gradient(90deg, #F6851B, #EF4444); }
+.progress-row .progress-value { width: 80px; text-align: right; font-weight: 700; color: var(--text-heading); flex-shrink: 0; }
+
+/* Calculators & Forms */
+.tool-box { max-width: 700px; margin: 0 auto 60px; background: var(--bg-surface); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); }
+.tool-box label { display: block; font-weight: 700; margin-bottom: 8px; color: var(--text-heading); }
+.tool-box select, .tool-box input { width: 100%; padding: 14px 16px; border: 1px solid #CCC; border-radius: var(--radius-sm); font-size: 1rem; margin-bottom: 24px; font-family: var(--font-sans); transition: border-color 0.2s; box-shadow: inset 0 1px 3px rgba(0,0,0,0.02); }
+.tool-box select:focus, .tool-box input:focus { outline: none; border-color: var(--brand-accent); box-shadow: 0 0 0 3px var(--brand-soft); }
+
+.quiz-step { margin-bottom: 32px; }
+.quiz-step h3 { font-size: 1.3rem; margin-bottom: 16px; color: var(--brand-dark); }
+.quiz-options { display: grid; gap: 12px; }
+.quiz-option { padding: 16px 20px; border: 2px solid var(--border-light); border-radius: var(--radius-md); cursor: pointer; font-weight: 600; font-size: 1.05rem; transition: all 0.2s ease; background: var(--bg-surface); }
+.quiz-option:hover { border-color: var(--brand-accent); background: var(--brand-soft); transform: translateY(-2px); }
+.quiz-option.selected { border-color: var(--brand-accent); background: var(--brand-accent); color: #fff; }
+
+.result-card { background: #ecfdf5; border-left: 4px solid #10b981; padding: 24px; border-radius: var(--radius-sm); margin-top: 24px; }
+.result-card h4 { color: #047857; font-size: 1.2rem; margin-bottom: 12px; font-family: var(--font-sans); }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 0.95rem; background: var(--bg-surface); border-radius: var(--radius-sm); overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+th, td { padding: 16px; text-align: left; border-bottom: 1px solid var(--border-light); }
+th { background: #f8fafc; font-weight: 700; color: var(--brand-dark); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+tr:last-child td { border-bottom: none; }
+
+/* FAQs */
+.faq-item { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border-light); }
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 { font-size: 1.3rem; margin-bottom: 14px; color: var(--brand-dark); }
+.faq-item p { margin-bottom: 0; }
+
+/* ── 8. Semantic Footer ── */
+.site-footer {
+    background: var(--brand-darker); color: #fff; padding: 80px 24px 40px;
+    margin-top: 80px; border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 2fr; gap: 48px; }
+.footer-brand h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 16px; color: #fff; }
+.footer-brand p { color: rgba(255,255,255,0.6); font-size: 0.95rem; max-width: 320px; line-height: 1.6; }
+.footer-col h4 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; color: var(--brand-accent); font-family: var(--font-sans); }
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col li { margin-bottom: 16px; }
+.footer-col a { color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: color 0.2s; }
+.footer-col a:hover { color: #fff; }
+/* Popular Guides: 2-column split to balance visual height with other 3 columns */
+.footer-col:last-of-type ul { column-count: 2; column-gap: 24px; }
+.footer-col:last-of-type li { break-inside: avoid; }
+.footer-bottom { text-align: center; padding-top: 40px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+
+/* ── 9. Dark Mode Override ── */
+body.dark-theme {
+    --bg-base: #0F172A; /* Deep Slate */
+    --bg-surface: #1E293B;
+    --text-heading: #F8FAFC;
+    --text-body: #CBD5E1;
+    --border-light: #334155;
+    --shadow-sm: 0 4px 12px rgba(0,0,0,0.3);
+    --shadow-hover: 0 16px 40px rgba(246, 133, 27, 0.1);
+    --brand-dark: #34D399; /* Lighter green for visibility on dark */
+    --brand-darker: #060E0B; /* Near-black green — anchors footer below dark body */
+}
+body.dark-theme .site-nav { background: rgba(15, 23, 42, 0.85); }
+body.dark-theme .bento-main { background: radial-gradient(circle at top right, #1e3a2f 0%, #0B241C 70%); }
+body.dark-theme .bento-card, body.dark-theme .widget, body.dark-theme .tool-box { background: var(--bg-surface); border-color: var(--border-light); }
+body.dark-theme th { background: #0F172A; color: #F8FAFC; }
+body.dark-theme .section-heading, body.dark-theme h1, body.dark-theme .tool-hero h1 { color: #F8FAFC; }
+body.dark-theme .widget-title { color: var(--brand-accent); }
+body.dark-theme .quiz-option { background: var(--bg-surface); border-color: var(--border-light); }
+body.dark-theme .quiz-option:hover { background: rgba(246, 133, 27, 0.1); }
+body.dark-theme .quiz-option.selected { background: var(--brand-accent); color: #fff; }
+body.dark-theme .nav-search { background: #0F172A; color: #fff; border-color: var(--border-light); }
+
+/* ── 10. Mobile Navigation ── */
+/* Hamburger button — hidden on desktop, visible on mobile */
+.hamburger {
+    display: none;
+    flex-direction: column; justify-content: center; gap: 5px;
+    width: 36px; height: 36px; padding: 6px;
+    background: none; border: none; cursor: pointer; z-index: 1001;
+}
+.hamburger span {
+    display: block; width: 100%; height: 2px;
+    background: var(--brand-dark); border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Search wrapper */
+.nav-search-wrap { position: relative; display: inline-block; }
+
+/* Search results dropdown */
+.search-results {
+    display: none; position: absolute; top: calc(100% + 8px); left: 0; right: 0;
+    background: var(--bg-surface); border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm); box-shadow: var(--shadow-md);
+    z-index: 1002; min-width: 280px; overflow: hidden;
+}
+.search-results.active { display: block; }
+.search-results a {
+    display: block; padding: 12px 20px; font-size: 0.9rem; font-weight: 500;
+    color: var(--text-body); border-bottom: 1px solid var(--border-light);
+    transition: background 0.15s;
+}
+.search-results a:last-child { border-bottom: none; }
+.search-results a:hover { background: var(--bg-base); color: var(--brand-accent); }
+.search-results a strong { color: var(--brand-accent); }
+.search-no-result { padding: 16px 20px; font-size: 0.88rem; color: var(--text-muted); }
+
+/* Overlay */
+.mobile-nav-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.4);
+    opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 998;
+}
+.mobile-nav-overlay.open { opacity: 1; pointer-events: auto; }
+
+/* Slide-out panel */
+.mobile-nav-panel {
+    position: fixed; top: 0; left: 0; bottom: 0; width: 300px; max-width: 85vw;
+    background: var(--bg-surface); z-index: 999; overflow-y: auto;
+    transform: translateX(-100%); transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 24px 0 120px; display: flex; flex-direction: column;
+    box-shadow: var(--shadow-md);
+}
+.mobile-nav-panel.open { transform: translateX(0); }
+.mobile-nav-panel a {
+    display: block; padding: 14px 32px; font-size: 0.95rem; font-weight: 600;
+    color: var(--text-heading); text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+}
+.mobile-nav-panel a:hover { background: var(--bg-base); color: var(--brand-accent); }
+.mobile-nav-close {
+    align-self: flex-end; margin: 0 20px 12px;
+    background: none; border: none; font-size: 1.4rem; color: var(--text-muted);
+    cursor: pointer; padding: 8px;
+}
+.mobile-nav-section {
+    padding: 12px 32px 6px; font-size: 0.75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--brand-accent); margin-top: 12px;
+}
+.mobile-nav-section:first-of-type { margin-top: 0; }
+
+/* Body lock when panel is open */
+body.mobile-nav-open { overflow: hidden; }
+
+/* ── 11. Responsive Breakpoints ── */
+@media (max-width: 1024px) {
+    .hero-bento { grid-template-columns: 1fr 1fr; }
+    .bento-main { grid-column: 1 / 3; }
+    .main-grid { grid-template-columns: 1fr; gap: 40px; }
+    .sidebar { position: static; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-search { width: 140px; }
+    .bento-main h1 { font-size: 2.6rem; }
+    .sidebar { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .footer-col:last-of-type ul { column-count: 1; }
+    .tool-hero h1 { font-size: 2.4rem; }
+    .article-section h2 { font-size: 1.6rem; }
+}
+@media (max-width: 480px) {
+    .hero-bento { grid-template-columns: 1fr; }
+    .bento-main { grid-column: 1; padding: 32px 24px; text-align: center; }
+    .bento-main p { max-width: 100%; margin: 0 auto 32px; }
+    .cta-group { flex-direction: column; }
+    .btn-primary, .btn-secondary { width: 100%; }
+    .guide-grid { grid-template-columns: 1fr; }
+}
+
+/* ── 12. Related Articles Section ── */
+.related-articles {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 0 24px;
+}
+.related-articles .section-heading {
+    font-size: 1.6rem;
+}
+.related-articles .guide-tag {
+    background: #E8F4F0;
+    color: var(--brand-dark);
+}
+
+/* ── 13. Breed Finder Result Guide Link ── */
+.breed-guide-link {
+    display: inline-block;
+    margin-top: 6px;
+    font-weight: 600;
+    color: var(--brand-accent);
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+.breed-guide-link:hover {
+    color: var(--brand-accent-hover);
+    text-decoration: underline;
+}
+
+/* ── 14. Print Styles (The Physical Backlink) ── */
+@media print {
+    #nav-container, .site-nav, .sidebar, .site-footer, .hero-bento, .btn-primary, .btn-secondary, .skip-link, .nav-actions, .tool-box button, .related-articles { display: none !important; }
+    body { background: #fff !important; color: #000 !important; font-size: 12pt; }
+    .container { width: 100% !important; max-width: none !important; padding: 0 !important; margin: 0 !important; }
+    h1, h2, h3 { page-break-after: avoid; color: #000 !important; }
+    img, table, figure { page-break-inside: avoid; border: 1px solid #ccc; }
+    a { text-decoration: none !important; color: #000 !important; }
+    /* 强行挂载带网址的实体锚文本 */
+    a[href^="/"]::after { content: " (www.meltpet.com" attr(href) ")"; font-size: 0.85em; color: #555; }
+    .article-section { max-width: 100%; }
+    /* Print-only footer badge */
+    body::after {
+        content: "meltpet.com — Evidence-Backed Pet Intelligence Hub";
+        display: block; text-align: center; margin-top: 32px; padding-top: 16px;
+        border-top: 2px solid #000; font-size: 0.9rem; font-weight: 700; color: #000;
+    }
+}

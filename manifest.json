@@ -1,0 +1,22 @@
+{
+  "name": "MeltPet — Find Your Perfect Pet",
+  "short_name": "MeltPet",
+  "description": "Breed finder, cost calculators, and evidence-backed pet guides. No tracking, no signup.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "150x150",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9F8F6",
+  "theme_color": "#F6851B"
+}

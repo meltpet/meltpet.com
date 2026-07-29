@@ -1,0 +1,7 @@
+.workbuddy/
+.claude/
+_gen_og.py
+_r2.py
+meltpet-audit-*.html
+meltpet-deep-audit-*.html
+meltpet-deindexing-diagnosis-*.html
