@@ -45,24 +45,23 @@
             'ad_storage': 'denied',
             'ad_user_data': 'denied',
             'ad_personalization': 'denied',
-            'analytics_storage': 'granted',
-            'region': [
-                {
-                    'region': ['EU', 'EEA', 'GB'],
-                    'ad_storage': 'denied',
-                    'ad_user_data': 'denied',
-                    'ad_personalization': 'denied',
-                    'analytics_storage': 'denied'
-                }
-            ]
+            'analytics_storage': 'granted'
+        });
+
+        // EU / EEA / UK: analytics_storage defaults to denied (cookieless pings only).
+        // The `region` parameter must be an array of ISO 3166-1 / EEA region codes.
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied',
+            'region': ['EEA', 'GB']
         });
 
         gtag('config', MEASUREMENT_ID, {
             page_location: window.location.href,
             page_path: window.location.pathname,
-            send_page_view: true,
-            anonymize_ip: true,
-            allow_ad_personalization_signals: false
+            send_page_view: true
         });
         window.gtag = gtag;
 

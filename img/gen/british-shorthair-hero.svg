@@ -1,0 +1,39 @@
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circleBsh"><circle cx="240" cy="240" r="220"/></clipPath>
+  </defs>
+  <g clip-path="url(#circleBsh)">
+    <rect width="480" height="480" fill="#E8E2D8"/>
+    <!-- Body - round and compact -->
+    <ellipse cx="240" cy="370" rx="130" ry="105" fill="#7E93A8"/>
+    <ellipse cx="240" cy="375" rx="95" ry="80" fill="#93A8BD"/>
+    <!-- Chest ruff / plush coat -->
+    <ellipse cx="240" cy="300" rx="85" ry="60" fill="#A8BDD2"/>
+    <!-- Head - wide round face (British Shorthair signature) -->
+    <path d="M160 185 Q160 120 240 115 Q320 120 320 185 L308 255 Q240 275 172 255 Z" fill="#7E93A8"/>
+    <ellipse cx="240" cy="240" rx="72" ry="58" fill="#93A8BD"/>
+    <!-- Chubby cheeks -->
+    <ellipse cx="200" cy="258" rx="30" ry="22" fill="#A8BDD2"/>
+    <ellipse cx="280" cy="258" rx="30" ry="22" fill="#A8BDD2"/>
+    <!-- Nose - small pink -->
+    <path d="M232 232 L240 226 L248 232 Z" fill="#E8A090"/>
+    <!-- Eyes - copper/amber (British Shorthair signature) -->
+    <ellipse cx="208" cy="205" rx="16" ry="15" fill="#D8981E"/>
+    <circle cx="208" cy="205" r="7" fill="#1A1A1A"/>
+    <circle cx="205" cy="202" r="2.8" fill="#FFF" opacity="0.75"/>
+    <ellipse cx="272" cy="205" rx="16" ry="15" fill="#D8981E"/>
+    <circle cx="272" cy="205" r="7" fill="#1A1A1A"/>
+    <circle cx="269" cy="202" r="2.8" fill="#FFF" opacity="0.75"/>
+    <!-- Small rounded ears -->
+    <path d="M180 155 L168 95 L212 128 Z" fill="#7E93A8"/>
+    <path d="M182 150 L172 105 L204 130 Z" fill="#C8B8A8"/>
+    <path d="M300 155 L312 95 L268 128 Z" fill="#7E93A8"/>
+    <path d="M298 150 L308 105 L276 130 Z" fill="#C8B8A8"/>
+    <!-- Mouth - gentle neutral -->
+    <path d="M240 238 Q232 248 224 244" fill="none" stroke="#5E6E80" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M240 238 Q248 248 256 244" fill="none" stroke="#5E6E80" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Whiskers -->
+    <path d="M150 238 L185 246 M150 254 L186 258" stroke="#E8E2D8" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <path d="M330 238 L295 246 M330 254 L294 258" stroke="#E8E2D8" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  </g>
+</svg>

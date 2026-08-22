@@ -33,7 +33,7 @@ First-year costs · Hidden costs · Pet insurance worth it · Monthly dog cost �
 - **Pure static HTML/CSS/JS** — no frameworks, no build step, no npm
 - **Cloudflare Pages** — global edge deployment
 - **nav.js** — single-source navigation engine (desktop dropdowns, mobile drawer, search index)
-- **No analytics tracking** — no cookies, no popups, no consent banners
+- **Privacy-first analytics** — GA4 with Consent Mode; cookieless by default for EU/EEA/UK visitors
 - **~65 hand-written pages** — zero AI-generated content
 
 ---

@@ -4,11 +4,11 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cdn.meltpet.com https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; base-uri 'self'; form-action 'self'
 
 # HTML: short cache, must revalidate
 /*.html
   Cache-Control: public, max-age=300, must-revalidate
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cdn.meltpet.com https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; base-uri 'self'; form-action 'self'
 
 # CSS / JS: 1-week cache (versioned via query string)
 /style.css

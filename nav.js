@@ -40,6 +40,8 @@
             {title: '🏷️ Name Generator',            href: '/pet-name-generator',          desktop: true, keywords: 'pet name generator dog cat names food funny classic human name ideas'},
             {title: '🍽️ Toxic Food Checker',        href: '/toxic-food-checker',          desktop: true, keywords: 'toxic food checker can my dog eat chocolate grapes onion garlic safe dangerous foods'},
             {title: '🍖 Dog Food Cost Calculator',   href: '/dog-food-cost-calculator',    desktop: true, keywords: 'dog food cost calculator monthly annual kibble wet raw dry food budget'},
+            {title: '⚖️ Dog Weight Checker',        href: '/dog-weight-calculator',       desktop: true, keywords: 'dog weight calculator overweight obese BCS body condition score ideal weight check if dog fat'},
+            {title: '🐱 Cat Calorie Calculator',    href: '/cat-calorie-calculator',      desktop: true, keywords: 'cat calorie calculator how much to feed cat RER DER portions cans cups wet dry food daily calories'},
             {title: '🧩 Pet Compatibility Quiz',     href: '/pet-compatibility-quiz',      desktop: true, keywords: 'pet compatibility quiz dog or cat which pet is right for me lifestyle match'}
         ],
         dogs: [
@@ -59,7 +61,9 @@
             {title: '🐆 Bengal Cat Guide',          href: '/bengal-cat-guide',                desktop: true, keywords: 'bengal cat breed guide wild spotted energetic leopard'},
             {title: '🐱 Sphynx Cat Guide',          href: '/sphynx-cat-guide',                desktop: true, keywords: 'sphynx cat breed guide hairless bald HCM bathing care cost'},
             {title: '🇬🇧 British Shorthair',          href: '/british-shorthair-guide',          desktop: true, keywords: 'british shorthair cat breed guide blue HCM PKD plush coat calm reserved'},
+            {title: '⚖️ Maine Coon vs Ragdoll',       href: '/maine-coon-vs-ragdoll',            desktop: true, keywords: 'maine coon vs ragdoll comparison which big cat temperament grooming health cost'},
             {title: '🐱 New Kitten Checklist',      href: '/new-kitten-checklist',            desktop: true, keywords: 'new kitten checklist supplies first week'},
+            {title: '🤝 Introduce a New Cat',       href: '/how-to-introduce-a-new-cat',      desktop: true, keywords: 'introduce new cat resident cat how to step by step scent swapping feliway hissing fighting timeline'},
             {title: '🦷 Why Cats Bite Gently',    href: '/why-does-my-cat-bite-me-gently',  desktop: true, keywords: 'cat bite gently why love bite nibble lick overstimulation play aggression grooming communication'},
             {title: '😴 Why Cats Sleep on You',   href: '/why-does-my-cat-sleep-on-me',     desktop: true, keywords: 'cat sleep on me why chest lap trust vulnerable purr heartbeat position breed'},
             {title: '📦 Why Cats Love Boxes',     href: '/why-do-cats-love-boxes',           desktop: true, keywords: 'cat love boxes why cardboard hide safe thermoregulation stress cortisol ambush predator'},
@@ -68,6 +72,7 @@
         behavior: [
             {title: '🐕 Head Tilt Science',         href: '/why-does-my-dog-tilt-its-head',   desktop: true, keywords: 'dog tilt head behavior why study science'},
             {title: '🌿 Why Dogs Eat Grass',         href: '/why-do-dogs-eat-grass',            desktop: true, keywords: 'dog eat grass behavior why sick vomit'},
+            {title: '💩 Why Dogs Eat Poop',          href: '/why-do-dogs-eat-poop',             desktop: true, keywords: 'dog eat poop coprophagia feces why behavior stop stool eating'},
             {title: '👣 Why Dogs Follow You',        href: '/why-do-dogs-follow-you-everywhere', desktop: true, keywords: 'dog follow everywhere clingy velcro shadow behavior'},
             {title: '🦨 Why Dogs Roll in Smelly Things', href: '/why-do-dogs-roll-in-smelly-things', desktop: true, keywords: 'dog roll dead things smelly gross behavior scent camouflage'},
             {title: '👀 Why Dogs Stare at You',       href: '/why-does-my-dog-stare-at-me',   desktop: true, keywords: 'dog stare at me why gazing behavior oxytocin love eye contact bond'},
@@ -81,6 +86,7 @@
         ],
         health: [
             {title: '🦷 Dog Dental Care Guide',     href: '/dog-dental-care-guide',           desktop: true, keywords: 'dog dental care teeth brushing cleaning vet extraction gum disease'},
+            {title: '🐱 Cat Dental Care Guide',     href: '/cat-dental-care-guide',           desktop: true, keywords: 'cat dental care teeth brushing cleaning vet extraction stomatitis tooth resorption FORL gum disease'},
             {title: '👂 How to Clean Dog Ears',     href: '/how-to-clean-dog-ears',           desktop: true, keywords: 'clean dog ears infection wax how to safe without hurting'},
             {title: '😰 Separation Anxiety Protocol', href: '/separation-anxiety-in-dogs',    desktop: true, keywords: 'separation anxiety dog protocol desensitization training destructive behavior'},
             {title: '📢 Stop Excessive Barking',    href: '/how-to-stop-dog-barking',          desktop: true, keywords: 'stop dog barking excessive why fix source training no shock collar'},
@@ -132,7 +138,7 @@
         html += '<div class="nav-links">';
 
         ['tools', 'breeds', 'behavior', 'health', 'costs'].forEach(function(key) {
-            html += '<div class="nav-dropdown"><span>' + dropdowns[key] + '</span><div class="nav-dropdown-menu">';
+            html += '<div class="nav-dropdown"><button type="button" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">' + dropdowns[key] + '</button><div class="nav-dropdown-menu">';
             var items = key === 'breeds' ? NAV_SECTIONS.dogs.concat(NAV_SECTIONS.cats) : NAV_SECTIONS[key];
             items.forEach(function(item) {
                 if (item.desktop === false) return;

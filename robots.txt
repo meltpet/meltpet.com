@@ -3,6 +3,16 @@
 
 User-agent: *
 Allow: /
+# ── Internal audit/debug pages (must not be indexed) ──
+User-agent: *
+Disallow: /meltpet-audit-
+Disallow: /meltpet-deindexing-
+Disallow: /meltpet-deep-audit-
+Disallow: /meltpet-audit-report-
+Disallow: /meltpet-audit-comprehensive-
+Disallow: /meltpet-audit-2026
+Disallow: *.temp
+
 Sitemap: https://www.meltpet.com/sitemap.xml
 
 # ── Disallow AI-training crawlers (Cloudflare Managed) ──

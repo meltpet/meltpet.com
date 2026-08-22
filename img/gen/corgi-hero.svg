@@ -1,0 +1,40 @@
+<svg viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="circleCorgi"><circle cx="240" cy="240" r="220"/></clipPath>
+  </defs>
+  <g clip-path="url(#circleCorgi)">
+    <rect width="480" height="480" fill="#EFE7DC"/>
+    <!-- Body - long, low (Corgi signature) -->
+    <ellipse cx="240" cy="380" rx="150" ry="95" fill="#D8953A"/>
+    <ellipse cx="240" cy="385" rx="105" ry="75" fill="#F0C878"/>
+    <!-- Chest white patch -->
+    <ellipse cx="240" cy="330" rx="60" ry="45" fill="#FFF8EE"/>
+    <!-- Head - fox-like face -->
+    <path d="M165 170 Q165 110 240 105 Q315 110 315 170 L300 235 Q240 255 180 235 Z" fill="#D8953A"/>
+    <ellipse cx="240" cy="225" rx="62" ry="48" fill="#E8B058"/>
+    <!-- White blaze down the face -->
+    <path d="M240 115 L224 160 Q240 172 256 160 Z" fill="#FFF8EE"/>
+    <path d="M214 168 L210 190 Q240 205 270 190 L266 168 Q240 182 214 168 Z" fill="#FFF8EE"/>
+    <!-- Nose -->
+    <path d="M232 210 L240 202 L248 210 Z" fill="#2E2A26"/>
+    <!-- Eyes - alert and dark -->
+    <ellipse cx="206" cy="185" rx="15" ry="14" fill="#3A2E26"/>
+    <circle cx="206" cy="183" r="4.5" fill="#6B5548"/>
+    <circle cx="203" cy="180" r="2.2" fill="#FFF" opacity="0.8"/>
+    <ellipse cx="274" cy="185" rx="15" ry="14" fill="#3A2E26"/>
+    <circle cx="274" cy="183" r="4.5" fill="#6B5548"/>
+    <circle cx="271" cy="180" r="2.2" fill="#FFF" opacity="0.8"/>
+    <!-- Large upright ears (Corgi signature) -->
+    <path d="M172 150 L150 60 L215 115 Z" fill="#D8953A"/>
+    <path d="M176 145 L158 72 L208 118 Z" fill="#F0C878"/>
+    <path d="M308 150 L330 60 L265 115 Z" fill="#D8953A"/>
+    <path d="M304 145 L322 72 L272 118 Z" fill="#F0C878"/>
+    <!-- Happy mouth -->
+    <path d="M226 228 Q240 242 254 228" fill="none" stroke="#5E4A38" stroke-width="3" stroke-linecap="round"/>
+    <!-- Tongue -->
+    <ellipse cx="240" cy="244" rx="8" ry="10" fill="#F09080"/>
+    <!-- Eyebrow dots -->
+    <circle cx="206" cy="164" r="4" fill="#C07E28" opacity="0.6"/>
+    <circle cx="274" cy="164" r="4" fill="#C07E28" opacity="0.6"/>
+  </g>
+</svg>

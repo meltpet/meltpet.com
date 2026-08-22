@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Scene: sheepish dog standing beside a fresh poop pile -->
+  <!-- Sky -->
+  <rect x="0" y="0" width="400" height="180" fill="#e8f4e8"/>
+  <!-- Sun -->
+  <circle cx="340" cy="48" r="26" fill="#fde68a" opacity="0.7"/>
+  <!-- Small clouds -->
+  <ellipse cx="78" cy="52" rx="24" ry="10" fill="#ffffff" opacity="0.6"/>
+  <ellipse cx="98" cy="46" rx="18" ry="8" fill="#ffffff" opacity="0.55"/>
+  <!-- Ground -->
+  <ellipse cx="200" cy="240" rx="220" ry="60" fill="#d4e8c0"/>
+  <rect x="0" y="190" width="400" height="90" fill="#c8dca8"/>
+
+  <!-- Grass blades -->
+  <g stroke="#5a8a3c" stroke-width="2.2" stroke-linecap="round" fill="none">
+    <path d="M58 200 Q63 170 56 150"/>
+    <path d="M72 198 Q68 168 76 148"/>
+    <path d="M118 196 Q122 166 115 146"/>
+    <path d="M142 198 Q138 168 145 148"/>
+    <path d="M330 194 Q326 166 333 148"/>
+    <path d="M352 196 Q350 168 358 150"/>
+    <path d="M372 198 Q376 172 369 154"/>
+  </g>
+
+  <!-- Dog (standing, sheepish, glancing toward poop) -->
+  <!-- Back legs -->
+  <rect x="128" y="182" width="18" height="27" rx="6" fill="#d4b060" stroke="#5a4020" stroke-width="2.5"/>
+  <rect x="150" y="182" width="18" height="27" rx="6" fill="#d4b060" stroke="#5a4020" stroke-width="2.5"/>
+  <!-- Front legs -->
+  <rect x="196" y="182" width="16" height="25" rx="6" fill="#e8c87a" stroke="#5a4020" stroke-width="2.5"/>
+  <rect x="212" y="182" width="16" height="25" rx="6" fill="#e8c87a" stroke="#5a4020" stroke-width="2.5"/>
+  <!-- Body -->
+  <ellipse cx="178" cy="168" rx="64" ry="40" fill="#e8c87a" stroke="#5a4020" stroke-width="2.5"/>
+  <!-- Chest -->
+  <ellipse cx="218" cy="175" rx="22" ry="19" fill="#f5e8c8" stroke="none"/>
+  <!-- Tail (tucked slightly, sheepish) -->
+  <path d="M118 160 Q102 172 106 184" stroke="#5a4020" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Head (turned to glance back toward poop) -->
+  <ellipse cx="230" cy="146" rx="28" ry="26" fill="#e8c87a" stroke="#5a4020" stroke-width="2.5"/>
+  <!-- Ears (slightly lowered — sheepish) -->
+  <ellipse cx="212" cy="126" rx="11" ry="16" fill="#c89840" stroke="#5a4020" stroke-width="2" transform="rotate(18 212 126)"/>
+  <ellipse cx="238" cy="120" rx="10" ry="15" fill="#c89840" stroke="#5a4020" stroke-width="2" transform="rotate(10 238 120)"/>
+  <!-- Eye (looking sideways, small) -->
+  <ellipse cx="238" cy="142" rx="4.5" ry="5" fill="white" stroke="#5a4020" stroke-width="1.8"/>
+  <circle cx="237" cy="142" r="2.7" fill="#3a2010"/>
+  <circle cx="236.4" cy="140.6" r="0.9" fill="white"/>
+  <!-- Snout -->
+  <ellipse cx="252" cy="150" rx="13" ry="10" fill="#e8c87a" stroke="#5a4020" stroke-width="2"/>
+  <!-- Nose -->
+  <ellipse cx="261" cy="148" rx="4.5" ry="3.5" fill="#3a2010"/>
+  <!-- Mouth (slight nervous line) -->
+  <path d="M244 158 Q249 162 254 159" stroke="#5a4020" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Collar -->
+  <path d="M214 130 Q222 137 234 129" stroke="#d44" stroke-width="3" fill="none"/>
+  <circle cx="224" cy="133" r="3" fill="#d44"/>
+
+  <!-- Small sweat drop (nervous) -->
+  <path d="M210 122 q-4 6 0 9 q4 -3 0 -9 z" fill="#8ec8e8" stroke="#6aa8c8" stroke-width="1"/>
+
+  <!-- Poop pile (three stacked coils, near dog's front feet) -->
+  <g stroke="#5a4020" stroke-width="2" fill="#8a5a30">
+    <ellipse cx="282" cy="204" rx="14" ry="6"/>
+    <ellipse cx="282" cy="197" rx="11" ry="5"/>
+    <ellipse cx="282" cy="191" rx="7.5" ry="4"/>
+  </g>
+  <!-- Little stink lines -->
+  <g stroke="#a89070" stroke-width="1.6" stroke-linecap="round" fill="none">
+    <path d="M300 196 q6 -6 3 -14"/>
+    <path d="M308 200 q6 -4 7 -12"/>
+    <path d="M296 188 q-6 -5 -4 -13"/>
+  </g>
+
+  <!-- ? thought bubble -->
+  <ellipse cx="266" cy="82" rx="32" ry="22" fill="white" stroke="#999" stroke-width="1.2"/>
+  <circle cx="248" cy="104" r="4" fill="white" stroke="#999" stroke-width="1"/>
+  <circle cx="242" cy="112" r="2.5" fill="white" stroke="#999" stroke-width="0.9"/>
+  <text x="266" y="88" text-anchor="middle" font-size="20" font-family="sans-serif" fill="#555">?</text>
+</svg>
