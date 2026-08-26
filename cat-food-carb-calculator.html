@@ -69,20 +69,28 @@
         <option value="custom">Custom — enter everything manually</option>
       </select>
 
-      <label for="moisture">Moisture % (from label)</label>
-      <input type="number" id="moisture" step="0.1" min="0" max="90" value="10" style="width:100%;margin-bottom:14px;text-align:center;font-size:1.1rem;" oninput="liveCalc()" onfocus="this.select()">
+      <label for="moisture">💧 Moisture % <span style="color:var(--text-muted);font-weight:400;">— the number that makes labels misleading</span></label>
+      <input type="number" id="moisture" step="0.1" min="0" max="90" value="10" style="width:100%;margin-bottom:16px;text-align:center;font-size:1.15rem;font-weight:700;" oninput="liveCalc()" onfocus="this.select()">
 
-      <label for="protein">Crude protein % (from label)</label>
-      <input type="number" id="protein" step="0.1" min="0" max="80" value="34" style="width:100%;margin-bottom:14px;text-align:center;font-size:1.1rem;" oninput="liveCalc()" onfocus="this.select()">
-
-      <label for="fat">Crude fat % (from label)</label>
-      <input type="number" id="fat" step="0.1" min="0" max="60" value="16" style="width:100%;margin-bottom:14px;text-align:center;font-size:1.1rem;" oninput="liveCalc()" onfocus="this.select()">
-
-      <label for="fiber">Crude fiber % (from label)</label>
-      <input type="number" id="fiber" step="0.1" min="0" max="20" value="4" style="width:100%;margin-bottom:14px;text-align:center;font-size:1.1rem;" oninput="liveCalc()" onfocus="this.select()">
-
-      <label for="ash">Ash % (not on most US labels — use the estimate)</label>
-      <input type="number" id="ash" step="0.1" min="0" max="20" value="7" style="width:100%;margin-bottom:20px;text-align:center;font-size:1.1rem;" oninput="liveCalc()" onfocus="this.select()">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px;">
+        <div>
+          <label for="protein">🥩 Crude protein %</label>
+          <input type="number" id="protein" step="0.1" min="0" max="80" value="34" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="liveCalc()" onfocus="this.select()">
+        </div>
+        <div>
+          <label for="fat">🧈 Crude fat %</label>
+          <input type="number" id="fat" step="0.1" min="0" max="60" value="16" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="liveCalc()" onfocus="this.select()">
+        </div>
+        <div>
+          <label for="fiber">🌾 Crude fiber %</label>
+          <input type="number" id="fiber" step="0.1" min="0" max="20" value="4" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="liveCalc()" onfocus="this.select()">
+        </div>
+        <div>
+          <label for="ash">🦴 Ash % <span style="color:var(--text-muted);font-weight:400;">(estimate)</span></label>
+          <input type="number" id="ash" step="0.1" min="0" max="20" value="7" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="liveCalc()" onfocus="this.select()">
+        </div>
+      </div>
+      <p style="font-size:0.74rem;color:var(--text-muted);margin:0 0 4px;">💡 Ash isn't on most US labels — leave the estimate (≈7% dry, ≈2% wet).</p>
 
       <div class="result-card" id="result" style="display:block;"></div>
     </div>
@@ -227,35 +235,86 @@
     }
 
     var html = '';
-    html += '<div style="text-align:center;">';
-    html += '<div style="font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;">Carbohydrate (by difference, dry matter)</div>';
-    html += '<div style="font-size:2.6rem;font-weight:800;color:' + color + ';">' + carbDM.toFixed(1) + '%</div>';
-    html += '<div style="font-size:1rem;font-weight:700;color:' + color + ';margin-bottom:12px;">' + verdict + '</div>';
-    html += '<div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:16px;">' + detail + '</div>';
 
-    // DM breakdown grid
-    html += '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;">';
-    html += dmCell('Protein', pDM);
-    html += dmCell('Fat', fDM);
-    html += dmCell('Fiber', fiDM);
-    html += dmCell('Ash', aDM);
+    // 1) Headline carb number + verdict pill
+    html += '<div style="text-align:center;">';
+    html += '<div style="font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:2px;">Carbohydrate <span style="text-transform:none;">·</span> dry matter</div>';
+    html += '<div style="font-size:3.2rem;font-weight:800;line-height:1.05;color:' + color + ';">' + carbDM.toFixed(1) + '<span style="font-size:1.5rem;">%</span></div>';
+    html += '<div style="display:inline-block;margin-top:10px;padding:6px 14px;border-radius:999px;background:' + color + '1A;color:' + color + ';font-size:0.82rem;font-weight:700;">' + verdict + '</div>';
+    html += '<div style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">' + detail + '</div>';
     html += '</div>';
 
-    html += '<div style="font-size:0.8rem;color:var(--text-muted);">On a dry-matter basis (water removed), this food is <strong>' + pDM.toFixed(1) + '% protein, ' + fDM.toFixed(1) + '% fat, ' + carbDM.toFixed(1) + '% carbs</strong>. Dry matter = ' + dm.toFixed(0) + '%.</div>';
+    // 2) Carb gauge
+    html += carbGauge(carbDM, species, color);
+
+    // 3) Macronutrient stacked bar
+    html += macroBar(pDM, fDM, carbDM, fiDM, aDM);
+
+    // 4) DM tiles
+    html += '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px;">';
+    html += dmCell('Protein', pDM, '#2563EB');
+    html += dmCell('Fat', fDM, '#F59E0B');
+    html += dmCell('Fiber', fiDM, '#9CA3AF');
+    html += dmCell('Ash', aDM, '#9CA3AF');
+    html += '</div>';
+
+    // 5) Summary
+    html += '<div style="margin-top:14px;padding:10px 12px;background:#F8F9FA;border-radius:8px;font-size:0.8rem;color:var(--text-muted);text-align:center;">Water removed, this food is <strong style="color:var(--text-heading);">' + pDM.toFixed(1) + '% protein · ' + fDM.toFixed(1) + '% fat · ' + carbDM.toFixed(1) + '% carbs</strong>. Dry matter = ' + dm.toFixed(0) + '%.</div>';
 
     if (sumAsFed > 100.5) {
-      html += '<div style="margin-top:12px;padding:10px 14px;background:#FFF0F0;border-radius:6px;font-size:0.82rem;color:#C0392B;">⚠️ <strong>Numbers don\'t add up:</strong> protein + fat + fiber + ash + moisture = ' + sumAsFed.toFixed(1) + '%, which exceeds 100%. One of your label values is off — double-check the label (remember protein is a minimum and fiber a maximum, so the printed numbers can sum above 100).</div>';
+      html += '<div style="margin-top:10px;padding:10px 14px;background:#FFF0F0;border-radius:8px;font-size:0.8rem;color:#C0392B;">⚠️ <strong>Numbers don\'t add up:</strong> protein + fat + fiber + ash + moisture = ' + sumAsFed.toFixed(1) + '%, over 100%. Recheck the label (protein is a minimum, fiber a maximum).</div>';
     }
 
-    html += '</div>';
     resultDiv.innerHTML = html;
   }
 
-  function dmCell(label, val) {
-    return '<div style="background:#F8F9FA;border-radius:8px;padding:10px 6px;">' +
-      '<div style="font-size:0.72rem;color:var(--text-muted);">' + label + '</div>' +
-      '<div style="font-size:1.1rem;font-weight:800;color:var(--text-heading);">' + val.toFixed(1) + '%</div>' +
+  function dmCell(label, val, accent) {
+    return '<div style="background:#FAF8F4;border-radius:10px;padding:10px 6px;border:1px solid #EFEBE3;">' +
+      '<div style="font-size:0.7rem;color:var(--text-muted);margin-bottom:3px;">' + label + '</div>' +
+      '<div style="font-size:1.15rem;font-weight:800;color:var(--text-heading);">' + val.toFixed(1) + '%</div>' +
+      '<div style="height:3px;border-radius:2px;background:' + accent + ';margin-top:6px;"></div>' +
       '</div>';
+  }
+
+  function carbGauge(carb, species, color) {
+    var max = 50;
+    var zones = (species === 'cat')
+      ? [{to:10,c:'#16A34A'},{to:15,c:'#84CC16'},{to:25,c:'#F59E0B'},{to:max,c:'#DC2626'}]
+      : [{to:30,c:'#16A34A'},{to:45,c:'#F59E0B'},{to:max,c:'#DC2626'}];
+    var pct = Math.max(0, Math.min(carb, max)) / max * 100;
+    var html = '<div style="margin:18px 4px 0;">';
+    html += '<div style="position:relative;">';
+    html += '<div style="display:flex;height:12px;border-radius:999px;overflow:hidden;background:#EFEBE3;">';
+    var acc = 0;
+    zones.forEach(function(z){ html += '<div style="width:' + ((z.to-acc)/max*100) + '%;background:' + z.c + ';opacity:0.7;"></div>'; acc = z.to; });
+    html += '</div>';
+    html += '<div style="position:absolute;left:' + pct + '%;top:-9px;transform:translateX(-50%);">';
+    html += '<div style="width:18px;height:18px;border-radius:50%;background:#FFFFFF;border:4px solid ' + color + ';box-shadow:0 1px 3px rgba(0,0,0,0.25);"></div>';
+    html += '</div>';
+    html += '</div>';
+    html += '<div style="display:flex;justify-content:space-between;font-size:0.68rem;color:var(--text-muted);margin-top:10px;">';
+    html += '<span>0%</span><span style="color:#16A34A;font-weight:700;">low carb</span><span style="color:#DC2626;font-weight:700;">high carb</span><span>50%</span>';
+    html += '</div>';
+    html += '</div>';
+    return html;
+  }
+
+  function macroBar(p, f, c, fi, a) {
+    var html = '<div style="margin:18px 0 0;">';
+    html += '<div style="font-size:0.72rem;color:var(--text-muted);margin-bottom:6px;">Macronutrient split (dry matter)</div>';
+    html += '<div style="display:flex;height:14px;border-radius:999px;overflow:hidden;background:#EFEBE3;">';
+    html += '<div style="width:' + p + '%;background:#2563EB;" title="Protein ' + p.toFixed(1) + '%"></div>';
+    html += '<div style="width:' + f + '%;background:#F59E0B;" title="Fat ' + f.toFixed(1) + '%"></div>';
+    html += '<div style="width:' + c + '%;background:#DC2626;" title="Carbs ' + c.toFixed(1) + '%"></div>';
+    html += '<div style="width:' + (fi+a) + '%;background:#C7C2B8;" title="Fiber + Ash ' + (fi+a).toFixed(1) + '%"></div>';
+    html += '</div>';
+    html += '<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:7px;font-size:0.72rem;color:var(--text-muted);">';
+    html += '<span><span style="display:inline-block;width:9px;height:9px;border-radius:2px;background:#2563EB;margin-right:4px;vertical-align:middle;"></span>Protein ' + p.toFixed(1) + '%</span>';
+    html += '<span><span style="display:inline-block;width:9px;height:9px;border-radius:2px;background:#F59E0B;margin-right:4px;vertical-align:middle;"></span>Fat ' + f.toFixed(1) + '%</span>';
+    html += '<span><span style="display:inline-block;width:9px;height:9px;border-radius:2px;background:#DC2626;margin-right:4px;vertical-align:middle;"></span>Carbs ' + c.toFixed(1) + '%</span>';
+    html += '<span><span style="display:inline-block;width:9px;height:9px;border-radius:2px;background:#C7C2B8;margin-right:4px;vertical-align:middle;"></span>Fiber+Ash ' + (fi+a).toFixed(1) + '%</span>';
+    html += '</div></div>';
+    return html;
   }
 
   document.addEventListener('DOMContentLoaded', function() { liveCalc(); });
