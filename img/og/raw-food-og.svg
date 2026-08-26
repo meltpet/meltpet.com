@@ -1,1 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630"><rect width="1200" height="630" fill="#FAF6EF"/><rect x="0" y="0" width="14" height="630" fill="#F6851B"/><text x="64" y="150" font-family="Arial,Helvetica,sans-serif" font-size="72" font-weight="800" fill="#1F1F1F">Raw Food Calculator</text><text x="64" y="212" font-family="Arial,Helvetica,sans-serif" font-size="34" fill="#6B6B6B">Prey Model Raw — 80/10/5/5, to the gram.</text><text x="64" y="264" font-family="Arial,Helvetica,sans-serif" font-size="26" fill="#6B6B6B">Muscle meat · bone · liver · organ + the supplements raw diets need.</text><rect x="64" y="320" width="760" height="64" rx="32" fill="#FFFFFF" stroke="#E5E1D8" stroke-width="2"/><rect x="64" y="320" width="608" height="64" rx="32" fill="#C0392B"/><rect x="64" y="320" width="608" height="32" rx="32" fill="#C0392B"/><text x="90" y="362" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">Muscle meat 80%</text><rect x="64" y="404" width="532" height="64" rx="32" fill="#FFFFFF" stroke="#E5E1D8" stroke-width="2"/><rect x="64" y="404" width="76" height="64" rx="32" fill="#E8DCC8"/><rect x="64" y="404" width="76" height="32" rx="32" fill="#E8DCC8"/><text x="90" y="446" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" fill="#5D4E37">Bone 10%</text><rect x="64" y="488" width="304" height="64" rx="32" fill="#FFFFFF" stroke="#E5E1D8" stroke-width="2"/><rect x="64" y="488" width="38" height="64" rx="32" fill="#8E44AD"/><rect x="64" y="488" width="38" height="32" rx="32" fill="#8E44AD"/><text x="90" y="530" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700" fill="#8E44AD">Liver 5%</text><text x="900" y="120" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="800" fill="#F6851B">MeltPet</text><text x="900" y="158" font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#6B6B6B">meltpet.com</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFBF4"/>
+      <stop offset="1" stop-color="#FBF2E4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.15" r="0.6">
+      <stop offset="0" stop-color="#F6851B" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#F6851B" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#B45309" flood-opacity="0.12"/>
+    </filter>
+    <filter id="shadowLight" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#8C5A1A" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- subtle paw prints -->
+  <g fill="#F6851B" opacity="0.06">
+    <circle cx="140" cy="560" r="10"/><circle cx="170" cy="548" r="7"/><circle cx="196" cy="556" r="7"/><circle cx="188" cy="580" r="7"/><circle cx="110" cy="548" r="7"/><ellipse cx="152" cy="588" rx="22" ry="14"/>
+    <circle cx="1120" cy="90" r="8"/><circle cx="1142" cy="80" r="6"/><circle cx="1162" cy="88" r="6"/><circle cx="1156" cy="106" r="6"/><ellipse cx="1132" cy="112" rx="18" ry="11"/>
+  </g>
+
+  <!-- Left: brand + title -->
+  <rect x="64" y="78" width="180" height="48" rx="24" fill="#F6851B"/>
+  <text x="154" y="110" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">🐾 MeltPet</text>
+
+  <text x="64" y="218" font-family="Arial,Helvetica,sans-serif" font-size="88" font-weight="800" fill="#1F1F1F">Raw Food</text>
+  <text x="64" y="300" font-family="Arial,Helvetica,sans-serif" font-size="88" font-weight="800" fill="#F6851B">Calculator</text>
+
+  <text x="64" y="356" font-family="Arial,Helvetica,sans-serif" font-size="32" font-weight="700" fill="#5D4E37">Prey Model Raw · 80 / 10 / 5 / 5</text>
+  <text x="64" y="398" font-family="Arial,Helvetica,sans-serif" font-size="25" fill="#8A7A64">Muscle meat · bone · liver · organ —</text>
+  <text x="64" y="430" font-family="Arial,Helvetica,sans-serif" font-size="25" fill="#8A7A64">to the gram, plus the supplements raw diets need.</text>
+
+  <rect x="64" y="472" width="196" height="46" rx="23" fill="#16A34A"/>
+  <text x="162" y="502" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">Free · No signup</text>
+
+  <!-- Right: donut card -->
+  <rect x="556" y="84" width="580" height="470" rx="30" fill="#FFFFFF" filter="url(#shadow)"/>
+
+  <!-- Donut -->
+  <g transform="translate(760, 318) rotate(-90)">
+    <circle r="104" fill="none" stroke="#C0392B" stroke-width="46" stroke-dasharray="522.76 653.45" stroke-dashoffset="0"/>
+    <circle r="104" fill="none" stroke="#E8DCC8" stroke-width="46" stroke-dasharray="65.35 653.45" stroke-dashoffset="-522.76"/>
+    <circle r="104" fill="none" stroke="#8E44AD" stroke-width="46" stroke-dasharray="32.67 653.45" stroke-dashoffset="-588.10"/>
+    <circle r="104" fill="none" stroke="#5D4E37" stroke-width="46" stroke-dasharray="32.67 653.45" stroke-dashoffset="-620.78"/>
+  </g>
+  <text x="760" y="312" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="800" fill="#1F1F1F">80/10</text>
+  <text x="760" y="342" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="800" fill="#1F1F1F">/5/5</text>
+
+  <!-- Legend -->
+  <g font-family="Arial,Helvetica,sans-serif">
+    <rect x="872" y="150" width="16" height="16" rx="4" fill="#C0392B"/>
+    <text x="900" y="164" font-size="23" font-weight="700" fill="#1F1F1F">Muscle meat</text>
+    <text x="1130" y="164" text-anchor="end" font-size="21" font-weight="800" fill="#C0392B">80%</text>
+
+    <rect x="872" y="228" width="16" height="16" rx="4" fill="#E8DCC8"/>
+    <text x="900" y="242" font-size="23" font-weight="700" fill="#1F1F1F">Edible bone</text>
+    <text x="1130" y="242" text-anchor="end" font-size="21" font-weight="800" fill="#8A6A3C">10%</text>
+
+    <rect x="872" y="306" width="16" height="16" rx="4" fill="#8E44AD"/>
+    <text x="900" y="320" font-size="23" font-weight="700" fill="#1F1F1F">Liver</text>
+    <text x="1130" y="320" text-anchor="end" font-size="21" font-weight="800" fill="#8E44AD">5%</text>
+
+    <rect x="872" y="384" width="16" height="16" rx="4" fill="#5D4E37"/>
+    <text x="900" y="398" font-size="23" font-weight="700" fill="#1F1F1F">Other organ</text>
+    <text x="1130" y="398" text-anchor="end" font-size="21" font-weight="800" fill="#5D4E37">5%</text>
+  </g>
+
+  <text x="760" y="500" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#8A7A64">Built to the gram for your pet's exact weight</text>
+</svg>
