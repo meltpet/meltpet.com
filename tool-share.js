@@ -10,7 +10,7 @@
         '/breed-finder', '/dog-breed-finder', '/cat-breed-finder',
         '/monthly-pet-cost', '/adopt-vs-buy', '/pet-age-calculator',
         '/pet-name-generator', '/toxic-food-checker', '/dog-food-cost-calculator',
-        '/dog-weight-calculator', '/cat-calorie-calculator', '/cat-food-carb-calculator', '/pet-compatibility-quiz'
+        '/dog-weight-calculator', '/cat-calorie-calculator', '/cat-food-carb-calculator', '/raw-food-calculator', '/pet-compatibility-quiz'
     ];
     var isToolPage = TOOL_PATHS.some(function(p) {
         return window.location.pathname === p || window.location.pathname.indexOf(p) === 0;
