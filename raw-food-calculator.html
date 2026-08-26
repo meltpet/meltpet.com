@@ -314,6 +314,21 @@
     ctx.closePath();
   }
 
+  function drawDonut(ctx, cx, cy, r, width, segments) {
+    var start = -Math.PI / 2;
+    var gap = 0.03;
+    ctx.lineCap = 'butt';
+    segments.forEach(function(seg) {
+      var angle = seg.pct / 100 * 2 * Math.PI;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, start + gap, start + angle - gap);
+      ctx.strokeStyle = seg.c;
+      ctx.lineWidth = width;
+      ctx.stroke();
+      start += angle;
+    });
+  }
+
   function downloadCard() {
     if (!lastPlan) return;
     var p = lastPlan;
@@ -321,63 +336,78 @@
     C.width = 1000; C.height = 1500;
     var x = C.getContext('2d');
 
-    // background
-    x.fillStyle = '#FAF6EF'; x.fillRect(0, 0, 1000, 1500);
-    // header band
-    x.fillStyle = '#F6851B'; x.fillRect(0, 0, 1000, 120);
-    x.fillStyle = '#FFFFFF'; x.textAlign = 'left'; x.font = 'bold 44px Arial, sans-serif';
-    x.fillText('🐾 MeltPet', 48, 82);
-    x.textAlign = 'right'; x.font = '28px Arial, sans-serif';
-    x.fillText('Raw Food Calculator', 952, 80);
+    // ── background gradient ──
+    var bg = x.createLinearGradient(0, 0, 0, 1500);
+    bg.addColorStop(0, '#FFFBF4');
+    bg.addColorStop(1, '#FBF0E0');
+    x.fillStyle = bg;
+    x.fillRect(0, 0, 1000, 1500);
 
-    // species + stage
+    // ── header band (gradient) ──
+    var hg = x.createLinearGradient(0, 0, 1000, 0);
+    hg.addColorStop(0, '#F6851B');
+    hg.addColorStop(1, '#F97316');
+    x.fillStyle = hg;
+    x.fillRect(0, 0, 1000, 120);
+    x.fillStyle = '#FFFFFF';
+    x.textAlign = 'left'; x.font = 'bold 44px Arial, sans-serif';
+    x.fillText('🐾 MeltPet', 52, 82);
+    x.textAlign = 'right'; x.font = '26px Arial, sans-serif';
+    x.fillText('Raw Food Recipe Card', 948, 80);
+
+    // ── species + stage ──
     x.textAlign = 'center';
-    x.fillStyle = '#1F1F1F'; x.font = 'bold 46px Arial, sans-serif';
-    x.fillText(p.emoji, 500, 208);
-    x.fillStyle = '#6B6B6B'; x.font = '28px Arial, sans-serif';
-    x.fillText(p.stageLabel + '  ·  ' + p.goalLabel, 500, 250);
+    x.fillStyle = '#1F1F1F'; x.font = 'bold 52px Arial, sans-serif';
+    x.fillText(p.emoji, 500, 188);
+    x.fillStyle = '#8A7A64'; x.font = '26px Arial, sans-serif';
+    x.fillText(p.stageLabel + '  ·  ' + p.goalLabel, 500, 226);
 
-    // big amount
-    x.fillStyle = '#F6851B'; x.font = 'bold 168px Arial, sans-serif';
-    x.fillText(Math.round(p.dailyGrams) + ' g', 500, 430);
-    x.fillStyle = '#6B6B6B'; x.font = '32px Arial, sans-serif';
-    x.fillText('per day  ·  ≈ ' + (p.dailyGrams / 28.35).toFixed(1) + ' oz  ·  2 meals', 500, 482);
+    // ── big amount ──
+    x.fillStyle = '#F6851B'; x.font = 'bold 142px Arial, sans-serif';
+    x.fillText(Math.round(p.dailyGrams) + ' g', 500, 338);
+    x.fillStyle = '#8A7A64'; x.font = '28px Arial, sans-serif';
+    x.fillText('per day  ·  ≈ ' + (p.dailyGrams / 28.35).toFixed(1) + ' oz  ·  2 meals', 500, 378);
 
-    // divider
-    x.strokeStyle = '#E5E1D8'; x.lineWidth = 3;
-    x.beginPath(); x.moveTo(80, 540); x.lineTo(920, 540); x.stroke();
+    // ── donut chart (80/10/5/5) ──
+    drawDonut(x, 500, 520, 100, 44, [
+      {pct: 80, c: '#C0392B'}, {pct: 10, c: '#D6B98C'}, {pct: 5, c: '#8E44AD'}, {pct: 5, c: '#5D4E37'}
+    ]);
+    x.fillStyle = '#8A7A64'; x.font = '18px Arial, sans-serif'; x.textAlign = 'center';
+    x.fillText('PMR', 500, 512);
+    x.fillStyle = '#1F1F1F'; x.font = 'bold 30px Arial, sans-serif';
+    x.fillText('80/10/5/5', 500, 544);
 
-    // section label
-    x.fillStyle = '#1F1F1F'; x.font = 'bold 34px Arial, sans-serif';
-    x.fillText('PREY MODEL RAW  ·  80 / 10 / 5 / 5', 500, 600);
-
-    // breakdown rows
+    // ── breakdown rows (with card shadow) ──
     var rows = [
       {name: 'Muscle meat', pct: '80%', g: p.muscle, c: '#C0392B'},
-      {name: 'Edible bone', pct: '10%', g: p.bone, c: '#B8A88A'},
+      {name: 'Edible bone', pct: '10%', g: p.bone, c: '#C9A876'},
       {name: 'Liver', pct: '5%', g: p.liver, c: '#8E44AD'},
       {name: 'Other organ', pct: '5%', g: p.organ, c: '#5D4E37'}
     ];
-    var ry = 630;
+    var ry = 655;
     rows.forEach(function(r) {
-      x.fillStyle = '#FFFFFF'; roundRect(x, 80, ry, 840, 128, 20); x.fill();
-      x.strokeStyle = '#E5E1D8'; x.lineWidth = 2; roundRect(x, 80, ry, 840, 128, 20); x.stroke();
-      x.fillStyle = r.c; roundRect(x, 112, ry + 34, 60, 60, 12); x.fill();
-      x.fillStyle = '#1F1F1F'; x.font = 'bold 42px Arial, sans-serif'; x.textAlign = 'left';
-      x.fillText(r.name, 200, ry + 76);
-      x.fillStyle = '#6B6B6B'; x.font = '28px Arial, sans-serif';
-      x.fillText(r.pct, 200, ry + 108);
-      x.fillStyle = r.c; x.font = 'bold 48px Arial, sans-serif'; x.textAlign = 'right';
-      x.fillText(Math.round(r.g) + ' g', 880, ry + 82);
-      ry += 150;
+      x.save();
+      x.shadowColor = 'rgba(180,83,9,0.10)'; x.shadowBlur = 14; x.shadowOffsetY = 5;
+      x.fillStyle = '#FFFFFF'; roundRect(x, 60, ry, 880, 102, 20); x.fill();
+      x.restore();
+      x.fillStyle = r.c; x.beginPath(); x.arc(118, ry + 51, 24, 0, Math.PI * 2); x.fill();
+      x.fillStyle = '#1F1F1F'; x.font = 'bold 38px Arial, sans-serif'; x.textAlign = 'left';
+      x.fillText(r.name, 168, ry + 47);
+      x.fillStyle = '#8A7A64'; x.font = '24px Arial, sans-serif';
+      x.fillText(r.pct, 168, ry + 80);
+      x.fillStyle = r.c; x.font = 'bold 42px Arial, sans-serif'; x.textAlign = 'right';
+      x.fillText(Math.round(r.g) + ' g', 905, ry + 62);
+      ry += 116;
     });
 
-    // supplements box
-    x.fillStyle = '#FFFFFF'; roundRect(x, 80, ry + 6, 840, 320, 20); x.fill();
-    x.strokeStyle = '#E5E1D8'; x.lineWidth = 2; roundRect(x, 80, ry + 6, 840, 320, 20); x.stroke();
-    x.fillStyle = '#1F1F1F'; x.font = 'bold 32px Arial, sans-serif'; x.textAlign = 'left';
-    x.fillText('Supplements (per day)', 112, ry + 54);
-    x.fillStyle = '#6B6B6B'; x.font = '26px Arial, sans-serif';
+    // ── supplements card ──
+    x.save();
+    x.shadowColor = 'rgba(180,83,9,0.10)'; x.shadowBlur = 14; x.shadowOffsetY = 5;
+    x.fillStyle = '#FFFFFF'; roundRect(x, 60, ry + 4, 880, 272, 20); x.fill();
+    x.restore();
+    x.fillStyle = '#1F1F1F'; x.font = 'bold 30px Arial, sans-serif'; x.textAlign = 'left';
+    x.fillText('💊 Supplements (per day)', 100, ry + 58);
+    x.fillStyle = '#5D4E37'; x.font = '25px Arial, sans-serif';
     var sup = [
       'Taurine: ' + p.taurine,
       'Vitamin E: ' + p.vitE + ' IU',
@@ -385,14 +415,14 @@
       'Zinc: ' + p.zinc + ' mg   ·   Manganese: ' + p.manganese + ' mg',
       'Iodine (kelp): start low, check the label'
     ];
-    var sy = ry + 100;
-    sup.forEach(function(t) { x.fillText(t, 112, sy); sy += 42; });
+    var sy = ry + 106;
+    sup.forEach(function(t) { x.fillText(t, 100, sy); sy += 40; });
 
-    // footer
-    x.fillStyle = '#6B6B6B'; x.font = '24px Arial, sans-serif'; x.textAlign = 'center';
-    x.fillText('Generated with the MeltPet raw food calculator', 500, 1420);
-    x.fillStyle = '#F6851B'; x.font = 'bold 28px Arial, sans-serif';
-    x.fillText('meltpet.com/raw-food-calculator', 500, 1456);
+    // ── footer ──
+    x.fillStyle = '#8A7A64'; x.font = '22px Arial, sans-serif'; x.textAlign = 'center';
+    x.fillText('Generated with the MeltPet raw food calculator', 500, 1442);
+    x.fillStyle = '#F6851B'; x.font = 'bold 26px Arial, sans-serif';
+    x.fillText('meltpet.com/raw-food-calculator', 500, 1478);
 
     C.toBlob(function(blob) {
       var a = document.createElement('a');
