@@ -42,6 +42,7 @@
             {title: '🍖 Dog Food Cost Calculator',   href: '/dog-food-cost-calculator',    desktop: true, keywords: 'dog food cost calculator monthly annual kibble wet raw dry food budget'},
             {title: '⚖️ Dog Weight Checker',        href: '/dog-weight-calculator',       desktop: true, keywords: 'dog weight calculator overweight obese BCS body condition score ideal weight check if dog fat'},
             {title: '🐱 Cat Calorie Calculator',    href: '/cat-calorie-calculator',      desktop: true, keywords: 'cat calorie calculator how much to feed cat RER DER portions cans cups wet dry food daily calories'},
+            {title: '🥫 Cat Food Carb Calculator',   href: '/cat-food-carb-calculator',     desktop: true, keywords: 'cat food carbohydrate calculator dry matter basis carbs protein fat fiber ash moisture guaranteed analysis wet dry comparison hidden carbs'},
             {title: '🧩 Pet Compatibility Quiz',     href: '/pet-compatibility-quiz',      desktop: true, keywords: 'pet compatibility quiz dog or cat which pet is right for me lifestyle match'}
         ],
         dogs: [
