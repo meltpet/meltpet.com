@@ -16,11 +16,11 @@
   <meta property="og:description" content="Your pet's daily raw food amount, split into muscle meat, bone, liver and organ — to the gram — plus the supplement doses raw diets need.">
   <meta property="og:url" content="https://www.meltpet.com/raw-food-calculator">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.meltpet.com/img/og/tools-og.png">
+  <meta property="og:image" content="https://www.meltpet.com/img/og/raw-food-og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Raw Food Calculator: The 80/10/10 Split, to the Gram">
   <meta name="twitter:description" content="Muscle meat, bone, liver, organ — the Prey Model Raw ratio calculated for your pet's exact weight and life stage.">
-  <meta name="twitter:image" content="https://www.meltpet.com/img/og/tools-og.png">
+  <meta name="twitter:image" content="https://www.meltpet.com/img/og/raw-food-og.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Raw Dog &amp; Cat Food Calculator","description":"Interactive tool that calculates a pet's daily raw food amount using the Prey Model Raw (PMR) ratio — 80% muscle meat, 10% edible bone, 5% liver, 5% other secreting organ — plus supplement doses, based on species, life stage and body weight.","url":"https://www.meltpet.com/raw-food-calculator","applicationCategory":"Health","author":{"@type":"Person","name":"Sarah Mitchell","url":"https://www.meltpet.com/sarah-mitchell"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"MeltPet","alternateName":"Melt Pet","url":"https://www.meltpet.com/","description":"Independent pet resource — breed finder, cost calculators, and evidence-backed guides."}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much raw food should I feed my dog or cat?","acceptedAnswer":{"@type":"Answer","text":"Most adult dogs and cats eat 2–3% of their ideal body weight per day in raw food. An 10 kg (22 lb) adult dog at 2.5% eats about 250 grams of raw food a day; a 4.5 kg (10 lb) cat at 3% eats about 135 grams. Growing puppies and kittens need more (5–10% of body weight, decreasing as they mature). Neutered and less active adults sit at the low end (2%), intact or very active adults at the high end (3%). This percentage method is the standard starting point in raw feeding, then you adjust by body condition score — if the pet gains unwanted weight, reduce by 10%; if they get too thin, increase by 10%."}},{"@type":"Question","name":"What is the 80/10/10 raw feeding ratio?","acceptedAnswer":{"@type":"Answer","text":"The 80/10/10 ratio is shorthand for the Prey Model Raw (PMR) diet: 80% muscle meat, 10% edible raw bone, and 10% organ — where the organ portion splits into 5% liver and 5% other secreting organ such as kidney, spleen, or pancreas. It is often written 80/10/5/5. Each part is non-negotiable for a specific reason: muscle meat provides protein and calories; edible bone provides calcium to balance the phosphorus in meat (the calcium-to-phosphorus ratio drives bone health); liver provides vitamin A and B vitamins; and the second secreting organ provides minerals like iron, zinc and copper that muscle meat alone lacks. The model mimics the proportions of a whole prey animal."}},{"@type":"Question","name":"Is raw feeding safe?","acceptedAnswer":{"@type":"Answer","text":"Raw feeding carries a real pathogen risk that home cooking kills. Raw meat, poultry, and organ meat can carry Salmonella, Listeria, E. coli and parasites, which can infect both the pet and the humans handling the food. Raw diets are not recommended for households with infants, the elderly, pregnant people, or anyone immunocompromised. If you feed raw: source human-grade meat, freeze meat for at least 3 weeks before feeding (reduces parasite risk, though freezing does not reliably kill bacteria), handle raw meat with dedicated utensils, wash hands and surfaces thoroughly, and feed the meal promptly rather than leaving it out. Most important: have any homemade raw recipe reviewed by a board-certified veterinary nutritionist before you start —nutritional imbalance, not bacteria, is the most common cause of harm."}}]}</script>
@@ -84,6 +84,7 @@
       </div>
 
       <div class="result-card" id="result" style="display:block;"></div>
+      <button type="button" class="btn-primary" style="width:100%;margin-top:12px;" onclick="downloadCard()">📸 Save Recipe Card (PNG)</button>
     </div>
 
     <article class="article-section">
@@ -191,6 +192,9 @@
     cat: {'adult-neutered': 3.0, 'adult-intact': 3.0, 'puppy': 5.0, 'senior': 2.0, 'pregnant': 4.0}
   };
   var GOAL_ADJ = {'maintain': 0, 'lose': -0.5, 'gain': 0.5};
+  var STAGE_LABEL = {'adult-neutered': 'Adult · spayed / neutered', 'adult-intact': 'Adult · intact', 'puppy': 'Puppy / Kitten · growing', 'senior': 'Senior', 'pregnant': 'Pregnant / nursing'};
+  var GOAL_LABEL = {'maintain': 'Maintain weight', 'lose': 'Weight loss', 'gain': 'Weight gain'};
+  var lastPlan = null;
 
   function liveCalc() {
     var species = document.getElementById('species').value;
@@ -256,6 +260,9 @@
     var manganese = (der / 1000 * 1.5).toFixed(1);
     var taurine = species === 'cat' ? '250–500 mg (mandatory)' : '250–500 mg (optional)';
 
+    // Store for the recipe-card export
+    lastPlan = {species: species, emoji: species === 'cat' ? '🐱 CAT' : '🐶 DOG', stageLabel: STAGE_LABEL[stage], goalLabel: GOAL_LABEL[goal], dailyGrams: dailyGrams, muscle: muscle, bone: bone, liver: liver, organ: organ, taurine: taurine, vitE: vitE, fishOil: fishOil, zinc: zinc, manganese: manganese};
+
     html += '<div style="margin-top:16px;padding:12px 14px;background:#FAF8F4;border-radius:10px;border:1px solid #EFEBE3;text-align:left;">';
     html += '<div style="font-size:0.8rem;font-weight:700;color:var(--text-heading);margin-bottom:8px;">💊 Supplements (per day, starting ranges)</div>';
     html += suppRow('Taurine', taurine);
@@ -295,6 +302,107 @@
     return '<div style="display:flex;justify-content:space-between;gap:10px;font-size:0.8rem;padding:4px 0;border-bottom:1px dashed #EFEBE3;">' +
       '<span style="color:var(--text-muted);">' + name + '</span>' +
       '<span style="color:var(--text-heading);font-weight:700;text-align:right;">' + dose + '</span></div>';
+  }
+
+  function roundRect(ctx, x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+
+  function downloadCard() {
+    if (!lastPlan) return;
+    var p = lastPlan;
+    var C = document.createElement('canvas');
+    C.width = 1000; C.height = 1500;
+    var x = C.getContext('2d');
+
+    // background
+    x.fillStyle = '#FAF6EF'; x.fillRect(0, 0, 1000, 1500);
+    // header band
+    x.fillStyle = '#F6851B'; x.fillRect(0, 0, 1000, 120);
+    x.fillStyle = '#FFFFFF'; x.textAlign = 'left'; x.font = 'bold 44px Arial, sans-serif';
+    x.fillText('🐾 MeltPet', 48, 82);
+    x.textAlign = 'right'; x.font = '28px Arial, sans-serif';
+    x.fillText('Raw Food Calculator', 952, 80);
+
+    // species + stage
+    x.textAlign = 'center';
+    x.fillStyle = '#1F1F1F'; x.font = 'bold 46px Arial, sans-serif';
+    x.fillText(p.emoji, 500, 208);
+    x.fillStyle = '#6B6B6B'; x.font = '28px Arial, sans-serif';
+    x.fillText(p.stageLabel + '  ·  ' + p.goalLabel, 500, 250);
+
+    // big amount
+    x.fillStyle = '#F6851B'; x.font = 'bold 168px Arial, sans-serif';
+    x.fillText(Math.round(p.dailyGrams) + ' g', 500, 430);
+    x.fillStyle = '#6B6B6B'; x.font = '32px Arial, sans-serif';
+    x.fillText('per day  ·  ≈ ' + (p.dailyGrams / 28.35).toFixed(1) + ' oz  ·  2 meals', 500, 482);
+
+    // divider
+    x.strokeStyle = '#E5E1D8'; x.lineWidth = 3;
+    x.beginPath(); x.moveTo(80, 540); x.lineTo(920, 540); x.stroke();
+
+    // section label
+    x.fillStyle = '#1F1F1F'; x.font = 'bold 34px Arial, sans-serif';
+    x.fillText('PREY MODEL RAW  ·  80 / 10 / 5 / 5', 500, 600);
+
+    // breakdown rows
+    var rows = [
+      {name: 'Muscle meat', pct: '80%', g: p.muscle, c: '#C0392B'},
+      {name: 'Edible bone', pct: '10%', g: p.bone, c: '#B8A88A'},
+      {name: 'Liver', pct: '5%', g: p.liver, c: '#8E44AD'},
+      {name: 'Other organ', pct: '5%', g: p.organ, c: '#5D4E37'}
+    ];
+    var ry = 630;
+    rows.forEach(function(r) {
+      x.fillStyle = '#FFFFFF'; roundRect(x, 80, ry, 840, 128, 20); x.fill();
+      x.strokeStyle = '#E5E1D8'; x.lineWidth = 2; roundRect(x, 80, ry, 840, 128, 20); x.stroke();
+      x.fillStyle = r.c; roundRect(x, 112, ry + 34, 60, 60, 12); x.fill();
+      x.fillStyle = '#1F1F1F'; x.font = 'bold 42px Arial, sans-serif'; x.textAlign = 'left';
+      x.fillText(r.name, 200, ry + 76);
+      x.fillStyle = '#6B6B6B'; x.font = '28px Arial, sans-serif';
+      x.fillText(r.pct, 200, ry + 108);
+      x.fillStyle = r.c; x.font = 'bold 48px Arial, sans-serif'; x.textAlign = 'right';
+      x.fillText(Math.round(r.g) + ' g', 880, ry + 82);
+      ry += 150;
+    });
+
+    // supplements box
+    x.fillStyle = '#FFFFFF'; roundRect(x, 80, ry + 6, 840, 320, 20); x.fill();
+    x.strokeStyle = '#E5E1D8'; x.lineWidth = 2; roundRect(x, 80, ry + 6, 840, 320, 20); x.stroke();
+    x.fillStyle = '#1F1F1F'; x.font = 'bold 32px Arial, sans-serif'; x.textAlign = 'left';
+    x.fillText('Supplements (per day)', 112, ry + 54);
+    x.fillStyle = '#6B6B6B'; x.font = '26px Arial, sans-serif';
+    var sup = [
+      'Taurine: ' + p.taurine,
+      'Vitamin E: ' + p.vitE + ' IU',
+      'Omega-3 fish oil: ' + p.fishOil + ' mg EPA+DHA',
+      'Zinc: ' + p.zinc + ' mg   ·   Manganese: ' + p.manganese + ' mg',
+      'Iodine (kelp): start low, check the label'
+    ];
+    var sy = ry + 100;
+    sup.forEach(function(t) { x.fillText(t, 112, sy); sy += 42; });
+
+    // footer
+    x.fillStyle = '#6B6B6B'; x.font = '24px Arial, sans-serif'; x.textAlign = 'center';
+    x.fillText('Generated with the MeltPet raw food calculator', 500, 1420);
+    x.fillStyle = '#F6851B'; x.font = 'bold 28px Arial, sans-serif';
+    x.fillText('meltpet.com/raw-food-calculator', 500, 1456);
+
+    C.toBlob(function(blob) {
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'meltpet-raw-recipe-' + p.species + '.png';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function() { URL.revokeObjectURL(a.href); }, 2000);
+    }, 'image/png');
   }
 
   document.addEventListener('DOMContentLoaded', function() { liveCalc(); });
