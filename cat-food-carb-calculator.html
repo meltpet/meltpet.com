@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="theme-color" content="#F6851B">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cat Food Carbohydrate Calculator: Dry Matter Basis (2026) | MeltPet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Food Carbohydrate Calculator: Dry Matter Basis (2026) | MeltPet</title>
   <meta name="description" content="Most cat food labels don't list carbs. Enter the guaranteed analysis (protein, fat, fiber, ash, moisture) and see the real carbohydrate % on a dry matter basis — compare dry vs wet food fairly, and flag high-carb cat food.">
   <link rel="canonical" href="https://www.meltpet.com/cat-food-carb-calculator">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -70,24 +71,24 @@
       </select>
 
       <label for="moisture">💧 Moisture % <span style="color:var(--text-muted);font-weight:400;">— the number that makes labels misleading</span></label>
-      <input type="number" id="moisture" step="0.1" min="0" max="90" value="10" style="width:100%;margin-bottom:16px;text-align:center;font-size:1.15rem;font-weight:700;" oninput="liveCalc()" onfocus="this.select()">
+      <input type="number" id="moisture" step="0.1" min="0" max="90" value="10" style="width:100%;margin-bottom:16px;text-align:center;font-size:1.15rem;font-weight:700;" oninput="handleManualInput()" onfocus="this.select()">
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px;">
         <div>
           <label for="protein">🥩 Crude protein %</label>
-          <input type="number" id="protein" step="0.1" min="0" max="80" value="34" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="liveCalc()" onfocus="this.select()">
+          <input type="number" id="protein" step="0.1" min="0" max="80" value="34" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="handleManualInput()" onfocus="this.select()">
         </div>
         <div>
           <label for="fat">🧈 Crude fat %</label>
-          <input type="number" id="fat" step="0.1" min="0" max="60" value="16" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="liveCalc()" onfocus="this.select()">
+          <input type="number" id="fat" step="0.1" min="0" max="60" value="16" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="handleManualInput()" onfocus="this.select()">
         </div>
         <div>
           <label for="fiber">🌾 Crude fiber %</label>
-          <input type="number" id="fiber" step="0.1" min="0" max="20" value="4" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="liveCalc()" onfocus="this.select()">
+          <input type="number" id="fiber" step="0.1" min="0" max="20" value="4" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="handleManualInput()" onfocus="this.select()">
         </div>
         <div>
           <label for="ash">🦴 Ash % <span style="color:var(--text-muted);font-weight:400;">(estimate)</span></label>
-          <input type="number" id="ash" step="0.1" min="0" max="20" value="7" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="liveCalc()" onfocus="this.select()">
+          <input type="number" id="ash" step="0.1" min="0" max="20" value="7" style="width:100%;text-align:center;font-size:1.15rem;font-weight:700;" oninput="handleManualInput()" onfocus="this.select()">
         </div>
       </div>
       <p style="font-size:0.74rem;color:var(--text-muted);margin:0 0 4px;">💡 Ash isn't on most US labels — leave the estimate (≈7% dry, ≈2% wet).</p>
@@ -181,16 +182,29 @@
   <script defer src="tool-share.js?v=20260807"></script>
   <script>
   var PRESETS = {
-    'dry':   {moisture: 10, ash: 7},
-    'wet':   {moisture: 78, ash: 2},
-    'raw':   {moisture: 70, ash: 1.5},
-    'custom':{moisture: null, ash: null}
+    'dry':    {moisture: 10, ash: 7},
+    'wet':    {moisture: 78, ash: 2},
+    'raw':    {moisture: 70, ash: 1.5},
+    'custom': {moisture: null, ash: null}
   };
 
   function applyPreset() {
     var p = PRESETS[document.getElementById('foodType').value];
-    if (p.moisture !== null) document.getElementById('moisture').value = p.moisture;
-    if (p.ash !== null) document.getElementById('ash').value = p.ash;
+    if (p && p.moisture !== null) document.getElementById('moisture').value = p.moisture;
+    if (p && p.ash !== null) document.getElementById('ash').value = p.ash;
+    liveCalc();
+  }
+
+  function handleManualInput() {
+    var sel = document.getElementById('foodType');
+    if (sel && sel.value !== 'custom') {
+      var currentPreset = PRESETS[sel.value];
+      var currentMoisture = parseFloat(document.getElementById('moisture').value);
+      var currentAsh = parseFloat(document.getElementById('ash').value);
+      if (!currentPreset || currentMoisture !== currentPreset.moisture || currentAsh !== currentPreset.ash) {
+        sel.value = 'custom';
+      }
+    }
     liveCalc();
   }
 
@@ -203,17 +217,17 @@
     var ash = parseFloat(document.getElementById('ash').value);
     var resultDiv = document.getElementById('result');
 
-    if ([moisture, protein, fat, fiber, ash].some(isNaN)) {
-      resultDiv.innerHTML = '<p style="text-align:center;color:var(--text-muted);">Enter all five numbers to see the result.</p>';
+    if ([moisture, protein, fat, fiber, ash].some(function(v) { return isNaN(v) || v < 0; })) {
+      resultDiv.innerHTML = '<div style="text-align:center;padding:16px 0;color:var(--text-muted);">Please enter valid positive numbers for all five fields.</div>';
+      return;
+    }
+
+    if (moisture >= 100) {
+      resultDiv.innerHTML = '<div style="text-align:center;padding:16px 0;color:#DC2626;font-weight:700;">⚠️ Moisture % must be less than 100%.</div>';
       return;
     }
 
     var dm = 100 - moisture;
-    if (dm <= 0) {
-      resultDiv.innerHTML = '<p style="text-align:center;color:#DC2626;">Moisture must be under 100%.</p>';
-      return;
-    }
-
     var pDM = protein / dm * 100;
     var fDM = fat / dm * 100;
     var fiDM = fiber / dm * 100;
@@ -250,8 +264,8 @@
     // 3) Macronutrient stacked bar
     html += macroBar(pDM, fDM, carbDM, fiDM, aDM);
 
-    // 4) DM tiles
-    html += '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px;">';
+    // 4) DM tiles (Responsive adaptive grid)
+    html += '<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(75px, 1fr));gap:8px;margin-top:14px;">';
     html += dmCell('Protein', pDM, '#2563EB');
     html += dmCell('Fat', fDM, '#F59E0B');
     html += dmCell('Fiber', fiDM, '#9CA3AF');
@@ -269,8 +283,8 @@
   }
 
   function dmCell(label, val, accent) {
-    return '<div style="background:#FAF8F4;border-radius:10px;padding:10px 6px;border:1px solid #EFEBE3;">' +
-      '<div style="font-size:0.7rem;color:var(--text-muted);margin-bottom:3px;">' + label + '</div>' +
+    return '<div style="background:#FAF8F4;border-radius:10px;padding:10px 4px;border:1px solid #EFEBE3;text-align:center;min-width:0;">' +
+      '<div style="font-size:0.7rem;color:var(--text-muted);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + label + '</div>' +
       '<div style="font-size:1.15rem;font-weight:800;color:var(--text-heading);">' + val.toFixed(1) + '%</div>' +
       '<div style="height:3px;border-radius:2px;background:' + accent + ';margin-top:6px;"></div>' +
       '</div>';
