@@ -6,25 +6,32 @@ MeltPet is an independent, ad-free resource for pet owners who want real answers
 
 ---
 
-## What's Inside (~65 pages)
+## What's Inside (76 pages)
 
-### 🔧 Interactive Tools (10)
+### 🔧 Interactive Tools (12)
 Breed finders, cost calculators, food checkers, name generators — all client-side, no signup required.
 
-### 🐶 Dog Breed Guides (9)
-Golden Retriever · French Bulldog · German Shepherd · Labrador Retriever · Australian Shepherd · Dachshund · Poodle · Pembroke Welsh Corgi · Golden vs Labrador
+Flagship tools:
+- **Raw food / PMR calculator** — 80/10/5/5 gram split, supplements, safety guardrails, one-tap recipe card export
+- **Cat food carb calculator** — converts any guaranteed analysis to dry-matter basis and reveals the hidden carbs labels won't tell you
+
+### 🐶 Dog Breed Guides (8)
+Golden Retriever · French Bulldog · German Shepherd · Labrador Retriever · Australian Shepherd · Dachshund · Poodle · Pembroke Welsh Corgi
 
 ### 🐱 Cat Breed Guides (5)
 Maine Coon · Ragdoll · Bengal · Sphynx · British Shorthair
 
-### 🧠 Behavior Explainers (16)
-Why dogs howl · Why cats follow you to the bathroom · Why dogs stare · Why dogs eat grass · Midnight zoomies · Head tilts · Kneading · Tail wagging · Why cats sleep so much · Why cats love boxes · + more
+### 🧠 Behavior Explainers (17)
+Why dogs howl · Why cats follow you to the bathroom · Why dogs stare · Why dogs eat grass · Why dogs eat poop · Midnight zoomies · Head tilts · Kneading · Tail wagging · Why cats sleep so much · Why cats love boxes · + more
 
-### 🩺 Health & Training (14)
-Separation anxiety protocol · Dental care · Leash training · Fireworks calm · Cat vomiting color guide · Kidney disease prevention · DIY vs pro grooming · + more
+### 🩺 Health & Training (15)
+Separation anxiety protocol · Dental care · Leash training · Fireworks calm · Cat vomiting color guide · Kidney disease prevention · DIY vs pro grooming · New puppy checklist · Introducing a new cat · + more
 
-### 💰 Cost & Finance (8)
-First-year costs · Hidden costs · Pet insurance worth it · Monthly dog cost · Dog food comparison · Cat litter comparison · + more
+### 💰 Cost & Finance (10)
+First-year costs · Hidden costs · Pet insurance worth it · Monthly dog cost · Dog food comparison · Cat litter comparison · Adoption vs breeder · + more
+
+### ⚖️ Breed Comparisons (2)
+Golden Retriever vs Labrador · Maine Coon vs Ragdoll
 
 ---
 
@@ -32,9 +39,10 @@ First-year costs · Hidden costs · Pet insurance worth it · Monthly dog cost �
 
 - **Pure static HTML/CSS/JS** — no frameworks, no build step, no npm
 - **Cloudflare Pages** — global edge deployment
+- **R2 + cdn.meltpet.com** — images served from object storage, keeps deploys light
 - **nav.js** — single-source navigation engine (desktop dropdowns, mobile drawer, search index)
 - **Privacy-first analytics** — GA4 with Consent Mode; cookieless by default for EU/EEA/UK visitors
-- **~65 hand-written pages** — zero AI-generated content
+- **76 hand-written pages** — zero AI-generated content
 
 ---
 
