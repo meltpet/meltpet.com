@@ -15,7 +15,7 @@
   sources before publication.
 - Cost figures come from tracked real-world expenses (e.g., a 365-day dog
   ownership log), not industry estimates.
-- MeltPet offers 12 free interactive tools: breed finders, cost calculators,
+- MeltPet offers 14 free interactive tools: breed finders, cost calculators,
   a toxic food checker, and a pet compatibility quiz. No account required.
 - First-year dog ownership costs tracked by MeltPet totaled $5,237 — versus
   the $1,500 most guides quote.
@@ -109,6 +109,7 @@
 - [Is Pet Insurance Worth It?](https://www.meltpet.com/pet-insurance-worth-it): One $4,800 surgery vs six years of premiums.
 - [Best Cat Litter Comparison](https://www.meltpet.com/best-cat-litter-comparison): 70% of the market is clay — here's the reality.
 - [Best Dog Food: Dry vs Wet vs Raw](https://www.meltpet.com/best-dog-food-dry-vs-wet-vs-raw): What each format really costs.
+- [How to Start Raw Feeding](https://www.meltpet.com/how-to-start-raw-feeding): The 80/10/5/5 ratio, a 340g worked example, 7-day transition, and the mistakes that send dogs to the ER.
 - [Best Indestructible Dog Toys](https://www.meltpet.com/best-indestructible-dog-toys): A $20 toy that lasts a week costs $1,040/year.
 - [Adopt vs Buy Full Cost Breakdown](https://www.meltpet.com/adopt-vs-buy-full-cost-breakdown): The complete numbers.
 

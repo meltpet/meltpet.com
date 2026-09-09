@@ -111,6 +111,7 @@
             {title: '🧾 First Year Dog Cost: $5,237', href: '/first-year-dog-cost',            desktop: true, keywords: 'first year dog cost real receipt tracked expenses puppy supplies'},
             {title: '💵 Pet Insurance Worth It?',    href: '/pet-insurance-worth-it',           desktop: true, keywords: 'pet insurance worth it 2026 cost premium vs out of pocket real scenarios'},
             {title: '🍖 Best Dog Food Guide',        href: '/best-dog-food-dry-vs-wet-vs-raw',  desktop: true, keywords: 'best dog food dry vs wet vs raw kibble comparison nutrition label'},
+            {title: '🦴 How to Start Raw Feeding',    href: '/how-to-start-raw-feeding',         desktop: true, keywords: 'raw feeding start beginner guide 80 10 5 5 prey model PMR transition bone liver organ how to safe bacteria cost puppy'},
             {title: '🦴 Best Indestructible Dog Toys', href: '/best-indestructible-dog-toys',   desktop: true, keywords: 'best indestructible dog toys heavy chewers durable rubber nylon kong goughnuts benebone'},
             {title: '🐱 Best Cat Litter Comparison',  href: '/best-cat-litter-comparison',       desktop: true, keywords: 'best cat litter clumping crystal clay natural silica comparison'}
         ],

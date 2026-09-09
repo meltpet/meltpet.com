@@ -5,10 +5,36 @@
     <link>https://www.meltpet.com/</link>
     <description>Breed finder, cost calculators, and honest pet guides — researched by a team with combined experience in pet food, clinical research, and veterinary science. No AI fluff, no sponsored picks.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 14 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.meltpet.com/rss.xml" rel="self" type="application/rss+xml"/>
 
+    <!-- ══════ September 2026 ══════ -->
+    <item>
+      <title>How to Start Raw Feeding: The 80/10/5/5 Beginner's Guide</title>
+      <link>https://www.meltpet.com/how-to-start-raw-feeding</link>
+      <guid isPermaLink="true">https://www.meltpet.com/how-to-start-raw-feeding</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <description><![CDATA[<p>Raw isn't "just meat." A pet food insider's safe-start playbook: the 80/10/5/5 nutrient map, a worked 340g example for a 30 lb dog, a 7-day transition, the four mistakes that send dogs to the ER, and honest bacteria risk management.</p>]]></description>
+    </item>
+
     <!-- ══════ August 2026 ══════ -->
+    <item>
+      <title>Cat Food Carbohydrate Calculator: Dry Matter Basis</title>
+      <link>https://www.meltpet.com/cat-food-carb-calculator</link>
+      <guid isPermaLink="true">https://www.meltpet.com/cat-food-carb-calculator</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <description><![CDATA[<p>Most cat food labels don't list carbs. Enter the guaranteed analysis (protein, fat, fiber, ash, moisture) and see the real carbohydrate % on a dry matter basis — compare dry vs wet food fairly, and flag high-carb cat food.</p>]]></description>
+    </item>
+    <item>
+      <title>Raw Dog &amp; Cat Food Calculator: 80/10/10 Recipe Builder</title>
+      <link>https://www.meltpet.com/raw-food-calculator</link>
+      <guid isPermaLink="true">https://www.meltpet.com/raw-food-calculator</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <description><![CDATA[<p>Build a balanced raw diet for your dog or cat. Prey Model Raw (PMR) ratio — 80% muscle meat, 10% edible bone, 5% liver, 5% other organ — calculated to the gram for your pet's weight and life stage, plus supplement doses.</p>]]></description>
+    </item>
     <item>
       <title>Why Do Dogs Eat Poop? 1 in 6 Dogs Does It — The Paradox Study</title>
       <link>https://www.meltpet.com/why-do-dogs-eat-poop</link>
