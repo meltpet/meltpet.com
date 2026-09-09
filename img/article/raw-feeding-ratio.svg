@@ -10,16 +10,16 @@
   <text x="400" y="31" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">THE 80/10/5/5 NUTRIENT MAP — WHY THE RATIO MATTERS</text>
 
   <!-- Stacked bar -->
-  <text x="400" y="86" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#6B6B6B">Each slice exists because a specific nutrient lives in a specific tissue.</text>
+  <text x="400" y="74" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#6B6B6B">Each slice exists because a specific nutrient lives in a specific tissue.</text><g font-family="Arial,Helvetica,sans-serif"><text x="336" y="99" text-anchor="middle" font-size="15" font-weight="800" fill="#C0392B">80%</text><text x="639" y="99" text-anchor="middle" font-size="15" font-weight="800" fill="#6B4A1F">10%</text><text x="673" y="99" text-anchor="middle" font-size="13" font-weight="800" fill="#8E44AD">5%</text><text x="707" y="99" text-anchor="middle" font-size="13" font-weight="800" fill="#5D4E37">5%</text></g>
   <rect x="60" y="104" width="544" height="58" rx="10" fill="#C0392B"/>
-  <rect x="604" y="104" width="68" height="58" rx="0" fill="#D6B98C"/>
+  <rect x="602" y="104" width="2" height="58" fill="#FFFFFF"/><rect x="670" y="104" width="2" height="58" fill="#FFFFFF"/><rect x="704" y="104" width="2" height="58" fill="#FFFFFF"/><rect x="606" y="104" width="66" height="58" rx="0" fill="#D6B98C"/>
   <rect x="672" y="104" width="34" height="58" fill="#8E44AD"/>
   <rect x="706" y="104" width="34" height="58" rx="0 10 10 0" fill="#5D4E37"/>
   <rect x="60" y="104" width="680" height="58" rx="10" fill="none" stroke="#E5DFD2" stroke-width="1.5"/>
-  <text x="332" y="141" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">MUSCLE 80%</text>
-  <text x="638" y="141" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" fill="#6B4A1F">10%</text>
-  <text x="689" y="141" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11.5" font-weight="800" fill="#FFFFFF">5%</text>
-  <text x="723" y="141" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11.5" font-weight="800" fill="#FFFFFF" >5%</text>
+  <text x="332" y="141" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">MUSCLE MEAT</text>
+  
+  
+  
 
   <!-- Legend rows -->
   <g font-family="Arial,Helvetica,sans-serif">
