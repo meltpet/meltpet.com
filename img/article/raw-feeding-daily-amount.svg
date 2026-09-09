@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF9F2"/><stop offset="1" stop-color="#FAF3E6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect x="0" y="0" width="800" height="48" fill="#F6851B"/>
+  <text x="400" y="31" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">WHAT 340 G A DAY LOOKS LIKE — A 30 LB ADULT DOG</text>
+
+  <!-- Big number -->
+  <text x="400" y="112" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#6B6B6B">Daily total ≈ 2.5% of ideal body weight</text>
+  <text x="400" y="176" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="62" font-weight="800" fill="#F6851B">340 g</text>
+  <text x="400" y="203" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#6B6B6B">served across two meals — every single day, not on average</text>
+
+  <!-- Four amount cards -->
+  <g font-family="Arial,Helvetica,sans-serif">
+    <rect x="70" y="224" width="330" height="52" rx="10" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.5"/>
+    <circle cx="96" cy="250" r="7" fill="#C0392B"/>
+    <text x="114" y="256" font-size="15.5" font-weight="800" fill="#1F1F1F">272 g muscle meat (80%)</text>
+    <text x="386" y="256" text-anchor="end" font-size="15" font-weight="700" fill="#C0392B">thigh, heart</text>
+
+    <rect x="400" y="224" width="330" height="52" rx="10" fill="#FFFFFF" stroke="#D6B98C" stroke-width="1.5"/>
+    <circle cx="426" cy="250" r="7" fill="#D6B98C"/>
+    <text x="444" y="256" font-size="15.5" font-weight="800" fill="#1F1F1F">34 g edible bone (10%)</text>
+    <text x="716" y="256" text-anchor="end" font-size="15" font-weight="700" fill="#8A6A3C">necks, wings</text>
+
+    <rect x="70" y="286" width="330" height="52" rx="10" fill="#FFFFFF" stroke="#8E44AD" stroke-width="1.5"/>
+    <circle cx="96" cy="312" r="7" fill="#8E44AD"/>
+    <text x="114" y="318" font-size="15.5" font-weight="800" fill="#1F1F1F">17 g liver (5%)</text>
+    <text x="386" y="318" text-anchor="end" font-size="15" font-weight="700" fill="#8E44AD">vitamin A source</text>
+
+    <rect x="400" y="286" width="330" height="52" rx="10" fill="#FFFFFF" stroke="#5D4E37" stroke-width="1.5"/>
+    <circle cx="426" cy="312" r="7" fill="#5D4E37"/>
+    <text x="444" y="318" font-size="15.5" font-weight="800" fill="#1F1F1F">17 g other organ (5%)</text>
+    <text x="716" y="318" text-anchor="end" font-size="15" font-weight="700" fill="#5D4E37">kidney, spleen</text>
+  </g>
+
+  <rect x="70" y="360" width="660" height="68" rx="10" fill="#FFF7EC" stroke="#F6851B" stroke-width="1.5"/>
+  <text x="400" y="387" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14.5" font-weight="700" fill="#C2410C">Plus supplements matched to the recipe: vitamin E, omega-3, zinc, manganese, iodine.</text>
+  <text x="400" y="412" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" fill="#8A6A3C">Adjust by body condition, not appetite — use the MeltPet raw food calculator for your dog's exact weight.</text>
+</svg>

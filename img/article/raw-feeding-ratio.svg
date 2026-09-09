@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF9F2"/><stop offset="1" stop-color="#FAF3E6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="48" fill="#F6851B"/>
+  <text x="400" y="31" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">THE 80/10/5/5 NUTRIENT MAP — WHY THE RATIO MATTERS</text>
+
+  <!-- Stacked bar -->
+  <text x="400" y="86" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#6B6B6B">Each slice exists because a specific nutrient lives in a specific tissue.</text>
+  <rect x="60" y="104" width="544" height="58" rx="10" fill="#C0392B"/>
+  <rect x="604" y="104" width="68" height="58" rx="0" fill="#D6B98C"/>
+  <rect x="672" y="104" width="34" height="58" fill="#8E44AD"/>
+  <rect x="706" y="104" width="34" height="58" rx="0 10 10 0" fill="#5D4E37"/>
+  <rect x="60" y="104" width="680" height="58" rx="10" fill="none" stroke="#E5DFD2" stroke-width="1.5"/>
+  <text x="332" y="141" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">MUSCLE 80%</text>
+  <text x="638" y="141" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="800" fill="#6B4A1F">10%</text>
+  <text x="689" y="141" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11.5" font-weight="800" fill="#FFFFFF">5%</text>
+  <text x="723" y="141" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11.5" font-weight="800" fill="#FFFFFF" >5%</text>
+
+  <!-- Legend rows -->
+  <g font-family="Arial,Helvetica,sans-serif">
+    <circle cx="86" cy="207" r="9" fill="#C0392B"/>
+    <text x="106" y="212" font-size="17" font-weight="800" fill="#1F1F1F">80% Muscle meat</text>
+    <text x="352" y="212" font-size="14" fill="#6B6B6B">thigh, chuck, heart, gizzard — protein, B vitamins, phosphorus</text>
+
+    <circle cx="86" cy="252" r="9" fill="#D6B98C"/>
+    <text x="106" y="257" font-size="17" font-weight="800" fill="#1F1F1F">10% Edible bone</text>
+    <text x="352" y="257" font-size="14" fill="#6B6B6B">necks, wings, soft ribs — calcium; sets the Ca:P ratio</text>
+
+    <circle cx="86" cy="297" r="9" fill="#8E44AD"/>
+    <text x="106" y="302" font-size="17" font-weight="800" fill="#1F1F1F">5% Liver</text>
+    <text x="352" y="302" font-size="14" fill="#6B6B6B">vitamin A, copper, iron — over 5–7% becomes toxic</text>
+
+    <circle cx="86" cy="342" r="9" fill="#5D4E37"/>
+    <text x="106" y="347" font-size="17" font-weight="800" fill="#1F1F1F">5% Other secreting organ</text>
+    <text x="352" y="347" font-size="14" fill="#6B6B6B">kidney, spleen, pancreas — trace minerals most skip</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="60" y="382" width="680" height="48" rx="10" fill="#FFF7EC" stroke="#F6851B" stroke-width="1.5"/>
+  <text x="400" y="412" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" fill="#C2410C">A whole-prey starting framework — not a certificate of completeness.</text>
+</svg>
