@@ -17,6 +17,17 @@
     // Don't load GA in dev / localhost
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') return;
 
+    // Don't load GA from automated browsers. Headless QA runs and SEO crawlers otherwise
+    // send real page_views: a fresh browser profile each run counts as a brand-new user,
+    // no referrer files it under (direct)/(none), and an instant exit yields ~0s
+    // engagement — which corrupts the new-user ratio, engagement time and source reports.
+    // The UA list is deliberately explicit instead of a loose /bot/ pattern, because
+    // "bot" appears inside real device UAs (e.g. CUBOT phones) and would drop real users.
+    // NOTE: navigator.webdriver alone is not enough — it is FALSE under Chrome
+    // --headless=new, so the UA token "HeadlessChrome" is the only reliable signal.
+    var _ua = navigator.userAgent || '';
+    if (/HeadlessChrome|Headless|Puppeteer|Playwright|PhantomJS|Lighthouse|Chrome-Lighthouse|Googlebot|bingbot|YandexBot|DuckDuckBot|Baiduspider|AhrefsBot|SemrushBot|MJ12bot|DotBot|PetalBot/i.test(_ua) || navigator.webdriver === true) return;
+
     // ── Consent State ──
     var stored = null;
     try { stored = JSON.parse(localStorage.getItem(CONSENT_KEY)); } catch(e) {}
