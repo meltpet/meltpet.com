@@ -110,6 +110,90 @@
         });
     }
 
+    // ── Outbound + affiliate click tracking ──
+    // Why this exists: GA4 was only ever sending page_view, so the reports answered
+    // "how many people read this page" and nothing else. Amazon's own report gives
+    // clicks per tracking tag — one number for the whole site — so "which article
+    // actually earns" was unanswerable from either side. Every affiliate decision
+    // (where a link sits, which product to feature, whether to bother with a merchant)
+    // was therefore unverifiable.
+    //
+    // Delegated from the document on purpose: one listener covers every <a> on the page,
+    // including markup added later, and no per-link attribute has to stay in sync across
+    // 77 files. Note this is capture phase, so it still runs if another handler
+    // stopPropagation()s the event.
+    //
+    // transport_type:'beacon' is the part that matters. The visitor is navigating away in
+    // the same tick as the click; a normal XHR hit gets cancelled mid-flight and the click
+    // is silently lost. Beacon survives the unload.
+    var PARTNERS = {
+        'amazon.com': 'Amazon Associates',
+        'amzn.to': 'Amazon Associates',
+        'trupanion.com': 'Trupanion',
+        'healthypawspetinsurance.com': 'Healthy Paws',
+        'lemonade.com': 'Lemonade',
+        'prettylitter.com': 'PrettyLitter',
+        'tractorsupply.com': 'Tractor Supply'
+    };
+
+    function bareHost(host) {
+        return String(host || '').toLowerCase().replace(/^www\./, '');
+    }
+
+    function partnerFor(host) {
+        for (var key in PARTNERS) {
+            if (host === key || host.slice(-(key.length + 1)) === '.' + key) return PARTNERS[key];
+        }
+        return '';
+    }
+
+    // How far down the page the clicked link sat, 0-100. This is the number that tells us
+    // whether burying every buy link in the last 30% of the article is costing clicks.
+    function depthPct(anchor) {
+        try {
+            var rect = anchor.getBoundingClientRect();
+            var full = document.documentElement ? document.documentElement.scrollHeight : 0;
+            if (!full || !rect) return -1;
+            var top = rect.top + (window.pageYOffset || 0);
+            return Math.max(0, Math.min(100, Math.round(top / full * 100)));
+        } catch (e) { return -1; }
+    }
+
+    function reportClick(e) {
+        // Declining consent deletes window.gtag; no gtag means we stay dark. Nothing to do.
+        if (!window.gtag) return;
+        var anchor = e.target && e.target.closest ? e.target.closest('a') : null;
+        if (!anchor) return;
+
+        var href = anchor.href || anchor.getAttribute('href') || '';
+        if (!/^https?:\/\//i.test(href)) return;
+
+        var host;
+        try { host = bareHost(new URL(href, window.location.href).hostname); }
+        catch (err) { return; }
+        if (host === bareHost(window.location.hostname)) return;   // internal navigation
+
+        var partner = partnerFor(host);
+        var params = {
+            transport_type: 'beacon',
+            link_domain: host,
+            link_url: href,
+            link_text: (anchor.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 100),
+            link_position_pct: depthPct(anchor),
+            affiliate_partner: partner,
+            link_type: partner ? 'partner' : 'outbound'
+        };
+
+        // Amazon links carry two very different intents. A /dp/ link names one product the
+        // reader has already decided about; a /s?k= link drops them on a results page we
+        // control nothing about. Splitting them is how we find out if that matters.
+        var asin = /\/dp\/([A-Z0-9]{10})/.exec(href);
+        if (asin) { params.asin = asin[1]; params.link_type = 'product'; }
+        else if (/\/s\?/.test(href)) { params.link_type = 'search'; }
+
+        window.gtag('event', partner ? 'affiliate_click' : 'outbound_click', params);
+    }
+
     // ── Consent Banner (minimal, non-blocking) ──
     function showBanner() {
         var banner = document.createElement('div');
@@ -146,6 +230,12 @@
 
     // ── Init ──
     loadGA4();
+
+    // Capture phase, so a later stopPropagation() can't hide a click. 'auxclick' catches
+    // middle-click and cmd-click, which fire there instead of 'click' and would otherwise
+    // be invisible — those open a background tab and are a real share of affiliate traffic.
+    document.addEventListener('click', reportClick, true);
+    document.addEventListener('auxclick', reportClick, true);
 
     if (hasValidConsent()) {
         updateConsent(true);
