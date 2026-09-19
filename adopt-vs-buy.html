@@ -169,12 +169,12 @@
   var adoptLifetime = adoptFee + annualA * life;
   var buyLifetime = breederPrice + annualB * life;
   var html = '<h4>📊 Cost Comparison</h4>';
-  html += '<table><tr><th></th><th>🏠 Adoption</th><th>🏡 Breeder</th></tr>';
+  html += '<div class="table-scroll"><table><tr><th></th><th>🏠 Adoption</th><th>🏡 Breeder</th></tr>';
   html += '<tr><td>Acquisition</td><td><strong>$' + adoptFee.toLocaleString() + '</strong></td><td><strong>$' + breederPrice.toLocaleString() + '</strong></td></tr>';
   html += '<tr><td>First Year Total</td><td><strong>$' + adoptYr1.toLocaleString() + '</strong></td><td><strong>$' + buyYr1.toLocaleString() + '</strong></td></tr>';
   html += '<tr><td>Annual (after year 1)</td><td><strong>$' + annualA.toLocaleString() + '</strong></td><td><strong>$' + annualB.toLocaleString() + '</strong></td></tr>';
   html += '<tr style="border-top:2px solid var(--accent);"><td><strong>Lifetime (~' + life + ' yr)</strong></td><td><strong>$' + adoptLifetime.toLocaleString() + '</strong></td><td><strong>$' + buyLifetime.toLocaleString() + '</strong></td></tr>';
-  html += '<tr><td><strong>Difference</strong></td><td colspan="2" style="color:var(--accent);"><strong>$' + Math.abs(buyLifetime - adoptLifetime).toLocaleString() + ' more via breeder</strong></td></tr></table>';
+  html += '<tr><td><strong>Difference</strong></td><td colspan="2" style="color:var(--accent);"><strong>$' + Math.abs(buyLifetime - adoptLifetime).toLocaleString() + ' more via breeder</strong></td></tr></table></div>';
   html += '<p style="font-size:0.83rem;color:var(--text-muted);margin-top:8px;">Based on ' + pet.replace('-',' ') + '  ' + care + ' care. Emergency costs and travel boarding not included.</p>';
   document.getElementById('result').innerHTML = html;
   document.getElementById('result').style.display = 'block';

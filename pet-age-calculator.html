@@ -65,7 +65,7 @@
   <div id="dogSizeGroup">
   <fieldset>
   <legend>Dog size</legend>
-  <div class="quiz-options" id="sizePicker" style="grid-template-columns: repeat(4, 1fr); margin-bottom:18px;">
+  <div class="quiz-options size-picker" id="sizePicker" style="margin-bottom:18px;">
   <div class="quiz-option selected" data-size="small" onclick="pickSize(this)">🐾 Small<br><span style="font-size:0.7rem;font-weight:400;">&lt; 20 lbs</span></div>
   <div class="quiz-option" data-size="medium" onclick="pickSize(this)">🐕 Medium<br><span style="font-size:0.7rem;font-weight:400;">20–50 lbs</span></div>
   <div class="quiz-option" data-size="large" onclick="pickSize(this)"> Large<br><span style="font-size:0.7rem;font-weight:400;">50–100 lbs</span></div>
@@ -99,7 +99,7 @@
   <p>For decades people have parroted: "one dog year equals seven human years." This number has no scientific basis. It came from dividing an average human lifespan (roughly 70 years) by an average dog lifespan (roughly 10 years) —pure bad arithmetic dressed up as biology.</p>
   <p>The reality: dogs and cats don't age like a straight line. They do most of their development in year one, then slow down. A 1-year-old dog is closer to a 15-year-old human than a 7-year-old. A 2-year-old dog is about 24 in human terms —not 14. And from year three onward, the rate differs dramatically by size: small breeds add about 4 human years per calendar year, while giant breeds add 7 or more.</p>
   <p>This calculator uses the formula adopted by the American Veterinary Medical Association and refined by a <a href="https://www.cell.com/cell-systems/fulltext/S2405-4712(20)30203-9" target="_blank" rel="noopener">2020 study in <em>Cell Systems</em></a> that mapped DNA methylation patterns —the epigenetic clock —across 104 Labrador Retrievers and compared them to humans. The result is the most accurate human-age equivalent we have.</p>
-  <table style="margin-top:18px;">
+  <div class="table-scroll" style="margin-top:18px;margin-bottom:32px"><table>
   <thead><tr><th>Pet Age</th><th>Small Dog (&lt;20 lbs)</th><th>Medium Dog (20–50)</th><th>Large Dog (50–100)</th><th>Giant Dog (&gt;90)</th><th>Cat</th></tr></thead>
   <tbody>
   <tr><td>1 year</td><td>15</td><td>15</td><td>15</td><td>15</td><td>15</td></tr>
@@ -108,7 +108,7 @@
   <tr><td>10 years</td><td>56</td><td>64</td><td>72</td><td>80</td><td>56</td></tr>
   <tr><td>15 years</td><td>76</td><td>89</td><td>102</td><td>115</td><td>76</td></tr>
   </tbody>
-  </table>
+  </table></div>
   <p style="font-size:0.78rem;color:var(--text-muted);">Table: approximate human-age equivalents using the modern veterinary formula. Actual aging varies by genetics, diet, and healthcare —same as it does in humans.</p>
   </div>
 

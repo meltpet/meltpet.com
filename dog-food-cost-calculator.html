@@ -102,7 +102,7 @@
   <article class="article-section">
   <h2>📊 What's Normal by Dog Size</h2>
   <p>These are real monthly ranges based on 2026 national average prices. Your actual cost depends on where you shop and whether you buy in bulk.</p>
-  <table>
+  <div class="table-scroll"><table>
   <thead><tr><th>Dog Weight</th><th>Daily Calories</th><th>Economy Kibble</th><th>Premium Kibble</th><th>Wet Only</th><th>Raw / Fresh</th></tr></thead>
   <tbody>
   <tr><td>5 lbs</td><td>120–160</td><td>$8–12</td><td>$14–22</td><td>$30–40</td><td>$40–50</td></tr>
@@ -114,7 +114,7 @@
   <tr><td>90 lbs</td><td>1,250–1,550</td><td>$55–65</td><td>$90–145</td><td>$220–250</td><td>$320–400</td></tr>
   <tr><td>120 lbs</td><td>1,600–1,950</td><td>$70–110</td><td>$115–185</td><td>$280–350</td><td>$400–420</td></tr>
   </tbody>
-  </table>
+  </table></div>
   <p style="font-size:0.83rem;color:var(--text-muted);">All figures assume adult maintenance —puppies need roughly 2 calories per pound during growth phases. Prices based on Chewy/Amazon national averages, Q2 2026.</p>
   </article>
 
@@ -232,9 +232,9 @@
 
   var html = '<h4>🐕 Monthly Food Cost: <span style="color:var(--accent);">$' + low.toLocaleString() + '—' + high.toLocaleString() + '</span></h4>';
   html += '<p style="margin-bottom:16px;">Most likely: <strong>$' + mid.toLocaleString() + '/month</strong> for a <strong>' + wt + '-pound dog</strong> on <strong>' + document.getElementById('foodType').selectedOptions[0].text + '</strong>.</p>';
-  html += '<table><thead><tr><th>Food Type</th><th>Est. Monthly</th><th>Range</th></tr></thead><tbody>';
+  html += '<div class="table-scroll"><table><thead><tr><th>Food Type</th><th>Est. Monthly</th><th>Range</th></tr></thead><tbody>';
   html += compareHtml;
-  html += '</tbody></table>';
+  html += '</tbody></table></div>';
 
   // Savings callout
   if (ft !== 'raw-commercial' && savingsVsRaw > 0) {

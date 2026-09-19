@@ -249,6 +249,11 @@ body.dark-theme .article-section blockquote {
 .quiz-step { margin-bottom: 32px; }
 .quiz-step h3 { font-size: 1.3rem; margin-bottom: 16px; color: var(--brand-dark); }
 .quiz-options { display: grid; gap: 12px; }
+/* Four size choices sit in one row on desktop; the column count lives here, not in an
+   inline style, so the mobile breakpoint can bring it down to 2×2. Four columns of
+   "🐾 Small / 50–100 lbs" need ~476px and would otherwise widen the page, and a
+   <fieldset> stretch-wraps around its widest child, so the whole tool box grew with it. */
+.size-picker { grid-template-columns: repeat(4, 1fr); }
 .quiz-option { padding: 16px 20px; border: 2px solid var(--border-light); border-radius: var(--radius-md); cursor: pointer; font-weight: 600; font-size: 1.05rem; transition: all 0.2s ease; background: var(--bg-surface); }
 .quiz-option:hover { border-color: var(--brand-accent); background: var(--brand-soft); transform: translateY(-2px); }
 .quiz-option.selected { border-color: var(--brand-accent); background: var(--brand-accent); color: #fff; }
@@ -261,6 +266,26 @@ table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 0.95r
 th, td { padding: 16px; text-align: left; border-bottom: 1px solid var(--border-light); }
 th { background: #f8fafc; font-weight: 700; color: var(--brand-dark); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
 tr:last-child td { border-bottom: none; }
+
+/* A table box is display:table, and `overflow` does NOT apply to table boxes — so a
+   table wider than the screen cannot scroll on its own. Without a block-level wrapper
+   it either widens the whole document (page-wide horizontal scrollbar) or gets silently
+   sliced off by an ancestor's overflow:hidden. Every <table> therefore sits inside this
+   wrapper, which IS a block container, so the table scrolls within the column. */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; margin: 32px 0; }
+/* The table inside keeps no vertical margin: a scroll container is a block formatting
+   context, so margins inside it cannot collapse with the neighbouring blocks' margins.
+   `max(prev margin-bottom, table margin-top)` would silently become a sum (~20px of dead
+   space above every table on desktop). The wrapper is an ordinary block whose margins
+   collapse normally, so it carries the vertical rhythm instead. */
+.table-scroll > table { margin-top: 0; margin-bottom: 0; }
+
+/* CTA pair at the end of the behaviour articles (legacy class name kept for markup
+   compatibility). auto-fit + minmax keeps the two cards side by side while there is
+   room and collapses to one column when there is not, so the nowrap buttons inside
+   can never push the page wider. */
+.social-share-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.social-share-bar .btn-primary { width: auto; }   /* beats the mobile width:100% rule */
 
 /* FAQs */
 .faq-item { margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--border-light); }
@@ -409,6 +434,11 @@ body.mobile-nav-open { overflow: hidden; }
     .cta-group { flex-direction: column; }
     .btn-primary, .btn-secondary { width: 100%; }
     .guide-grid { grid-template-columns: 1fr; }
+    /* Tighter cells so most tables fit the screen instead of needing a sideways swipe */
+    table { font-size: 0.85rem; }
+    th, td { padding: 10px 12px; }
+    th { font-size: 0.78rem; letter-spacing: 0.3px; }
+    .size-picker { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ── 12. Related Articles Section ── */
@@ -446,6 +476,8 @@ body.mobile-nav-open { overflow: hidden; }
     .container { width: 100% !important; max-width: none !important; padding: 0 !important; margin: 0 !important; }
     h1, h2, h3 { page-break-after: avoid; color: #000 !important; }
     img, table, figure { page-break-inside: avoid; border: 1px solid #ccc; }
+    /* Paper cannot scroll: let a wide table spill rather than clip it inside the wrapper */
+    .table-scroll { overflow: visible; }
     a { text-decoration: none !important; color: #000 !important; }
     /* 强行挂载带网址的实体锚文本 */
     a[href^="/"]::after { content: " (www.meltpet.com" attr(href) ")"; font-size: 0.85em; color: #555; }
