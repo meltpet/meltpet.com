@@ -11,7 +11,7 @@
   <!-- Big number -->
   <text x="400" y="86" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12.5" fill="#6B6B6B">Daily total ≈ 2.5% of ideal body weight</text>
   <text x="400" y="150" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="56" font-weight="800" fill="#F6851B">340 g</text>
-  <text x="400" y="176" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#6B6B6B">served across two meals — every single day, not on average</text>
+  <text x="400" y="182" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#6B6B6B">served across two meals — every single day, not on average</text>
 
   <!-- Four amount cards (two-line layout: main + example) -->
   <g font-family="Arial,Helvetica,sans-serif">
