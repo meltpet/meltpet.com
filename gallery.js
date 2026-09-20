@@ -126,7 +126,11 @@
     if (state.tag) p.set('tag', state.tag);
     if (state.sort !== 'recent') p.set('sort', state.sort);
     var qs = p.toString();
-    var url = location.pathname + (qs ? '?' + qs : '');
+    // 🔴 必须把 #pin=<slug> 深链带上。历史实现写的是 location.pathname + search，
+    //    replaceState 会把 hash 一起抹掉 —— 结果弹层还开着，但地址栏的深链没了，
+    //    用户此刻复制链接得到的是一个不指向这张图的 URL。
+    var hash = location.hash.indexOf('#pin=') === 0 ? location.hash : '';
+    var url = location.pathname + (qs ? '?' + qs : '') + hash;
     try { history.replaceState(null, '', url); } catch (e) { /* file:// 下会抛，忽略 */ }
   }
 
@@ -222,6 +226,9 @@
       btn.type = 'button';
       btn.className = 'pin-chip pin-chip-sm' + (state.tag === t.value ? ' is-active' : '');
       btn.dataset.value = t.value;
+      // 主题/宠物 chip 有 aria-pressed，标签 chip 也必须有 ——
+      // 否则屏幕阅读器用户听不出当前选中了哪个标签（纯视觉的 is-active 对它无效）
+      btn.setAttribute('aria-pressed', state.tag === t.value ? 'true' : 'false');
       btn.textContent = '#' + prettyTag(t.value);
       btn.addEventListener('click', function () {
         state.tag = state.tag === t.value ? '' : t.value;
@@ -243,6 +250,8 @@
     var card = document.createElement('article');
     card.className = 'pin-card';
     card.dataset.slug = post.slug;
+    // 容器是 role="list"，卡片必须声明 listitem，否则列表结构不完整
+    card.setAttribute('role', 'listitem');
 
     var media = document.createElement('button');
     media.type = 'button';
@@ -286,7 +295,9 @@
     var body = document.createElement('div');
     body.className = 'pin-card-body';
 
-    var title = document.createElement('h2');
+    // h3 而不是 h2：板块已经有 sr-only 的 h2「Pins」，
+    // 24 张卡片若都用 h2 会把文档大纲冲成 24 个并列顶级标题。
+    var title = document.createElement('h3');
     title.className = 'pin-card-title';
     title.textContent = post.title;
     body.appendChild(title);
@@ -386,7 +397,14 @@
   // ── 信息流加载 ────────────────────────────────────────────────────────────
 
   function loadFeed(reset) {
-    if (state.loading) return;
+    if (state.loading) {
+      // 🔴 加载中又来了请求（用户手快，连点两个筛选 chip）：
+      //    旧的实现直接 return，把这次点击**静默吞掉** —— 表现为「点了没反应」，
+      //    而筛选项已经变了、地址栏也变了，界面和状态开始对不上。
+      //    改成记一个待办，本轮结束后补跑一次。只要是 reset 就一定要重跑（不能降级成 append）。
+      state.pendingReset = state.pendingReset || !!reset;
+      return;
+    }
     state.loading = true;
     if (reset) {
       state.offset = 0;
@@ -441,6 +459,11 @@
         state.loading = false;
         els.moreBtn.disabled = false;
         els.moreBtn.textContent = 'Load more pins';
+        // 补跑被吞掉的那次刷新（先清标记再递归，否则会无限循环）
+        if (state.pendingReset) {
+          state.pendingReset = false;
+          loadFeed(true);
+        }
       });
   }
 
@@ -538,12 +561,77 @@
   // ── 弹层 ──────────────────────────────────────────────────────────────────
 
   var modalState = { slug: '', post: null };
+  // 打开弹层前焦点在哪，关闭时要还回去（键盘用户否则会被丢回页面顶部）
+  var lastFocused = null;
+
+  /** 弹层内当前可聚焦的可见元素。 */
+  function focusables(root) {
+    var sel = 'a[href], button:not([disabled]), input:not([disabled]), '
+      + 'textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    return Array.prototype.filter.call(root.querySelectorAll(sel), function (el) {
+      return !el.hidden && el.offsetParent !== null;
+    });
+  }
+
+  /**
+   * 弹层的键盘行为。
+   *
+   * 🔴 为什么必须自己做：`aria-modal="true"` 只是**声明**，浏览器不会因此
+   *    把 Tab 关在弹层里。没有这段代码，键盘用户按几下 Tab 就跑到背后
+   *    那 24 张卡片上了，而视觉上他还在弹层里 —— 这是真正的「看不见的陷阱」。
+   */
+  function onModalKeydown(ev) {
+    if (els.modal.hidden) return;
+    if (ev.key === 'Escape') { ev.preventDefault(); closeModal(); return; }
+    if (ev.key !== 'Tab' || !els.modalCard) return;
+    var list = focusables(els.modalCard);
+    if (!list.length) return;
+    var first = list[0];
+    var last = list[list.length - 1];
+    var active = document.activeElement;
+    // 焦点在对话框本体上（就是刚打开时的状态，tabindex="-1"）：
+    // 它**不在 Tab 序列里**，交给浏览器就等于「跳到弹层外面」——
+    // 尤其 Shift+Tab，会去找 DOM 里它前面的可聚焦元素，也就是背景那 24 张卡。
+    // 所以这一档必须自己接住。写这段时是靠断言才发现的（原生行为反直觉）。
+    if (active === els.modalCard) {
+      ev.preventDefault();
+      (ev.shiftKey ? last : first).focus();
+      return;
+    }
+    if (ev.shiftKey) {
+      // Shift+Tab 在第一个元素（或焦点已丢到弹层外）时绕回最后一个
+      if (active === first || !els.modalCard.contains(active)) { ev.preventDefault(); last.focus(); }
+    } else if (active === last || !els.modalCard.contains(active)) {
+      ev.preventDefault();
+      first.focus();
+    }
+  }
+
+  /** 找到某张卡片上的「打开」按钮 —— 焦点还原的目标。 */
+  function triggerFor(slug) {
+    var cards = document.querySelectorAll('.pin-card');
+    for (var i = 0; i < cards.length; i++) {
+      if (cards[i].dataset.slug === slug) return cards[i].querySelector('.pin-card-media');
+    }
+    return null;
+  }
 
   function openModal(slug) {
     modalState.slug = slug;
     modalState.post = null;
+    // 记下「从哪儿打开的」，关闭时把焦点还回去。
+    // ⚠️ 不能只认 document.activeElement：深链（#pin=xxx 直接进页面）打开时
+    //    焦点还在 body 上，body.focus() 等于没还原，键盘用户会被丢回页面开头。
+    //    这种情况退回到按 slug 找到的卡片按钮。
+    var active = document.activeElement;
+    lastFocused = (active && active.focus && active !== document.body && active !== document.documentElement)
+      ? active
+      : triggerFor(slug);
     els.modal.hidden = false;
     document.body.classList.add('pin-modal-open');
+    // 焦点移入对话框本体（tabindex="-1" + aria-labelledby，屏幕阅读器会念出标题）。
+    // 不直接聚焦关闭按钮：那会让 SR 一开口就是 "Close"，听不出打开了什么。
+    if (els.modalCard) { try { els.modalCard.focus(); } catch (e) { /* ignore */ } }
     els.modalImage.removeAttribute('src');
     els.modalTitle.textContent = 'Loading…';
     els.modalDesc.textContent = '';
@@ -645,6 +733,11 @@
     els.modal.hidden = true;
     document.body.classList.remove('pin-modal-open');
     modalState.slug = '';
+    // 焦点还给触发它的那张卡片，键盘用户才能接着往下翻
+    if (lastFocused && lastFocused.focus) {
+      try { lastFocused.focus(); } catch (e) { /* 元素可能已被重渲染移除 */ }
+    }
+    lastFocused = null;
     try {
       if (location.hash.indexOf('#pin=') === 0) history.replaceState(null, '', location.pathname + location.search);
     } catch (e) { /* ignore */ }
@@ -758,6 +851,7 @@
       sortSelect: $('sortSelect'),
       resetBtn: $('resetBtn'),
       modal: $('pinModal'),
+      modalCard: document.querySelector('.pin-modal-card'),
       modalImage: $('pinModalImage'),
       modalTitle: $('pinModalTitle'),
       modalDesc: $('pinModalDesc'),
@@ -800,9 +894,7 @@
     els.modal.addEventListener('click', function (ev) {
       if (ev.target.dataset && ev.target.dataset.close) closeModal();
     });
-    document.addEventListener('keydown', function (ev) {
-      if (ev.key === 'Escape' && !els.modal.hidden) closeModal();
-    });
+    document.addEventListener('keydown', onModalKeydown);
     els.likeBtn.addEventListener('click', function () {
       if (modalState.slug) toggle('like', modalState.slug, null, els.likeBtn, 'likes');
     });

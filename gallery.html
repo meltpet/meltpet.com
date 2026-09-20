@@ -84,7 +84,11 @@
 
   <div class="pin-notice" id="pinNotice" hidden role="status"></div>
 
-  <div class="pin-masonry" id="pinMasonry"></div>
+  <!-- sr-only 的板块标题：瀑布流本身是一组卡片，需要一个可访问名，
+       否则屏幕阅读器只会念出一串并列的卡片标题、没有任何上下文。
+       卡片标题用 h3，所以层级是 h1（页面）→ h2（Pins）→ h3（每张卡）。 -->
+  <h2 class="sr-only" id="pinBoardHeading">Pins</h2>
+  <div class="pin-masonry" id="pinMasonry" role="list" aria-labelledby="pinBoardHeading"></div>
 
   <div class="pin-empty" id="pinEmpty" hidden>
     <p class="pin-empty-emoji" aria-hidden="true">🐾</p>
@@ -157,7 +161,7 @@
   <!-- ── 图片详情弹层（瀑布流点击后打开；评论也在这里）────────────────────── -->
   <div class="pin-modal" id="pinModal" hidden>
     <div class="pin-modal-backdrop" data-close="1"></div>
-    <div class="pin-modal-card" role="dialog" aria-modal="true" aria-labelledby="pinModalTitle">
+    <div class="pin-modal-card" role="dialog" aria-modal="true" aria-labelledby="pinModalTitle" tabindex="-1">
       <button type="button" class="pin-modal-close" data-close="1" aria-label="Close">✕</button>
       <div class="pin-modal-media">
         <!-- 不要写 src=""：空字符串会被解析成「当前页面 URL」并真的发一次请求
