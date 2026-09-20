@@ -35,6 +35,11 @@
     //    任何新增的一等导航项（文字 ≈55px + 28px 间距）都会在 769–1024px 把
     //    .nav-links 顶到 .nav-actions 上并撑宽文档。放进现有下拉菜单是零宽度成本的，
     //    一样是 79 页都有入口。要升级成一等项，得先重排页头标签并做全宽度回归。
+    //
+    //    2026-09-20 补充：站长反馈「首页找不到画廊入口」——下拉菜单在首屏是不可见的，
+    //    等于没有入口（首页正文原先 gallery 出现 0 次）。已在 index.html 的 hero-bento
+    //    下方加了 .gallery-banner 入口卡片。**改首页时别把它删掉**；
+    //    要改它的样式看 style.css 的「4b. Pin Gallery Banner」。
     var NAV_SECTIONS = {
         tools: [
             {title: '🖼️ Pin Gallery',               href: '/gallery',                     desktop: true, keywords: 'pin gallery picture board image visual cheat sheet infographic save share pinterest dog cat'},

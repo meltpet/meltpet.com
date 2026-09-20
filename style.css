@@ -140,6 +140,39 @@ h3, h4, h5 { font-family: var(--font-sans); color: var(--text-heading); }
 .bento-tool p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0; }
 .bento-icon { font-size: 2.2rem; margin-bottom: 20px; display: inline-block; }
 
+/* ── 4b. Pin Gallery Banner（首页图库入口，见 nav.js 顶部注释）── */
+.gallery-banner {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 28px;
+    margin: 0 0 64px 0;
+    padding: 28px 32px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    background: linear-gradient(115deg, rgba(246, 133, 27, 0.12) 0%, var(--bg-surface) 58%);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gallery-banner:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: rgba(246, 133, 27, 0.28); }
+body.dark-theme .gallery-banner { background: linear-gradient(115deg, rgba(246, 133, 27, 0.16) 0%, var(--bg-surface) 58%); }
+.gallery-banner-icon { font-size: 2.6rem; line-height: 1; }
+.gallery-banner-body { min-width: 0; }
+.gallery-banner-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-heading); margin: 8px 0 8px; }
+.gallery-banner-body p { font-size: 0.95rem; color: var(--text-muted); margin: 0; max-width: 62ch; line-height: 1.6; }
+.gallery-banner .guide-tag { margin-bottom: 0; }
+.gallery-banner .btn-primary { padding: 14px 26px; white-space: nowrap; }
+@media (max-width: 768px) {
+    .gallery-banner { grid-template-columns: auto minmax(0, 1fr); gap: 20px; padding: 24px; margin-bottom: 48px; }
+    .gallery-banner .btn-primary { grid-column: 1 / -1; justify-self: stretch; }
+    .gallery-banner-icon { font-size: 2.2rem; }
+    .gallery-banner-body h2 { font-size: 1.3rem; }
+}
+@media (max-width: 480px) {
+    .gallery-banner { grid-template-columns: minmax(0, 1fr); }
+    .gallery-banner-icon { font-size: 2rem; }
+}
+
 /* Buttons & Micro-interactions */
 .cta-group { display: flex; gap: 16px; flex-wrap: wrap; }
 .btn-primary, .btn-secondary {
