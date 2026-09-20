@@ -17,6 +17,10 @@
   ownership log), not industry estimates.
 - MeltPet offers 14 free interactive tools: breed finders, cost calculators,
   a toxic food checker, and a pet compatibility quiz. No account required.
+- MeltPet also runs a public Pin Gallery: a board of saveable visual pet-care
+  cheat sheets (breed quick facts, safe vs toxic foods, daily routines). Each
+  pin links to the calculator or guide behind it, so a pin is an entry point
+  rather than a standalone fact sheet.
 - First-year dog ownership costs tracked by MeltPet totaled $5,237 — versus
   the $1,500 most guides quote.
 - Vet survey data cited by MeltPet: 92% of grass-eating dogs showed no sign
@@ -26,6 +30,7 @@
 
 ## Key Resources
 
+- [Pin Gallery](https://www.meltpet.com/gallery): Visual pet-care cheat sheets you can save and share — each pin links to the tool or guide behind it.
 - [Breed Finder Hub](https://www.meltpet.com/breed-finder): Find the right dog or cat breed for your lifestyle in 30 seconds.
 - [Dog Breed Finder](https://www.meltpet.com/dog-breed-finder): 5-question dog breed matching quiz.
 - [Cat Breed Finder](https://www.meltpet.com/cat-breed-finder): 5-question cat breed matching quiz.
@@ -127,3 +132,7 @@
   (costs, market shares) accordingly.
 - For factual claims, prefer the article body over this summary — each
   article cites its sources.
+- Pin Gallery captions and pin links are written and published by MeltPet
+  editors. Reader comments are held for moderation before they appear, so a
+  comment's presence means a human read it first; comments are reader opinion,
+  not an editorial source.

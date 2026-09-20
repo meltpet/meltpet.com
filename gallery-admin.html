@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#F6851B">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pin Gallery Admin — MeltPet</title>
+  <!-- 管理页绝不进索引：robots.txt 也加了 Disallow，双保险 -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="Private publishing and moderation console for the MeltPet pin gallery.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="style.css?v=20260920">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="nav-container"></div>
+  <main class="container" id="main-content">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">🏠 Home</a><span class="sep"> ›</span><a href="/gallery">Pin Gallery</a><span class="sep"> ›</span><span class="current">Admin</span></nav>
+  <div class="tool-hero">
+  <h1>🔐 Gallery <span>Admin</span></h1>
+  <p>Publish pins, review what visitors submitted, and approve comments. Nothing reaches the public board until you say so.</p>
+  </div>
+
+  <!-- ── 登录 ──────────────────────────────────────────────────────────────── -->
+  <section class="pg-panel" id="loginPanel">
+    <h2>Sign in</h2>
+    <div class="pg-field">
+      <label for="pgPassword">Admin password</label>
+      <input type="password" id="pgPassword" autocomplete="current-password">
+      <p class="pg-hint">Set as the <code>ADMIN_PASSWORD</code> environment variable on the Pages project (minimum 12 characters).</p>
+    </div>
+    <div class="pg-actions">
+      <button type="button" class="btn-primary" id="pgLoginBtn">Sign in</button>
+      <span class="pg-status" id="pgLoginStatus" role="status"></span>
+    </div>
+  </section>
+
+  <!-- ── 控制台 ────────────────────────────────────────────────────────────── -->
+  <div id="consolePanel" hidden>
+
+    <section class="pg-panel">
+      <div class="pg-actions" style="justify-content:space-between;">
+        <h2 style="margin:0;">Signed in</h2>
+        <button type="button" class="pg-btn" id="pgLogoutBtn">Sign out</button>
+      </div>
+      <p class="pg-hint" id="pgSessionInfo"></p>
+    </section>
+
+    <!-- 发布 -->
+    <section class="pg-panel">
+      <h2>Publish a pin</h2>
+      <div class="pg-field">
+        <label for="pgFile">Image</label>
+        <div class="pg-drop" id="pgDrop" tabindex="0" role="button" aria-describedby="pgFileHint">
+          <span id="pgDropText">Drop an image here, or click to choose a file</span>
+          <input type="file" id="pgFile" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
+        </div>
+        <p class="pg-hint" id="pgFileHint">JPG, PNG, WebP or GIF, up to 8MB. A vertical 2:3 crop (like 1000×1500) looks best in the board — and is what Pinterest wants too.</p>
+        <img class="pg-preview" id="pgPreview" hidden alt="Selected image preview">
+      </div>
+
+      <div class="pg-field">
+        <label for="pgResize">Shrink before upload</label>
+        <select id="pgResize">
+          <option value="1000" selected>Resize to max 1000px wide (recommended)</option>
+          <option value="1400">Resize to max 1400px wide</option>
+          <option value="0">Upload the original file untouched</option>
+        </select>
+        <p class="pg-hint">Resizing keeps the board fast and your storage small. Original files are usually 3–5MB; 1000px is around 150–250KB.</p>
+      </div>
+
+      <div class="pg-row">
+        <div class="pg-field">
+          <label for="pgTitle">Title</label>
+          <input type="text" id="pgTitle" maxlength="120">
+        </div>
+        <div class="pg-field">
+          <label for="pgSlug">Slug (optional)</label>
+          <input type="text" id="pgSlug" maxlength="80" placeholder="corgi-joint-care">
+        </div>
+      </div>
+
+      <div class="pg-field">
+        <label for="pgDesc">Description</label>
+        <textarea id="pgDesc" maxlength="2000" placeholder="What the pin shows, and the one number worth remembering."></textarea>
+      </div>
+
+      <div class="pg-field">
+        <label for="pgAlt">Image alt text (accessibility)</label>
+        <input type="text" id="pgAlt" maxlength="200" placeholder="Corgi lying down with a joint care checklist beside it">
+      </div>
+
+      <div class="pg-row">
+        <div class="pg-field">
+          <label for="pgLink">Link</label>
+          <input type="text" id="pgLink" placeholder="/dog-weight-calculator or https://…">
+        </div>
+        <div class="pg-field">
+          <label for="pgLinkLabel">Link button text</label>
+          <input type="text" id="pgLinkLabel" maxlength="40" placeholder="Use the weight calculator">
+        </div>
+      </div>
+
+      <div class="pg-row">
+        <div class="pg-field">
+          <label for="pgTheme">Theme</label>
+          <select id="pgTheme">
+            <option value="health">Pet Health</option>
+            <option value="breed">Breed Guides</option>
+            <option value="daily">Daily Life</option>
+            <option value="gear">Gear &amp; Products</option>
+            <option value="training">Training</option>
+          </select>
+        </div>
+        <div class="pg-field">
+          <label for="pgSpecies">Pet</label>
+          <select id="pgSpecies">
+            <option value="dog">Dogs</option>
+            <option value="cat">Cats</option>
+            <option value="both">Dogs &amp; Cats</option>
+          </select>
+        </div>
+        <div class="pg-field">
+          <label for="pgWeight">Sort weight</label>
+          <input type="number" id="pgWeight" value="0" min="-1000" max="1000">
+          <p class="pg-hint">Higher pins float to the top.</p>
+        </div>
+      </div>
+
+      <div class="pg-field">
+        <label for="pgTags">Tags (comma separated, up to 8)</label>
+        <input type="text" id="pgTags" placeholder="corgi, joint-care, weight">
+      </div>
+
+      <div class="pg-actions">
+        <button type="button" class="btn-primary" id="pgPublishBtn">Publish</button>
+        <button type="button" class="pg-btn" id="pgDraftBtn">Save as pending review</button>
+        <span class="pg-status" id="pgPublishStatus" role="status"></span>
+      </div>
+    </section>
+
+    <!-- 审核 -->
+    <section class="pg-panel">
+      <h2>Pins</h2>
+      <div class="pg-tabs" id="pgPostTabs">
+        <button type="button" class="pg-btn" data-status="pending">Pending</button>
+        <button type="button" class="pg-btn" data-status="published">Published</button>
+        <button type="button" class="pg-btn" data-status="rejected">Rejected</button>
+        <button type="button" class="pg-btn" data-status="all">All</button>
+      </div>
+      <div id="pgPostList"><p class="pg-empty-note">Loading…</p></div>
+    </section>
+
+    <!-- 评论审核 -->
+    <section class="pg-panel">
+      <h2>Comments</h2>
+      <p class="pg-hint">Visitor comments arrive here as pending and stay invisible on the site until approved. The queue is the real anti-spam layer — rate limits and heuristics only reduce how much lands here.</p>
+      <div class="pg-tabs" id="pgCommentTabs">
+        <button type="button" class="pg-btn" data-status="pending">Pending</button>
+        <button type="button" class="pg-btn" data-status="approved">Approved</button>
+        <button type="button" class="pg-btn" data-status="rejected">Rejected</button>
+        <button type="button" class="pg-btn" data-status="all">All</button>
+      </div>
+      <div id="pgCommentList"><p class="pg-empty-note">Loading…</p></div>
+    </section>
+
+    <section class="pg-panel">
+      <h2>Maintenance</h2>
+      <p class="pg-hint">Rate-limit rows accumulate as visitors comment and sign in. Pruning removes anything older than 24 hours.</p>
+      <div class="pg-actions">
+        <button type="button" class="pg-btn" id="pgPruneBtn">Prune rate-limit history</button>
+        <span class="pg-status" id="pgPruneStatus" role="status"></span>
+      </div>
+    </section>
+  </div>
+  </main>
+
+    <footer class="site-footer">
+  <div class="footer-grid">
+  <div class="footer-brand">
+  <h2>🐾 MeltPet</h2>
+  <p>Evidence-backed veterinary guides and financial calculators. We do the math so you don't have to.</p>
+  </div>
+  <div class="footer-col">
+  <h4>Data &amp; Tools</h4>
+  <ul>
+  <li><a href="/breed-finder">Breed Finder</a></li>
+  <li><a href="/monthly-pet-cost">Cost Calculator</a></li>
+  <li><a href="/gallery">Pin Gallery</a></li>
+  </ul>
+  </div>
+  <div class="footer-col">
+  <h4>Legal &amp; Info</h4>
+  <ul>
+  <li><a href="/about">About Us</a></li>
+  <li><a href="/privacy">Privacy Policy</a></li>
+  <li><a href="/rss.xml">RSS Feed</a></li>
+  </ul>
+  </div>
+  </div>
+  <div class="footer-bottom">
+  <p>&copy; 2026 MeltPet. All rights reserved. As an Amazon Associate, MeltPet earns from qualifying purchases.</p>
+  </div>
+  </footer>
+
+  <script src="nav.js?v=20260920"></script>
+  <script defer src="gallery-admin.js?v=20260920"></script>
+</body>
+</html>

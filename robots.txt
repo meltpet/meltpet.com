@@ -1,4 +1,4 @@
-# MeltPet robots.txt — Last updated 2026-06-23
+# MeltPet robots.txt — Last updated 2026-09-20
 # https://www.meltpet.com/robots.txt
 
 User-agent: *
@@ -11,6 +11,9 @@ Disallow: /meltpet-deep-audit-
 Disallow: /meltpet-audit-report-
 Disallow: /meltpet-audit-comprehensive-
 Disallow: /meltpet-audit-2026
+# ── Pin Gallery admin console + its API (no index, no crawl) ──
+Disallow: /gallery-admin
+Disallow: /api/
 Disallow: *.temp
 
 Sitemap: https://www.meltpet.com/sitemap.xml

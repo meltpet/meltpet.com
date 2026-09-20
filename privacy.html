@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="theme-color" content="#F6851B">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Privacy Policy —MeltPet</title>
-  <meta name="description" content="MeltPet privacy policy —we use Google Analytics (GA4) with anonymized data. Minimal first-party cookies for basic analytics only. All tools run in your browser.">
+  <meta name="description" content="MeltPet privacy policy — anonymized GA4 analytics, first-party cookies for measurement only, and exactly what the Pin Gallery stores when you post a comment or like a pin.">
   <meta name="robots" content="noindex">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Privacy Policy —MeltPet">
-  <meta property="og:description" content="MeltPet privacy policy —we use anonymous analytics with minimal first-party cookies. No personal data collection. All tools run in your browser.">
+  <meta property="og:description" content="MeltPet privacy policy — anonymous analytics, no accounts, and a plain-language account of what the Pin Gallery stores.">
   <meta property="og:url" content="https://www.meltpet.com/privacy">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.meltpet.com/img/og/tools-og.png">
@@ -18,7 +18,7 @@
   <meta name="twitter:description" content="Evidence-backed pet guides and tools.">
   <meta name="twitter:image" content="https://www.meltpet.com/img/og/tools-og.png">
   <link rel="canonical" href="https://www.meltpet.com/privacy">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy","description":"MeltPet privacy policy. Minimal anonymous analytics cookies (GA4) only —no personal data collection."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy","description":"MeltPet privacy policy: anonymized GA4 analytics, no accounts or logins, and a plain-language account of what the Pin Gallery stores when you comment, like or save a pin."}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"MeltPet","alternateName":"Melt Pet","url":"https://www.meltpet.com/","description":"Independent pet resource — breed finder, cost calculators, and evidence-backed guides."}</script>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,20 +48,28 @@
   </div>
   <main class="container" id="main-content">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">🏠 Home</a><span class="sep"> ›</span><span class="current">Privacy Policy</span></nav>
-  <div class="tool-hero"><h1>Privacy <span>Policy</span></h1><p>Last updated: September 18, 2026</p></div>
+  <div class="tool-hero"><h1>Privacy <span>Policy</span></h1><p>Last updated: September 20, 2026</p></div>
   <div class="article-section">
   <h2>Our Approach</h2>
-  <p>MeltPet is a static website. All tools (Breed Finder, cost calculators, Toxic Food Checker) run entirely in your browser —no personal data is sent to any server. We use Google Analytics 4 (GA4) to understand how many people visit and which pages are useful. GA4 uses minimal first-party cookies (_ga) for basic traffic measurement. IP addresses are anonymized and no personally identifiable information is collected.</p>
+  <p>MeltPet is mostly a static website. Every tool (Breed Finder, cost calculators, Toxic Food Checker) runs entirely in your browser —no personal data is sent to any server. We use Google Analytics 4 (GA4) to understand how many people visit and which pages are useful. GA4 uses minimal first-party cookies (_ga) for basic traffic measurement. IP addresses are anonymized and no personally identifiable information is collected.</p>
+  <p style="margin-top:10px;">One part of the site does talk to a server: the <a href="/gallery">Pin Gallery</a>. Pin view, like and save counts —and any comment you choose to post—are stored in our own database so that the board looks the same for every visitor. Exactly what that involves is set out under <a href="#gallery-comments">Pin Gallery and Comments</a> below.</p>
   </div>
   <div class="article-section">
   <h2>Information We Do NOT Collect</h2>
-  <ul><li>Names, email addresses, or personal identification</li><li>Browsing history across sites</li><li>Exact location data</li><li>Device fingerprints</li></ul>
+  <ul><li>Email addresses, passwords, or account credentials — the gallery has no sign-up and no login</li><li>Browsing history across other sites</li><li>Exact location data</li><li>Your IP address in readable form — we keep a keyed one-way hash instead, described below</li></ul>
   <p style="margin-top:10px;">GA4 shows us aggregated data —total page views, which countries visitors come from (city-level is not available), which pages are most read, and which outbound links get clicked (the link text and the page it sat on, never who clicked it). We cannot identify individual visitors from this data.</p>
+  </div>
+  <div class="article-section" id="gallery-comments">
+  <h2>Pin Gallery and Comments</h2>
+  <p><strong>What you send.</strong> If you post a comment, the display name you type and the comment text are stored on our server and, once approved, shown publicly to everyone who opens that pin. You do not need an account, an email address, or a login —which also means you should not type your real full name if you would rather stay anonymous. A first name or a nickname is fine.</p>
+  <p style="margin-top:8px;"><strong>How we block spam.</strong> To rate-limit abuse we derive an anonymous identifier from your IP address and your browser's user-agent string: an HMAC-SHA256 hash computed with a secret key that only our server holds. We store only that hash. Your IP address is never written to our database in readable form, and the hash cannot be reversed to recover it. It is used for three things only —counting submissions per visitor so one person cannot flood a pin, preventing duplicate likes, saves and views from being counted twice, and blocking automated spam. It is not used to build a profile of you, and it is never shared or sold.</p>
+  <p style="margin-top:8px;"><strong>Interaction state in your browser.</strong> Whether you have liked or saved a pin is remembered in your browser's local storage (<code>localStorage</code>) so the buttons look right when you come back. That stays on your device; we do not receive a list of what you liked.</p>
+  <p style="margin-top:8px;"><strong>Comments are reviewed before they appear.</strong> Every comment is held for moderation. We may decline or delete anything spammy, abusive, or off-topic, and we can remove a comment at any time. A comment that is visible has been read by a human first.</p>
   </div>
   <div class="article-section">
   <h2>Third-Party Services</h2>
   <p><strong>Google Analytics 4 (GA4).</strong> We use GA4 for anonymous traffic measurement. GA4 sets minimal first-party cookies (_ga) that do not store personal data. IP addresses are anonymized. You can opt out by declining cookies when the consent banner appears, or by using a browser extension. Learn more at <a href="https://support.google.com/analytics/answer/12017362">Google's Analytics privacy page</a>.</p>
-  <p style="margin-top:8px;"><strong>Cloudflare Pages.</strong> MeltPet is hosted on Cloudflare Pages, which may collect anonymized server logs for security and performance purposes. Cloudflare's privacy policy is available at <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com</a>.</p>
+  <p style="margin-top:8px;"><strong>Cloudflare Pages, D1 and R2.</strong> MeltPet is hosted on Cloudflare Pages. Gallery content is stored in Cloudflare D1 (database) and Cloudflare R2 (image storage), and pin images are delivered from our own CDN at cdn.meltpet.com. Cloudflare may collect anonymized server logs for security and performance purposes. Cloudflare's privacy policy is available at <a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com</a>.</p>
   <p style="margin-top:8px;"><strong>Future Advertising.</strong> If MeltPet runs ads in the future (e.g., Google AdSense), this policy will be updated, and visitors will be notified. No advertising networks are currently active.</p>
   </div>
   <div class="article-section">
@@ -112,7 +120,7 @@
   
 </footer>
 
-<script src="nav.js?v=20260729"></script>
+<script src="nav.js?v=20260920"></script>
     <script defer src="/analytics.js"></script>
 </body>
 </html>

@@ -29,8 +29,15 @@
 
     // ── Shared Nav Data (Single Source of Truth) ──
     // `desktop: false` items appear in mobile nav + search, but not the desktop dropdowns.
+    //
+    // ⚠️ 为什么 Pin Gallery 挂在 Tools 里，而不是做成一等导航项：
+    //    实测页头在 900px 只剩 11–29px 余量、1024px 只剩 80px（见 _gallery_browser_audit.js）。
+    //    任何新增的一等导航项（文字 ≈55px + 28px 间距）都会在 769–1024px 把
+    //    .nav-links 顶到 .nav-actions 上并撑宽文档。放进现有下拉菜单是零宽度成本的，
+    //    一样是 79 页都有入口。要升级成一等项，得先重排页头标签并做全宽度回归。
     var NAV_SECTIONS = {
         tools: [
+            {title: '🖼️ Pin Gallery',               href: '/gallery',                     desktop: true, keywords: 'pin gallery picture board image visual cheat sheet infographic save share pinterest dog cat'},
             {title: '🔍 Breed Finder Hub',          href: '/breed-finder',                desktop: true, keywords: 'breed finder quiz dog cat match finder hub'},
             {title: '🐶 Dog Breed Finder',          href: '/dog-breed-finder',            desktop: true, keywords: 'dog breed finder quiz match what dog should i get puppy breed selector'},
             {title: '🐱 Cat Breed Finder',          href: '/cat-breed-finder',            desktop: true, keywords: 'cat breed finder quiz match what cat should i get kitten breed selector'},
