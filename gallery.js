@@ -203,11 +203,12 @@
     });
     // 「全部」chip 常驻，否则清空筛选要另外找按钮
     themeOpts.unshift({ value: '', count: tax.totals ? tax.totals.posts : 0, label: 'All themes' });
+    // ⚠️ 这里必须用 totals.posts，不能把 species 分组的 count 相加：
+    // species='both' 的作品会**同时**落在 dogs 和 cats 两组里，
+    // 相加会把它算两次（实测 2 条记录显示成 3），与「All themes」口径也对不上。
     speciesOpts.unshift({
       value: '',
-      count: tax.species && tax.species.length
-        ? tax.species.reduce(function (a, b) { return a + b.count; }, 0)
-        : 0,
+      count: tax.totals ? tax.totals.posts : 0,
       label: 'All pets',
     });
     renderChips(els.themeChips, 'theme', themeOpts);
