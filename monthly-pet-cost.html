@@ -69,6 +69,9 @@
   <select id="vetPlan"><option value="basic" selected>Basic (annual checkup + vaccines)</option><option value="plus">Plus (basic + dental + blood work)</option><option value="comprehensive">Comprehensive (plus + emergency fund)</option></select>
   <label for="insurance">Pet Insurance?</label>
   <select id="insurance"><option value="none">None</option><option value="basic" selected>Basic Accident &amp; Illness</option><option value="comprehensive">Comprehensive (includes wellness)</option></select>
+  <label for="ageStage">Age</label>
+  <select id="ageStage"><option value="adult" selected>Adult (1–7)</option><option value="puppy">Puppy / Kitten (under 1)</option><option value="senior">Senior (8+ dog, 7+ cat)</option></select>
+  <p id="ageNote" style="font-size:0.78rem;color:var(--text-muted);margin:-4px 0 10px;">Our monthly figures are not age-adjusted — the site has never measured age-specific monthly costs, so we won&rsquo;t estimate them. This adds only the age-linked items we <em>have</em> published, each cited.</p>
   <label for="grooming">Grooming Frequency</label>
   <select id="grooming"><option value="diy">DIY at Home</option><option value="occasional" selected>Professional Occasionally (4/year)</option><option value="regular">Professional Monthly</option></select>
   <button class="btn-primary" onclick="calculate()">💵 Calculate My Monthly Cost</button>
@@ -290,6 +293,63 @@
   // to line up — otherwise selecting "DIY" makes a Standard Poodle look cheap.
   var GROOM_RATIO = {diy:[0, 0.1], occasional:[0.45, 0.6], regular:[1, 1]};
 
+  // ── Age stage ──────────────────────────────────────────────────────────
+  // We do NOT publish age-adjusted monthly costs, because the site has never
+  // measured them. What it HAS published is two specific age-linked line items,
+  // and this block quotes those verbatim rather than extrapolating:
+  //
+  //   Puppy/kitten — the vaccination series is a real, short, one-off spend
+  //     that an adult dog simply does not have. Source: the "First 30 days"
+  //     row of new-puppy-checklist's vet table ($225–$425 = both puppy visits
+  //     plus the first month of preventives), and new-kitten-checklist's
+  //     "Budget $250–$500 all-in for the first week".
+  //   Senior — annual bloodwork. Source: pet-insurance-worth-it's
+  //     "Senior blood panel + urinalysis (annual) $120–$250" and
+  //     cat-kidney-disease-prevention's "$120–$200 ... If you have a cat over 7".
+  //
+  // 🔴 Deliberately NOT added to the monthly total: the vet-plan selector
+  //    already carries a bloodwork tier (plus/comprehensive), so folding a
+  //    senior panel into the monthly figure would count it twice — the same
+  //    double-counting trap the startup block avoids. Senior is shown as an
+  //    annual note, with the word "annual" in it.
+  // 🔴 No figure here is invented and none is an average we computed. Each one
+  //    is a number that already appears on a named page of this site.
+  var AGESTAGE = {
+    puppy: {
+      dog: {
+        label:'Puppy (under 1)',
+        oneTime:[225, 425],
+        oneTimeLabel:'Vaccination series + first exam',
+        src:'the <em>First 30 days</em> row of the vet table on <a href="/new-puppy-checklist">our puppy checklist</a>',
+        freq:'one-off, spread over the first month or two'
+      },
+      cat: {
+        label:'Kitten (under 1)',
+        oneTime:[250, 500],
+        oneTimeLabel:'First week, vet care included',
+        src:'the startup total on <a href="/new-kitten-checklist">our kitten checklist</a> (&ldquo;$250–$500 all-in for the first week&rdquo;)',
+        freq:'one-off, in the first week'
+      }
+    },
+    adult: { dog:null, cat:null },
+    senior: {
+      dog: {
+        label:'Senior (8+)',
+        annual:[120, 250],
+        annualLabel:'Senior blood panel + urinalysis',
+        src:'the diagnostics table on <a href="/pet-insurance-worth-it">our insurance guide</a>, which pegs it at &ldquo;dogs over 8&rdquo;',
+        note:'Also worth knowing: the same page reports premiums climb with age — an 8-year-old Frenchie quoted at $120/month against $30–$60/month for a young mixed breed. We don&rsquo;t model that here because it depends on your insurer, breed and postcode.'
+      },
+      cat: {
+        label:'Senior (7+)',
+        annual:[120, 200],
+        annualLabel:'Senior blood panel (with SDMA)',
+        src:'<a href="/cat-kidney-disease-prevention">our cat kidney-disease guide</a>, which recommends it annually &ldquo;if you have a cat over 7&rdquo;',
+        note:'The same guide notes adding SDMA to the panel costs $15–$25 extra. Premiums also rise with age, but that depends on your insurer and we don&rsquo;t model it.'
+      }
+    }
+  };
+
   // ── One-time startup costs ─────────────────────────────────────────────
   // Two published sources, and they measure different things — so this is a
   // range whose two ends each have a citation, not an invented spread:
@@ -342,6 +402,7 @@
   var vet = document.getElementById('vetPlan').value;
   var ins = document.getElementById('insurance').value;
   var groom = document.getElementById('grooming').value;
+  var ageStage = document.getElementById('ageStage').value;
 
   var B = breedKey ? BREEDS[breedKey] : null;
   var d = COSTS[pet];
@@ -436,17 +497,57 @@
   // Year-one total: 12 months of the number we just computed + the startup cost.
   // Only shown with the range caveat attached, because both operands are ranges
   // and adding two ranges silently turns a wide uncertainty into a fake number.
-  var yLow = Math.round((total * 12) + (S.mode === 'range' ? (sLo || 0) : S.bundled[0]));
-  var yHigh = Math.round((total * 12) + (S.mode === 'range' ? (sHi || 0) : S.bundled[1]));
+    //
+  // A puppy's vaccination series is folded in here (and only here): it is a
+  // genuine first-year cost that an adult does not pay. It is deliberately kept
+  // out of the monthly figure above, which is the whole point of the split.
+  var aStage = AGESTAGE[ageStage][pet.indexOf('cat') >= 0 ? 'cat' : 'dog'];
+  var vaccLo = (aStage && aStage.oneTime) ? aStage.oneTime[0] : 0;
+  var vaccHi = (aStage && aStage.oneTime) ? aStage.oneTime[1] : 0;
+  var yLow = Math.round((total * 12) + (S.mode === 'range' ? (sLo || 0) : S.bundled[0]) + vaccLo);
+  var yHigh = Math.round((total * 12) + (S.mode === 'range' ? (sHi || 0) : S.bundled[1]) + vaccHi);
 
   html += '<div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border);">';
   html += '<p style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted);margin:0 0 8px;">🎒 One-Time Startup (' + S.label + ')</p>';
   html += startHtml;
   if (typeof yLow === 'number' && isFinite(yLow) && typeof yHigh === 'number' && isFinite(yHigh)) {
-    html += '<p style="font-size:0.88rem;margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);">🗓️ <strong>Year one, all in: $' + yLow.toLocaleString() + '–$' + yHigh.toLocaleString() + '</strong> <span style="color:var(--text-muted);font-size:0.85em;">($' + (total * 12).toLocaleString() + ' of monthly costs &times; 12, plus startup)</span></p>';
+    html += '<p style="font-size:0.88rem;margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);">🗓️ <strong>Year one, all in: $' + yLow.toLocaleString() + '–$' + yHigh.toLocaleString() + '</strong> <span style="color:var(--text-muted);font-size:0.85em;">($' + (total * 12).toLocaleString() + ' of monthly costs &times; 12, plus startup' + (vaccLo ? ' and the vaccination series' : '') + ')</span></p>';
   }
   html += '<p style="font-size:0.74rem;color:var(--text-muted);margin-top:6px;">Both figures are ranges, and they are added to each other here — treat the pair as a band, not a target. Not included: emergency vet care (the $1,240 sock surgery in our tracker was reimbursed $2,560), boarding, puppy destruction, or dental cleanings. See <a href="/hidden-costs-of-dog-ownership">hidden costs</a>.</p>';
   html += '</div>';
+
+  // ── Age-linked items ───────────────────────────────────────────────────
+  // Separate block again, and for the same reason: the puppy vaccination
+  // series is a short one-off, not a monthly cost. The senior panel is annual.
+  // Neither belongs inside a per-month figure, and neither is invented.
+  if (ageStage !== 'adult') {
+    // 🔴 Look up by species, not by size band: every source page is written
+    //    for dogs or cats, never for "small dog". Wiring this to COSTS would
+    //    invent a size split the sources don't make.
+    var speciesKey = pet.indexOf('cat') >= 0 ? 'cat' : 'dog';
+    var A = AGESTAGE[ageStage][speciesKey];
+    if (A) {
+      var ageHtml = '';
+      if (A.oneTime) {
+        ageHtml += '<p class="big" style="font-size:1.5rem;">$' + A.oneTime[0] + '–$' + A.oneTime[1] + ' <span style="font-size:0.6em;">one-off</span></p>';
+        ageHtml += '<p style="font-size:0.85rem;color:var(--text-secondary);margin-top:6px;">' + A.oneTimeLabel + ': <strong>$' + A.oneTime[0] + '–$' + A.oneTime[1] + '</strong><br><span style="color:var(--text-muted);font-size:0.9em;">' + A.freq + '</span></p>';
+      } else if (A.annual) {
+        ageHtml += '<p class="big" style="font-size:1.5rem;">$' + A.annual[0] + '–$' + A.annual[1] + ' <span style="font-size:0.6em;">per year</span></p>';
+        ageHtml += '<p style="font-size:0.85rem;color:var(--text-secondary);margin-top:6px;">' + A.annualLabel + ': <strong>$' + A.annual[0] + '–$' + A.annual[1] + '</strong> a year &mdash; about $' + Math.round(A.annual[0] / 12) + '–$' + Math.round(A.annual[1] / 12) + ' a month if you set it aside.</p>';
+      }
+      ageHtml += '<p style="font-size:0.76rem;color:var(--text-muted);margin-top:6px;">Source: ' + A.src + '.</p>';
+      if (A.note) {
+        ageHtml += '<p style="font-size:0.76rem;color:var(--text-muted);margin-top:6px;">' + A.note + '</p>';
+      }
+      if (A.annual) {
+        ageHtml += '<p style="font-size:0.76rem;color:var(--text-muted);margin-top:6px;">🔴 This is <strong>not</strong> added to the monthly total above. The vet-plan selector already has a bloodwork tier, so adding an age uplift on top would count the same panel twice.</p>';
+      }
+      html += '<div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--border);">';
+      html += '<p style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted);margin:0 0 8px;">🐕 Age Stage (' + A.label + ')</p>';
+      html += ageHtml;
+      html += '</div>';
+    }
+  }
 
   if (breedRisk) {
     html += '<div style="margin-top:12px;padding:10px 12px;border-left:3px solid var(--accent);background:rgba(246,133,27,0.07);font-size:0.8rem;line-height:1.55;">';
