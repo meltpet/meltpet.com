@@ -26,7 +26,7 @@
   <meta name="twitter:image" content="https://www.meltpet.com/img/og/tools-og.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Monthly Pet Cost Calculator","description":"Interactive calculator estimating the real monthly cost of pet ownership.","url":"https://www.meltpet.com/monthly-pet-cost","applicationCategory":"Finance","author":{"@type":"Person","name":"Sarah Mitchell","url":"https://www.meltpet.com/sarah-mitchell"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"MeltPet","alternateName":"Melt Pet","url":"https://www.meltpet.com/","description":"Independent pet resource — breed finder, cost calculators, and evidence-backed guides."}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How accurate is the pet cost calculator?","acceptedAnswer":{"@type":"Answer","text":"Our calculator uses 2026 national average cost data from the American Veterinary Medical Association and American Pet Products Association, adjusted by pet size, food quality level, insurance coverage, and grooming frequency. It provides a realistic range, not an exact prediction. Actual costs vary by geographic region — veterinary care in major cities costs more than in rural areas — and by individual pet health. The calculator is designed to give you a solid budgeting baseline. We recommend adding a 15–20% buffer for regional variation and unexpected expenses."}},{"@type":"Question","name":"What costs are included in the monthly pet cost estimate?","acceptedAnswer":{"@type":"Answer","text":"The calculator includes food (adjusted by quality tier), routine veterinary care amortized monthly (annual exams, vaccinations, preventive medications), flea/tick/heartworm prevention, pet insurance premiums, grooming costs (DIY to professional monthly), toys and supplies, and litter for cats. One-time setup costs (crate, bed, bowls, initial vaccinations, spay/neuter) are not included in the monthly figure but typically run $400–$1,100 in year one. Emergency veterinary expenses are also excluded — plan for $500–$1,000 per incident."}},{"@type":"Question","name":"How much does a cat cost per month compared to a dog?","acceptedAnswer":{"@type":"Answer","text":"Cats generally cost less per month than dogs of similar size. A typical indoor cat runs $80–100 per month, compared to $95–120 for a dog depending on size. Cats eat less, their flea prevention is dosed lower, and many cats need no professional grooming. However, cats require litter ($10–15/month) which dogs don't. The lifetime cost difference is significant: a cat over 15 years may cost $14,400–16,000, while a large dog over 10–12 years can cost $30,200–40,500. The gap narrows if you choose premium food and comprehensive insurance for both."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How accurate is this calculator for my specific situation?","acceptedAnswer":{"@type":"Answer","text":"Our calculator uses 2026 national average cost data from the American Veterinary Medical Association and American Pet Products Association. It gives you a solid budgeting baseline. But your actual number depends on where you live — vet care in New York City costs 30–50% more than in rural Ohio, and pet food prices vary by retailer and region. We recommend adding a 15–20% buffer when you use these numbers for actual budgeting. The calculator isn't meant to nail the exact dollar figure. It's meant to prevent the sticker shock that hits people who've already named the dog but haven't yet added up the numbers."}},{"@type":"Question","name":"What's NOT included in the monthly estimate?","acceptedAnswer":{"@type":"Answer","text":"The monthly number excludes: one-time setup costs (crate $40–100, bed $20–30, bowls, leash, collar — roughly $400–$1,100 in year one); emergency veterinary care ($500–$1,000 per incident — the calculator's insurance toggle partly covers this if you select it); boarding or pet sitting during travel ($25–35/night); training classes ($150–200 for a group course); and puppy destruction ($100–200 in year one). These aren't monthly but they're real, and they add up. Budget for them separately."}},{"@type":"Question","name":"Cat vs dog — which actually costs less?","acceptedAnswer":{"@type":"Answer","text":"Cats cost less. A typical indoor cat runs $80–100 per month versus $95–120 for a dog, depending on size. The gap comes from several places: cats eat less, their medications are dosed lower by weight, and most cats don't need professional grooming. Cats do have one cost dogs don't — litter, at $10–15/month. But the biggest driver of the gap is simply body mass. A 10-pound cat versus a 75-pound Golden Retriever: everything scales. The lifetime total tells the story clearly — a cat over 15 years may cost $14,000–16,000, while a large dog over 10 years can run $30,000–40,000."}},{"@type":"Question","name":"Does the calculator use breed-specific costs?","acceptedAnswer":{"@type":"Answer","text":"Only where we have published them. Eight breeds currently have a full monthly breakdown drawn from our own breed guides — Golden Retriever, all three Poodle sizes, Dachshund, French Bulldog, Sphynx and Bengal. Pick one of those and the calculator swaps in that breed’s real numbers instead of a size-band average. For every other breed it falls back to the size estimate and says so in the result. We would rather show you a labelled estimate than invent a breed figure."}}]}</script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
@@ -58,6 +58,11 @@
   <div class="tool-box">
   <label for="petType">Pet Type</label>
   <select id="petType"><option value="dog-small">🐶 Small Dog (&lt; 20 lbs)</option><option value="dog-medium" selected>🐶 Medium Dog (20–50 lbs)</option><option value="dog-large">🐶 Large Dog (&gt; 50 lbs)</option><option value="cat">🐱 Cat</option></select>
+  <label for="breed">Breed (optional — use real breed numbers)</label>
+  <select id="breed">
+    <option value="">— Size-based estimate —</option>
+  </select>
+  <p id="breedNote" style="font-size:0.78rem;color:var(--text-muted);margin:-4px 0 10px;">Leave this on the size estimate unless your breed is listed — we only use breed-specific numbers where the site has published them.</p>
   <label for="foodQuality">Food Quality</label>
   <select id="foodQuality"><option value="standard">Standard Kibble</option><option value="premium" selected>Premium / Grain-Free</option><option value="raw">Raw / Fresh / Home-Cooked</option></select>
   <label for="vetPlan">Vet Plan</label>
@@ -81,6 +86,9 @@
 
   <h3>Cat vs dog — which actually costs less?</h3>
   <p>Cats cost less. A typical indoor cat runs $80–100 per month versus $95–120 for a dog, depending on size. The gap comes from several places: cats eat less, their medications are dosed lower by weight, and most cats don't need professional grooming. Cats do have one cost dogs don't — litter, at $10–15/month. But the biggest driver of the gap is simply body mass. A 10-pound cat versus a 75-pound Golden Retriever: everything scales. The lifetime total tells the story clearly — a cat over 15 years may cost $14,000–16,000, while a large dog over 10 years can run $30,000–40,000.</p>
+  <h3>Does the calculator use breed-specific costs?</h3>
+  <p>Only where we have published them. Eight breeds currently have a full monthly breakdown drawn from our own breed guides — Golden Retriever, all three Poodle sizes, Dachshund, French Bulldog, Sphynx and Bengal. Pick one of those and the calculator swaps in that breed’s real numbers instead of a size-band average. For every other breed it falls back to the size estimate and says so in the result. We would rather show you a labelled estimate than invent a breed figure.</p>
+
   </article>
 
   <article class="article-section">
@@ -101,6 +109,25 @@
   </tbody>
   </table></div>
   <p style="font-size:0.83rem;color:var(--text-muted);">Ranges are national averages. Your actual cost depends on location, brand choices, and your pet's individual health. Emergency vet visits (not included above) add $500–$1,000 per incident.</p>
+  </article>
+
+  <article class="article-section">
+  <h2>🐕 Breed-Specific Monthly Costs</h2>
+  <p>A Golden Retriever and a Dachshund are both dogs. Their monthly costs are not the same number, and the gap is not in food — it's in grooming, insurance and breed-specific gear. The table below is built from the cost breakdowns published on our own breed guides, so you can see where each breed actually lands before you pick one in the calculator above.</p>
+  <div class="table-scroll"><table>
+  <thead><tr><th>Breed</th><th>Monthly Total</th><th>The Line That Makes It Different</th></tr></thead>
+  <tbody>
+  <tr><td><a href="/golden-retriever-guide">Golden Retriever</a></td><td>$185–$355</td><td>Food alone is $50–100/month at the large end.</td></tr>
+  <tr><td><a href="/poodle-guide">Standard Poodle</a></td><td>$215–$370</td><td>Grooming, every 5 weeks: $80–140/month.</td></tr>
+  <tr><td><a href="/poodle-guide">Miniature Poodle</a></td><td>$150–$245</td><td>Grooming still outruns food at this size.</td></tr>
+  <tr><td><a href="/poodle-guide">Toy Poodle</a></td><td>$125–$200</td><td>Higher dental risk; cleanings run $300–$1,200.</td></tr>
+  <tr><td><a href="/dachshund-guide">Dachshund</a></td><td>$79–$195</td><td>Add $8–15/month for ramps — spine insurance, not a luxury.</td></tr>
+  <tr><td><a href="/french-bulldog-guide">French Bulldog</a></td><td>$174–$293</td><td>Allergy treatment amortises to $50–150/month. A major-event year runs $5,590–$9,310.</td></tr>
+  <tr><td><a href="/sphynx-cat-guide">Sphynx</a></td><td>$122–$227</td><td>Sweaters and heating are real line items.</td></tr>
+  <tr><td><a href="/bengal-cat-guide">Bengal</a></td><td>$115–$215</td><td>No grooming line at all — enrichment is the cost.</td></tr>
+  </tbody>
+  </table></div>
+  <p style="font-size:0.83rem;color:var(--text-muted);">Figures come from the cost tables on each breed's own guide. Breeds not listed here (Labrador, German Shepherd, Corgi, Maine Coon, Ragdoll and others) don't have a published monthly breakdown yet — the calculator falls back to a size-based estimate and tells you when it does.</p>
   </article>
 
   <article class="article-section">
@@ -176,35 +203,173 @@
   'dog-large': {food:{standard:[50,80],premium:[75,120],raw:[110,180]},treats:[15,28],vet:{basic:[25,40],plus:[38,60],comprehensive:[55,90]},flea:[28,48],insurance:{basic:[35,60],comprehensive:[55,90],none:[0,0]},grooming:{diy:[15,30],occasional:[30,70],regular:[55,100]},toys:[15,30]},
   'cat': {food:{standard:[10,20],premium:[18,30],raw:[30,55]},treats:[5,10],vet:{basic:[12,25],plus:[20,35],comprehensive:[35,55]},flea:[10,20],insurance:{basic:[15,30],comprehensive:[25,45],none:[0,0]},grooming:{diy:[0,10],occasional:[10,25],regular:[20,40]},toys:[8,18],litter:[10,25]}
   };
+
+  // ── Breed overrides ────────────────────────────────────────────────────
+  // Every number below is lifted from cost tables the site already published on
+  // the breed page itself — none of it is invented. Where a breed page has no
+  // published breakdown, the breed is NOT listed here and the size estimate
+  // applies instead. `partial` flags a breed whose page covers only part of the
+  // monthly budget, so the result card can say so out loud.
+  // `risk` is the breed-specific one-off / recurring exposure the breed page
+  // documents (surgery, screening) — shown as a caution, never added to totals.
+  var BREEDS = {
+  'golden': {label:'Golden Retriever', type:'dog', size:'dog-large', page:'/golden-retriever-guide',
+    food:{standard:[35,60],premium:[50,100],raw:[75,140]}, treats:[15,35], vet:{basic:[25,50],plus:[35,65],comprehensive:[50,90]},
+    flea:[25,50], insurance:{basic:[35,50],comprehensive:[50,75],none:[0,0]},
+    grooming:{diy:[0,0],occasional:[20,40],regular:[40,75]}, toys:[15,30],
+    risk:'Goldens are prone to hip dysplasia and CCL tears. Emergency surgery runs $1,000–$3,500, and the breed page recommends budgeting for it separately.'},
+
+  'poodle-standard': {label:'Standard Poodle', type:'dog', size:'dog-large', page:'/poodle-guide',
+    food:{standard:[30,55],premium:[45,80],raw:[70,120]}, treats:[20,40], vet:{basic:[35,55],plus:[45,70],comprehensive:[60,95]},
+    flea:[25,45], insurance:{basic:[35,55],comprehensive:[55,80],none:[0,0]},
+    grooming:{diy:[15,30],occasional:[45,80],regular:[80,140]}, toys:[0,0],
+    risk:'Its coat, not its health, is the expensive part: a Standard Poodle in full coat needs a groomer every 5 weeks. The breed page puts 13 years of grooming at $12,500–$21,800.'},
+
+  'poodle-miniature': {label:'Miniature Poodle', type:'dog', size:'dog-medium', page:'/poodle-guide',
+    food:{standard:[18,30],premium:[25,40],raw:[40,70]}, treats:[15,30], vet:{basic:[30,50],plus:[40,65],comprehensive:[55,85]},
+    flea:[18,32], insurance:{basic:[25,40],comprehensive:[40,60],none:[0,0]},
+    grooming:{diy:[10,20],occasional:[30,55],regular:[55,85]}, toys:[0,0],
+    risk:'Grooming runs every 5 weeks on the breed page — the single biggest line for this size.'},
+
+  'poodle-toy': {label:'Toy Poodle', type:'dog', size:'dog-small', page:'/poodle-guide',
+    food:{standard:[12,20],premium:[15,25],raw:[25,45]}, treats:[15,25], vet:{basic:[30,45],plus:[38,58],comprehensive:[50,80]},
+    flea:[12,22], insurance:{basic:[20,35],comprehensive:[32,52],none:[0,0]},
+    grooming:{diy:[8,18],occasional:[25,45],regular:[45,70]}, toys:[0,0],
+    risk:'Toy Poodles carry higher dental and patellar luxation risk. Dental cleanings under anaesthesia are $300–$1,200 per procedure.'},
+
+  'dachshund': {label:'Dachshund', type:'dog', size:'dog-small', page:'/dachshund-guide',
+    food:{standard:[12,22],premium:[18,32],raw:[28,50]}, treats:[10,20], vet:{basic:[18,30],plus:[25,42],comprehensive:[40,65]},
+    flea:[15,28], insurance:{basic:[28,60],comprehensive:[45,85],none:[0,0]},
+    grooming:{diy:[0,0],occasional:[0,20],regular:[30,40]}, toys:[0,0],
+    extra:{x:[8,15],label:'Ramps &amp; gear (amortized)'},
+    risk:'Roughly 1 in 4 Dachshunds develops IVDD. The breed page is blunt about it: get the exclusion list in writing — many insurers classify IVDD as pre-existing in this breed. Two ramps ($120–180) amortised over 3–4 years are the cheapest spine insurance you can buy. Grooming is $0 for a smooth coat; longhaired runs to $40 and wirehaired hand-stripping is $60–100 twice a year.'},
+
+  'french-bulldog': {label:'French Bulldog', type:'dog', size:'dog-medium', page:'/french-bulldog-guide',
+    food:{standard:[20,35],premium:[30,50],raw:[50,85]}, treats:[8,18], vet:{basic:[29,46],plus:[40,62],comprehensive:[55,90]},
+    flea:[20,35], insurance:{basic:[40,80],comprehensive:[60,110],none:[0,0]},
+    grooming:{diy:[8,18],occasional:[25,33],regular:[40,60]}, toys:[8,18],
+    extra:{x:[50,150],label:'Allergy treatment (amortized)'},
+    risk:'The breed page publishes two columns on purpose — a good year and a year with a major event ($5,590–$9,310). BOAS surgery is $2,500–$5,000; IVDD surgery $5,000–$12,000. Neither is in the monthly number above.'},
+
+  'corgi': {label:'Corgi', type:'dog', size:'dog-medium', partial:true, page:'/corgi-guide',
+    food:{standard:[18,28],premium:[25,35],raw:[45,75]}, treats:[10,18], vet:{basic:[18,30],plus:[25,42],comprehensive:[40,65]},
+    flea:[15,25], insurance:{basic:[30,55],comprehensive:[45,80],none:[0,0]},
+    grooming:{diy:[10,0],occasional:[15,0],regular:[30,0]}, toys:[15,25],
+    risk:'Corgi-specific costs sit outside the monthly budget: ramps for furniture are $60–150 each and you need at least two, a DM wheelchair cart runs $300–600 in the senior years, and a hemilaminectomy is $5,000–8,000.'},
+
+  'australian-shepherd': {label:'Australian Shepherd', type:'dog', size:'dog-medium', page:'/australian-shepherd-guide', risk:'High exercise needs drive replacement costs on toys and gear. No published monthly breakdown on the breed page.'},
+  'labrador': {label:'Labrador Retriever', type:'dog', size:'dog-large', page:'/labrador-retriever-guide', risk:'Labs tear CCLs at a higher rate than almost any breed — $2,500–$5,000 per knee, with 40–60% tearing the second within two years. No published monthly breakdown on the breed page.'},
+  'german-shepherd': {label:'German Shepherd', type:'dog', size:'dog-large', page:'/german-shepherd-guide', risk:'Hip and elbow dysplasia are the headline risk. A hip replacement can reach $12,000. No published monthly breakdown on the breed page.'},
+
+  'sphynx': {label:'Sphynx', type:'cat', size:'cat', page:'/sphynx-cat-guide',
+    food:{standard:[20,35],premium:[30,50],raw:[45,80]}, treats:[15,25], vet:{basic:[25,42],plus:[35,58],comprehensive:[50,85]},
+    flea:[10,20], insurance:{basic:[30,65],comprehensive:[45,95],none:[0,0]},
+    grooming:{diy:[12,20],occasional:[20,32],regular:[35,55]}, toys:[0,0], litter:[15,25],
+    extra:{x:[10,25],label:'Sweaters &amp; heating'}, treatLabel:'Litter, toys, misc.',
+    risk:'The breed page treats the heating bill as a real line item — keeping the house at 73°F instead of 68°F. It also amortises an annual cardiac ultrasound ($300–500) because Sphynxes carry early-onset HCM. An HCM emergency can exceed $5,000.'},
+
+  'bengal': {label:'Bengal', type:'cat', size:'cat', page:'/bengal-cat-guide',
+    food:{standard:[25,45],premium:[40,80],raw:[60,110]}, treats:[8,18], vet:{basic:[15,25],plus:[22,38],comprehensive:[35,60]},
+    flea:[10,20], insurance:{basic:[25,45],comprehensive:[38,68],none:[0,0]},
+    grooming:{diy:[0,10],occasional:[0,20],regular:[20,40]}, toys:[20,40], litter:[15,25],
+    risk:'No grooming line at all on the breed page — Bengals mostly self-maintain. Enrichment is the real cost: they destroy puzzle feeders and wand toys fast.'},
+
+  'maine-coon': {label:'Maine Coon', type:'cat', size:'cat', partial:true, page:'/maine-coon-guide', risk:'A large cat with a heavy double coat and real HCM risk ($3,000–$8,000 in cardiology if diagnosed). The breed page lists no monthly breakdown.'},
+  'ragdoll': {label:'Ragdoll', type:'cat', size:'cat', partial:true, page:'/ragdoll-cat-guide', risk:'HCM and bladder stones are the documented risks. Coat care is 2× weekly combing. The breed page publishes a comparison table but no monthly breakdown.'},
+  'british-shorthair': {label:'British Shorthair', type:'cat', size:'cat', partial:true, page:'/british-shorthair-guide',
+    food:{standard:[15,25],premium:[25,35],raw:[40,70]}, treats:[8,15], vet:{basic:[25,58],plus:[35,75],comprehensive:[50,100]},
+    flea:[15,25], insurance:{basic:[20,35],comprehensive:[32,55],none:[0,0]},
+    grooming:{diy:[0,10],occasional:[10,0],regular:[20,0]}, toys:[8,18], litter:[12,18],
+    risk:'This breed is prone to gingivitis and periodontal disease — annual dental cleanings under anaesthesia are $300–700, which the breed page amortises to $25–58/month and which is already inside the vet line above.'}
+  };
+
   function r(arr) { return Math.round((arr[0] + arr[1]) / 2); }
+
+  // Breed pages publish grooming at a stated cadence ("pro every 5–8 weeks").
+  // The dropdown has its own cadence, so relate them instead of trusting labels
+  // to line up — otherwise selecting "DIY" makes a Standard Poodle look cheap.
+  var GROOM_RATIO = {diy:[0, 0.1], occasional:[0.45, 0.6], regular:[1, 1]};
+
+  function rGroom(bg, mode) {
+    if (bg[0] === 0 && bg[1] === 0) return 0;
+    var k = GROOM_RATIO[mode] || [1, 1];
+    if (k[0] === 0 && k[1] === 0) return 0;
+    // Nearest dollar, and never let a range invert on small numbers.
+    var lo = Math.round(bg[0] * k[0]), hi = Math.round(bg[1] * k[1]);
+    if (hi < lo) hi = lo;
+    return Math.round((lo + hi) / 2);
+  }
+
   function calculate() {
   var pet = document.getElementById('petType').value;
+  var breedKey = document.getElementById('breed').value;
   var foodQ = document.getElementById('foodQuality').value;
   var vet = document.getElementById('vetPlan').value;
   var ins = document.getElementById('insurance').value;
   var groom = document.getElementById('grooming').value;
+
+  var B = breedKey ? BREEDS[breedKey] : null;
   var d = COSTS[pet];
-  var food = r(d.food[foodQ]);
-  var treats = r(d.treats);
-  var vetCost = r(d.vet[vet]);
-  var flea = r(d.flea);
-  var insCost = r(d.insurance[ins]);
-  var groomCost = r(d.grooming[groom]);
-  var toys = r(d.toys);
-  var litter = d.litter ? r(d.litter) : 0;
-  var total = food + treats + vetCost + flea + insCost + groomCost + toys + litter;
+  var usesBreedData = !!(B && B.food);      // partial breeds fall back to size
+  var srcLabel, srcNote, breedRisk = '';
+
+  var food, treats, vetCost, flea, insCost, groomCost, toys, litter, extra = 0, extraLabel = '';
+  var treatsLabel = 'Treats';
+
+  if (usesBreedData) {
+    food = r(B.food[foodQ]);
+    treats = r(B.treats || [0, 0]);
+    vetCost = r(B.vet[vet]);
+    flea = r(B.flea || [0, 0]);
+    insCost = r(B.insurance[ins]);
+    groomCost = rGroom(B.grooming[groom], groom);
+    toys = r(B.toys || [0, 0]);
+    litter = (pet.indexOf('cat') >= 0 && B.litter) ? r(B.litter) : 0;
+    if (B.extra) { extra = r(B.extra.x); extraLabel = B.extra.label; }
+    if (B.treatLabel) treatsLabel = B.treatLabel;
+    srcLabel = B.label + ' data';    srcNote = 'Line items are the ranges published on our <a href="' + B.page + '">' + B.label + ' guide</a>, adjusted only by the food, vet, insurance and grooming choices you picked.';
+  } else {
+    food = r(d.food[foodQ]);
+    treats = r(d.treats);
+    vetCost = r(d.vet[vet]);
+    flea = r(d.flea);
+    insCost = r(d.insurance[ins]);
+    groomCost = r(d.grooming[groom]);
+    toys = r(d.toys);
+    litter = d.litter ? r(d.litter) : 0;
+    srcLabel = 'size-based estimate';
+    if (B && B.partial) {
+      srcNote = 'We picked <strong>' + B.label + '</strong>, but we have not published a full monthly breakdown for this breed yet — so these are the size-based numbers. ';
+      srcNote += B.page ? '<a href="' + B.page + '">Read what we do know about ' + B.label + ' costs</a>.' : '';
+    } else {
+      srcNote = 'These are averages for the size band, not a breed. Pick a breed from the dropdown where we have real published numbers.';
+    }
+  }
+  if (B && B.risk) breedRisk = B.risk;
+
+  var total = food + treats + vetCost + flea + insCost + groomCost + toys + litter + extra;
   var annual = total * 12;
-  var lifetime = annual * (pet.indexOf('cat')>=0 ? 15 : 12);
+  var lifetime = annual * (pet.indexOf('cat') >= 0 ? 15 : 12);
+
   var html = '<h4>💰 Your Estimated Monthly Cost</h4>';
+  html += '<p style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:var(--text-muted);margin:0 0 6px;">Based on: ' + srcLabel + '</p>';
   html += '<p class="big">$' + total + ' <span style="font-size:0.6em;">/ month</span></p>';
   html += '<p style="font-size:0.85rem;color:var(--text-secondary);margin-top:8px;">';
-  html += 'Food: <strong>$' + food + '</strong>  Treats: <strong>$' + treats + '</strong><br>';
+  html += 'Food: <strong>$' + food + '</strong>  ' + treatsLabel + ': <strong>$' + treats + '</strong><br>';
   html += 'Vet (amortized): <strong>$' + vetCost + '</strong>  Flea/Tick: <strong>$' + flea + '</strong><br>';
   if (insCost > 0) html += 'Insurance: <strong>$' + insCost + '</strong>  ';
-  html += 'Grooming: <strong>$' + groomCost + '</strong>  Toys: <strong>$' + toys + '</strong>';
+  html += 'Grooming: <strong>$' + groomCost + '</strong>';
+  if (toys > 0) html += '  Toys: <strong>$' + toys + '</strong>';
   if (litter > 0) html += '<br>Litter: <strong>$' + litter + '</strong>';
+  if (extra > 0 && extraLabel) html += ((litter > 0 || toys <= 0) ? '<br>' : '  ') + extraLabel + ': <strong>$' + extra + '</strong>';
   html += '</p>';
   html += '<p style="font-size:0.88rem;margin-top:10px;border-top:1px solid var(--border);padding-top:10px;">📅 <strong>$' + annual.toLocaleString() + '</strong> per year &nbsp;|&nbsp; 🐾 ~<strong>$' + lifetime.toLocaleString() + '</strong> lifetime estimate</p>';
+  html += '<p style="font-size:0.76rem;color:var(--text-muted);margin-top:8px;">' + srcNote + '</p>';
+
+  if (breedRisk) {
+    html += '<div style="margin-top:12px;padding:10px 12px;border-left:3px solid var(--accent);background:rgba(246,133,27,0.07);font-size:0.8rem;line-height:1.55;">';
+    html += '<strong>⚠️ Breed-specific risk not in the number above</strong><br>' + breedRisk + '</div>';
+  }
 
   // Progress bar: baseline vs potential medical emergency
   var medicalEstimate = total * 0.4; // rough: 40% of monthly can be medical buffer
@@ -221,6 +386,40 @@
   document.getElementById('result').style.display = 'block';
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'center'});
   }
+
+  // Breed list is filtered by species: a Bengal under "Large Dog" is nonsense.
+  // 🔴 <optgroup> 在 Chromium 里根本不是渲染盒（offsetParent 恒为 null、offsetHeight 恒 0），
+  //    所以 display:none / disabled 都挡不住它 —— 实测 option.disabled 与 hidden 也照样
+  //    能被 JS 选中。**唯一可靠的做法是重建列表**，把不属于当前物种的条目真正移出 DOM。
+  function syncBreedList() {
+  var isCat = document.getElementById('petType').value === 'cat';
+  var sel = document.getElementById('breed');
+  var keep = sel.value;
+  while (sel.firstChild) sel.removeChild(sel.firstChild);
+
+  var blank = document.createElement('option');
+  blank.value = ''; blank.textContent = '— Size-based estimate —';
+  sel.appendChild(blank);
+
+  var g = document.createElement('optgroup');
+  g.label = isCat ? '🐱 Cats in our guides' : '🐶 Dogs in our guides';
+  Object.keys(BREEDS).forEach(function (k) {
+    var B = BREEDS[k];
+    if ((isCat && B.type !== 'cat') || (!isCat && B.type !== 'dog')) return;
+    var o = document.createElement('option');
+    o.value = k; o.textContent = B.label;
+    g.appendChild(o);
+  });
+  sel.appendChild(g);
+
+  // 跨物种切换后，原选中项多半已不在列表里 —— 显式确认，别留一个悬空 value。
+  var stillThere = false;
+  for (var i = 0; i < sel.options.length; i++) { if (sel.options[i].value === keep) stillThere = true; }
+  sel.value = stillThere ? keep : '';
+  }
+
+  document.getElementById('petType').addEventListener('change', syncBreedList);
+  syncBreedList();
   </script>
   <script src="nav.js?v=20260920b"></script>
   <script defer src="tool-share.js?v=20260807"></script>
