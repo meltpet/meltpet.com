@@ -17,6 +17,9 @@ Disallow: /api/
 Disallow: *.temp
 
 Sitemap: https://www.meltpet.com/sitemap.xml
+# Pin 相册的补充 sitemap（functions/gallery-sitemap.xml.js 动态生成）：
+# 静态 sitemap.xml 保持原样，这里只多声明一条 —— sitemap 协议允许一个站点有多条。
+Sitemap: https://www.meltpet.com/gallery-sitemap.xml
 
 # ── Disallow AI-training crawlers (Cloudflare Managed) ──
 User-agent: Amazonbot

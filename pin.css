@@ -1,0 +1,91 @@
+/* ── Pin detail page (/gallery/<slug>) ───────────────────────────────────────
+ * 只被 Functions 服务端渲染的详情页引用（functions/gallery/[slug].js）。
+ *
+ * ⚠️ 故意的：不并进 style.css。改 style.css 必须全站升 ?v=（79 个 HTML），
+ *    而这一页只在主站存在（GitHub Pages 镜像没有 Functions）——
+ *    为它连累整站的缓存版本号不划算。这里改了只需动本文件的 ?v。
+ *
+ * 配色一律取 §1 的变量，不写死色值 —— §9 的 body.dark-theme 覆盖才能自动生效。
+ */
+
+.pin-detail-figure {
+    margin: 0 auto 20px;
+    max-width: 560px;
+    text-align: center;
+}
+
+.pin-detail-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+    background: var(--bg-surface);
+}
+
+.pin-detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    max-width: 560px;
+}
+
+.pin-detail-back {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.pin-detail-back:hover { color: var(--brand-accent); }
+
+.pin-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin: 0 auto 10px;
+    max-width: 720px;
+}
+
+.pin-detail-tag {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border-light);
+    background: var(--bg-surface);
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.pin-detail-tag:hover {
+    border-color: var(--brand-accent);
+    color: var(--brand-accent);
+    background: var(--brand-soft);
+}
+
+.pin-detail-meta {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-bottom: 24px;
+}
+
+body.dark-theme .pin-detail-tag {
+    background: var(--bg-surface);
+    border-color: var(--border-light);
+    color: var(--text-body);
+}
+
+body.dark-theme .pin-detail-back { color: var(--text-secondary); }
+
+/* 手机上按钮通栏，和站内其它 CTA 的断点行为一致 */
+@media (max-width: 480px) {
+    .pin-detail-actions { flex-direction: column; align-items: stretch; }
+    .pin-detail-actions .btn-primary { width: 100%; text-align: center; }
+    .pin-detail-back { text-align: center; }
+}

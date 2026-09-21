@@ -28,6 +28,11 @@
 /nav.js
   Cache-Control: public, max-age=604800, must-revalidate
 
+# Pin 详情页专用样式（只在 /gallery/<slug> 用，故意不并进 style.css，
+# 免得每改一次都要全站升 ?v=）。版本号走 query，同 style.css 的口径。
+/pin.css
+  Cache-Control: public, max-age=604800, must-revalidate
+
 # Images: 1-day cache
 /*.png
   Cache-Control: public, max-age=86400

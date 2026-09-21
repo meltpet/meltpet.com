@@ -298,9 +298,21 @@
 
     // h3 而不是 h2：板块已经有 sr-only 的 h2「Pins」，
     // 24 张卡片若都用 h2 会把文档大纲冲成 24 个并列顶级标题。
+    // 标题是**真链接**，不是纯文本：这是 /gallery 通往每个详情页的发现路径
+    // （爬虫与无 JS 访客顺着它走）。有 JS 时接管普通左键、保持原有弹层交互；
+    // 修饰键与中键**不接管** —— Ctrl/Cmd+点击、中键必须还能新标签页打开，
+    // 否则就是渐进增强做成了功能倒退。
     var title = document.createElement('h3');
     title.className = 'pin-card-title';
-    title.textContent = post.title;
+    var titleLink = document.createElement('a');
+    titleLink.href = '/gallery/' + encodeURIComponent(post.slug);
+    titleLink.textContent = post.title;
+    titleLink.addEventListener('click', function (ev) {
+      if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey || ev.button !== 0) return;
+      ev.preventDefault();
+      openModal(post.slug);
+    });
+    title.appendChild(titleLink);
     body.appendChild(title);
 
     if (post.description) {
@@ -715,9 +727,16 @@
     }
 
     // 「Pin it」：把这张图送到 Pinterest。这是本页最自然的分享动作。
+    //
+    // 🔴 指向**服务端渲染的真 URL**（functions/gallery/[slug].js），不再是 #pin= 深链。
+    //    原因是 hash 在服务端不可见：Pinterest 打开链接只能看到 /gallery，
+    //    于是每条 Pin 抓到的 og:image 都是全站共用的 tools-og.png（预览图全错），
+    //    Google 也永远只收录 1 个页面。真 URL 同时修掉这两件事。
+    //    utm_* 让 GA4 能把 Pinterest 会话归因到具体这条 Pin（此前全归到 /gallery）。
     var old = els.modalActions.querySelector('.pin-pinterest');
     if (old) old.remove();
-    var shareUrl = 'https://www.meltpet.com/gallery#pin=' + encodeURIComponent(post.slug);
+    var shareUrl = 'https://www.meltpet.com/gallery/' + encodeURIComponent(post.slug)
+      + '?utm_source=pinterest&utm_medium=social&utm_campaign=pin_board';
     var pinHref = 'https://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(shareUrl)
       + '&media=' + encodeURIComponent(post.imageUrl)
       + '&description=' + encodeURIComponent(post.title);
@@ -822,7 +841,11 @@
   function share() {
     var post = modalState.post;
     if (!post) return;
-    var url = 'https://www.meltpet.com/gallery#pin=' + encodeURIComponent(post.slug);
+    // 与服务端渲染的真 URL 对齐（见文件末尾 pinHref 处的说明）：
+    // 分享出去的链接必须指向详情页，而不是服务端看不见的 #pin= 深链 ——
+    // 否则对方拿到的那条链接没有任何预览与标题信息。
+    var url = 'https://www.meltpet.com/gallery/' + encodeURIComponent(post.slug)
+      + '?utm_source=share&utm_medium=social&utm_campaign=pin_board';
     if (navigator.share) {
       navigator.share({ title: post.title, text: post.description || post.title, url: url }).catch(function () { /* 用户取消 */ });
       return;

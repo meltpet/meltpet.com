@@ -30,7 +30,7 @@
 
 ## Key Resources
 
-- [Pin Gallery](https://www.meltpet.com/gallery): Visual pet-care cheat sheets you can save and share — each pin links to the tool or guide behind it.
+- [Pin Gallery](https://www.meltpet.com/gallery): Visual pet-care cheat sheets you can save and share — each pin links to the tool or guide behind it. Every published pin also has its own page (`/gallery/<slug>`) with the full-size image, its notes, and the link it points at; the full list is in the pin sitemap at `/gallery-sitemap.xml`.
 - [Breed Finder Hub](https://www.meltpet.com/breed-finder): Find the right dog or cat breed for your lifestyle in 30 seconds.
 - [Dog Breed Finder](https://www.meltpet.com/dog-breed-finder): 5-question dog breed matching quiz.
 - [Cat Breed Finder](https://www.meltpet.com/cat-breed-finder): 5-question cat breed matching quiz.
