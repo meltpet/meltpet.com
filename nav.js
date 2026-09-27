@@ -111,7 +111,8 @@
             {title: '✂️ DIY vs Pro Grooming',       href: '/diy-dog-grooming-vs-professional', desktop: true, keywords: 'diy dog grooming vs professional cost clippers breed guide doodle double coat shave'},
             {title: '🐶 New Puppy Checklist',       href: '/new-puppy-checklist',              desktop: true, keywords: 'new puppy checklist supplies what you need first week'},
             {title: '🤮 Cat Vomiting Color Guide',  href: '/cat-vomiting-color-guide',         desktop: true, keywords: 'cat vomiting vomit color yellow bile white foam brown red blood when to worry emergency hairball'},
-            {title: '🫘 Cat Kidney Disease Prevention', href: '/cat-kidney-disease-prevention',desktop: true, keywords: 'cat kidney disease CKD chronic renal failure prevention hydration SDMA creatinine wet food phosphorus'}
+            {title: '🫘 Cat Kidney Disease Prevention', href: '/cat-kidney-disease-prevention',desktop: true, keywords: 'cat kidney disease CKD chronic renal failure prevention hydration SDMA creatinine wet food phosphorus'},
+            {title: '💧 Cat Dehydration Test', href: '/cat-dehydration-test-guide', desktop: true, keywords: 'cat dehydration test skin pinch tent test turgor gums capillary refill how to tell if cat is dehydrated water intake not drinking'}
         ],
         costs: [
             {title: '💰 Monthly Pet Cost Calculator', href: '/monthly-pet-cost',              desktop: true, keywords: 'cost calculator monthly pet food vet insurance grooming'},
