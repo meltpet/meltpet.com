@@ -19,8 +19,8 @@
     
     --text-heading: #1A1A1A;
     --text-body: #4A4A4A;
-    --text-muted: #8C8C8C;
-    --text-secondary: #64748B;
+    --text-muted: #707070;       /* 4.67:1 on --bg-base, 4.95:1 on --bg-surface (WCAG AA small text) */
+    --text-secondary: #5F6F85;   /* 4.83:1 on --bg-base, 5.12:1 on --bg-surface (WCAG AA small text) */
     
     --border-light: #EBEBEB;
     --border-focus: #F6851B;
@@ -350,6 +350,10 @@ body.dark-theme {
     --bg-surface: #1E293B;
     --text-heading: #F8FAFC;
     --text-body: #CBD5E1;
+    /* Muted/secondary must be re-declared for dark surfaces: the light-theme
+       values (#707070 / #5F6F85) drop to 2.96:1 and 2.86:1 on --bg-surface. */
+    --text-muted: #9A9A9A;       /* 6.34:1 on --bg-base, 5.20:1 on --bg-surface */
+    --text-secondary: #94A3B8;   /* 6.96:1 on --bg-base, 5.71:1 on --bg-surface */
     --border-light: #334155;
     --shadow-sm: 0 4px 12px rgba(0,0,0,0.3);
     --shadow-hover: 0 16px 40px rgba(246, 133, 27, 0.1);
