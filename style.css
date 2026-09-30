@@ -342,7 +342,7 @@ tr:last-child td { border-bottom: none; }
 /* Popular Guides: 2-column split to balance visual height with other 3 columns */
 .footer-col:last-of-type ul { column-count: 2; column-gap: 24px; }
 .footer-col:last-of-type li { break-inside: avoid; }
-.footer-bottom { text-align: center; padding-top: 40px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+.footer-bottom { text-align: center; padding-top: 40px; margin-top: 60px; border-top: 1px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.5); font-size: 0.85rem; }
 
 /* ── 9. Dark Mode Override ── */
 body.dark-theme {
