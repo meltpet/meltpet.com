@@ -112,12 +112,15 @@
             {title: '🐶 New Puppy Checklist',       href: '/new-puppy-checklist',              desktop: true, keywords: 'new puppy checklist supplies what you need first week'},
             {title: '🤮 Cat Vomiting Color Guide',  href: '/cat-vomiting-color-guide',         desktop: true, keywords: 'cat vomiting vomit color yellow bile white foam brown red blood when to worry emergency hairball'},
             {title: '🫘 Cat Kidney Disease Prevention', href: '/cat-kidney-disease-prevention',desktop: true, keywords: 'cat kidney disease CKD chronic renal failure prevention hydration SDMA creatinine wet food phosphorus'},
-            {title: '💧 Cat Dehydration Test', href: '/cat-dehydration-test-guide', desktop: true, keywords: 'cat dehydration test skin pinch tent test turgor gums capillary refill how to tell if cat is dehydrated water intake not drinking'}
+            {title: '🎗️ Dog Cancer Risk by Breed', href: '/dog-breeds-cancer-risk', desktop: true, keywords: 'dog breeds cancer risk ranked most likely to get cancer golden retriever bernese mountain dog flat coated retriever cancer statistics tumor'},
+            {title: '💧 Cat Dehydration Test', href: '/cat-dehydration-test-guide', desktop: true, keywords: 'cat dehydration test skin pinch tent test turgor gums capillary refill how to tell if cat is dehydrated water intake not drinking'},
+            {title: '💧 Why Cats Get Dehydrated', href: '/cat-dehydration-causes', desktop: true, keywords: 'cat dehydration causes why cats get dehydrated kidney disease hyperthyroidism diabetes dry food water intake fluid loss'}
         ],
         costs: [
             {title: '💰 Monthly Pet Cost Calculator', href: '/monthly-pet-cost',              desktop: true, keywords: 'cost calculator monthly pet food vet insurance grooming'},
             {title: '🍖 Dog Food Cost Calculator',   href: '/dog-food-cost-calculator',        desktop: true, keywords: 'dog food cost calculator monthly annual kibble wet raw dry food budget'},
             {title: '💵 How Much Does a Dog Cost Per Month', href: '/how-much-does-a-dog-cost-per-month', desktop: true, keywords: 'dog cost per month food vet insurance small medium large'},
+            {title: '💸 Most Expensive Dog Breeds', href: '/most-expensive-dog-breeds', desktop: true, keywords: 'most expensive dog breeds cost ranking lifetime monthly annual poodle golden retriever french bulldog dachshund cheapest breed to own'},
             {title: '⚖️ Adopt vs Buy',              href: '/adopt-vs-buy',                    desktop: true, keywords: 'adopt buy cost comparison shelter breeder calculator'},
             {title: '📊 Adopt vs Buy: Full Breakdown', href: '/adopt-vs-buy-full-cost-breakdown', desktop: true, keywords: 'adopt vs buy full cost breakdown health temperament lifetime comparison'},
             {title: '💸 17 Hidden Costs of Ownership', href: '/hidden-costs-of-dog-ownership', desktop: true, keywords: 'hidden costs dog ownership emergency boarding allergy shots destroyed drywall'},

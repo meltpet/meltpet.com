@@ -210,7 +210,7 @@ body.dark-theme .gallery-banner { background: linear-gradient(115deg, rgba(246, 
 .tag-calc { background: #F3EEF5; color: #6B4C8A; }
 
 .guide-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-heading); margin-bottom: 12px; line-height: 1.4; font-family: var(--font-serif); }
-.guide-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0; flex-grow: 1; }
+.guide-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0; flex-grow: 1; }
 
 /* ── 6. Sidebar (Sticky EEAT Widgets) ── */
 .sidebar { display: flex; flex-direction: column; gap: 32px; position: sticky; top: calc(var(--nav-height) + 32px); height: max-content; }
