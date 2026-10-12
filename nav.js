@@ -96,7 +96,8 @@
             {title: '🪅 Cats Knock Things Over',     href: '/why-do-cats-knock-things-off-tables', desktop: true, keywords: 'cat knock things off table behavior why'},
             {title: '😴 Why Cats Sleep So Much',     href: '/why-do-cats-sleep-so-much',         desktop: true, keywords: 'cat sleep so much why hours polyphasic REM lethargy nap normal'},
             {title: '🦶 Why Dogs Lick Your Feet',    href: '/why-does-my-dog-lick-my-feet',      desktop: true, keywords: 'dog lick feet why behavior sweat salt vomeronasal pheromone compulsive'},
-            {title: '🐺 Why Dogs Howl',              href: '/why-do-dogs-howl',                 desktop: true, keywords: 'dog howl why siren separation anxiety husky hound singing pack communication'}
+            {title: '🐺 Why Dogs Howl',              href: '/why-do-dogs-howl',                 desktop: true, keywords: 'dog howl why siren separation anxiety husky hound singing pack communication'},
+            {title: '🚽 Cat Peeing Outside the Box', href: '/cat-peeing-outside-litter-box',    desktop: true, keywords: 'cat peeing outside litter box house soiling not using litter box urinating spraying marking litter box avoidance inappropriate elimination pee on bed carpet why does my cat'}
         ],
         health: [
             {title: '🦷 Dog Dental Care Guide',     href: '/dog-dental-care-guide',           desktop: true, keywords: 'dog dental care teeth brushing cleaning vet extraction gum disease'},
