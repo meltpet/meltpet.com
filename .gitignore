@@ -5,3 +5,15 @@ _r2.py
 meltpet-audit-*.html
 meltpet-deep-audit-*.html
 meltpet-deindexing-diagnosis-*.html
+
+# 内部运维产物与凭据 —— 与 _deploy_build.py 的 DENY_* 规则对齐。
+# 这些文件就放在静态根里，此前只靠部署端拒绝；加在这里避免被 `git add -A` 带进公开仓库。
+.gallery-cred.json
+auto-pin-*
+gallery-auto-pin.ps1
+img/auto-pin-*
+img/pin-*.jpg
+img/pin-*.jpeg
+img/pin-*.png
+img/pin-*.webp
+img/pin-*.gif
