@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="style.css?v=20261012">
+        <link rel="stylesheet" href="style.css?v=20261013">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:type" content="website">
@@ -50,6 +50,8 @@
   </noscript>
   </div>
   <main class="container" id="main-content">
+<div class="main-grid content-grid">
+<div class="main-content">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">🏠 Home</a><span class="sep"> ›</span><a href="/monthly-pet-cost">Tools</a><span class="sep"> ›</span><span class="current">Adopt vs Buy Calculator</span></nav>
   <div class="tool-hero">
   <h1>⚖️ <span>Adopt vs Buy</span> Calculator</h1>
@@ -68,13 +70,13 @@
   <div class="result-card" id="result" style="display:none"></div>
   </div>
   <div class="article-section" style="margin-top:24px;">
-  <h2>What This Calculator Shows</h2>
+  <h2 id="what-this-calculator-shows">What This Calculator Shows</h2>
   <p>The acquisition fee is just the beginning. This calculator factors in first-year setup costs (crate, bed, supplies, training), annual routine costs (food, vet, flea prevention, insurance, grooming), and estimated emergency and travel expenses over the pet's expected lifespan. Read our <a href="/adopt-vs-buy-full-cost-breakdown">full adopt vs buy guide</a> for the complete analysis.</p>
   </div>
 
     <img src="https://cdn.meltpet.com/article/adopt-vs-buy-cost-comparison.png" alt="Adopt vs buy first-year cost comparison: shelter adoption costs $50-$500 with spay/neuter and vaccines included; breeder puppy costs $800-$3,500 plus $200-$500 for spay/neuter — year-one totals $1,250-$2,000 vs $2,300-$5,750" width="800" height="450" style="max-width:100%;height:auto;border-radius:8px;display:block;margin:20px 0;" loading="lazy">
     <article class="article-section">
-  <h2>⚖️ Adoption vs Breeder: The Real Tradeoffs</h2>
+  <h2 id="adoption-vs-breeder-the-real-tradeoffs">⚖️ Adoption vs Breeder: The Real Tradeoffs</h2>
 
   <h3>How much do you actually save by adopting?</h3>
   <p>The gap is real, and it's biggest at the counter. Adoption fees on our calculator run $100 to $450, while a breeder charges $1,000 to $3,500 — and the adoption fee usually bundles spay/neuter, initial vaccinations, and a microchip that a breeder bills for separately. But the acquisition fee is the smallest piece of the lifetime number. A cheap price at the counter doesn't guarantee a cheap decade, and this tool shows you both: the first-year difference and the lifetime projection.</p>
@@ -87,7 +89,7 @@
   </article>
 
   <article class="article-section">
-  <h2> What the Numbers Can't Tell You</h2>
+  <h2 id="what-the-numbers-can-t-tell-you"> What the Numbers Can't Tell You</h2>
   <p>Cost is one dimension. It's not the only one. Here's what to weigh alongside the calculator:</p>
   <ul style="margin:14px 0 0 20px;line-height:2;">
   <li><strong>Temperament predictability.</strong> A well-bred Golden Retriever puppy comes with generations of documented temperament. A shelter dog's history is often unknown — which can mean a wonderful surprise or a behavioral project. Neither is "better." They're different commitments.</li>
@@ -98,6 +100,33 @@
   </ul>
   <p style="margin-top:14px;">For a deeper dive, read our <a href="/adopt-vs-buy-full-cost-breakdown">full adopt vs buy cost breakdown guide</a> — it covers health, temperament, hidden fees, and the arguments both sides skip.</p>
   </article>
+</div>
+
+<aside class="sidebar" aria-label="On this page and related reading">
+
+  <div class="widget">
+  <h4 class="widget-title">🧰 Tools That Help</h4>
+  <a href="/monthly-pet-cost" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">💰</span><span class="widget-link-text">Monthly Cost Calculator</span></a>
+  <a href="/pet-age-calculator" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">📅</span><span class="widget-link-text">Pet Age Calculator</span></a>
+  <a href="/breed-finder" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🔍</span><span class="widget-link-text">Breed Finder</span></a>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">More Cost Guides</h4>
+  <a href="/monthly-pet-cost" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">📄</span><span class="widget-link-text">Cost Calculator</span></a>
+  <a href="/dog-food-cost-calculator" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">📄</span><span class="widget-link-text">Dog Food Cost Calculator</span></a>
+  <a href="/how-much-does-a-dog-cost-per-month" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">📄</span><span class="widget-link-text">How Much Does a Dog Cost Per Month</span></a>
+  <a href="/most-expensive-dog-breeds" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">📄</span><span class="widget-link-text">Most Expensive Dog Breeds</span></a>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">✍️ Written By</h4>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">Sarah Mitchell writes MeltPet's behavior and health explainers, and reads the primary literature before she writes a line of them.</p>
+  <a href="/sarah-mitchell" class="btn-secondary" style="width:100%; justify-content:center; border-color:var(--border-light); color:var(--text-heading);">About the Author</a>
+  </div>
+
+</aside>
+</div>
 </main>
 
     <section class="related-articles" aria-labelledby="related-heading">
@@ -184,7 +213,7 @@
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'center'});
   }
   </script>
-  <script src="nav.js?v=20261012"></script>
+  <script src="nav.js?v=20261013"></script>
   <script defer src="tool-share.js?v=20260807"></script>
     <script defer src="/analytics.js"></script>
 </body>

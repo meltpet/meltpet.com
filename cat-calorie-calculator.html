@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261012">
+  <link rel="stylesheet" href="style.css?v=20261013">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Cat Calorie Calculator: RER + DER Formula, Portions by Food Type">
@@ -52,11 +52,13 @@
   </div>
 
   <main class="container" id="main-content">
+<div class="main-grid content-grid">
+<div class="main-content">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">🏠 Home</a><span class="sep"> ›</span><a href="/cat-breed-finder">Cats</a><span class="sep"> ›</span><span class="current">Cat Calorie Calculator</span></nav>
     <div class="tool-hero"><h1>🐱 Cat Calorie <span>Calculator</span></h1><p>How many calories does your cat actually need? RER formula, activity multiplier, and the answer in real portions — cans, cups, or mixed. | 2026-07-30 · MeltPet</p></div>
 
     <div class="widget" id="calculator-widget" style="max-width:560px;margin:0 auto 32px;padding:24px 24px 28px;">
-      <h2 style="margin:0 0 20px;font-size:1.1rem;">Calculate Your Cat's Daily Calories</h2>
+      <h2 style="margin:0 0 20px;font-size:1.1rem;" id="calculate-your-cat-s-daily-calories">Calculate Your Cat's Daily Calories</h2>
 
       <label for="catWeight">Your cat's weight</label>
       <div style="display:flex;gap:8px;align-items:flex-end;margin-bottom:14px;">
@@ -88,7 +90,7 @@
     </div>
 
     <article class="article-section">
-      <h2>The RER Formula: Where Cat Calorie Math Comes From</h2>
+      <h2 id="the-rer-formula-where-cat-calorie-math-comes-from">The RER Formula: Where Cat Calorie Math Comes From</h2>
       <p>Veterinarians calculate a cat's energy needs in two steps. Step one: <strong>RER (Resting Energy Requirement)</strong> — the calories a cat burns just existing: breathing, circulating blood, maintaining body temperature. The formula, derived from metabolic studies across species:</p>
       <p style="text-align:center;font-size:1.1rem;font-weight:700;background:#F8F9FA;padding:12px;border-radius:6px;">RER (kcal/day) = 70 × (body weight in kg)<sup>0.75</sup></p>
       <p>Step two: multiply RER by an activity factor to get <strong>DER (Daily Energy Requirement)</strong> — the calories the cat actually needs. For a sedentary indoor cat, the multiplier is 1.2. For weight loss, 0.8. For a growing kitten, 2.5. For a nursing queen with a large litter, up to 6.0.</p>
@@ -97,7 +99,7 @@
     </article>
 
     <article class="article-section">
-      <h2>Why the Feeding Guide on the Bag Is Wrong</h2>
+      <h2 id="why-the-feeding-guide-on-the-bag-is-wrong">Why the Feeding Guide on the Bag Is Wrong</h2>
       <p>The feeding guide printed on your cat food bag is a starting point, not a prescription. Here's why it's usually wrong for your specific cat:</p>
       <p><strong>It assumes an "average" cat that doesn't exist.</strong> The guide is calculated for an intact (not spayed/neutered) adult cat with moderate activity — a cat that goes outside, hunts, patrols territory. Your spayed indoor cat has a metabolism roughly 20–25% lower than that theoretical cat. Feeding per the bag will make her gain weight. A 2009 study found that spayed/neutered cats fed according to bag guidelines gained an average of 12% body weight over 12 months — roughly 1.5 pounds on a 12-pound cat. That's the difference between BCS 5 (ideal) and BCS 7 (overweight).</p>
       <p><strong>It's rounded to convenient cup increments</strong> — ½ cup, ¾ cup, 1 cup — that don't correspond to the actual calorie math. A 10-pound cat who needs 220 calories on a 400 kcal/cup food should get 0.55 cups. The bag says ½ to ¾ cup. Most owners go with ¾ cup "to be safe" — that's 300 calories, or 80 extra calories per day. Over a year, that's 29,200 extra calories, or about 8 pounds of body fat. On a 10-pound cat.</p>
@@ -105,7 +107,7 @@
     </article>
 
     <article class="article-section">
-      <h2>Calories by Weight: Quick Reference Table</h2>
+      <h2 id="calories-by-weight-quick-reference-table">Calories by Weight: Quick Reference Table</h2>
       <div class="table-scroll"><table>
         <thead><tr><th>Cat Weight</th><th>RER (kcal)</th><th>Sedentary Indoor</th><th>Weight Loss (0.8×)</th><th>Moderately Active</th><th>Kitten (&lt;12 mo)</th></tr></thead>
         <tbody>
@@ -123,7 +125,7 @@
     </article>
 
     <article class="article-section">
-      <h2>Wet vs Dry: The Weight-Loss Math</h2>
+      <h2 id="wet-vs-dry-the-weight-loss-math">Wet vs Dry: The Weight-Loss Math</h2>
       <p>Wet food is the single most effective weight-loss tool for cats — not because it's magically low-calorie, but because it's mostly water. A 3-ounce can of pâté is roughly 78% water. A cup of dry kibble is 6–10% water. The water in wet food takes up stomach volume without adding calories, so the cat feels physically full on fewer calories. This matters enormously for weight loss, because the main reason cat diets fail is owner compliance — the cat begs, the owner caves. A cat on wet food begs less because they're not hungry. The stomach is full.</p>
       <p>The carb difference compounds this. Dry food needs starch to hold the kibble shape — corn, wheat, rice, potatoes, peas, lentils. Even "grain-free" dry foods are 25–35% carbohydrate by calories because you need starch to extrude a kibble. Wet food needs no starch — meat, water, vitamins, and a gelling agent (carrageenan, agar, guar gum) in trace amounts. The result: a typical wet food is 40–50% protein, 40–50% fat, and 5–10% carbohydrate. A typical dry food is 30–35% protein, 20–25% fat, and 35–45% carbohydrate. A cat's natural diet — mice, birds, lizards — is roughly 50% protein, 40% fat, and 5% carbohydrate. Wet food is closer to the evolutionary norm.</p>
       <p>If your cat absolutely refuses wet food — and some do, especially cats who've eaten dry exclusively for years — don't force a hunger strike. Switch to a high-protein, low-carb dry food (aim for &lt;20% carbs by calorie, which usually means &lt;25% carbs on the guaranteed analysis), measure portions by weight with a kitchen scale, and split into 3–4 small meals per day to keep the cat feeling fed. Automated feeders are worth the $60–80 — they eliminate the "the cat is meowing at me at 5 AM" variable from the weight-loss equation.</p>
@@ -142,7 +144,39 @@
     </article>
 
     <div class="article-section" style="background:var(--accent-soft);border-left:3px solid var(--accent);margin-bottom:24px;"><h2 style="font-size:1rem;">📖 Related</h2><ul style="margin-left:18px;line-height:2;"><li><a href="/cat-dental-care-guide">Cat Dental Care Guide</a> — dental disease and obesity share a root cause: carbohydrate-heavy dry food</li><li><a href="/cat-kidney-disease-prevention">Cat Kidney Disease Prevention</a> — hydration from wet food protects kidneys, especially in overweight cats</li><li><a href="/cat-vomiting-color-guide">Cat Vomiting Color Guide</a> — rapid diet changes can cause vomiting; transition food over 7–10 days</li><li><a href="/monthly-pet-cost">Monthly Pet Cost Calculator</a> — see what switching to wet food does to your monthly budget</li></ul></div>
-  </main>
+  
+</div>
+
+<aside class="sidebar" aria-label="On this page and related reading">
+
+  <div class="widget">
+  <h4 class="widget-title">📑 On This Page</h4>
+  <nav aria-label="On this page">
+  <a href="#calculate-your-cat-s-daily-calories" class="widget-link toc-link"><span class="widget-link-text">Calculate Your Cat's Daily Calories</span></a>
+  <a href="#the-rer-formula-where-cat-calorie-math-comes-from" class="widget-link toc-link"><span class="widget-link-text">The RER Formula: Where Cat Calorie Math Comes From</span></a>
+  <a href="#why-the-feeding-guide-on-the-bag-is-wrong" class="widget-link toc-link"><span class="widget-link-text">Why the Feeding Guide on the Bag Is Wrong</span></a>
+  <a href="#calories-by-weight-quick-reference-table" class="widget-link toc-link"><span class="widget-link-text">Calories by Weight: Quick Reference Table</span></a>
+  <a href="#wet-vs-dry-the-weight-loss-math" class="widget-link toc-link"><span class="widget-link-text">Wet vs Dry: The Weight-Loss Math</span></a>
+  </nav>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">More Tools</h4>
+  <a href="/cat-food-carb-calculator" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Cat Food Carb Calculator</span></a>
+  <a href="/raw-food-calculator" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Raw Food Calculator</span></a>
+  <a href="/pet-compatibility-quiz" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Pet Compatibility Quiz</span></a>
+  <a href="/gallery" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Pin Gallery</span></a>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">✍️ Written By</h4>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">Sarah Mitchell writes MeltPet's behavior and health explainers, and reads the primary literature before she writes a line of them.</p>
+  <a href="/sarah-mitchell" class="btn-secondary" style="width:100%; justify-content:center; border-color:var(--border-light); color:var(--text-heading);">About the Author</a>
+  </div>
+
+</aside>
+</div>
+</main>
 
   <footer class="site-footer">
     <div class="footer-grid">
@@ -186,7 +220,7 @@
     </div>
   </footer>
 
-  <script src="nav.js?v=20261012"></script>
+  <script src="nav.js?v=20261013"></script>
   <script defer src="tool-share.js?v=20260807"></script>
   <script>
   // Food type calorie densities

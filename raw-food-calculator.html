@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261012">
+  <link rel="stylesheet" href="style.css?v=20261013">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Raw Dog &amp; Cat Food Calculator — 80/10/10 (PMR) Recipe Builder">
@@ -52,11 +52,13 @@
   </div>
 
   <main class="container" id="main-content">
+<div class="main-grid content-grid">
+<div class="main-content">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">🏠 Home</a><span class="sep"> ›</span><a href="/dog-breed-finder">Dogs</a><span class="sep"> ›</span><span class="current">Raw Food Calculator</span></nav>
     <div class="tool-hero"><h1>🥩 Raw Food <span>Calculator</span></h1><p>Build a balanced raw diet — 80/10/10 split to the gram, plus the supplements raw diets actually need. | 2026-08-26 · MeltPet</p></div>
 
     <div class="widget" id="calculator-widget" style="max-width:560px;margin:0 auto 32px;padding:24px 24px 28px;">
-      <h2 style="margin:0 0 20px;font-size:1.1rem;">Build Your Pet's Raw Meal Plan</h2>
+      <h2 style="margin:0 0 20px;font-size:1.1rem;" id="build-your-pet-s-raw-meal-plan">Build Your Pet's Raw Meal Plan</h2>
 
       <label for="species">Species</label>
       <select id="species" onchange="liveCalc()" style="width:100%;margin-bottom:14px;">
@@ -91,7 +93,7 @@
     </div>
 
     <article class="article-section">
-      <h2>How Much Raw Food? The 2–3% Rule, Then the 80/10/5/5 Split</h2>
+      <h2 id="how-much-raw-food-the-2-3-rule-then-the-80-10-5-5-split">How Much Raw Food? The 2–3% Rule, Then the 80/10/5/5 Split</h2>
       <p><strong>An adult dog or cat eats 2–3% of their ideal body weight in raw food per day.</strong> From there, the Prey Model Raw (PMR) ratio — often called "80/10/10" — splits that daily amount into: <strong>80% muscle meat, 10% edible bone, 5% liver, and 5% other secreting organ</strong> (kidney, spleen, pancreas). That's the whole structure. Everything else is detail.</p>
       <p>Why each part is non-negotiable:</p>
       <ul style="margin-left:18px;line-height:2;">
@@ -104,14 +106,14 @@
     </article>
 
     <article class="article-section">
-      <h2>How the Calories Work (So the 2–3% Isn't a Blind Guess)</h2>
+      <h2 id="how-the-calories-work-so-the-2-3-isn-t-a-blind-guess">How the Calories Work (So the 2–3% Isn't a Blind Guess)</h2>
       <p>The raw-feeding community's 2–3% rule lines up with the veterinary calorie math. A pet's energy need is <strong>RER = 70 × (body weight in kg)<sup>0.75</sup></strong>, multiplied by a life-stage factor (roughly 1.6 for a neutered adult dog, 1.2 for a neutered adult cat, higher for puppies, kittens, and nursing mothers).</p>
       <p>Raw food averages about <strong>1.5–1.7 kcal per gram</strong>. A 10 kg (22 lb) dog needs roughly 500–550 kcal/day → about 300–340 grams of raw food → right at 3% of body weight. The two methods agree because they're describing the same animal. The calculator above shows you both: the calorie target and the gram amount.</p>
       <p>Then you tune by results, not by the formula. Weigh the pet weekly. If they gain unwanted weight, cut the daily amount by 10%. If they get too thin, add 10%. Body condition — how the ribs feel under your hands — beats any calculator.</p>
     </article>
 
     <article class="article-section">
-      <h2>The Four Things That Go Wrong With Raw Diets</h2>
+      <h2 id="the-four-things-that-go-wrong-with-raw-diets">The Four Things That Go Wrong With Raw Diets</h2>
       <p>Raw feeding isn't dangerous because it's raw. It's dangerous when it's <em>unbalanced</em>. These are the four failures that actually hurt animals:</p>
       <p><strong>1. Calcium–phosphorus imbalance.</strong> Meat is high in phosphorus and low in calcium. Without bone (or a calcium supplement), the body leaches calcium from its own bones to balance blood chemistry — softening bones, especially in growing puppies and kittens. This is the #1 nutritional failure in homemade raw diets. The 10% bone is not optional.</p>
       <p><strong>2. Taurine deficiency.</strong> Cats cannot synthesize enough taurine and will develop dilated cardiomyopathy (heart failure) and blindness without it. Taurine is abundant in heart and dark meat, but it degrades with freezing and grinding, so most cat raw recipes add it as a supplement. The calculator lists it as mandatory for cats — do not skip it.</p>
@@ -120,7 +122,7 @@
     </article>
 
     <article class="article-section">
-      <h2>Supplements: The Five That Matter</h2>
+      <h2 id="supplements-the-five-that-matter">Supplements: The Five That Matter</h2>
       <p>A PMR diet is meat-based, which means it's short on a few things a whole prey animal would supply through fur, feathers, blood, and stomach contents. Most raw feeders add these five. Doses are starting ranges per day — confirm against your specific supplement's label, because concentrations vary by brand.</p>
       <div class="table-scroll"><table>
         <thead><tr><th>Supplement</th><th>Why</th><th>Starting dose</th></tr></thead>
@@ -136,7 +138,7 @@
       <p style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;">Doses are general starting points, not prescriptions. Supplement concentration differs by brand. This is why a board-certified veterinary nutritionist review matters.</p>
     </article>
 
-    <div class="article-section" style="background:#FFF8E1;border-left:3px solid #E65100;margin-bottom:24px;"><h2 style="font-size:1rem;">⚠️ Before You Feed Raw — Read This</h2><ul style="margin-left:18px;line-height:2;font-size:0.92rem;"><li>This is a <strong>planning tool, not veterinary advice</strong>. Have the final recipe reviewed by a <strong>board-certified veterinary nutritionist</strong> before feeding.</li><li>Raw diets are <strong>not recommended</strong> for households with infants, the elderly, pregnant people, or anyone immunocompromised.</li><li><strong>Freeze meat for at least 3 weeks</strong> before feeding to reduce parasite risk (freezing does not reliably kill bacteria).</li><li>Never feed <strong>cooked bones</strong> (splinter hazard). Raw edible bone only, and size it to your pet — a choking hazard if too large or too small.</li></ul></div>
+    <div class="article-section" style="background:#FFF8E1;border-left:3px solid #E65100;margin-bottom:24px;"><h2 style="font-size:1rem;" id="before-you-feed-raw-read-this">⚠️ Before You Feed Raw — Read This</h2><ul style="margin-left:18px;line-height:2;font-size:0.92rem;"><li>This is a <strong>planning tool, not veterinary advice</strong>. Have the final recipe reviewed by a <strong>board-certified veterinary nutritionist</strong> before feeding.</li><li>Raw diets are <strong>not recommended</strong> for households with infants, the elderly, pregnant people, or anyone immunocompromised.</li><li><strong>Freeze meat for at least 3 weeks</strong> before feeding to reduce parasite risk (freezing does not reliably kill bacteria).</li><li>Never feed <strong>cooked bones</strong> (splinter hazard). Raw edible bone only, and size it to your pet — a choking hazard if too large or too small.</li></ul></div>
 
     <article class="article-section">
         <h2>Frequently Asked Questions</h2>
@@ -149,7 +151,40 @@
     </article>
 
     <div class="article-section" style="background:var(--accent-soft);border-left:3px solid var(--accent);margin-bottom:24px;"><h2 style="font-size:1rem;">📖 Related</h2><ul style="margin-left:18px;line-height:2;"><li><a href="/best-dog-food-dry-vs-wet-vs-raw">Best Dog Food: Dry vs Wet vs Raw</a> — the honest tradeoffs of each feeding approach</li><li><a href="/cat-food-carb-calculator">Cat Food Carb Calculator</a> — why raw (0–5% carbs) compares to kibble (35–45%)</li><li><a href="/dog-food-cost-calculator">Dog Food Cost Calculator</a> — see what a raw diet does to your monthly food budget</li><li><a href="/cat-calorie-calculator">Cat Calorie Calculator</a> — the RER/DER math behind the calorie estimate</li></ul></div>
-  </main>
+  
+</div>
+
+<aside class="sidebar" aria-label="On this page and related reading">
+
+  <div class="widget">
+  <h4 class="widget-title">📑 On This Page</h4>
+  <nav aria-label="On this page">
+  <a href="#build-your-pet-s-raw-meal-plan" class="widget-link toc-link"><span class="widget-link-text">Build Your Pet's Raw Meal Plan</span></a>
+  <a href="#how-much-raw-food-the-2-3-rule-then-the-80-10-5-5-split" class="widget-link toc-link"><span class="widget-link-text">How Much Raw Food? The 2–3% Rule, Then the 80/10/5/5 Split</span></a>
+  <a href="#how-the-calories-work-so-the-2-3-isn-t-a-blind-guess" class="widget-link toc-link"><span class="widget-link-text">How the Calories Work (So the 2–3% Isn't a Blind Guess)</span></a>
+  <a href="#the-four-things-that-go-wrong-with-raw-diets" class="widget-link toc-link"><span class="widget-link-text">The Four Things That Go Wrong With Raw Diets</span></a>
+  <a href="#supplements-the-five-that-matter" class="widget-link toc-link"><span class="widget-link-text">Supplements: The Five That Matter</span></a>
+  <a href="#before-you-feed-raw-read-this" class="widget-link toc-link"><span class="widget-link-text">⚠️ Before You Feed Raw — Read This</span></a>
+  </nav>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">More Tools</h4>
+  <a href="/pet-compatibility-quiz" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Pet Compatibility Quiz</span></a>
+  <a href="/gallery" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Pin Gallery</span></a>
+  <a href="/breed-finder" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Breed Finder Hub</span></a>
+  <a href="/dog-breed-finder" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Dog Breed Finder</span></a>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">✍️ Written By</h4>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">Sarah Mitchell writes MeltPet's behavior and health explainers, and reads the primary literature before she writes a line of them.</p>
+  <a href="/sarah-mitchell" class="btn-secondary" style="width:100%; justify-content:center; border-color:var(--border-light); color:var(--text-heading);">About the Author</a>
+  </div>
+
+</aside>
+</div>
+</main>
 
   <footer class="site-footer">
     <div class="footer-grid">
@@ -191,7 +226,7 @@
     </div>
   </footer>
 
-  <script src="nav.js?v=20261012"></script>
+  <script src="nav.js?v=20261013"></script>
   <script defer src="tool-share.js?v=20260807"></script>
   <script>
   // ── Life-stage DER factors (RER multiplier) ──

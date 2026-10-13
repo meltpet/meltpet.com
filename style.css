@@ -1211,3 +1211,84 @@ body.dark-theme .pg-btn-ok, body.dark-theme .pg-btn-danger { background: transpa
     .pin-masonry { column-count: 1 !important; }
     .pin-card { break-inside: avoid; box-shadow: none; border: 1px solid #ccc; }
 }
+
+/* ══ 16 文章页 / 工具页两栏布局（2026-10-13）═══════════════════════════════
+   复用首页已有的 .main-grid / .sidebar / .widget（响应式与暗色主题均已验证）。
+   🔴 这里只新增作用域规则，不改动任何既有规则；且一律带 .content-grid 类。
+      首页 index.html 的网格只写 .main-grid、没有 .content-grid
+      ⇒ 首页与未迁移页面**零影响**（否则「窄屏隐藏侧栏」会把首页侧栏也藏掉）。
+   效果：正文由「800px 居中」变成「左列 764px + 右侧栏 340px」，
+        行宽只从 800 收到 764（阅读舒适度基本不变），右侧空白被利用。
+   ──────────────────────────────────────────────────────────────────────── */
+
+/* 正文块：取消自身的 800px 居中，交给网格列宽决定 */
+.main-grid.content-grid .article-section {
+    max-width: none;
+    margin: 0 0 48px;
+}
+
+/* 🔴 网格子项必须能收缩到 min-content 以下。
+   否则 1fr = minmax(auto,1fr) 会被内容（如 max-width:380px 的插图）顶宽 ⇒ 窄屏横向溢出。
+   2026-10-13 实测：375px 下不加这条会得到 scrollWidth 420（视口 375）。 */
+.main-grid.content-grid > .main-content,
+.main-grid.content-grid > .sidebar {
+    min-width: 0;
+}
+
+/* hero：两栏下改为左对齐；原本的居中在窄栏里会显得别扭 */
+.main-grid.content-grid .tool-hero {
+    text-align: left;
+    margin: 32px 0 40px;
+}
+.main-grid.content-grid .tool-hero p {
+    max-width: none;
+    margin: 0;
+}
+
+/* 工具盒：同理取消 700px 居中 */
+.main-grid.content-grid .tool-box {
+    max-width: none;
+    margin: 0 0 48px;
+}
+
+/* 目录锚点跳转时，别被吸顶导航盖住 */
+.main-grid.content-grid .article-section h2[id] {
+    scroll-margin-top: calc(var(--nav-height) + 24px);
+}
+
+/* 目录当前项（由 nav.js 的 scroll-spy 切换 .is-active） */
+.main-grid.content-grid .toc-link.is-active {
+    padding-left: 10px;
+}
+.main-grid.content-grid .toc-link.is-active .widget-link-text {
+    color: var(--brand-accent);
+    font-weight: 800;
+}
+
+/* 侧栏比视口高时，吸顶元素底部会够不到 ⇒ 给个内部滚动兜底 */
+@media (min-width: 1025px) {
+    .main-grid.content-grid .sidebar {
+        max-height: calc(100vh - var(--nav-height) - 48px);
+        overflow-y: auto;
+        scrollbar-width: thin;
+    }
+}
+
+/* 1024px 以内：侧栏由既有规则收成两列并落到正文之后，这里只收紧节奏 */
+@media (max-width: 1024px) {
+    .main-grid.content-grid .article-section {
+        margin-bottom: 40px;
+    }
+    .main-grid.content-grid .tool-hero {
+        margin: 24px 0 32px;
+    }
+}
+
+/* ≤768px：直接隐藏侧栏。
+   理由：这个站的长文动辄 4,000–5,000 词，目录被推到文末等于没有；
+   移动端阅读流越干净越好。侧栏里的链接在导航与正文里本来就有，隐藏不损失可达性。 */
+@media (max-width: 768px) {
+    .main-grid.content-grid > .sidebar {
+        display: none;
+    }
+}

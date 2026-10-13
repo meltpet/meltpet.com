@@ -412,3 +412,50 @@
         document.addEventListener('DOMContentLoaded', init);
     } else { init(); }
 })();
+
+
+// ── 目录滚动高亮（仅两栏页有 .toc-link；其它页面自动空转）──
+// 由「文章页 / 工具页两栏布局」引入：侧栏目录里的当前小节加 .is-active，
+// 样式见 style.css § 16。没有目录的页面在第一个 return 就退出，开销可忽略。
+(function () {
+    function setupTocSpy() {
+        var links = document.querySelectorAll('.toc-link');
+        if (links.length < 2) { return; }
+        var heads = [];
+        for (var i = 0; i < links.length; i++) {
+            var href = links[i].getAttribute('href') || '';
+            var el = href.charAt(0) === '#' ? document.getElementById(href.slice(1)) : null;
+            if (el) { heads.push({ el: el, a: links[i] }); }
+        }
+        if (heads.length < 2) { return; }
+        var current = null;
+        function sync() {
+            var line = 140;                      // 吸顶导航高度 + 余量
+            var best = heads[0];
+            for (var i = 0; i < heads.length; i++) {
+                if (heads[i].el.getBoundingClientRect().top - line <= 0) { best = heads[i]; }
+            }
+            if (best === current) { return; }
+            current = best;
+            for (var j = 0; j < heads.length; j++) {
+                if (heads[j] === best) {
+                    heads[j].a.classList.add('is-active');
+                } else {
+                    heads[j].a.classList.remove('is-active');
+                }
+            }
+        }
+        var ticking = false;
+        function onScroll() {
+            if (ticking) { return; }
+            ticking = true;
+            window.requestAnimationFrame(function () { sync(); ticking = false; });
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', sync, { passive: true });
+        sync();
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupTocSpy);
+    } else { setupTocSpy(); }
+})();

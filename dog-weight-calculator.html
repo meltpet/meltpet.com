@@ -10,7 +10,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261012">
+  <link rel="stylesheet" href="style.css?v=20261013">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Dog Weight Calculator: Is Your Dog Overweight? BCS Checker">
@@ -53,11 +53,13 @@
   </div>
 
   <main class="container" id="main-content">
+<div class="main-grid content-grid">
+<div class="main-content">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">🏠 Home</a><span class="sep"> ›</span><a href="/dog-breed-finder">Dogs</a><span class="sep"> ›</span><span class="current">Dog Weight Calculator</span></nav>
     <div class="tool-hero"><h1>⚖️ Dog Weight <span>Calculator</span></h1><p>60% of dogs are overweight. Most owners can't tell. Find out where your dog actually stands. | 2026-07-30 · MeltPet</p></div>
 
     <div class="widget" id="calculator-widget" style="max-width:560px;margin:0 auto 32px;padding:24px 24px 28px;">
-      <h2 style="margin:0 0 20px;font-size:1.1rem;">Check Your Dog's Weight</h2>
+      <h2 style="margin:0 0 20px;font-size:1.1rem;" id="check-your-dog-s-weight">Check Your Dog's Weight</h2>
 
       <label for="breed">Your dog's breed (or closest match)</label>
       <select id="breed" onchange="updateBreed()" style="width:100%;margin-bottom:16px;">
@@ -112,7 +114,7 @@
     </div>
 
     <article class="article-section">
-      <h2>Body Condition Score: The Rib Test That Beats Any Scale</h2>
+      <h2 id="body-condition-score-the-rib-test-that-beats-any-scale">Body Condition Score: The Rib Test That Beats Any Scale</h2>
       <p>Breed weight charts are a starting point. A Labrador at 80 pounds could be a lean, muscular field-line dog or a fat show-line dog — the scale alone doesn't tell you. The Body Condition Score (BCS) does. It's the system veterinarians use, scored 1–9, and it takes 10 seconds to learn.</p>
 
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin:20px 0;">
@@ -143,7 +145,7 @@
     </article>
 
     <article class="article-section">
-      <h2>The Breed-by-Breed Reality: What "Ideal" Actually Looks Like</h2>
+      <h2 id="the-breed-by-breed-reality-what-ideal-actually-looks-like">The Breed-by-Breed Reality: What "Ideal" Actually Looks Like</h2>
       <div class="table-scroll"><table>
         <thead><tr><th>Breed</th><th>Male Ideal (lbs)</th><th>Female Ideal (lbs)</th><th>Common Misconception</th></tr></thead>
         <tbody>
@@ -163,7 +165,7 @@
     </article>
 
     <article class="article-section">
-      <h2>The Weight-Loss Plan That Actually Works</h2>
+      <h2 id="the-weight-loss-plan-that-actually-works">The Weight-Loss Plan That Actually Works</h2>
       <p>Most dog weight-loss advice is uselessly vague: "feed less, walk more." Here's the version that accounts for the fact that your dog will stare at you like they're starving and you will feel guilty.</p>
       <p><strong>Step 1: Measure. Actually measure.</strong> A kitchen scale is more accurate than a measuring cup for kibble. Cups vary by up to 20% depending on how densely you scoop. If you're free-feeding (bowl always full), stop. Measured meals, twice a day. No exceptions except training treats.</p>
       <p><strong>Step 2: Reduce by 10%, not 30%.</strong> Cutting calories drastically triggers the starvation response — the dog's metabolism slows, they become lethargic, and they beg more. Cut the current daily portion by 10% and hold for two weeks. Weigh the dog. If no change, cut another 5–10%. Slow weight loss is permanent weight loss. Crash diets fail in dogs for the same reason they fail in humans.</p>
@@ -182,7 +184,38 @@
     </article>
 
     <div class="article-section" style="background:var(--accent-soft);border-left:3px solid var(--accent);margin-bottom:24px;"><h2 style="font-size:1rem;">📖 Related</h2><ul style="margin-left:18px;line-height:2;"><li><a href="/dog-food-cost-calculator">Dog Food Cost Calculator</a> — what weight management food actually costs per month</li><li><a href="/best-dog-food-dry-vs-wet-vs-raw">Best Dog Food: Dry vs Wet vs Raw</a> — format matters for satiety on a calorie-restricted diet</li><li><a href="/monthly-pet-cost">Monthly Pet Cost Calculator</a> — budget for the weight management prescription food your vet might recommend</li><li><a href="/pet-insurance-worth-it">Is Pet Insurance Worth It?</a> — obesity-related conditions are expensive; insurance math, explained</li></ul></div>
-  </main>
+  
+</div>
+
+<aside class="sidebar" aria-label="On this page and related reading">
+
+  <div class="widget">
+  <h4 class="widget-title">📑 On This Page</h4>
+  <nav aria-label="On this page">
+  <a href="#check-your-dog-s-weight" class="widget-link toc-link"><span class="widget-link-text">Check Your Dog's Weight</span></a>
+  <a href="#body-condition-score-the-rib-test-that-beats-any-scale" class="widget-link toc-link"><span class="widget-link-text">Body Condition Score: The Rib Test That Beats Any Scale</span></a>
+  <a href="#the-breed-by-breed-reality-what-ideal-actually-looks-like" class="widget-link toc-link"><span class="widget-link-text">The Breed-by-Breed Reality: What "Ideal" Actually Looks Like</span></a>
+  <a href="#the-weight-loss-plan-that-actually-works" class="widget-link toc-link"><span class="widget-link-text">The Weight-Loss Plan That Actually Works</span></a>
+  </nav>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">More Tools</h4>
+  <a href="/cat-calorie-calculator" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Cat Calorie Calculator</span></a>
+  <a href="/cat-food-carb-calculator" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Cat Food Carb Calculator</span></a>
+  <a href="/raw-food-calculator" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Raw Food Calculator</span></a>
+  <a href="/pet-compatibility-quiz" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Pet Compatibility Quiz</span></a>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">✍️ Written By</h4>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">Sarah Mitchell writes MeltPet's behavior and health explainers, and reads the primary literature before she writes a line of them.</p>
+  <a href="/sarah-mitchell" class="btn-secondary" style="width:100%; justify-content:center; border-color:var(--border-light); color:var(--text-heading);">About the Author</a>
+  </div>
+
+</aside>
+</div>
+</main>
 
   <footer class="site-footer">
     <div class="footer-grid">
@@ -226,7 +259,7 @@
     </div>
   </footer>
 
-  <script src="nav.js?v=20261012"></script>
+  <script src="nav.js?v=20261013"></script>
   <script defer src="tool-share.js?v=20260807"></script>
   <script>
   var BREEDS = {

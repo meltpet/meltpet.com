@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="style.css?v=20261012">
+        <link rel="stylesheet" href="style.css?v=20261013">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Breed Finder Hub — Dog &amp; Cat Quizzes | MeltPet">
@@ -50,6 +50,8 @@
   </noscript>
   </div>
   <main class="container" id="main-content">
+<div class="main-grid content-grid">
+<div class="main-content">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">🏠 Home</a><span class="sep"> ›</span><span class="current">Breed Finder</span></nav>
   <div class="tool-hero">
   <h1>🐾 <span>Breed Finder</span></h1>
@@ -127,14 +129,14 @@
   </div>
 
   <div class="article-section" style="margin-top:24px;">
-  <h2> How the Breed Finder Works</h2>
+  <h2 id="how-the-breed-finder-works"> How the Breed Finder Works</h2>
   <p>Our matching algorithm weighs 6 lifestyle factors against breed-specific traits — energy level, space requirements, family compatibility, grooming needs, and trainability. The result is not a "best breed" ranking but a <strong>best-for-you</strong> match. No breed is perfect for everyone; every breed is perfect for someone.</p>
   <p>All recommendations are based on breed temperament data from the American Kennel Club, The International Cat Association, and veterinary behavior research.</p>
   <p style="margin-top:12px;"><strong>Prefer a dedicated experience?</strong> Try our single-species finders with questions tailored specifically to each animal: <a href="/dog-breed-finder">🐶 Dog Breed Finder</a>  <a href="/cat-breed-finder">🐱 Cat Breed Finder</a></p>
   </div>
 
     <article class="article-section">
-  <h2>🔍 Breed Matching: What Most People Get Wrong</h2>
+  <h2 id="breed-matching-what-most-people-get-wrong">🔍 Breed Matching: What Most People Get Wrong</h2>
 
   <h3>How does the matching algorithm work?</h3>
   <p>It's not a random generator or a marketing funnel. The breed finder scores each breed across 6 factors — species, living space, activity level, owner experience, family composition, and grooming tolerance — then ranks matches by how closely each breed's known traits align with your answers. The scoring weight is heaviest on compatibility factors that can't be changed: living space (a Husky in a studio apartment is a recipe for disaster) and experience level (a first-time owner with a Border Collie is a mismatch no amount of love can fix). The result is a <strong>best-for-you</strong> recommendation, not a best-in-show ranking.</p>
@@ -148,6 +150,26 @@
   <h3>Does it cover both dogs and cats?</h3>
   <p>Yes. The first question in the quiz lets you choose dog or cat, and the matching engine pulls from separate breed databases for each. Cat breed recommendations account for feline-specific considerations like indoor/outdoor living, climbing needs, and independence tolerance that differ substantially from dog requirements. Mixed breed fans: the algorithm leans toward purebred recommendations because breed-specific temperament data is what it can match against. But if you're open to any breed, a shelter visit with your lifestyle parameters in mind is always a great move.</p>
   </article>
+</div>
+
+<aside class="sidebar" aria-label="On this page and related reading">
+
+  <div class="widget">
+  <h4 class="widget-title">More Tools</h4>
+  <a href="/dog-breed-finder" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Dog Breed Finder</span></a>
+  <a href="/cat-breed-finder" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Cat Breed Finder</span></a>
+  <a href="/monthly-pet-cost" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Cost Calculator</span></a>
+  <a href="/adopt-vs-buy" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Adopt vs Buy</span></a>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">✍️ Written By</h4>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">Sarah Mitchell writes MeltPet's behavior and health explainers, and reads the primary literature before she writes a line of them.</p>
+  <a href="/sarah-mitchell" class="btn-secondary" style="width:100%; justify-content:center; border-color:var(--border-light); color:var(--text-heading);">About the Author</a>
+  </div>
+
+</aside>
+</div>
 </main>
 
     <footer class="site-footer">
@@ -306,7 +328,7 @@
   document.getElementById('step-1').scrollIntoView({behavior:'smooth',block:'center'});
   }
   </script>
-  <script src="nav.js?v=20261012"></script>
+  <script src="nav.js?v=20261013"></script>
   <script defer src="tool-share.js?v=20260807"></script>
     <script defer src="/analytics.js"></script>
 </body>

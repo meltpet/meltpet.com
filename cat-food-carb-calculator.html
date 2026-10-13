@@ -10,7 +10,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261012">
+  <link rel="stylesheet" href="style.css?v=20261013">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Cat Food Carbohydrate Calculator — Dry Matter Basis">
@@ -53,11 +53,13 @@
   </div>
 
   <main class="container" id="main-content">
+<div class="main-grid content-grid">
+<div class="main-content">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">🏠 Home</a><span class="sep"> ›</span><a href="/cat-breed-finder">Cats</a><span class="sep"> ›</span><span class="current">Cat Food Carb Calculator</span></nav>
     <div class="tool-hero"><h1>🥫 Cat Food <span>Carb Calculator</span></h1><p>The label won't tell you how many carbs are in your cat's food. This will — in five seconds, on a dry matter basis. | 2026-08-26 · MeltPet</p></div>
 
     <div class="widget" id="calculator-widget" style="max-width:560px;margin:0 auto 32px;padding:24px 24px 28px;">
-      <h2 style="margin:0 0 20px;font-size:1.1rem;">Reveal the Hidden Carbohydrates</h2>
+      <h2 style="margin:0 0 20px;font-size:1.1rem;" id="reveal-the-hidden-carbohydrates">Reveal the Hidden Carbohydrates</h2>
 
       <label for="species">Pet (affects carb warning thresholds)</label>
       <select id="species" onchange="liveCalc()" style="width:100%;margin-bottom:14px;">
@@ -100,7 +102,7 @@
     </div>
 
     <article class="article-section">
-      <h2>How the Math Works: Carbs by Difference</h2>
+      <h2 id="how-the-math-works-carbs-by-difference">How the Math Works: Carbs by Difference</h2>
       <p>Here's the part food companies don't print on the bag: <strong>carbohydrates are not a required line item on a US pet food label.</strong> You can't read the carbs — you have to calculate them. The formula has two steps.</p>
       <p><strong>Step 1 — remove the water.</strong> Dry matter is everything in the food that isn't moisture. If a food is 10% moisture, it's 90% dry matter:</p>
       <p style="text-align:center;font-size:1.05rem;font-weight:700;background:#F8F9FA;padding:12px;border-radius:6px;">Dry Matter (DM) % = 100 − Moisture %</p>
@@ -111,14 +113,14 @@
     </article>
 
     <article class="article-section">
-      <h2>Why You Can't Compare Wet vs Dry Without This</h2>
+      <h2 id="why-you-can-t-compare-wet-vs-dry-without-this">Why You Can't Compare Wet vs Dry Without This</h2>
       <p>The moisture content is the trap. Dry kibble is about 10% water. Canned food is about 78% water. If you line up the crude protein numbers straight off two labels, the dry food's "34% protein" looks like it crushes the wet food's "10% protein." It doesn't. The wet food is 78% water, so its 10% protein is actually about <strong>45% protein on a dry-matter basis</strong> — higher than the dry food.</p>
       <p>This matters because cats don't eat water. They eat the dry matter. A cat's natural diet — mice, birds, lizards — is roughly 50% protein, 40% fat, and <strong>5% carbohydrate</strong>. Wet food lands near that (5–15% carbs). Raw is even closer (0–5%). Dry kibble, which needs starch to hold its pellet shape, runs <strong>35–45% carbohydrate</strong> — several times higher than anything a cat evolved to eat. That's the number this calculator reveals, and it's why a cat who lives on high-carb kibble is fighting their own biology.</p>
       <p>Dogs are different — they've been eating human scraps for tens of thousands of years and tolerate carbohydrate far better. A dog food at 30% carbs is unremarkable. The same food fed to a cat is a slow problem. This is why the calculator's warning thresholds shift when you switch the species toggle.</p>
     </article>
 
     <article class="article-section">
-      <h2>Typical Foods at a Glance</h2>
+      <h2 id="typical-foods-at-a-glance">Typical Foods at a Glance</h2>
       <div class="table-scroll"><table>
         <thead><tr><th>Food Type</th><th>Moisture</th><th>Protein (DM)</th><th>Fat (DM)</th><th>Carbs (DM)</th></tr></thead>
         <tbody>
@@ -132,7 +134,7 @@
     </article>
 
     <article class="article-section">
-      <h2>Two Label Traps to Watch For</h2>
+      <h2 id="two-label-traps-to-watch-for">Two Label Traps to Watch For</h2>
       <p><strong>Trap 1 — ash is missing on US labels.</strong> The AAFCO "guaranteed analysis" panel lists protein, fat, fiber, and moisture, but not ash (the mineral content left after burning). EU labels do list it. For a US label, you have to estimate ash: use roughly <strong>7% for dry food</strong> and <strong>2% for canned food</strong>. It's an estimate, so your carb figure is accurate to within a couple of percentage points — more than enough to tell a 10% food from a 35% one. (The calculator pre-fills this for you.)</p>
       <p><strong>Trap 2 — "guaranteed" means "minimum" or "maximum," not exact.</strong> Crude protein is a <em>minimum</em> guarantee; crude fiber is a <em>maximum</em>. The actual batch varies. This is why the carb figure is an estimate by difference, not a lab value — treat it as a reliable ballpark, not a decimal-point measurement. If a food's protein, fat, fiber, ash, and moisture add up to more than 100%, the label numbers are inconsistent and the carb estimate will be off — the calculator will flag this.</p>
     </article>
@@ -148,7 +150,39 @@
     </article>
 
     <div class="article-section" style="background:var(--accent-soft);border-left:3px solid var(--accent);margin-bottom:24px;"><h2 style="font-size:1rem;">📖 Related</h2><ul style="margin-left:18px;line-height:2;"><li><a href="/cat-calorie-calculator">Cat Calorie Calculator</a> — carbs and calories together are the two numbers that determine your cat's weight</li><li><a href="/best-dog-food-dry-vs-wet-vs-raw">Best Dog Food: Dry vs Wet vs Raw</a> — the same dry-matter math applied to choosing dog food</li><li><a href="/cat-kidney-disease-prevention">Cat Kidney Disease Prevention</a> — wet food's higher moisture and lower carbs support kidney health</li><li><a href="/cat-dental-care-guide">Cat Dental Care Guide</a> — carbohydrate-heavy dry food and dental disease share a root cause</li><li><a href="/monthly-pet-cost">Monthly Pet Cost Calculator</a> — see what switching to wet food does to your budget</li></ul></div>
-  </main>
+  
+</div>
+
+<aside class="sidebar" aria-label="On this page and related reading">
+
+  <div class="widget">
+  <h4 class="widget-title">📑 On This Page</h4>
+  <nav aria-label="On this page">
+  <a href="#reveal-the-hidden-carbohydrates" class="widget-link toc-link"><span class="widget-link-text">Reveal the Hidden Carbohydrates</span></a>
+  <a href="#how-the-math-works-carbs-by-difference" class="widget-link toc-link"><span class="widget-link-text">How the Math Works: Carbs by Difference</span></a>
+  <a href="#why-you-can-t-compare-wet-vs-dry-without-this" class="widget-link toc-link"><span class="widget-link-text">Why You Can't Compare Wet vs Dry Without This</span></a>
+  <a href="#typical-foods-at-a-glance" class="widget-link toc-link"><span class="widget-link-text">Typical Foods at a Glance</span></a>
+  <a href="#two-label-traps-to-watch-for" class="widget-link toc-link"><span class="widget-link-text">Two Label Traps to Watch For</span></a>
+  </nav>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">More Tools</h4>
+  <a href="/raw-food-calculator" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Raw Food Calculator</span></a>
+  <a href="/pet-compatibility-quiz" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Pet Compatibility Quiz</span></a>
+  <a href="/gallery" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Pin Gallery</span></a>
+  <a href="/breed-finder" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Breed Finder Hub</span></a>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">✍️ Written By</h4>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">Sarah Mitchell writes MeltPet's behavior and health explainers, and reads the primary literature before she writes a line of them.</p>
+  <a href="/sarah-mitchell" class="btn-secondary" style="width:100%; justify-content:center; border-color:var(--border-light); color:var(--text-heading);">About the Author</a>
+  </div>
+
+</aside>
+</div>
+</main>
 
   <footer class="site-footer">
     <div class="footer-grid">
@@ -191,7 +225,7 @@
     </div>
   </footer>
 
-  <script src="nav.js?v=20261012"></script>
+  <script src="nav.js?v=20261013"></script>
   <script defer src="tool-share.js?v=20260807"></script>
   <script>
   var PRESETS = {

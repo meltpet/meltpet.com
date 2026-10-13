@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="style.css?v=20261012">
+        <link rel="stylesheet" href="style.css?v=20261013">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Find Your Perfect Dog in 30 Seconds — Dog Breed Finder | MeltPet">
@@ -50,6 +50,8 @@
   </noscript>
   </div>
   <main class="container" id="main-content">
+<div class="main-grid content-grid">
+<div class="main-content">
   <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">🏠 Home</a><span class="sep"> ›</span><a href="/breed-finder">Breed Finder</a><span class="sep"> ›</span><span class="current">Dog Breed Finder</span></nav>
   <div class="tool-hero">
   <h1>🐶 <span>Find Your Perfect Dog in 30 Seconds</span></h1>
@@ -102,13 +104,13 @@
   </div>
 
     <div class="article-section" style="margin-top:24px;">
-  <h2> How We Match You</h2>
+  <h2 id="how-we-match-you"> How We Match You</h2>
   <p>This isn't a BuzzFeed quiz. Our algorithm scores 30+ dog breeds against <strong>5 lifestyle factors you can't change after bringing the dog home</strong>. It's not the "best dog breed" — it's the best dog breed <em>for you</em>.</p>
   <p>All recommendations are based on breed temperament data from the American Kennel Club (AKC) breed standards and veterinary behavior research. We don't rank by popularity. We rank by compatibility.</p>
   </div>
 
     <article class="article-section">
-  <h2>🐺 The 5 Factors That Actually Matter</h2>
+  <h2 id="the-5-factors-that-actually-matter">🐺 The 5 Factors That Actually Matter</h2>
   <p>More questions don't mean better results. Research on decision-making shows that beyond 5–7 factors, accuracy plateaus. Each of our questions targets something <strong>you cannot fix after bringing the dog home</strong>:</p>
   <ul style="margin:12px 0 0 20px;line-height:1.9;">
   <li><strong>Living space</strong> — A Husky in a studio apartment is a disaster waiting to happen.</li>
@@ -121,7 +123,7 @@
 
   <!-- FAQ -->
   <article class="article-section">
-  <h2>🐶 Questions Dog People Actually Ask</h2>
+  <h2 id="questions-dog-people-actually-ask">🐶 Questions Dog People Actually Ask</h2>
 
   <h3>Which dog breed is best for first-time owners?</h3>
   <p>Golden Retrievers and Labrador Retrievers top the list — they're eager to please, forgiving of training mistakes, and naturally good with families. Cavalier King Charles Spaniels are another excellent choice for apartment dwellers. The common thread: breeds that were developed to work <em>with</em> humans (not independently) tend to be easier for beginners.</p>
@@ -140,7 +142,28 @@
   <p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:14px;">Not a dog person after all?</p>
   <a href="/cat-breed-finder" class="btn-primary" style="background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent);">🐱 Try the Cat Breed Finder Instead </a>
   </div>
-  </main>
+  
+</div>
+
+<aside class="sidebar" aria-label="On this page and related reading">
+
+  <div class="widget">
+  <h4 class="widget-title">More Tools</h4>
+  <a href="/cat-breed-finder" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Cat Breed Finder</span></a>
+  <a href="/monthly-pet-cost" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Cost Calculator</span></a>
+  <a href="/adopt-vs-buy" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Adopt vs Buy</span></a>
+  <a href="/pet-age-calculator" class="widget-link"><span class="bento-icon" style="font-size:1.2rem; margin:0;">🧰</span><span class="widget-link-text">Age Calculator</span></a>
+  </div>
+
+  <div class="widget">
+  <h4 class="widget-title">✍️ Written By</h4>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">Sarah Mitchell writes MeltPet's behavior and health explainers, and reads the primary literature before she writes a line of them.</p>
+  <a href="/sarah-mitchell" class="btn-secondary" style="width:100%; justify-content:center; border-color:var(--border-light); color:var(--text-heading);">About the Author</a>
+  </div>
+
+</aside>
+</div>
+</main>
 
     <footer class="site-footer">
   <div class="footer-grid">
@@ -313,7 +336,7 @@
   document.getElementById('step-1').scrollIntoView({behavior:'smooth',block:'center'});
   }
   </script>
-  <script src="nav.js?v=20261012"></script>
+  <script src="nav.js?v=20261013"></script>
   <script defer src="tool-share.js?v=20260807"></script>
     <script defer src="/analytics.js"></script>
 </body>
