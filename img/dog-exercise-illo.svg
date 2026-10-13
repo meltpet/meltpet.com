@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Scene: a medium-built dog mid-stride across grass, with a clock face showing the daily target -->
+  <!-- Sky -->
+  <rect x="0" y="0" width="400" height="180" fill="#e8f4e8"/>
+  <ellipse cx="84" cy="48" rx="25" ry="10" fill="#ffffff" opacity="0.65"/>
+  <ellipse cx="105" cy="42" rx="17" ry="8" fill="#ffffff" opacity="0.6"/>
+  <!-- Distant hill -->
+  <ellipse cx="90" cy="196" rx="160" ry="44" fill="#cfe4bc"/>
+  <!-- Ground -->
+  <rect x="0" y="186" width="400" height="94" fill="#c8dca8"/>
+  <ellipse cx="200" cy="238" rx="215" ry="50" fill="#bcd49a"/>
+
+  <!-- Clock face -->
+  <circle cx="338" cy="88" r="36" fill="#ffffff" stroke="#f6851b" stroke-width="3.2"/>
+  <circle cx="338" cy="88" r="29" fill="none" stroke="#f7e6d3" stroke-width="1.4"/>
+  <g stroke="#f6851b" stroke-width="2.6" stroke-linecap="round">
+    <path d="M338 62 L338 68"/>
+    <path d="M338 108 L338 114"/>
+    <path d="M312 88 L318 88"/>
+    <path d="M358 88 L364 88"/>
+  </g>
+  <path d="M338 88 L338 68" stroke="#1F1F1F" stroke-width="3" stroke-linecap="round"/>
+  <path d="M338 88 L352 96" stroke="#1F1F1F" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="338" cy="88" r="4" fill="#f6851b"/>
+
+  <!-- Motion lines -->
+  <g stroke="#93b96f" stroke-width="2.4" stroke-linecap="round">
+    <path d="M44 200 L92 200"/>
+    <path d="M38 214 L86 214"/>
+    <path d="M50 228 L98 228"/>
+  </g>
+
+  <!-- Dog, mid-stride -->
+  <!-- Back leg, pushing off (off the ground) -->
+  <path d="M112 202 Q88 190 76 172" stroke="#a86c32" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <ellipse cx="72" cy="168" rx="9" ry="5.5" fill="#f2dcbd" stroke="#6a3f18" stroke-width="1.6"/>
+  <!-- Back leg, planted -->
+  <path d="M116 208 Q110 230 108 242" stroke="#8a5a2b" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <ellipse cx="107" cy="245" rx="9" ry="5.5" fill="#f2dcbd" stroke="#6a3f18" stroke-width="1.6"/>
+  <!-- Body -->
+  <ellipse cx="150" cy="188" rx="54" ry="31" fill="#c98a4b" stroke="#6a3f18" stroke-width="2.5"/>
+  <!-- Tail, up and out (drawn over the body so it reads clearly) -->
+  <path d="M104 166 Q80 154 82 132" stroke="#a86c32" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <!-- Chest -->
+  <ellipse cx="188" cy="194" rx="19" ry="17" fill="#f2dcbd"/>
+  <!-- Front leg, reaching forward (off the ground) -->
+  <path d="M194 202 Q220 208 238 216" stroke="#b0743a" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <ellipse cx="242" cy="218" rx="9" ry="5.5" fill="#f2dcbd" stroke="#6a3f18" stroke-width="1.6"/>
+  <!-- Front leg, planted -->
+  <path d="M188 208 Q188 230 194 242" stroke="#b0743a" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <ellipse cx="196" cy="245" rx="9" ry="5.5" fill="#f2dcbd" stroke="#6a3f18" stroke-width="1.6"/>
+  <!-- Neck -->
+  <path d="M182 176 Q196 160 208 156" stroke="#c98a4b" stroke-width="22" fill="none" stroke-linecap="round"/>
+  <!-- Head -->
+  <ellipse cx="218" cy="152" rx="28" ry="23" fill="#c98a4b" stroke="#6a3f18" stroke-width="2.5"/>
+  <!-- Ear, flicked back in the wind -->
+  <path d="M200 134 Q182 132 184 152 Q194 158 202 150 Z" fill="#a86c32" stroke="#6a3f18" stroke-width="2.1" stroke-linejoin="round"/>
+  <!-- Muzzle -->
+  <ellipse cx="244" cy="162" rx="16" ry="11" fill="#f2dcbd" stroke="#6a3f18" stroke-width="1.8"/>
+  <ellipse cx="257" cy="156" rx="5" ry="4" fill="#3a2010"/>
+  <path d="M238 168 Q248 177 259 171" stroke="#6a3f18" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M244 170 Q248 178 254 175 Q252 169 244 170 Z" fill="#ef8f9e"/>
+  <!-- Eye -->
+  <ellipse cx="224" cy="146" rx="4.8" ry="5.2" fill="#ffffff" stroke="#6a3f18" stroke-width="1.7"/>
+  <circle cx="225" cy="146" r="2.6" fill="#3a2010"/>
+  <circle cx="224.2" cy="144.8" r="0.9" fill="#ffffff"/>
+  <!-- Collar -->
+  <path d="M192 170 Q202 176 214 168" stroke="#d44" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+
+  <!-- Grass -->
+  <g stroke="#5a8a3c" stroke-width="2.2" stroke-linecap="round" fill="none">
+    <path d="M40 216 Q34 196 42 180"/>
+    <path d="M292 216 Q286 198 294 184"/>
+    <path d="M312 220 Q318 200 310 186"/>
+    <path d="M348 218 Q354 202 347 188"/>
+    <path d="M368 222 Q374 204 366 190"/>
+  </g>
+</svg>

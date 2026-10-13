@@ -15,7 +15,7 @@
   sources before publication.
 - Cost figures come from tracked real-world expenses (e.g., a 365-day dog
   ownership log), not industry estimates.
-- MeltPet offers 14 free interactive tools: breed finders, cost calculators,
+- MeltPet offers 16 free interactive tools: breed finders, cost calculators,
   a toxic food checker, and a pet compatibility quiz. No account required.
 - MeltPet also runs a public Pin Gallery: a board of saveable visual pet-care
   cheat sheets (breed quick facts, safe vs toxic foods, daily routines). Each
@@ -43,6 +43,8 @@
 - [Pet Age Calculator](https://www.meltpet.com/pet-age-calculator): The real dog/cat age math (the 7-year rule is wrong).
 - [Pet Name Generator](https://www.meltpet.com/pet-name-generator): Thousands of dog and cat names by theme.
 - [Pet Compatibility Quiz](https://www.meltpet.com/pet-compatibility-quiz): Dog or cat? Which pet fits your life.
+- [Cat Water Intake Calculator](https://www.meltpet.com/cat-water-intake-calculator): How much water a cat needs per day, and how much of it the food already supplies.
+- [Dog Exercise Calculator](https://www.meltpet.com/dog-exercise-calculator): How many minutes of daily exercise a dog needs, by breed, plus how to split it.
 
 ## Dog Breed Guides
 

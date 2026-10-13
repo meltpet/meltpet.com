@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#FAF6EF"/>
+  <rect x="0" y="0" width="800" height="58" fill="#F6851B"/>
+  <text x="28" y="26" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">Where a Cat's Water Actually Comes From</text>
+  <text x="28" y="46" font-family="Arial,Helvetica,sans-serif" font-size="12.5" fill="#FFF3E6">The same 5 kg cat &#183; the same 200&#8211;300 ml daily requirement &#183; two very different bowls</text>
+
+  <!-- LEFT CARD: dry food. Bar scale: 0-300 ml maps to 0-300 px starting at x=48 -->
+  <rect x="28" y="76" width="360" height="330" rx="10" fill="#FFFFFF" stroke="#E5E1D8" stroke-width="1.2"/>
+  <text x="48" y="108" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#1F1F1F">Dry food only</text>
+  <text x="48" y="130" font-family="Arial,Helvetica,sans-serif" font-size="11.5" fill="#6B6B6B">60 g per day &#183; about 8% moisture (range 6&#8211;10%)</text>
+
+  <text x="48" y="164" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8C8C8C">0 ml</text>
+  <text x="200" y="164" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8C8C8C">150 ml</text>
+  <text x="348" y="164" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8C8C8C">300 ml</text>
+
+  <!-- From food ~5 ml -->
+  <text x="48" y="196" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#4A90D9">From the food</text>
+  <text x="368" y="196" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#4A90D9">~5 ml</text>
+  <rect x="48" y="204" width="300" height="18" rx="5" fill="#EFF3F7"/>
+  <rect x="48" y="204" width="6" height="18" rx="3" fill="#4A90D9"/>
+
+  <!-- From the bowl 195-295 ml -->
+  <text x="48" y="252" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#F6851B">From the bowl</text>
+  <text x="368" y="252" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#F6851B">195&#8211;295 ml</text>
+  <rect x="48" y="260" width="295" height="18" rx="5" fill="#FDF0E2"/>
+  <rect x="48" y="260" width="195" height="18" rx="5" fill="#F6851B"/>
+
+  <text x="48" y="308" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#6B6B6B">A dry-fed cat has to drink almost the entire</text>
+  <text x="48" y="324" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#6B6B6B">daily requirement &#8212; from a bowl, voluntarily,</text>
+  <text x="48" y="340" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#6B6B6B">every single day.</text>
+
+  <!-- RIGHT CARD: wet food. Bar scale: 0-300 ml maps to 0-300 px starting at x=432 -->
+  <rect x="412" y="76" width="360" height="330" rx="10" fill="#FFFFFF" stroke="#E5E1D8" stroke-width="1.2"/>
+  <text x="432" y="108" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#1F1F1F">Wet food only</text>
+  <text x="432" y="130" font-family="Arial,Helvetica,sans-serif" font-size="11.5" fill="#6B6B6B">200 g per day &#183; about 78% moisture</text>
+
+  <text x="432" y="164" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8C8C8C">0 ml</text>
+  <text x="584" y="164" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8C8C8C">150 ml</text>
+  <text x="732" y="164" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8C8C8C">300 ml</text>
+
+  <!-- From food ~156 ml -->
+  <text x="432" y="196" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#4A90D9">From the food</text>
+  <text x="752" y="196" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#4A90D9">~156 ml</text>
+  <rect x="432" y="204" width="300" height="18" rx="5" fill="#EFF3F7"/>
+  <rect x="432" y="204" width="156" height="18" rx="5" fill="#4A90D9"/>
+
+  <!-- From the bowl 44-144 ml -->
+  <text x="432" y="252" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#F6851B">From the bowl</text>
+  <text x="752" y="252" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#F6851B">44&#8211;144 ml</text>
+  <rect x="432" y="260" width="144" height="18" rx="5" fill="#FDF0E2"/>
+  <rect x="432" y="260" width="44" height="18" rx="5" fill="#F6851B"/>
+
+  <text x="432" y="308" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#6B6B6B">The food supplies more than half the daily</text>
+  <text x="432" y="324" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#6B6B6B">total. The bowl only has to cover what is</text>
+  <text x="432" y="340" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#6B6B6B">left over.</text>
+
+  <rect x="28" y="420" width="744" height="1" fill="#E5E1D8"/>
+  <text x="28" y="440" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#8C8C8C">40&#8211;60 ml per kg per day (200&#8211;300 ml for a 5 kg cat) &#183; Dry food ~8% moisture &#183; Wet food ~78% moisture &#183; From MeltPet's cat-health guides</text>
+</svg>

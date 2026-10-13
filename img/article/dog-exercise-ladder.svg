@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#FAF6EF"/>
+  <rect x="0" y="0" width="800" height="58" fill="#F6851B"/>
+  <text x="28" y="26" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#FFFFFF">How Much Exercise Does a Dog Need Every Day?</text>
+  <text x="28" y="46" font-family="Arial,Helvetica,sans-serif" font-size="12.5" fill="#FFF3E6">Breed figures as published in MeltPet's breed guides &#183; minutes per day &#183; the span across these breeds is 20 to 120</text>
+
+  <!-- Axis (0-120 min mapped to x=240-720, 4 px per minute) -->
+  <g stroke="#EFE9DE" stroke-width="1">
+    <line x1="240" y1="84" x2="240" y2="404"/>
+    <line x1="360" y1="84" x2="360" y2="404"/>
+    <line x1="480" y1="84" x2="480" y2="404"/>
+    <line x1="600" y1="84" x2="600" y2="404"/>
+    <line x1="720" y1="84" x2="720" y2="404"/>
+  </g>
+  <text x="240" y="80" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8C8C8C">0</text>
+  <text x="360" y="80" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8C8C8C">30</text>
+  <text x="480" y="80" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8C8C8C">60</text>
+  <text x="600" y="80" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8C8C8C">90</text>
+  <text x="720" y="80" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8C8C8C">120 min</text>
+
+  <!-- 1. French Bulldog 20-30 -->
+  <text x="222" y="110" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1F1F1F">French Bulldog</text>
+  <rect x="240" y="96" width="120" height="20" rx="5" fill="#FDF0E2"/>
+  <rect x="240" y="96" width="80" height="20" rx="5" fill="#F6851B"/>
+  <text x="368" y="110" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#F6851B">20&#8211;30</text>
+
+  <!-- 2. Toy Poodle 20-30 -->
+  <text x="222" y="146" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1F1F1F">Toy Poodle</text>
+  <rect x="240" y="132" width="120" height="20" rx="5" fill="#FDF0E2"/>
+  <rect x="240" y="132" width="80" height="20" rx="5" fill="#F6851B"/>
+  <text x="368" y="146" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#F6851B">20&#8211;30</text>
+
+  <!-- 3. Miniature Poodle 30-45 -->
+  <text x="222" y="182" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1F1F1F">Miniature Poodle</text>
+  <rect x="240" y="168" width="180" height="20" rx="5" fill="#FDF0E2"/>
+  <rect x="240" y="168" width="120" height="20" rx="5" fill="#F6851B"/>
+  <text x="428" y="182" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#F6851B">30&#8211;45</text>
+
+  <!-- 4. Golden Retriever 60+ -->
+  <text x="222" y="218" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1F1F1F">Golden Retriever</text>
+  <rect x="240" y="204" width="265" height="20" rx="5" fill="#FDF0E2"/>
+  <rect x="240" y="204" width="240" height="20" rx="5" fill="#F6851B"/>
+  <text x="513" y="218" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#F6851B">60+</text>
+
+  <!-- 5. Labrador Retriever 60+ -->
+  <text x="222" y="254" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1F1F1F">Labrador Retriever</text>
+  <rect x="240" y="240" width="265" height="20" rx="5" fill="#FDF0E2"/>
+  <rect x="240" y="240" width="240" height="20" rx="5" fill="#F6851B"/>
+  <text x="513" y="254" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#F6851B">60+</text>
+
+  <!-- 6. Pembroke Welsh Corgi 60+ -->
+  <text x="222" y="290" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1F1F1F">Pembroke Welsh Corgi</text>
+  <rect x="240" y="276" width="265" height="20" rx="5" fill="#FDF0E2"/>
+  <rect x="240" y="276" width="240" height="20" rx="5" fill="#F6851B"/>
+  <text x="513" y="290" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#F6851B">60+</text>
+
+  <!-- 7. Standard Poodle 60+ -->
+  <text x="222" y="326" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1F1F1F">Poodle, Standard</text>
+  <rect x="240" y="312" width="265" height="20" rx="5" fill="#FDF0E2"/>
+  <rect x="240" y="312" width="240" height="20" rx="5" fill="#F6851B"/>
+  <text x="513" y="326" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#F6851B">60+</text>
+
+  <!-- 8. German Shepherd 90+ -->
+  <text x="222" y="362" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1F1F1F">German Shepherd</text>
+  <rect x="240" y="348" width="385" height="20" rx="5" fill="#FDF0E2"/>
+  <rect x="240" y="348" width="360" height="20" rx="5" fill="#F6851B"/>
+  <text x="633" y="362" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#F6851B">90+</text>
+
+  <!-- 9. Australian Shepherd 90-120 -->
+  <text x="222" y="398" text-anchor="end" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="700" fill="#1F1F1F">Australian Shepherd</text>
+  <rect x="240" y="384" width="480" height="20" rx="5" fill="#FDF0E2"/>
+  <rect x="240" y="384" width="360" height="20" rx="5" fill="#F6851B"/>
+  <text x="728" y="398" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" fill="#F6851B">90&#8211;120</text>
+
+  <rect x="28" y="420" width="744" height="1" fill="#E5E1D8"/>
+  <text x="28" y="440" font-family="Arial,Helvetica,sans-serif" font-size="10" fill="#8C8C8C">Solid = published minimum &#183; lighter = the upper end, or "or more" &#183; Source: meltpet.com breed guides</text>
+</svg>
