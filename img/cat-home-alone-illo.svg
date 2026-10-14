@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Scene: a cat sitting calmly in a prepared room, with a window, water, food and a litter tray set out -->
+  <!-- Wall -->
+  <rect x="0" y="0" width="400" height="188" fill="#FBF3E6"/>
+  <!-- Skirting line -->
+  <line x1="0" y1="188" x2="400" y2="188" stroke="#E3D5BE" stroke-width="2"/>
+  <!-- Floor -->
+  <rect x="0" y="188" width="400" height="92" fill="#EFE1CB"/>
+
+  <!-- Window (daylight) -->
+  <rect x="30" y="28" width="112" height="118" rx="6" fill="#D7E9F4" stroke="#B9A17C" stroke-width="6"/>
+  <line x1="86" y1="28" x2="86" y2="146" stroke="#B9A17C" stroke-width="4"/>
+  <line x1="30" y1="87" x2="142" y2="87" stroke="#B9A17C" stroke-width="4"/>
+  <!-- sun -->
+  <circle cx="58" cy="55" r="11" fill="#F7D98A"/>
+  <!-- cloud -->
+  <g fill="#FFFFFF" opacity="0.95">
+    <ellipse cx="106" cy="118" rx="18" ry="8"/>
+    <ellipse cx="94" cy="121" rx="12" ry="7"/>
+    <ellipse cx="118" cy="121" rx="11" ry="6"/>
+  </g>
+  <!-- windowsill -->
+  <rect x="24" y="146" width="124" height="8" rx="3" fill="#C9AE85" stroke="#B9A17C" stroke-width="2"/>
+
+  <!-- Sunlight patch on the floor -->
+  <path d="M40 190 L150 190 L186 262 L62 262 Z" fill="#FDF0D5" opacity="0.75"/>
+
+  <!-- Floor items: water bowl, food bowl, litter tray (all prepared) -->
+  <!-- water bowl -->
+  <g transform="translate(252,232)">
+    <path d="M-24 -1 Q-20 16 0 16 Q20 16 24 -1 Z" fill="#EEF4F8" stroke="#4A5A63" stroke-width="2.2"/>
+    <ellipse cx="0" cy="-1" rx="24" ry="7.5" fill="#DCE6EC" stroke="#4A5A63" stroke-width="2.2"/>
+    <ellipse cx="0" cy="-1" rx="18" ry="5" fill="#8FC0DC"/>
+    <ellipse cx="-6" cy="-2.5" rx="6" ry="1.8" fill="#BFDEEE"/>
+  </g>
+  <!-- food bowl with kibble -->
+  <g transform="translate(312,233)">
+    <path d="M-22 -1 Q-18 15 0 15 Q18 15 22 -1 Z" fill="#FDF0E2" stroke="#4A5A63" stroke-width="2.2"/>
+    <ellipse cx="0" cy="-1" rx="22" ry="7" fill="#F6E3CC" stroke="#4A5A63" stroke-width="2.2"/>
+    <g fill="#D89A4E">
+      <circle cx="-8" cy="-1" r="3"/>
+      <circle cx="-1" cy="-3" r="3"/>
+      <circle cx="7" cy="-1" r="3"/>
+      <circle cx="3" cy="2" r="2.6"/>
+      <circle cx="-4" cy="2" r="2.6"/>
+    </g>
+  </g>
+  <!-- litter tray, clean and filled -->
+  <g transform="translate(364,226)">
+    <path d="M-30 0 L-24 22 L24 22 L30 0 Z" fill="#DCE6EC" stroke="#4A5A63" stroke-width="2.4"/>
+    <ellipse cx="0" cy="0" rx="30" ry="9" fill="#E9E1D2" stroke="#4A5A63" stroke-width="2.4"/>
+    <g fill="#CDC3AE">
+      <circle cx="-12" cy="1" r="2"/>
+      <circle cx="0" cy="3" r="2.2"/>
+      <circle cx="12" cy="0" r="2"/>
+    </g>
+  </g>
+  <!-- a ball toy on the floor -->
+  <circle cx="206" cy="252" r="9" fill="#F2B8B0" stroke="#5A4020" stroke-width="2"/>
+  <path d="M197 252 Q206 246 215 252" stroke="#E88E86" stroke-width="2" fill="none"/>
+
+  <!-- Cat (sitting calmly, facing the window) -->
+  <g transform="translate(30,-34)">
+    <!-- tail resting on the floor -->
+    <path d="M180 208 Q212 212 206 230 Q200 239 186 233" stroke="#5A4020" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M180 208 Q212 212 206 230 Q200 239 186 233" stroke="#E9C48A" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M203 219 Q207 224 205 230" stroke="#C89840" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- hind haunch -->
+    <ellipse cx="146" cy="204" rx="27" ry="24" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+    <!-- body -->
+    <ellipse cx="152" cy="180" rx="30" ry="38" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+    <!-- chest -->
+    <ellipse cx="136" cy="188" rx="14" ry="22" fill="#F7E7C8" stroke="none"/>
+    <!-- front legs -->
+    <rect x="146" y="196" width="13" height="34" rx="6" fill="#EED4A0" stroke="#5A4020" stroke-width="2.5"/>
+    <rect x="160" y="196" width="13" height="34" rx="6" fill="#EED4A0" stroke="#5A4020" stroke-width="2.5"/>
+    <!-- paws -->
+    <ellipse cx="152.5" cy="230" rx="8" ry="4" fill="#F7E7C8" stroke="#5A4020" stroke-width="2"/>
+    <ellipse cx="166.5" cy="230" rx="8" ry="4" fill="#F7E7C8" stroke="#5A4020" stroke-width="2"/>
+    <!-- body stripes -->
+    <g stroke="#C89840" stroke-width="2.6" stroke-linecap="round" fill="none">
+      <path d="M160 162 Q170 168 168 178"/>
+      <path d="M163 180 Q173 186 171 196"/>
+    </g>
+    <!-- head -->
+    <circle cx="150" cy="131" r="27" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+    <!-- head stripes -->
+    <g stroke="#C89840" stroke-width="2.2" stroke-linecap="round" fill="none">
+      <path d="M143 108 L146 118"/>
+      <path d="M152 106 L152 117"/>
+      <path d="M161 108 L158 118"/>
+    </g>
+    <!-- ears -->
+    <path d="M131 122 L122 94 L144 111" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M169 122 L178 94 L156 111" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M133 119 L127 101 L140 112" fill="#F2B8B0" stroke="none"/>
+    <path d="M167 119 L173 101 L160 112" fill="#F2B8B0" stroke="none"/>
+    <!-- eyes (open and relaxed, looking toward the window) -->
+    <ellipse cx="140" cy="130" rx="6.5" ry="7.5" fill="#FFFFFF" stroke="#5A4020" stroke-width="1.6"/>
+    <ellipse cx="158" cy="130" rx="6.5" ry="7.5" fill="#FFFFFF" stroke="#5A4020" stroke-width="1.6"/>
+    <circle cx="138" cy="130" r="3.6" fill="#4A6A2A"/>
+    <circle cx="156" cy="130" r="3.6" fill="#4A6A2A"/>
+    <ellipse cx="138" cy="130" rx="1.5" ry="3.4" fill="#1A1A1A"/>
+    <ellipse cx="156" cy="130" rx="1.5" ry="3.4" fill="#1A1A1A"/>
+    <circle cx="136.5" cy="128" r="1.3" fill="#FFFFFF"/>
+    <circle cx="154.5" cy="128" r="1.3" fill="#FFFFFF"/>
+    <!-- nose + mouth -->
+    <path d="M147 141 L150 144 L153 141" fill="#F2A0A0" stroke="#F2A0A0" stroke-width="1"/>
+    <path d="M146 145 Q150 148 150 144" stroke="#5A4020" stroke-width="1" fill="none"/>
+    <path d="M150 144 Q150 148 154 145" stroke="#5A4020" stroke-width="1" fill="none"/>
+    <!-- whiskers -->
+    <g stroke="#C4B09A" stroke-width="1" stroke-linecap="round">
+      <line x1="136" y1="140" x2="112" y2="136"/>
+      <line x1="136" y1="144" x2="111" y2="146"/>
+      <line x1="164" y1="140" x2="188" y2="136"/>
+      <line x1="164" y1="144" x2="189" y2="146"/>
+    </g>
+  </g>
+</svg>

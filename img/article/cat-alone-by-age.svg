@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect x="0" y="0" width="800" height="450" fill="#FAF6EF"/>
+
+  <!-- Header band -->
+  <rect x="0" y="0" width="800" height="68" fill="#F6851B"/>
+  <text x="32" y="44" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="bold" fill="#FFFFFF">How Long Can You Leave a Cat Alone?</text>
+
+  <text x="32" y="97" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#6B6B6B">By age and situation. The number is a starting point — the setup before you leave decides the outcome.</text>
+
+  <!-- Row 1 -->
+  <text x="30" y="148" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#3A3226">Under 4 months</text>
+  <rect x="250" y="129" width="66" height="26" rx="6" fill="#F5B971"/>
+  <text x="330" y="148" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#3A3226">A few hours — not overnight</text>
+
+  <!-- Row 2 -->
+  <text x="30" y="202" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#3A3226">Kitten, 4–12 months</text>
+  <rect x="250" y="183" width="132" height="26" rx="6" fill="#EE8B2E"/>
+  <text x="396" y="202" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#3A3226">A short day, with a check-in</text>
+
+  <!-- Row 3 -->
+  <text x="30" y="256" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#3A3226">Healthy adult, 1–6 years</text>
+  <rect x="250" y="237" width="300" height="26" rx="6" fill="#F6851B"/>
+  <text x="564" y="256" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#3A3226">Up to about 12 hours</text>
+
+  <!-- Row 4 -->
+  <text x="30" y="310" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#3A3226">Senior 10+ or unwell</text>
+  <rect x="250" y="291" width="96" height="26" rx="6" fill="#B9610F"/>
+  <text x="360" y="310" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#3A3226">Much less than an adult's</text>
+
+  <!-- Row 5 -->
+  <text x="30" y="364" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#3A3226">Past 24 hours, any age</text>
+  <rect x="250" y="351" width="16" height="16" rx="4" fill="#4A5A63"/>
+  <text x="278" y="364" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#3A3226">A person has to check in, daily</text>
+
+  <!-- Divider -->
+  <line x1="32" y1="392" x2="768" y2="392" stroke="#E3D5BE" stroke-width="1.5"/>
+
+  <!-- Footer note -->
+  <text x="32" y="418" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#8A8175">Sources: Cats Protection; 2021 AAHA/AAFP Feline Life Stage Guidelines; Vitale et al., Current Biology 2019.</text>
+  <text x="32" y="436" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#8A8175">Full breakdown, warning signs and setup checklist at meltpet.com</text>
+</svg>
