@@ -100,7 +100,8 @@
             {title: '🦶 Why Dogs Lick Your Feet',    href: '/why-does-my-dog-lick-my-feet',      desktop: true, keywords: 'dog lick feet why behavior sweat salt vomeronasal pheromone compulsive'},
             {title: '🐺 Why Dogs Howl',              href: '/why-do-dogs-howl',                 desktop: true, keywords: 'dog howl why siren separation anxiety husky hound singing pack communication'},
             {title: '🚽 Cat Peeing Outside the Box', href: '/cat-peeing-outside-litter-box',    desktop: true, keywords: 'cat peeing outside litter box house soiling not using litter box urinating spraying marking litter box avoidance inappropriate elimination pee on bed carpet why does my cat'},
-            {title: '⏰ How Long Can You Leave a Cat Alone', href: '/how-long-can-you-leave-a-cat-alone', desktop: true, keywords: 'how long can you leave a cat alone home alone overnight 24 hours weekend vacation trip cat sitter alone time hours by age kitten senior separation lonely'}
+            {title: '⏰ How Long Can You Leave a Cat Alone', href: '/how-long-can-you-leave-a-cat-alone', desktop: true, keywords: 'how long can you leave a cat alone home alone overnight 24 hours weekend vacation trip cat sitter alone time hours by age kitten senior separation lonely'},
+            {title: '🛋️ Stop a Cat Scratching Furniture', href: '/how-to-stop-cat-scratching-furniture', desktop: true, keywords: 'cat scratching furniture sofa couch stop scratching posts sisal scratching post vertical horizontal declawing redirect scratching behaviour claws marking why does my cat scratch'}
         ],
         health: [
             {title: '🦷 Dog Dental Care Guide',     href: '/dog-dental-care-guide',           desktop: true, keywords: 'dog dental care teeth brushing cleaning vet extraction gum disease'},

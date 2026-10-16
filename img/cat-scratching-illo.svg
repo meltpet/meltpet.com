@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Scene: a cat with one forepaw up on a sisal scratching post, while the sofa beside it stays intact -->
+  <!-- Wall -->
+  <rect x="0" y="0" width="400" height="188" fill="#FBF3E6"/>
+  <!-- Skirting line -->
+  <line x1="0" y1="188" x2="400" y2="188" stroke="#E3D5BE" stroke-width="2"/>
+  <!-- Floor -->
+  <rect x="0" y="188" width="400" height="92" fill="#EFE1CB"/>
+
+  <!-- The sofa (the thing we are trying to save): arm + back at the right edge -->
+  <rect x="348" y="84" width="52" height="46" rx="9" fill="#D8C6A8" stroke="#8A7554" stroke-width="2.5"/>
+  <rect x="320" y="118" width="80" height="106" rx="14" fill="#DCCBAE" stroke="#8A7554" stroke-width="2.5"/>
+  <path d="M320 166 L400 166" stroke="#8A7554" stroke-width="2"/>
+  <!-- a few claw marks on the sofa arm -->
+  <g stroke="#A08760" stroke-width="2.2" stroke-linecap="round">
+    <path d="M328 176 L340 188"/>
+    <path d="M326 185 L338 197"/>
+    <path d="M332 172 L344 184"/>
+  </g>
+
+  <!-- Sisal scratching post -->
+  <rect x="146" y="236" width="86" height="14" rx="6" fill="#C08A4E" stroke="#7A5426" stroke-width="2.5"/>
+  <rect x="176" y="64" width="26" height="176" rx="4" fill="#DCC08C" stroke="#7A5426" stroke-width="2.5"/>
+  <g stroke="#B9985E" stroke-width="1.6" stroke-linecap="round" opacity="0.95">
+    <path d="M176 76 L202 83"/>
+    <path d="M176 88 L202 95"/>
+    <path d="M176 100 L202 107"/>
+    <path d="M176 112 L202 119"/>
+    <path d="M176 124 L202 131"/>
+    <path d="M176 136 L202 143"/>
+    <path d="M176 148 L202 155"/>
+    <path d="M176 160 L202 167"/>
+    <path d="M176 172 L202 179"/>
+    <path d="M176 184 L202 191"/>
+    <path d="M176 196 L202 203"/>
+    <path d="M176 208 L202 215"/>
+    <path d="M176 220 L202 227"/>
+  </g>
+  <ellipse cx="189" cy="64" rx="13" ry="5" fill="#E8D2A6" stroke="#7A5426" stroke-width="2.2"/>
+
+  <!-- Cat, sitting, one forepaw up on the post -->
+  <g transform="translate(-50,-8)">
+    <!-- tail resting on the floor -->
+    <path d="M180 208 Q212 212 206 230 Q200 239 186 233" stroke="#5A4020" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M180 208 Q212 212 206 230 Q200 239 186 233" stroke="#E9C48A" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M203 219 Q207 224 205 230" stroke="#C89840" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- hind haunch -->
+    <ellipse cx="146" cy="204" rx="27" ry="24" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+    <!-- body -->
+    <ellipse cx="152" cy="180" rx="30" ry="38" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+    <!-- chest -->
+    <ellipse cx="136" cy="188" rx="14" ry="22" fill="#F7E7C8" stroke="none"/>
+    <!-- the foreleg that carries the weight -->
+    <rect x="160" y="196" width="13" height="34" rx="6" fill="#EED4A0" stroke="#5A4020" stroke-width="2.5"/>
+    <ellipse cx="166.5" cy="230" rx="8" ry="4" fill="#F7E7C8" stroke="#5A4020" stroke-width="2"/>
+    <!-- body stripes -->
+    <g stroke="#C89840" stroke-width="2.6" stroke-linecap="round" fill="none">
+      <path d="M160 162 Q170 168 168 178"/>
+      <path d="M163 180 Q173 186 171 196"/>
+    </g>
+    <!-- head -->
+    <circle cx="150" cy="131" r="27" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+    <!-- head stripes -->
+    <g stroke="#C89840" stroke-width="2.2" stroke-linecap="round" fill="none">
+      <path d="M143 108 L146 118"/>
+      <path d="M152 106 L152 117"/>
+      <path d="M161 108 L158 118"/>
+    </g>
+    <!-- ears -->
+    <path d="M131 122 L122 94 L144 111" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M169 122 L178 94 L156 111" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M133 119 L127 101 L140 112" fill="#F2B8B0" stroke="none"/>
+    <path d="M167 119 L173 101 L160 112" fill="#F2B8B0" stroke="none"/>
+    <!-- eyes, looking up toward the post -->
+    <ellipse cx="141" cy="129" rx="6.5" ry="7.5" fill="#FFFFFF" stroke="#5A4020" stroke-width="1.6"/>
+    <ellipse cx="159" cy="129" rx="6.5" ry="7.5" fill="#FFFFFF" stroke="#5A4020" stroke-width="1.6"/>
+    <circle cx="142" cy="128" r="3.6" fill="#4A6A2A"/>
+    <circle cx="160" cy="128" r="3.6" fill="#4A6A2A"/>
+    <ellipse cx="142.5" cy="127.5" rx="1.5" ry="3.4" fill="#1A1A1A"/>
+    <ellipse cx="160.5" cy="127.5" rx="1.5" ry="3.4" fill="#1A1A1A"/>
+    <circle cx="140.5" cy="126" r="1.3" fill="#FFFFFF"/>
+    <circle cx="158.5" cy="126" r="1.3" fill="#FFFFFF"/>
+    <!-- nose + mouth -->
+    <path d="M147 141 L150 144 L153 141" fill="#F2A0A0" stroke="#F2A0A0" stroke-width="1"/>
+    <path d="M146 145 Q150 148 150 144" stroke="#5A4020" stroke-width="1" fill="none"/>
+    <path d="M150 144 Q150 148 154 145" stroke="#5A4020" stroke-width="1" fill="none"/>
+    <!-- whiskers -->
+    <g stroke="#C4B09A" stroke-width="1" stroke-linecap="round">
+      <line x1="136" y1="140" x2="114" y2="136"/>
+      <line x1="136" y1="144" x2="113" y2="146"/>
+    </g>
+    <!-- the raised foreleg: a tapered limb from the shoulder up to the post -->
+    <ellipse cx="157" cy="166" rx="13" ry="12" fill="#EED4A0" stroke="#5A4020" stroke-width="2.5"/>
+    <path d="M164 154 C184 136 204 124 224 116 L216 128 C204 138 184 154 154 178 Z" fill="#EED4A0" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- the paw, gripping the post -->
+    <ellipse cx="222" cy="117" rx="10" ry="7" fill="#F7E7C8" stroke="#5A4020" stroke-width="2" transform="rotate(-26 222 117)"/>
+    <g stroke="#5A4020" stroke-width="1.5" stroke-linecap="round" opacity="0.9">
+      <path d="M216 112 L214 108"/>
+      <path d="M221 110 L220 106"/>
+      <path d="M226 111 L227 107"/>
+    </g>
+  </g>
+</svg>

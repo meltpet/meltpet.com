@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect x="0" y="0" width="800" height="450" fill="#FAF6EF"/>
+
+  <!-- Header band -->
+  <rect x="0" y="0" width="800" height="68" fill="#F6851B"/>
+  <text x="32" y="44" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="bold" fill="#FFFFFF">The Cat Scratching Post That Gets Used</text>
+
+  <text x="32" y="96" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#6B6B6B">Owners offer carpet most often; cats use sisal. Here is the spec the survey data points to.</text>
+
+  <!-- Left column: substrate preference -->
+  <text x="30" y="126" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#3A3226">Used most, when offered</text>
+
+  <text x="30" y="168" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#3A3226">Sisal rope</text>
+  <rect x="118" y="150" width="240" height="24" rx="5" fill="#F6851B"/>
+  <text x="366" y="168" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#3A3226">32.5%</text>
+
+  <text x="30" y="216" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#3A3226">Carpet</text>
+  <rect x="118" y="198" width="185" height="24" rx="5" fill="#EE8B2E"/>
+  <text x="311" y="216" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#3A3226">25.1%</text>
+
+  <text x="30" y="264" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#3A3226">Cardboard</text>
+  <rect x="118" y="246" width="134" height="24" rx="5" fill="#F5B971"/>
+  <text x="260" y="264" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#3A3226">18.2%</text>
+
+  <text x="30" y="300" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#8A8175">Wilson et al., JFMS 2016 · 4,105 cats in 39 countries</text>
+
+  <!-- Right column: the specification -->
+  <rect x="432" y="118" width="338" height="184" rx="12" fill="#FFFFFF" stroke="#E3D5BE" stroke-width="1.8"/>
+  <text x="452" y="146" font-family="Arial, Helvetica, sans-serif" font-size="15.5" font-weight="bold" fill="#3A3226">The post, specified</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#3A3226">
+    <circle cx="458" cy="173" r="7.5" fill="#F6851B"/>
+    <path d="M454.5 173 L457 175.5 L461.5 170.5" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="476" y="178">Vertical, upright surface</text>
+
+    <circle cx="458" cy="201" r="7.5" fill="#F6851B"/>
+    <path d="M454.5 201 L457 203.5 L461.5 198.5" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="476" y="206">At least 3 ft (0.9 m) tall</text>
+
+    <circle cx="458" cy="229" r="7.5" fill="#F6851B"/>
+    <path d="M454.5 229 L457 231.5 L461.5 226.5" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="476" y="234">Two or more levels</text>
+
+    <circle cx="458" cy="257" r="7.5" fill="#F6851B"/>
+    <path d="M454.5 257 L457 259.5 L461.5 254.5" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="476" y="262">Base 1–3 ft (0.3–0.9 m) wide</text>
+
+    <circle cx="458" cy="285" r="7.5" fill="#F6851B"/>
+    <path d="M454.5 285 L457 287.5 L461.5 282.5" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="476" y="290">Where the cat already scratches</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="32" y1="322" x2="768" y2="322" stroke="#E3D5BE" stroke-width="1.5"/>
+
+  <!-- Counter-intuitive finding -->
+  <rect x="30" y="334" width="740" height="58" rx="8" fill="#FFF4E8" stroke="#F0D3B4" stroke-width="1.8"/>
+  <text x="46" y="358" font-family="Arial, Helvetica, sans-serif" font-size="13.5" fill="#7A5426"><tspan font-weight="bold">Do not carry your cat to the post.</tspan> In one survey of 116 cats, being</text>
+  <text x="46" y="380" font-family="Arial, Helvetica, sans-serif" font-size="13.5" fill="#7A5426">placed at the post by hand was linked to using it less — not more.</text>
+
+  <!-- Footer -->
+  <text x="32" y="420" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#8A8175">Sources: Wilson et al., JFMS 2016 · DePorter &amp; Elzerman, JFMS 2019 · Moesta et al., JFMS 2018</text>
+  <text x="32" y="438" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#8A8175">meltpet.com — how to stop a cat scratching furniture</text>
+</svg>
