@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect x="0" y="0" width="800" height="450" fill="#FAF6EF"/>
+
+  <!-- Header band -->
+  <rect x="0" y="0" width="800" height="68" fill="#F6851B"/>
+  <text x="32" y="44" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="bold" fill="#FFFFFF">How Often to Change Cat Litter?</text>
+
+  <text x="32" y="92" font-family="Arial, Helvetica, sans-serif" font-size="14.5" fill="#6B6B6B">Three clocks at three different scales. Most advice collapses them into one number, which is why it never quite fits.</text>
+
+  <!-- Clock 1 -->
+  <rect x="32" y="106" width="228" height="90" rx="10" fill="#FFFFFF" stroke="#E3D5BE" stroke-width="1.5"/>
+  <text x="50" y="130" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#8A8175">SCOOP &#183; THE HOURS CLOCK</text>
+  <text x="50" y="161" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#B4570A">1&#8211;2 &#215; a day</text>
+  <text x="50" y="183" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#3A3226">At least once. Twice is ideal.</text>
+
+  <!-- Clock 2 -->
+  <rect x="286" y="106" width="228" height="90" rx="10" fill="#FFFFFF" stroke="#E3D5BE" stroke-width="1.5"/>
+  <text x="304" y="130" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#8A8175">FULL CHANGE &#183; THE WEEKS CLOCK</text>
+  <text x="304" y="161" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#B4570A">1&#8211;4 weeks</text>
+  <text x="304" y="183" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#3A3226">Weekly if non-clumping.</text>
+
+  <!-- Clock 3 -->
+  <rect x="540" y="106" width="228" height="90" rx="10" fill="#FFFFFF" stroke="#E3D5BE" stroke-width="1.5"/>
+  <text x="558" y="130" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#8A8175">THE OVERRIDE</text>
+  <text x="558" y="161" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" fill="#B4570A">Your nose</text>
+  <text x="558" y="183" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#3A3226">Smell it at the door? Change it.</text>
+
+  <!-- Table heading -->
+  <text x="32" y="228" font-family="Arial, Helvetica, sans-serif" font-size="13.5" font-weight="bold" fill="#3A3226">Full-change interval by litter type (with daily scooping)</text>
+
+  <!-- Table header -->
+  <text x="32" y="256" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8A8175">LITTER</text>
+  <text x="250" y="256" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8A8175">ONE CAT</text>
+  <text x="390" y="256" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8A8175">TWO OR MORE</text>
+  <text x="550" y="256" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8A8175">WHAT LATE LOOKS LIKE</text>
+  <line x1="32" y1="266" x2="768" y2="266" stroke="#E3D5BE" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <text x="32" y="288" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#3A3226">Clumping clay</text>
+  <text x="250" y="288" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#3A3226">2–4 weeks</text>
+  <text x="390" y="288" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#3A3226">1–2 weeks</text>
+  <text x="550" y="288" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6B6B">Clumps welded to the base</text>
+  <line x1="32" y1="296" x2="768" y2="296" stroke="#EFE4D2" stroke-width="1.2"/>
+
+  <!-- Row 2 -->
+  <text x="32" y="316" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#3A3226">Non-clumping clay</text>
+  <text x="250" y="316" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#3A3226">1 week</text>
+  <text x="390" y="316" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#3A3226">3–5 days</text>
+  <text x="550" y="316" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6B6B">Wet litter at the bottom</text>
+  <line x1="32" y1="324" x2="768" y2="324" stroke="#EFE4D2" stroke-width="1.2"/>
+
+  <!-- Row 3 -->
+  <text x="32" y="344" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#3A3226">Crystal / silica</text>
+  <text x="250" y="344" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#3A3226">3–4 weeks</text>
+  <text x="390" y="344" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#3A3226">2 weeks</text>
+  <text x="550" y="344" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6B6B">Bed pools instead of absorbing</text>
+  <line x1="32" y1="352" x2="768" y2="352" stroke="#EFE4D2" stroke-width="1.2"/>
+
+  <!-- Row 4 -->
+  <text x="32" y="372" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#3A3226">Pine pellets</text>
+  <text x="250" y="372" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#3A3226">1–2 weeks</text>
+  <text x="390" y="372" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#3A3226">1 week</text>
+  <text x="550" y="372" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6B6B">Sawdust layer, pellets lose shape</text>
+  <line x1="32" y1="380" x2="768" y2="380" stroke="#EFE4D2" stroke-width="1.2"/>
+
+  <!-- Row 5 -->
+  <text x="32" y="400" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="bold" fill="#3A3226">Paper-based</text>
+  <text x="250" y="400" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#3A3226">5–7 days</text>
+  <text x="390" y="400" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#3A3226">3–4 days</text>
+  <text x="550" y="400" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6B6B">Soggy patches that stay wet</text>
+  <line x1="32" y1="408" x2="768" y2="408" stroke="#E3D5BE" stroke-width="1.5"/>
+
+  <!-- Footer note -->
+  <text x="32" y="430" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8A8175">Sources: AVMA 2024 FLUTD client brochure; AAFP/ISFM house-soiling guidelines; Cornell Feline Health Center; CDC. Full detail at meltpet.com</text>
+</svg>
