@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Scene: a cat standing on a flat kitchen scale, looking down at a small measured bowl -->
+  <!-- Wall -->
+  <rect x="0" y="0" width="400" height="188" fill="#FBF3E6"/>
+  <line x1="0" y1="188" x2="400" y2="188" stroke="#E3D5BE" stroke-width="2"/>
+  <!-- Floor -->
+  <rect x="0" y="188" width="400" height="92" fill="#EFE1CB"/>
+
+  <!-- Contact shadow under the scale -->
+  <ellipse cx="150" cy="256" rx="92" ry="8" fill="#E2D2B8"/>
+
+  <!-- The scale: body, then the top plate it stands on -->
+  <rect x="62" y="232" width="176" height="20" rx="7" fill="#AFC0C8" stroke="#55676F" stroke-width="2.5"/>
+  <rect x="68" y="225" width="164" height="10" rx="4" fill="#CBD8DE" stroke="#55676F" stroke-width="2"/>
+  <rect x="78" y="250" width="16" height="6" rx="2" fill="#8FA6AF"/>
+  <rect x="206" y="250" width="16" height="6" rx="2" fill="#8FA6AF"/>
+  <!-- display: blank readout, no numbers implied -->
+  <rect x="196" y="237" width="30" height="10" rx="2" fill="#EAF2F5" stroke="#55676F" stroke-width="1.3"/>
+  <line x1="201" y1="242" x2="209" y2="242" stroke="#8FA6AF" stroke-width="1.6" stroke-linecap="round"/>
+  <line x1="213" y1="242" x2="221" y2="242" stroke="#8FA6AF" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- Cat, standing on the plate, head down toward the bowl -->
+  <!-- tail, curled behind -->
+  <path d="M100 198 Q64 190 60 212 Q57 230 76 226" stroke="#5A4020" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 198 Q64 190 60 212 Q57 230 76 226" stroke="#E9C48A" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M64 218 Q62 223 66 226" stroke="#C89840" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- far legs -->
+  <rect x="110" y="206" width="12" height="20" rx="5" fill="#E3BE84" stroke="#5A4020" stroke-width="2.2"/>
+  <rect x="166" y="206" width="12" height="20" rx="5" fill="#E3BE84" stroke="#5A4020" stroke-width="2.2"/>
+  <ellipse cx="116" cy="226" rx="7" ry="3.4" fill="#EED4A0" stroke="#5A4020" stroke-width="1.8"/>
+  <ellipse cx="172" cy="226" rx="7" ry="3.4" fill="#EED4A0" stroke="#5A4020" stroke-width="1.8"/>
+
+  <!-- body -->
+  <ellipse cx="142" cy="194" rx="45" ry="31" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+  <!-- belly, lighter -->
+  <ellipse cx="146" cy="204" rx="28" ry="12" fill="#F7E7C8"/>
+  <!-- near legs -->
+  <rect x="117" y="199" width="13" height="27" rx="6" fill="#EED4A0" stroke="#5A4020" stroke-width="2.5"/>
+  <rect x="173" y="199" width="13" height="27" rx="6" fill="#EED4A0" stroke="#5A4020" stroke-width="2.5"/>
+  <ellipse cx="124.5" cy="226" rx="8" ry="4" fill="#F7E7C8" stroke="#5A4020" stroke-width="2"/>
+  <ellipse cx="180.5" cy="226" rx="8" ry="4" fill="#F7E7C8" stroke="#5A4020" stroke-width="2"/>
+
+  <!-- body stripes -->
+  <g stroke="#C89840" stroke-width="2.6" stroke-linecap="round" fill="none">
+    <path d="M132 168 Q143 174 141 184"/>
+    <path d="M148 166 Q159 172 157 182"/>
+    <path d="M120 176 Q128 182 126 192"/>
+  </g>
+
+  <!-- head, angled down-right toward the bowl -->
+  <circle cx="194" cy="174" r="23" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+  <!-- ears -->
+  <path d="M178 159 L170 134 L194 147" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M207 156 L220 134 L215 163" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M180 155 L174 141 L190 150" fill="#F2B8B0"/>
+  <path d="M209 154 L217 140 L214 158" fill="#F2B8B0"/>
+  <!-- head stripes -->
+  <g stroke="#C89840" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M187 152 L189 161"/>
+    <path d="M195 150 L195 160"/>
+    <path d="M203 152 L201 161"/>
+  </g>
+  <!-- muzzle -->
+  <ellipse cx="206" cy="182" rx="11" ry="9" fill="#F7E7C8"/>
+  <!-- eyes, looking down-right -->
+  <ellipse cx="199" cy="173" rx="4" ry="5" fill="#FFFFFF" stroke="#5A4020" stroke-width="1.4"/>
+  <ellipse cx="209" cy="173" rx="4" ry="5" fill="#FFFFFF" stroke="#5A4020" stroke-width="1.4"/>
+  <circle cx="200.5" cy="175" r="2.6" fill="#4A6A2A"/>
+  <circle cx="210.5" cy="175" r="2.6" fill="#4A6A2A"/>
+  <ellipse cx="200.5" cy="175.5" rx="1.2" ry="2.4" fill="#1A1A1A"/>
+  <ellipse cx="210.5" cy="175.5" rx="1.2" ry="2.4" fill="#1A1A1A"/>
+  <!-- nose + mouth -->
+  <path d="M203 183 L206 186 L209 183" fill="#F2A0A0" stroke="#F2A0A0" stroke-width="0.8"/>
+  <path d="M206 186 Q206 190 202 188" stroke="#5A4020" stroke-width="1" fill="none"/>
+  <path d="M206 186 Q206 190 210 188" stroke="#5A4020" stroke-width="1" fill="none"/>
+  <!-- whiskers -->
+  <g stroke="#C4B09A" stroke-width="1" stroke-linecap="round">
+    <line x1="212" y1="180" x2="234" y2="176"/>
+    <line x1="212" y1="184" x2="235" y2="186"/>
+  </g>
+
+  <!-- The measured bowl, smaller than a free-fed bowl would be -->
+  <ellipse cx="316" cy="252" rx="34" ry="7" fill="#E2D2B8"/>
+  <path d="M284 226 Q286 248 300 250 L332 250 Q346 248 348 226 Z" fill="#E2B98A" stroke="#8A6A3A" stroke-width="2.2"/>
+  <ellipse cx="316" cy="226" rx="32" ry="8" fill="#F0D3AC" stroke="#8A6A3A" stroke-width="2.2"/>
+  <!-- a few kibbles, visibly a measured amount -->
+  <g fill="#8A6A3A">
+    <circle cx="306" cy="226" r="2.6"/><circle cx="315" cy="223" r="2.4"/>
+    <circle cx="323" cy="227" r="2.6"/><circle cx="310" cy="229" r="2.2"/>
+    <circle cx="319" cy="230" r="2.2"/><circle cx="329" cy="225" r="2.2"/>
+  </g>
+
+  <!-- loose kibble between scale and bowl -->
+  <g fill="#B99A6E">
+    <circle cx="256" cy="250" r="2"/><circle cx="266" cy="254" r="1.8"/><circle cx="247" cy="254" r="1.6"/>
+  </g>
+</svg>

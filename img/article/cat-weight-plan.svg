@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect x="0" y="0" width="800" height="450" fill="#FAF6EF"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="70" fill="#F6851B"/>
+  <text x="30" y="33" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" fill="#FFFFFF">Helping an overweight cat lose weight</text>
+  <text x="30" y="54" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#FDEBD7">Three decisions, one safety limit — and the number most plans get wrong</text>
+
+  <!-- ── Card 1: TARGET ── -->
+  <rect x="28" y="90" width="232" height="292" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="52" cy="118" r="13" fill="#F6851B"/>
+  <text x="52" y="123" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">1</text>
+  <text x="72" y="123" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#8A5A1E" letter-spacing="0.6">TARGET</text>
+
+  <text x="46" y="168" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#2F2A24">0.8 x RER</text>
+  <text x="46" y="192" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">at the weight you want,</text>
+  <text x="46" y="209" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">not the weight you have</text>
+
+  <line x1="46" y1="228" x2="242" y2="228" stroke="#EFE3D3" stroke-width="1.2"/>
+
+  <text x="46" y="251" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">BCS 8-9? try</text>
+  <text x="46" y="271" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#2F2A24">current / 1.3</text>
+  <text x="46" y="292" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">16 lb becomes about 12.3 lb</text>
+  <text x="46" y="313" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">and the ration is about 200 kcal</text>
+  <text x="46" y="334" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C8175">RER = 70 x kg^0.75</text>
+
+  <!-- ── Card 2: RATE ── -->
+  <rect x="284" y="90" width="232" height="292" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="308" cy="118" r="13" fill="#F6851B"/>
+  <text x="308" y="123" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">2</text>
+  <text x="328" y="123" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#8A5A1E" letter-spacing="0.6">RATE</text>
+
+  <text x="302" y="168" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" fill="#2F2A24">1% per week</text>
+  <text x="302" y="192" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">of body weight; the</text>
+  <text x="302" y="209" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">guideline band is 0.5-2%</text>
+
+  <line x1="302" y1="228" x2="498" y2="228" stroke="#EFE3D3" stroke-width="1.2"/>
+
+  <text x="302" y="250" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#2F7D4F">0.5%</text>
+  <text x="348" y="250" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">cautious</text>
+  <text x="302" y="271" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#2F2A24">1%</text>
+  <text x="348" y="271" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">the target</text>
+  <text x="302" y="292" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#C9761A">2%</text>
+  <text x="348" y="292" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">the ceiling</text>
+  <text x="302" y="313" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#B3261E">over 2%</text>
+  <text x="376" y="313" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">stop</text>
+  <text x="302" y="334" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C8175">16 lb at 1% is about 2.6 oz</text>
+
+  <!-- ── Card 3: FLOOR ── -->
+  <rect x="540" y="90" width="232" height="292" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="564" cy="118" r="13" fill="#F6851B"/>
+  <text x="564" y="123" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">3</text>
+  <text x="584" y="123" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#8A5A1E" letter-spacing="0.6">FLOOR</text>
+
+  <text x="558" y="168" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#2F2A24">Keep it eating</text>
+  <text x="558" y="192" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">the liver, not appetite,</text>
+  <text x="558" y="209" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">sets the speed limit</text>
+
+  <line x1="558" y1="228" x2="754" y2="228" stroke="#EFE3D3" stroke-width="1.2"/>
+
+  <text x="558" y="251" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#B3261E">48 h with no food</text>
+  <text x="558" y="271" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">same-day vet call</text>
+  <text x="558" y="296" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">Muscle score falling?</text>
+  <text x="558" y="315" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">slow down, do not cut more</text>
+  <text x="558" y="340" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C8175">fat off with muscle kept = win</text>
+
+  <!-- Sources strip -->
+  <line x1="28" y1="404" x2="772" y2="404" stroke="#EADFD0" stroke-width="1.2"/>
+  <text x="28" y="426" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#8C8175">Sources: AAHA 2014 Weight Management Guidelines (Brooks et al.) · Cornell Feline Health Center (hepatic lipidosis) ·</text>
+  <text x="28" y="441" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#8C8175">Verbrugghe &amp; Bakovic 2013, Nutrients · Association for Pet Obesity Prevention 2022</text>
+</svg>

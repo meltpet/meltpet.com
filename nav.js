@@ -120,7 +120,8 @@
             {title: '🫘 Cat Kidney Disease Prevention', href: '/cat-kidney-disease-prevention',desktop: true, keywords: 'cat kidney disease CKD chronic renal failure prevention hydration SDMA creatinine wet food phosphorus'},
             {title: '🎗️ Dog Cancer Risk by Breed', href: '/dog-breeds-cancer-risk', desktop: true, keywords: 'dog breeds cancer risk ranked most likely to get cancer golden retriever bernese mountain dog flat coated retriever cancer statistics tumor'},
             {title: '💧 Cat Dehydration Test', href: '/cat-dehydration-test-guide', desktop: true, keywords: 'cat dehydration test skin pinch tent test turgor gums capillary refill how to tell if cat is dehydrated water intake not drinking'},
-            {title: '💧 Why Cats Get Dehydrated', href: '/cat-dehydration-causes', desktop: true, keywords: 'cat dehydration causes why cats get dehydrated kidney disease hyperthyroidism diabetes dry food water intake fluid loss'}
+            {title: '💧 Why Cats Get Dehydrated', href: '/cat-dehydration-causes', desktop: true, keywords: 'cat dehydration causes why cats get dehydrated kidney disease hyperthyroidism diabetes dry food water intake fluid loss'},
+            {title: '⚖️ Help an Overweight Cat Lose Weight', href: '/how-to-help-your-cat-lose-weight', desktop: true, keywords: 'how to help an overweight cat lose weight cat weight loss diet obese cat body condition score BCS target weight calories per day RER hepatic lipidosis fatty liver safe rate percent per week wet food portion control'},
         ],
         costs: [
             {title: '💰 Monthly Pet Cost Calculator', href: '/monthly-pet-cost',              desktop: true, keywords: 'cost calculator monthly pet food vet insurance grooming'},
