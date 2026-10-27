@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Scene: a cat sitting in profile, facing a pinned chart of a survival curve -->
+  <rect x="0" y="0" width="400" height="188" fill="#FBF3E6"/>
+  <line x1="0" y1="188" x2="400" y2="188" stroke="#E3D5BE" stroke-width="2"/>
+  <rect x="0" y="188" width="400" height="92" fill="#EFE1CB"/>
+
+  <!-- Pinned chart: a cohort thinning out with age -->
+  <rect x="212" y="44" width="164" height="124" rx="6" fill="#FFFDF7" stroke="#E3D5BE" stroke-width="2"/>
+  <path d="M230 150 L230 60" stroke="#CFBFA6" stroke-width="1.6"/>
+  <path d="M230 150 L358 150" stroke="#CFBFA6" stroke-width="1.6"/>
+  <g stroke="#C89840" stroke-width="1.3">
+    <rect x="238" y="76"  width="16" height="74" fill="#E9C48A"/>
+    <rect x="259" y="84"  width="16" height="66" fill="#E9C48A"/>
+    <rect x="280" y="96"  width="16" height="54" fill="#E9C48A"/>
+    <rect x="301" y="110" width="16" height="40" fill="#E9C48A"/>
+    <rect x="322" y="126" width="16" height="24" fill="#E9C48A"/>
+    <rect x="343" y="139" width="14" height="11" fill="#AFC0C8"/>
+  </g>
+
+  <!-- Contact shadow -->
+  <ellipse cx="112" cy="254" rx="70" ry="7" fill="#E2D2B8"/>
+
+  <!-- Tail, starting inside the haunch so it reads as attached -->
+  <path d="M78 238 Q44 240 40 250 Q37 260 60 258" stroke="#5A4020" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M78 238 Q44 240 40 250 Q37 260 60 258" stroke="#E9C48A" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+  <!-- Body: one silhouette, rear haunch to chest to front paw -->
+  <path d="M150 134
+           Q140 156 146 176
+           Q152 204 152 232
+           L152 240
+           Q152 246 146 246
+           L136 246
+           Q130 246 130 240
+           L130 230
+           Q120 244 104 246
+           Q78 248 72 232
+           Q66 214 78 196
+           Q90 178 100 168
+           Q118 150 150 134 Z"
+        fill="#E9C48A" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Haunch, shaded so the sitting posture reads -->
+  <path d="M92 190 Q118 186 124 212 Q128 238 106 244 Q80 246 74 228 Q70 202 92 190 Z" fill="#EED4A0" stroke="#5A4020" stroke-width="2"/>
+
+  <!-- Hind foot, tucked under the haunch -->
+  <ellipse cx="104" cy="244" rx="17" ry="6" fill="#F7E7C8" stroke="#5A4020" stroke-width="2"/>
+
+  <!-- Body stripes -->
+  <g stroke="#C89840" stroke-width="2.6" stroke-linecap="round" fill="none">
+    <path d="M96 176 Q108 182 106 194"/>
+    <path d="M112 168 Q124 176 122 190"/>
+    <path d="M84 190 Q96 196 94 208"/>
+  </g>
+
+  <!-- Front legs: two posts from inside the chest to the floor -->
+  <path d="M132 196 Q134 226 134 240" stroke="#5A4020" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M132 196 Q134 226 134 240" stroke="#E3BE84" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M146 190 Q149 222 149 240" stroke="#5A4020" stroke-width="13" stroke-linecap="round" fill="none"/>
+  <path d="M146 190 Q149 222 149 240" stroke="#EED4A0" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <ellipse cx="133" cy="242" rx="8.5" ry="4" fill="#F7E7C8" stroke="#5A4020" stroke-width="1.9"/>
+  <ellipse cx="149" cy="242" rx="9" ry="4.2" fill="#F7E7C8" stroke="#5A4020" stroke-width="2"/>
+
+  <!-- Neck, so the head does not float -->
+  <path d="M140 142 Q160 132 172 140 Q176 150 170 158 Q156 164 142 158 Z" fill="#E9C48A" stroke="#5A4020" stroke-width="2.2" stroke-linejoin="round"/>
+
+  <!-- Head in profile -->
+  <circle cx="166" cy="118" r="21" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+  <!-- Ears: two closed triangles, both pointing up -->
+  <path d="M150 103 L144 80 L164 96 Z" fill="#E9C48A" stroke="#5A4020" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M180 102 L188 79 L172 96 Z" fill="#E9C48A" stroke="#5A4020" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M152 100 L148 87 L161 97 Z" fill="#F2B8B0"/>
+  <path d="M180 99 L186 86 L175 96 Z" fill="#F2B8B0"/>
+  <!-- Head stripes -->
+  <g stroke="#C89840" stroke-width="1.9" stroke-linecap="round" fill="none">
+    <path d="M160 100 L162 109"/>
+    <path d="M168 99 L168 108"/>
+    <path d="M175 101 L173 109"/>
+  </g>
+  <!-- Muzzle -->
+  <ellipse cx="182" cy="126" rx="11" ry="8.5" fill="#F7E7C8"/>
+  <!-- Eye: one visible in profile, slit pupil -->
+  <ellipse cx="173" cy="115" rx="4.4" ry="5.4" fill="#FFFFFF" stroke="#5A4020" stroke-width="1.3"/>
+  <ellipse cx="174" cy="115" rx="1.5" ry="4.2" fill="#4A6A2A"/>
+  <ellipse cx="174" cy="115" rx="0.8" ry="3.1" fill="#1A1A1A"/>
+  <!-- Nose + mouth -->
+  <path d="M188 121 L192 123.5 L187 126 Z" fill="#F2A0A0" stroke="#F2A0A0" stroke-width="0.7"/>
+  <path d="M190 126 Q188 130 184 128" stroke="#5A4020" stroke-width="1" fill="none"/>
+  <path d="M190 126 Q190 131 194 130" stroke="#5A4020" stroke-width="1" fill="none"/>
+  <!-- Whiskers -->
+  <g stroke="#C4B09A" stroke-width="1" stroke-linecap="round">
+    <line x1="187" y1="122" x2="208" y2="118"/>
+    <line x1="187" y1="126" x2="209" y2="127"/>
+    <line x1="186" y1="130" x2="206" y2="136"/>
+  </g>
+  <!-- Collar -->
+  <path d="M147 141 Q163 150 176 142" stroke="#B3261E" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="162" cy="151" r="4.4" fill="#E8C14A" stroke="#8A6A3A" stroke-width="1.3"/>
+</svg>

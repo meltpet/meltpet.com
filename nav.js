@@ -122,6 +122,7 @@
             {title: '💧 Cat Dehydration Test', href: '/cat-dehydration-test-guide', desktop: true, keywords: 'cat dehydration test skin pinch tent test turgor gums capillary refill how to tell if cat is dehydrated water intake not drinking'},
             {title: '💧 Why Cats Get Dehydrated', href: '/cat-dehydration-causes', desktop: true, keywords: 'cat dehydration causes why cats get dehydrated kidney disease hyperthyroidism diabetes dry food water intake fluid loss'},
             {title: '⚖️ Help an Overweight Cat Lose Weight', href: '/how-to-help-your-cat-lose-weight', desktop: true, keywords: 'how to help an overweight cat lose weight cat weight loss diet obese cat body condition score BCS target weight calories per day RER hepatic lipidosis fatty liver safe rate percent per week wet food portion control'},
+            {title: '📉 How Long Do Cats Live?', href: '/how-long-do-cats-live', desktop: true, keywords: 'how long do cats live cat lifespan average life expectancy life table indoor outdoor cats oldest cat how long do indoor cats live cat years longevity' },
         ],
         costs: [
             {title: '💰 Monthly Pet Cost Calculator', href: '/monthly-pet-cost',              desktop: true, keywords: 'cost calculator monthly pet food vet insurance grooming'},
