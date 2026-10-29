@@ -143,6 +143,7 @@
         info: [
             {title: 'About MeltPet',                href: '/about',                           desktop: false, keywords: 'about meltpet contact story founder pet food experience'},
             {title: 'Privacy Policy',               href: '/privacy',                         desktop: false, keywords: 'privacy policy cookies tracking data'},
+            {title: 'Affiliate Disclosure',         href: '/affiliate-disclosure',            desktop: false, keywords: 'affiliate disclosure affiliate links commission sponsored how we make money amazon associates'},
             {title: '🗺️ Sitemap',                  href: '/sitemap-page',                    desktop: false, keywords: 'sitemap all pages index directory'},
             {title: '👩‍🔬 Sarah Mitchell — Author',     href: '/sarah-mitchell',                  desktop: false, keywords: 'sarah mitchell author pet food researcher meltpet credentials bio'}
         ]
