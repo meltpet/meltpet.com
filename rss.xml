@@ -5,10 +5,17 @@
     <link>https://www.meltpet.com/</link>
     <description>Breed finder, cost calculators, and honest pet guides — researched by a team with combined experience in pet food, clinical research, and veterinary science. No AI fluff, no sponsored picks.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.meltpet.com/rss.xml" rel="self" type="application/rss+xml"/>
 
     <!-- ══════ October 2026 ══════ -->
+    <item>
+      <title>When to Spay or Neuter: The Breed-by-Breed Numbers</title>
+      <link>https://www.meltpet.com/when-to-spay-or-neuter</link>
+      <guid isPermaLink="true">https://www.meltpet.com/when-to-spay-or-neuter</guid>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <description>Six months is a surgical convention, not a finding. The largest breed-by-breed dataset on neutering age covers 35 breeds, and the answer for a Chihuahua is not the answer for a Golden Retriever.</description>
+    </item>
     <item>
       <title>How Long Do Cats Live? What the Life Tables Actually Say</title>
       <link>https://www.meltpet.com/how-long-do-cats-live</link>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect x="0" y="0" width="800" height="450" fill="#FAF6EF"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="70" fill="#F6851B"/>
+  <text x="30" y="33" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" fill="#FFFFFF">When to spay or neuter?</text>
+  <text x="30" y="54" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#FDEBD7">Three numbers from three studies, each compared with intact animals of the same breed and sex</text>
+
+  <!-- ── Card 1: GOLDEN MALE ── -->
+  <rect x="28" y="90" width="232" height="292" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="52" cy="118" r="13" fill="#F6851B"/>
+  <text x="52" y="123" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">1</text>
+  <text x="72" y="123" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#8A5A1E" letter-spacing="0.6">GOLDEN, MALE</text>
+
+  <text x="46" y="172" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="bold" fill="#2F2A24">14.67%</text>
+  <text x="46" y="194" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">hip dysplasia, in dogs</text>
+  <text x="46" y="211" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">neutered before 6 months</text>
+
+  <line x1="46" y1="230" x2="242" y2="230" stroke="#EFE3D3" stroke-width="1.2"/>
+
+  <text x="46" y="253" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#2F2A24">11 of 75 dogs</text>
+  <text x="46" y="274" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">against 4.07% in intact</text>
+  <text x="46" y="291" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">males (9 of 221)</text>
+  <text x="46" y="318" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#8A5A1E">p = 0.04</text>
+  <text x="46" y="345" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C8175">Same breed, same sex,</text>
+  <text x="46" y="362" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C8175">same hospital</text>
+
+  <!-- ── Card 2: SHEPHERD FEMALE ── -->
+  <rect x="284" y="90" width="232" height="292" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="308" cy="118" r="13" fill="#F6851B"/>
+  <text x="308" y="123" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">2</text>
+  <text x="328" y="123" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#8A5A1E" letter-spacing="0.6">SHEPHERD, FEMALE</text>
+
+  <text x="302" y="172" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="bold" fill="#2F2A24">7.22%</text>
+  <text x="302" y="194" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">urinary incontinence, in</text>
+  <text x="302" y="211" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">bitches neutered at 6-11 mo</text>
+
+  <line x1="302" y1="230" x2="498" y2="230" stroke="#EFE3D3" stroke-width="1.2"/>
+
+  <text x="302" y="253" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#2F2A24">6 of 83 bitches</text>
+  <text x="302" y="274" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">against 0% in intact</text>
+  <text x="302" y="291" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">bitches (0 of 156)</text>
+  <text x="302" y="318" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#8A5A1E">significant</text>
+  <text x="302" y="345" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C8175">Falls to 2.78% at 1 year,</text>
+  <text x="302" y="362" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C8175">1.05% at 2-8 years</text>
+
+  <!-- ── Card 3: CATS ── -->
+  <rect x="540" y="90" width="232" height="292" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="564" cy="118" r="13" fill="#F6851B"/>
+  <text x="564" y="123" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">3</text>
+  <text x="584" y="123" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#8A5A1E" letter-spacing="0.6">CATS, BOTH SEXES</text>
+
+  <text x="558" y="172" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="bold" fill="#2F2A24">1,660</text>
+  <text x="558" y="194" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">cats neutered before a</text>
+  <text x="558" y="211" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5B5348">year, followed to 11 years</text>
+
+  <line x1="558" y1="230" x2="754" y2="230" stroke="#EFE3D3" stroke-width="1.2"/>
+
+  <text x="558" y="253" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">Before 5.5 months, no rise in</text>
+  <text x="558" y="274" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#2F7D4F">death or relinquishment</text>
+  <text x="558" y="295" font-family="Arial, Helvetica, sans-serif" font-size="11.5" font-weight="bold" fill="#2F7D4F">or serious disease</text>
+  <text x="558" y="322" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">Spraying, abscesses and</text>
+  <text x="558" y="339" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#5B5348">vet aggression decreased</text>
+  <text x="558" y="362" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C8175">47 conditions tested</text>
+
+  <!-- Footer -->
+  <line x1="28" y1="400" x2="772" y2="400" stroke="#EADFD0" stroke-width="1.2"/>
+  <text x="28" y="420" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#8C8175">Sources: Hart et al. 2014, PLOS ONE (Golden) · Hart et al. 2016, Vet Med Sci (German Shepherd) · Spain et al. 2004, JAVMA (cats)</text>
+  <text x="28" y="437" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#8C8175">Percentages are recorded diagnoses during the study period, not lifetime risk.</text>
+</svg>

@@ -123,6 +123,7 @@
             {title: '💧 Why Cats Get Dehydrated', href: '/cat-dehydration-causes', desktop: true, keywords: 'cat dehydration causes why cats get dehydrated kidney disease hyperthyroidism diabetes dry food water intake fluid loss'},
             {title: '⚖️ Help an Overweight Cat Lose Weight', href: '/how-to-help-your-cat-lose-weight', desktop: true, keywords: 'how to help an overweight cat lose weight cat weight loss diet obese cat body condition score BCS target weight calories per day RER hepatic lipidosis fatty liver safe rate percent per week wet food portion control'},
             {title: '📉 How Long Do Cats Live?', href: '/how-long-do-cats-live', desktop: true, keywords: 'how long do cats live cat lifespan average life expectancy life table indoor outdoor cats oldest cat how long do indoor cats live cat years longevity' },
+            {title: '🩺 When to Spay or Neuter?', href: '/when-to-spay-or-neuter', desktop: true, keywords: 'when to spay or neuter dog cat best age to neuter spay timing neutering age large breed golden retriever german shepherd labrador juvenile spay castration six months neuter risk joint cancer'},
         ],
         costs: [
             {title: '💰 Monthly Pet Cost Calculator', href: '/monthly-pet-cost',              desktop: true, keywords: 'cost calculator monthly pet food vet insurance grooming'},
