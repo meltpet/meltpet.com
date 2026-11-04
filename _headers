@@ -18,6 +18,13 @@
   X-Robots-Tag: noindex, nofollow, noarchive
 
 # HTML: short cache, must revalidate
+# ⚠️ 这条只命中**真的带 .html 的请求**（splat 吃掉前面的路径，`.html` 是字面量）。
+#    站内链接和搜索结果走的是 clean URL（/first-year-dog-cost），不命中这条，
+#    拿到的是 Pages 默认的 `public, max-age=0, must-revalidate`。
+#    2026-11-04 在不可变别名上实测确认：/first-year-dog-cost → max-age=0。
+#    要给它定 5 分钟只能走 zone 的 Cache Rule（Cloudflare 控制台），_headers 做不到。
+#    刻意不用 /:page 去兜 clean URL —— 占位符会同时命中 /style.css 等静态资源，
+#    而重复的 Cache-Control 会按逗号拼接（不是覆盖），反而把 7 天缓存弄坏。
 /*.html
   Cache-Control: public, max-age=300, must-revalidate
 
