@@ -5,8 +5,18 @@
     <link>https://www.meltpet.com/</link>
     <description>Breed finder, cost calculators, and honest pet guides — researched by a team with combined experience in pet food, clinical research, and veterinary science. No AI fluff, no sponsored picks.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.meltpet.com/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <!-- ══════ November 2026 ══════ -->
+    <item>
+      <title>How Long Do Dogs Live? Breed by Breed, Age by Age</title>
+      <link>https://www.meltpet.com/how-long-do-dogs-live</link>
+      <guid isPermaLink="true">https://www.meltpet.com/how-long-do-dogs-live</guid>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <description><![CDATA[<p>The UK life table puts the average at 11.23 years. The useful part is the eight-year gap between the longest and shortest-lived breeds, and the fact that an eight-year-old dog still has 4.61 years to run.</p>]]></description>
+    </item>
 
     <!-- ══════ October 2026 ══════ -->
     <item>

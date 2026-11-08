@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Scene: a wall-mounted measuring board with three orange marks, a dog bowl below -->
+  <rect x="0" y="0" width="400" height="224" fill="#FBF3E6"/>
+  <rect x="0" y="224" width="400" height="56" fill="#EFE1CB"/>
+  <line x1="0" y1="224" x2="400" y2="224" stroke="#E3D5BE" stroke-width="2"/>
+
+  <!-- Measuring board -->
+  <rect x="146" y="24" width="108" height="200" rx="8" fill="#FFFDF7" stroke="#E3D5BE" stroke-width="2"/>
+  <rect x="147" y="25" width="106" height="30" rx="7" fill="#E9C48A"/>
+  <rect x="147" y="44" width="106" height="11" fill="#E9C48A"/>
+  <!-- paw on the header -->
+  <g fill="#FBF3E6">
+    <ellipse cx="200" cy="43" rx="5.4" ry="4.6"/>
+    <circle cx="193" cy="35" r="2.2"/><circle cx="197.5" cy="32.6" r="2.2"/>
+    <circle cx="202.5" cy="32.6" r="2.2"/><circle cx="207" cy="35" r="2.2"/>
+  </g>
+
+  <!-- Regular ticks -->
+  <g stroke="#E3D5BE" stroke-width="2" stroke-linecap="round">
+    <line x1="156" y1="76"  x2="184" y2="76"/>
+    <line x1="156" y1="92"  x2="170" y2="92"/>
+    <line x1="156" y1="108" x2="184" y2="108"/>
+    <line x1="156" y1="124" x2="170" y2="124"/>
+    <line x1="156" y1="140" x2="184" y2="140"/>
+    <line x1="156" y1="156" x2="170" y2="156"/>
+    <line x1="156" y1="172" x2="184" y2="172"/>
+    <line x1="156" y1="188" x2="170" y2="188"/>
+    <line x1="156" y1="204" x2="184" y2="204"/>
+  </g>
+
+  <!-- Three orange marks -->
+  <g stroke="#F6851B" stroke-width="3.5" stroke-linecap="round">
+    <line x1="156" y1="92"  x2="198" y2="92"/>
+    <line x1="156" y1="140" x2="198" y2="140"/>
+    <line x1="156" y1="204" x2="198" y2="204"/>
+  </g>
+  <g fill="#F6851B">
+    <circle cx="206" cy="92"  r="4.6"/>
+    <circle cx="206" cy="140" r="4.6"/>
+    <circle cx="206" cy="204" r="4.6"/>
+  </g>
+
+  <!-- Dog bowl on the floor -->
+  <ellipse cx="96" cy="240" rx="27" ry="7" fill="#B9A78A"/>
+  <path d="M70 240 H122 L116 258 A10 6 0 0 1 106 262 H86 A10 6 0 0 1 76 258 Z" fill="#CFBFA6"/>
+  <ellipse cx="96" cy="240" rx="21" ry="5" fill="#E3D5BE"/>
+
+  <!-- Paw print on the floor, right -->
+  <g fill="#DCC9AC">
+    <ellipse cx="318" cy="250" rx="6" ry="5"/>
+    <circle cx="310" cy="242" r="2.3"/><circle cx="315" cy="239" r="2.3"/>
+    <circle cx="321" cy="239" r="2.3"/><circle cx="326" cy="242" r="2.3"/>
+  </g>
+</svg>

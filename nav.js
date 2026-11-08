@@ -124,6 +124,7 @@
             {title: '⚖️ Help an Overweight Cat Lose Weight', href: '/how-to-help-your-cat-lose-weight', desktop: true, keywords: 'how to help an overweight cat lose weight cat weight loss diet obese cat body condition score BCS target weight calories per day RER hepatic lipidosis fatty liver safe rate percent per week wet food portion control'},
             {title: '📉 How Long Do Cats Live?', href: '/how-long-do-cats-live', desktop: true, keywords: 'how long do cats live cat lifespan average life expectancy life table indoor outdoor cats oldest cat how long do indoor cats live cat years longevity' },
             {title: '🩺 When to Spay or Neuter?', href: '/when-to-spay-or-neuter', desktop: true, keywords: 'when to spay or neuter dog cat best age to neuter spay timing neutering age large breed golden retriever german shepherd labrador juvenile spay castration six months neuter risk joint cancer'},
+            {title: '🐕 How Long Do Dogs Live?', href: '/how-long-do-dogs-live', desktop: true, keywords: 'how long do dogs live dog lifespan average life expectancy life table breed lifespan jack russell french bulldog chihuahua senior dog years remaining longevity' },
         ],
         costs: [
             {title: '💰 Monthly Pet Cost Calculator', href: '/monthly-pet-cost',              desktop: true, keywords: 'cost calculator monthly pet food vet insurance grooming'},

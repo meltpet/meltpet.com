@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect x="0" y="0" width="800" height="450" fill="#FAF6EF"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="70" fill="#F6851B"/>
+  <text x="30" y="33" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" fill="#FFFFFF">How long do dogs live?</text>
+  <text x="30" y="54" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#FDEBD7">Three numbers from three studies: one population, one breed spread, one controllable factor</text>
+
+  <!-- ── Card 1: POPULATION ── -->
+  <rect x="28" y="90" width="232" height="292" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="52" cy="118" r="13" fill="#F6851B"/>
+  <text x="52" y="123" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">1</text>
+  <text x="74" y="118" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#8C6B4F" letter-spacing="1">POPULATION</text>
+  <text x="74" y="134" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C7A65">life expectancy at birth</text>
+  <text x="40" y="212" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="bold" fill="#2F2A24">11.23</text>
+  <text x="40" y="240" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#6B6257">years, on average</text>
+  <line x1="40" y1="264" x2="248" y2="264" stroke="#EFE4D4" stroke-width="1.2"/>
+  <text x="40" y="288" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">95% CI 11.19–11.27</text>
+  <text x="40" y="308" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">30,563 UK dogs</text>
+  <text x="40" y="328" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">deaths 2016–2020</text>
+
+  <!-- ── Card 2: BREED GAP ── -->
+  <rect x="284" y="90" width="232" height="292" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="308" cy="118" r="13" fill="#F6851B"/>
+  <text x="308" y="123" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">2</text>
+  <text x="330" y="118" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#8C6B4F" letter-spacing="1">BREED GAP</text>
+  <text x="330" y="134" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C7A65">longest minus shortest</text>
+  <text x="296" y="212" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="bold" fill="#2F2A24">8.2</text>
+  <text x="296" y="240" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#6B6257">years between breeds</text>
+  <line x1="296" y1="264" x2="504" y2="264" stroke="#EFE4D4" stroke-width="1.2"/>
+  <text x="296" y="288" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">Jack Russell 12.72</text>
+  <text x="296" y="308" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">French Bulldog 4.53</text>
+  <text x="296" y="328" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">Size does not order it</text>
+
+  <!-- ── Card 3: BODY CONDITION ── -->
+  <rect x="540" y="90" width="232" height="292" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="564" cy="118" r="13" fill="#F6851B"/>
+  <text x="564" y="123" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">3</text>
+  <text x="586" y="118" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#8C6B4F" letter-spacing="1">BODY CONDITION</text>
+  <text x="586" y="134" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C7A65">the controllable one</text>
+  <text x="552" y="212" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="bold" fill="#F6851B">+1.8</text>
+  <text x="552" y="240" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#6B6257">years, median</text>
+  <line x1="552" y1="264" x2="760" y2="264" stroke="#EFE4D4" stroke-width="1.2"/>
+  <text x="552" y="288" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">48 Labradors, paired</text>
+  <text x="552" y="308" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">25% less food, same diet</text>
+  <text x="552" y="328" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">followed for life</text>
+
+  <!-- Footer sources -->
+  <line x1="28" y1="400" x2="772" y2="400" stroke="#EADFD0" stroke-width="1.2"/>
+  <text x="28" y="420" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#8C7A65">Sources: Teng et al. 2022, Scientific Reports (30,563 UK dogs) · Kraus et al. 2013, Am Nat (74 breeds) · Lawler et al. 2008, Br J Nutr (48 Labradors)</text>
+  <text x="28" y="437" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#A89880">Population figures; not a prediction for an individual dog. Chart: MeltPet.</text>
+</svg>
