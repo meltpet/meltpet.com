@@ -125,6 +125,7 @@
             {title: '📉 How Long Do Cats Live?', href: '/how-long-do-cats-live', desktop: true, keywords: 'how long do cats live cat lifespan average life expectancy life table indoor outdoor cats oldest cat how long do indoor cats live cat years longevity' },
             {title: '🩺 When to Spay or Neuter?', href: '/when-to-spay-or-neuter', desktop: true, keywords: 'when to spay or neuter dog cat best age to neuter spay timing neutering age large breed golden retriever german shepherd labrador juvenile spay castration six months neuter risk joint cancer'},
             {title: '🐕 How Long Do Dogs Live?', href: '/how-long-do-dogs-live', desktop: true, keywords: 'how long do dogs live dog lifespan average life expectancy life table breed lifespan jack russell french bulldog chihuahua senior dog years remaining longevity' },
+            {title: '🦃 Thanksgiving Pet Safety', href: '/thanksgiving-pet-safety', desktop: true, keywords: 'thanksgiving pet safety dog cat turkey bones gravy stuffing chocolate xylitol grapes raisins onions garlic holiday food toxic foods guests doors travel emergency vet vomiting pancreatitis pet-safe treats' },
         ],
         costs: [
             {title: '💰 Monthly Pet Cost Calculator', href: '/monthly-pet-cost',              desktop: true, keywords: 'cost calculator monthly pet food vet insurance grooming'},
