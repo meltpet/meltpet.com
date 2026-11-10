@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="style.css?v=20261110">
+        <link rel="stylesheet" href="style.css?v=20261110b">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Dog Food Cost Calculator (2026) | MeltPet">
@@ -216,7 +216,7 @@
   </div>
   </footer>
 
-  <script src="nav.js?v=20261110"></script>
+  <script src="nav.js?v=20261110b"></script>
   <script defer src="tool-share.js?v=20260807"></script>
   <script>
   // Daily calorie needs by weight & activity: [low_moderate, moderate, high]
@@ -268,13 +268,13 @@
   compareHtml = tiers.map(function(t) {
   var c = FOOD[t.key];
   var m = Math.round(monthlyCal / 1000 * r(c));
-  var hl = (t.key === ft) ? ' style="font-weight:700;color:var(--accent);"' : '';
+  var hl = (t.key === ft) ? ' style="font-weight:700;color:var(--accent-ink);"' : '';
   return '<tr' + hl + '><td>' + t.label + '</td><td><strong>$' + m.toLocaleString() + '</strong></td><td>$' + Math.round(monthlyCal/1000*c[0]).toLocaleString() + '—' + Math.round(monthlyCal/1000*c[1]).toLocaleString() + '</td></tr>';
   }).join('');
 
   var savingsVsRaw = Math.round(monthlyCal / 1000 * r(FOOD['raw-commercial'])) - mid;
 
-  var html = '<h4>🐕 Monthly Food Cost: <span style="color:var(--accent);">$' + low.toLocaleString() + '—' + high.toLocaleString() + '</span></h4>';
+  var html = '<h4>🐕 Monthly Food Cost: <span style="color:var(--accent-ink);">$' + low.toLocaleString() + '—' + high.toLocaleString() + '</span></h4>';
   html += '<p style="margin-bottom:16px;">Most likely: <strong>$' + mid.toLocaleString() + '/month</strong> for a <strong>' + wt + '-pound dog</strong> on <strong>' + document.getElementById('foodType').selectedOptions[0].text + '</strong>.</p>';
   html += '<div class="table-scroll"><table><thead><tr><th>Food Type</th><th>Est. Monthly</th><th>Range</th></tr></thead><tbody>';
   html += compareHtml;

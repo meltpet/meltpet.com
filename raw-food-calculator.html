@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261110">
+  <link rel="stylesheet" href="style.css?v=20261110b">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Raw Food Calculator: 80/10/10 Recipe Builder">
@@ -227,7 +227,7 @@
     </div>
   </footer>
 
-  <script src="nav.js?v=20261110"></script>
+  <script src="nav.js?v=20261110b"></script>
   <script defer src="tool-share.js?v=20260807"></script>
   <script>
   // ── Life-stage DER factors (RER multiplier) ──
@@ -280,7 +280,7 @@
     // ── Calorie + amount header ──
     html += '<div style="text-align:center;margin-bottom:4px;">';
     html += '<div style="font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);margin-bottom:2px;">Daily raw food · ' + Math.round(pct * 10) / 10 + '% of body weight</div>';
-    html += '<div style="font-size:2.6rem;font-weight:800;color:var(--accent,#F6851B);line-height:1.05;">' + Math.round(dailyGrams) + '<span style="font-size:1.3rem;"> g</span></div>';
+    html += '<div style="font-size:2.6rem;font-weight:800;color:var(--accent-ink);line-height:1.05;">' + Math.round(dailyGrams) + '<span style="font-size:1.3rem;"> g</span></div>';
     html += '<div style="font-size:0.85rem;color:var(--text-muted);margin-top:2px;">≈ ' + toOz(dailyGrams) + ' oz per day · split into 2 meals</div>';
     html += '<div style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">Estimated energy need: <strong>' + Math.round(der) + ' kcal/day</strong> (RER ' + Math.round(rer) + ' × ' + FACTORS[species][stage] + ')</div>';
     html += '</div>';

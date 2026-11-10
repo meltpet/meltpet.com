@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="style.css?v=20261110">
+        <link rel="stylesheet" href="style.css?v=20261110b">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Dog Breed Finder: Find Your Match in 30 Seconds">
@@ -140,7 +140,7 @@
 
     <div class="article-section" style="text-align:center;padding:28px 20px;">
   <p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:14px;">Not a dog person after all?</p>
-  <a href="/cat-breed-finder" class="btn-primary" style="background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent);">🐱 Try the Cat Breed Finder Instead </a>
+  <a href="/cat-breed-finder" class="btn-primary" style="background:var(--accent-soft);color:var(--accent-ink);border:1px solid var(--accent);">🐱 Try the Cat Breed Finder Instead </a>
   </div>
   
 </div>
@@ -318,7 +318,7 @@
   var html = '<h4>' + speciesEmoji + ' Your Perfect Match</h4>';
   top.forEach(function(b, i){
   var label = i === 0 ? ' Top Match' : ' Runner-up';
-  html += '<div style="margin-bottom:14px;text-align:left;"><span style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.5px;color:var(--accent);">' + label + '</span><br><strong style="font-size:1.2rem;color:var(--text-heading);">' + b.n + '</strong><p style="margin-top:4px;">' + b.r + (BREED_GUIDE_MAP[b.n] ? ' <a href="' + BREED_GUIDE_MAP[b.n] + '" class="breed-guide-link">📖 Read our full ' + b.n + ' guide </a>' : '') + '</p></div>';
+  html += '<div style="margin-bottom:14px;text-align:left;"><span style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.5px;color:var(--accent-ink);">' + label + '</span><br><strong style="font-size:1.2rem;color:var(--text-heading);">' + b.n + '</strong><p style="margin-top:4px;">' + b.r + (BREED_GUIDE_MAP[b.n] ? ' <a href="' + BREED_GUIDE_MAP[b.n] + '" class="breed-guide-link">📖 Read our full ' + b.n + ' guide </a>' : '') + '</p></div>';
   });
   html += '<p style="font-size:0.78rem;color:var(--text-muted);margin-top:8px;border-top:1px solid var(--border);padding-top:10px;">Based on: ' + space.replace('-',' ') + '  ' + activity + ' activity  ' + (expLevel==='first'?'First-time':'') + (expLevel==='some'?'Some experience':'') + (expLevel==='experienced'?'Experienced':'') + '  Family: ' + family + '  Grooming: ' + grooming + '</p>';
   html += '<p style="font-size:0.78rem;color:var(--text-muted);margin-top:4px;">🐾 All matches based on AKC breed standards &amp; veterinary behavior data.</p>';
@@ -337,7 +337,7 @@
   document.getElementById('step-1').scrollIntoView({behavior:'smooth',block:'center'});
   }
   </script>
-  <script src="nav.js?v=20261110"></script>
+  <script src="nav.js?v=20261110b"></script>
   <script defer src="tool-share.js?v=20260807"></script>
     <script defer src="/analytics.js"></script>
 </body>
