@@ -5,11 +5,19 @@
     <link>https://www.meltpet.com/</link>
     <description>Breed finder, cost calculators, and honest pet guides — researched by a team with combined experience in pet food, clinical research, and veterinary science. No AI fluff, no sponsored picks.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.meltpet.com/rss.xml" rel="self" type="application/rss+xml"/>
 
     <!-- ══════ November 2026 ══════ -->
-    <item>
+<item>
+      <title>Flea and Tick Prevention: Why One Dose Never Works</title>
+      <link>https://www.meltpet.com/flea-and-tick-prevention</link>
+      <guid isPermaLink="true">https://www.meltpet.com/flea-and-tick-prevention</guid>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <description><![CDATA[<p>Why a monthly dose covering 30 days loses to a cocoon that can wait 210, how fast a tick transmits, and the feline permethrin numbers behind "never use the dog product on the cat".</p>]]></description>
+    </item>
+        <item>
       <title>Thanksgiving Pet Safety: What Pets Can't Eat</title>
       <link>https://www.meltpet.com/thanksgiving-pet-safety</link>
       <guid isPermaLink="true">https://www.meltpet.com/thanksgiving-pet-safety</guid>

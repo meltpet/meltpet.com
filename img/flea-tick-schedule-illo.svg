@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Scene: a wall calendar of thirty boxes, and a flea cocoon waiting outside the grid -->
+  <rect x="0" y="0" width="400" height="224" fill="#FBF3E6"/>
+  <rect x="0" y="224" width="400" height="56" fill="#EFE1CB"/>
+  <line x1="0" y1="224" x2="400" y2="224" stroke="#E3D5BE" stroke-width="2"/>
+
+  <!-- Calendar body -->
+  <rect x="86" y="22" width="150" height="192" rx="9" fill="#FFFDF7" stroke="#E3D5BE" stroke-width="2"/>
+  <rect x="87" y="23" width="148" height="30" rx="8" fill="#E9C48A"/>
+  <rect x="87" y="42" width="148" height="11" fill="#E9C48A"/>
+  <!-- binding rings -->
+  <g stroke="#C9B393" stroke-width="2.4" stroke-linecap="round">
+    <line x1="112" y1="18" x2="112" y2="30"/>
+    <line x1="161" y1="18" x2="161" y2="30"/>
+    <line x1="210" y1="18" x2="210" y2="30"/>
+  </g>
+
+  <!-- thirty day boxes: six columns, five rows -->
+  <g fill="#F4EADA">
+    <rect x="100" y="64" width="15" height="17" rx="3"/><rect x="119" y="64" width="15" height="17" rx="3"/>
+    <rect x="138" y="64" width="15" height="17" rx="3"/><rect x="157" y="64" width="15" height="17" rx="3"/>
+    <rect x="176" y="64" width="15" height="17" rx="3"/><rect x="195" y="64" width="15" height="17" rx="3"/>
+
+    <rect x="100" y="89" width="15" height="17" rx="3"/><rect x="119" y="89" width="15" height="17" rx="3"/>
+    <rect x="138" y="89" width="15" height="17" rx="3"/><rect x="157" y="89" width="15" height="17" rx="3"/>
+    <rect x="176" y="89" width="15" height="17" rx="3"/><rect x="195" y="89" width="15" height="17" rx="3"/>
+
+    <rect x="100" y="114" width="15" height="17" rx="3"/><rect x="119" y="114" width="15" height="17" rx="3"/>
+    <rect x="138" y="114" width="15" height="17" rx="3"/><rect x="157" y="114" width="15" height="17" rx="3"/>
+    <rect x="176" y="114" width="15" height="17" rx="3"/><rect x="195" y="114" width="15" height="17" rx="3"/>
+
+    <rect x="100" y="139" width="15" height="17" rx="3"/><rect x="119" y="139" width="15" height="17" rx="3"/>
+    <rect x="138" y="139" width="15" height="17" rx="3"/><rect x="157" y="139" width="15" height="17" rx="3"/>
+    <rect x="176" y="139" width="15" height="17" rx="3"/><rect x="195" y="139" width="15" height="17" rx="3"/>
+
+    <rect x="100" y="164" width="15" height="17" rx="3"/><rect x="119" y="164" width="15" height="17" rx="3"/>
+    <rect x="138" y="164" width="15" height="17" rx="3"/><rect x="157" y="164" width="15" height="17" rx="3"/>
+    <rect x="176" y="164" width="15" height="17" rx="3"/><rect x="195" y="164" width="15" height="17" rx="3"/>
+  </g>
+  <!-- the five boxes that carry an orange dot: this month's doses -->
+  <g fill="#F6851B">
+    <circle cx="107.5" cy="72.5" r="4"/><circle cx="126.5" cy="97.5" r="4"/>
+    <circle cx="145.5" cy="122.5" r="4"/><circle cx="164.5" cy="147.5" r="4"/>
+    <circle cx="183.5" cy="172.5" r="4"/>
+  </g>
+
+  <!-- a dashed line runs out of the grid to a cocoon that is not on the calendar -->
+  <path d="M236 172 H262" stroke="#C9B393" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+
+  <!-- cocoon: elongated silk case lying on its side, with longitudinal threads -->
+  <ellipse cx="293" cy="172" rx="25" ry="14" fill="#E9C48A" stroke="#C9A268" stroke-width="2"/>
+  <path d="M268 166 Q293 172 318 166" stroke="#D8B583" stroke-width="1.3"/>
+  <path d="M268 172 Q293 178 318 172" stroke="#D8B583" stroke-width="1.3"/>
+  <path d="M270 178 Q293 184 316 178" stroke="#D8B583" stroke-width="1.3"/>
+  <path d="M292 158 L294 186" stroke="#C9A268" stroke-width="1.2" stroke-dasharray="2 3"/>
+
+  <!-- pause mark: the cocoon is waiting, not moving -->
+  <g fill="#C9B393">
+    <rect x="287" y="120" width="4.5" height="15" rx="2.2"/>
+    <rect x="295" y="120" width="4.5" height="15" rx="2.2"/>
+  </g>
+
+  <!-- flea on the floor: arched body, head to the right, hind legs trailing -->
+  <g stroke="#8A7355" stroke-width="1.9" stroke-linecap="round">
+    <path d="M62 250 L54 244"/>
+    <path d="M64 254 L55 257"/>
+    <path d="M72 246 L66 239"/>
+  </g>
+  <ellipse cx="74" cy="250" rx="8" ry="4.6" fill="#8A7355"/>
+  <circle cx="84" cy="249" r="3.2" fill="#8A7355"/>
+  <path d="M86 246 L90 242" stroke="#8A7355" stroke-width="1.7" stroke-linecap="round"/>
+
+  <!-- paw print, right -->
+  <g fill="#DCC9AC">
+    <ellipse cx="336" cy="252" rx="6" ry="5"/>
+    <circle cx="328" cy="244" r="2.3"/><circle cx="333" cy="241" r="2.3"/>
+    <circle cx="339" cy="241" r="2.3"/><circle cx="344" cy="244" r="2.3"/>
+  </g>
+</svg>

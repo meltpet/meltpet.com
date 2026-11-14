@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <rect x="0" y="0" width="800" height="450" fill="#FAF6EF"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="70" fill="#F6851B"/>
+  <text x="30" y="33" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="bold" fill="#FFFFFF">Two clocks, one monthly dose</text>
+  <text x="30" y="54" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#FDEBD7">The product runs for 30 days. The cocoon in the carpet can wait 210.</text>
+
+  <!-- ── Card 1: THE PRODUCT ── -->
+  <rect x="28" y="88" width="232" height="296" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="52" cy="116" r="13" fill="#F6851B"/>
+  <text x="52" y="121" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">1</text>
+  <text x="74" y="116" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#8C6B4F" letter-spacing="1">YOUR PRODUCT</text>
+  <text x="74" y="132" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C7A65">one monthly dose</text>
+  <text x="40" y="205" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" fill="#2F2A24">30</text>
+  <text x="40" y="230" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#6B6257">days of cover</text>
+  <line x1="40" y1="250" x2="248" y2="250" stroke="#EFE4D4" stroke-width="1.2"/>
+  <text x="40" y="276" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">Reapply on schedule</text>
+  <text x="40" y="296" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">Gaps are not neutral:</text>
+  <text x="40" y="316" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">a gap is a breeding window</text>
+  <rect x="40" y="340" width="208" height="10" rx="5" fill="#F2E7D8"/>
+  <rect x="40" y="340" width="30" height="10" rx="5" fill="#F6851B"/>
+  <text x="40" y="372" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#9A8B78">bar drawn to the shared scale below</text>
+
+  <!-- ── Card 2: THE COCCOON ── -->
+  <rect x="284" y="88" width="232" height="296" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="308" cy="116" r="13" fill="#F6851B"/>
+  <text x="308" y="121" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">2</text>
+  <text x="330" y="116" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#8C6B4F" letter-spacing="1">THE COCCOON</text>
+  <text x="330" y="132" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C7A65">pupa in the carpet</text>
+  <text x="296" y="205" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" fill="#2F2A24">210</text>
+  <text x="296" y="230" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#6B6257">days it can wait</text>
+  <line x1="296" y1="250" x2="504" y2="250" stroke="#EFE4D4" stroke-width="1.2"/>
+  <text x="296" y="276" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">30 weeks at 11 °C</text>
+  <text x="296" y="296" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">8 to 13 days at 24 °C</text>
+  <text x="296" y="316" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">Heat and pressure hatch it</text>
+  <rect x="296" y="340" width="208" height="10" rx="5" fill="#F2E7D8"/>
+  <rect x="296" y="340" width="208" height="10" rx="5" fill="#C9A268"/>
+  <text x="296" y="372" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#9A8B78">0 to 210 days</text>
+
+  <!-- ── Card 3: THE TICK ── -->
+  <rect x="540" y="88" width="232" height="296" rx="12" fill="#FFFFFF" stroke="#EADFD0" stroke-width="1.4"/>
+  <circle cx="564" cy="116" r="13" fill="#F6851B"/>
+  <text x="564" y="121" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">3</text>
+  <text x="586" y="116" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#8C6B4F" letter-spacing="1">THE TICK</text>
+  <text x="586" y="132" font-family="Arial, Helvetica, sans-serif" font-size="11.5" fill="#8C7A65">time to transmission</text>
+  <text x="552" y="205" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="bold" fill="#2F2A24">3–6</text>
+  <text x="552" y="230" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#6B6257">hours, some infections</text>
+  <line x1="552" y1="250" x2="760" y2="250" stroke="#EFE4D4" stroke-width="1.2"/>
+  <text x="552" y="276" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">Lyme takes 24–48 hours</text>
+  <text x="552" y="296" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">Brown dog ticks bite</text>
+  <text x="552" y="316" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#6B6257">indoors all year</text>
+  <rect x="552" y="340" width="208" height="10" rx="5" fill="#F2E7D8"/>
+  <rect x="552" y="340" width="3" height="10" rx="1.5" fill="#12372A"/>
+  <!-- caret: the sliver is real, just too small to see -->
+  <path d="M553.5 356 L549 364 M553.5 356 L558 364" stroke="#12372A" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="552" y="372" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#9A8B78">0.25 of a day — this is the whole bar</text>
+
+  <!-- Footer -->
+  <line x1="28" y1="400" x2="772" y2="400" stroke="#EADFD0" stroke-width="1"/>
+  <text x="28" y="420" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#9A8B78">All three bars share one scale: 0 to 210 days. Life-cycle figures from the CAPC flea and tick guidelines; transmission times from the same source.</text>
+  <text x="28" y="436" font-family="Arial, Helvetica, sans-serif" font-size="10.5" fill="#9A8B78">Sources list on the page. Values are as published — nothing here is an average of different studies.</text>
+</svg>
