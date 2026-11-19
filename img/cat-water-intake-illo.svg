@@ -1,72 +1,126 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
-  <!-- Scene: an orange tabby lapping water, with a graduated jug showing the daily total -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 264" fill="none">
+  <!-- Scene: a cat standing at a water bowl, head down lapping, with a graduated jug holding
+       the day's measured water behind it. Warm palette matches the other MeltPet illustrations. -->
   <!-- Wall -->
-  <rect x="0" y="0" width="400" height="182" fill="#e6eef7"/>
-  <!-- Window -->
-  <rect x="30" y="28" width="52" height="56" rx="4" fill="#cfe0f2" stroke="#b6cde6" stroke-width="1.6"/>
-  <line x1="56" y1="28" x2="56" y2="84" stroke="#b6cde6" stroke-width="1.6"/>
-  <line x1="30" y1="56" x2="82" y2="56" stroke="#b6cde6" stroke-width="1.6"/>
-  <circle cx="70" cy="42" r="9" fill="#fde68a" opacity="0.85"/>
+  <rect x="0" y="0" width="400" height="196" fill="#FBF3E6"/>
+  <line x1="0" y1="196" x2="400" y2="196" stroke="#E3D5BE" stroke-width="2"/>
   <!-- Floor -->
-  <rect x="0" y="182" width="400" height="98" fill="#dfe7f0"/>
-  <ellipse cx="200" cy="232" rx="208" ry="48" fill="#d3dde9"/>
+  <rect x="0" y="196" width="400" height="68" fill="#EFE1CB"/>
 
-  <!-- Tail -->
-  <path d="M70 198 Q46 192 44 166 Q43 148 58 144" stroke="#e0952f" stroke-width="11" fill="none" stroke-linecap="round"/>
-  <!-- Back legs -->
-  <rect x="86" y="216" width="19" height="28" rx="8" fill="#d98a26" stroke="#7a4a12" stroke-width="2.2"/>
-  <rect x="108" y="218" width="19" height="26" rx="8" fill="#d98a26" stroke="#7a4a12" stroke-width="2.2"/>
-  <!-- Body -->
-  <ellipse cx="120" cy="192" rx="57" ry="34" fill="#eaa63c" stroke="#7a4a12" stroke-width="2.5"/>
-  <!-- Tabby stripes -->
-  <g stroke="#c9801e" stroke-width="3" fill="none" stroke-linecap="round">
-    <path d="M94 174 Q100 188 96 202"/>
-    <path d="M112 170 Q118 185 114 200"/>
-    <path d="M130 170 Q136 185 132 200"/>
-  </g>
-  <!-- Front legs -->
-  <rect x="168" y="214" width="18" height="32" rx="8" fill="#eaa63c" stroke="#7a4a12" stroke-width="2.2"/>
-  <rect x="188" y="216" width="18" height="30" rx="8" fill="#eaa63c" stroke="#7a4a12" stroke-width="2.2"/>
-  <ellipse cx="177" cy="246" rx="11" ry="6" fill="#f7e2bd" stroke="#7a4a12" stroke-width="1.6"/>
-  <ellipse cx="197" cy="246" rx="11" ry="6" fill="#f7e2bd" stroke="#7a4a12" stroke-width="1.6"/>
+  <!-- Window, to give the wall some life -->
+  <rect x="34" y="34" width="72" height="74" rx="4" fill="#DCE9F4" stroke="#CBBBA2" stroke-width="3"/>
+  <line x1="70" y1="34" x2="70" y2="108" stroke="#CBBBA2" stroke-width="3"/>
+  <line x1="34" y1="71" x2="106" y2="71" stroke="#CBBBA2" stroke-width="3"/>
+  <circle cx="52" cy="54" r="9" fill="#FCE1A6"/>
+  <path d="M84 84 q7 -8 14 0 q7 -5 10 3 q4 7 -8 7 l-18 0 q-9 -1 -4 -7 q3 -4 6 -3 z" fill="#FFFFFF" opacity="0.9"/>
+  <rect x="30" y="108" width="80" height="5" rx="2" fill="#E3D5BE"/>
 
-  <!-- Head -->
-  <ellipse cx="176" cy="178" rx="28" ry="25" fill="#eaa63c" stroke="#7a4a12" stroke-width="2.5"/>
-  <!-- Ears -->
-  <path d="M156 160 L146 132 L172 150 Z" fill="#eaa63c" stroke="#7a4a12" stroke-width="2.2" stroke-linejoin="round"/>
-  <path d="M172 148 L190 126 L196 154 Z" fill="#eaa63c" stroke="#7a4a12" stroke-width="2.2" stroke-linejoin="round"/>
-  <path d="M158 156 L153 140 L168 151 Z" fill="#f0a8a0"/>
-  <path d="M176 150 L187 137 L191 154 Z" fill="#f0a8a0"/>
-  <!-- Eyes (closed, content) -->
-  <path d="M164 176 Q169 181 174 176" stroke="#3a2010" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-  <path d="M181 175 Q186 180 191 175" stroke="#3a2010" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-  <!-- Muzzle and nose -->
-  <ellipse cx="190" cy="190" rx="15" ry="10" fill="#f7e2bd"/>
-  <path d="M184 183 L187 189 L181 189 Z" fill="#c96a5a"/>
-  <!-- Tongue reaching the water -->
-  <path d="M196 192 Q214 202 226 218 Q214 226 202 210 Z" fill="#ef8f9e" stroke="#d4707f" stroke-width="1.3"/>
-  <!-- Whiskers -->
-  <g stroke="#a8763a" stroke-width="1.2" stroke-linecap="round">
-    <path d="M200 186 L218 182"/>
-    <path d="M201 191 L220 193"/>
-  </g>
+  <g transform="translate(200,246) scale(1.06) translate(-200,-246)">
+  <!-- Contact shadow under the cat -->
+  <ellipse cx="146" cy="247" rx="86" ry="8" fill="#E2D2B8"/>
 
-  <!-- Water bowl -->
-  <ellipse cx="248" cy="228" rx="46" ry="14" fill="#c3ccd6" stroke="#9aa7b4" stroke-width="2"/>
-  <ellipse cx="248" cy="226" rx="46" ry="14" fill="#e8eef4" stroke="#9aa7b4" stroke-width="2"/>
-  <ellipse cx="248" cy="229" rx="38" ry="10" fill="#a6d8f0"/>
-  <ellipse cx="248" cy="228" rx="19" ry="5" fill="none" stroke="#7ab8dc" stroke-width="1.3"/>
+  <!-- Cat, standing, head down at the bowl -->
+  <!-- tail, curled up behind -->
+  <path d="M92 214 Q56 206 52 228 Q49 246 68 242" stroke="#5A4020" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M92 214 Q56 206 52 228 Q49 246 68 242" stroke="#E9C48A" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56 234 Q54 239 58 242" stroke="#C89840" stroke-width="2" fill="none" stroke-linecap="round"/>
 
-  <!-- Graduated jug -->
-  <path d="M320 150 L372 150 L367 232 L325 232 Z" fill="#f2f7fb" stroke="#9aa7b4" stroke-width="2" stroke-linejoin="round"/>
-  <path d="M322 166 L370 166 L366 232 L326 232 Z" fill="#8ec8e8"/>
-  <rect x="320" y="146" width="52" height="7" rx="3.5" fill="#9aa7b4"/>
-  <g stroke="#6f7d8c" stroke-width="1.3" stroke-linecap="round">
-    <path d="M356 182 L368 182"/>
-    <path d="M356 198 L368 198"/>
-    <path d="M356 214 L368 214"/>
+  <!-- far legs (darker, behind the body) -->
+  <rect x="102" y="216" width="12" height="30" rx="5" fill="#E3BE84" stroke="#5A4020" stroke-width="2.2"/>
+  <rect x="158" y="216" width="12" height="30" rx="5" fill="#E3BE84" stroke="#5A4020" stroke-width="2.2"/>
+  <ellipse cx="108" cy="245" rx="7" ry="3.4" fill="#EED4A0" stroke="#5A4020" stroke-width="1.8"/>
+  <ellipse cx="164" cy="245" rx="7" ry="3.4" fill="#EED4A0" stroke="#5A4020" stroke-width="1.8"/>
+
+  <!-- body -->
+  <ellipse cx="134" cy="211" rx="45" ry="30" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+  <ellipse cx="138" cy="221" rx="28" ry="11" fill="#F7E7C8"/>
+
+  <!-- near legs -->
+  <rect x="109" y="213" width="13" height="33" rx="6" fill="#EED4A0" stroke="#5A4020" stroke-width="2.5"/>
+  <rect x="165" y="213" width="13" height="33" rx="6" fill="#EED4A0" stroke="#5A4020" stroke-width="2.5"/>
+  <ellipse cx="116.5" cy="245" rx="8" ry="4" fill="#F7E7C8" stroke="#5A4020" stroke-width="2"/>
+  <ellipse cx="172.5" cy="245" rx="8" ry="4" fill="#F7E7C8" stroke="#5A4020" stroke-width="2"/>
+
+  <!-- body stripes -->
+  <g stroke="#C89840" stroke-width="2.6" stroke-linecap="round" fill="none">
+    <path d="M124 185 Q135 191 133 201"/>
+    <path d="M140 183 Q151 189 149 199"/>
+    <path d="M112 193 Q120 199 118 209"/>
   </g>
 
-  <!-- Droplet -->
-  <path d="M300 116 q-9 13 0 19 q9 -6 0 -19 z" fill="#8ec8e8" stroke="#6aa8c8" stroke-width="1.4"/>
+  <!-- neck: bridges the lowered head into the chest -->
+  <path d="M156 200 Q170 190 182 194" stroke="#E9C48A" stroke-width="17" stroke-linecap="round"/>
+
+  <!-- head, angled down toward the water -->
+  <circle cx="188" cy="196" r="23" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+  <!-- ears -->
+  <path d="M173 182 L166 160 L187 171" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M201 179 L212 160 L208 186" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M175 178 L170 166 L184 173" fill="#F2B8B0"/>
+  <path d="M203 177 L210 165 L207 181" fill="#F2B8B0"/>
+  <!-- head stripes -->
+  <g stroke="#C89840" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M181 174 L183 183"/>
+    <path d="M189 172 L189 182"/>
+    <path d="M197 174 L195 183"/>
+  </g>
+  <!-- muzzle -->
+  <ellipse cx="200" cy="204" rx="11" ry="9" fill="#F7E7C8"/>
+  <!-- eyes, looking down at the water -->
+  <ellipse cx="193" cy="195" rx="4" ry="5" fill="#FFFFFF" stroke="#5A4020" stroke-width="1.4"/>
+  <ellipse cx="203" cy="195" rx="4" ry="5" fill="#FFFFFF" stroke="#5A4020" stroke-width="1.4"/>
+  <circle cx="194.5" cy="197" r="2.6" fill="#4A6A2A"/>
+  <circle cx="204.5" cy="197" r="2.6" fill="#4A6A2A"/>
+  <ellipse cx="194.5" cy="197.5" rx="1.2" ry="2.4" fill="#1A1A1A"/>
+  <ellipse cx="204.5" cy="197.5" rx="1.2" ry="2.4" fill="#1A1A1A"/>
+  <circle cx="193" cy="195.5" r="0.9" fill="#FFFFFF"/>
+  <circle cx="203" cy="195.5" r="0.9" fill="#FFFFFF"/>
+  <!-- nose + mouth -->
+  <path d="M197 205 L200 208 L203 205" fill="#F2A0A0" stroke="#F2A0A0" stroke-width="0.8"/>
+  <path d="M200 208 Q200 212 196 210" stroke="#5A4020" stroke-width="1" fill="none"/>
+  <path d="M200 208 Q200 212 204 210" stroke="#5A4020" stroke-width="1" fill="none"/>
+  <!-- whiskers -->
+  <g stroke="#C4B09A" stroke-width="1" stroke-linecap="round">
+    <line x1="206" y1="202" x2="228" y2="198"/>
+    <line x1="206" y1="206" x2="229" y2="208"/>
+  </g>
+
+  <!-- The bowl, sitting on the floor -->
+  <ellipse cx="258" cy="247" rx="42" ry="7" fill="#E2D2B8"/>
+  <path d="M224 224 Q226 244 240 247 L276 247 Q290 244 292 224 Z" fill="#DCE6EC" stroke="#6E8189" stroke-width="2.2"/>
+  <ellipse cx="258" cy="224" rx="34" ry="9" fill="#EAF2F6" stroke="#6E8189" stroke-width="2.2"/>
+  <ellipse cx="258" cy="225" rx="28" ry="7" fill="#C9DCE8"/>
+  <ellipse cx="258" cy="226" rx="26" ry="6" fill="#8EC8E8"/>
+  <!-- lapping ripples -->
+  <path d="M246 227 Q252 224 258 227" stroke="#6FB0D4" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <path d="M264 229 Q270 226 276 229" stroke="#6FB0D4" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <!-- the tongue: a taper from the mouth that curls back at the tip, the way a cat laps -->
+  <path d="M202 208 Q215 211 228 219 Q234 222 232 225 Q229 226 226 223 Q226 221 228 220 Q214 215 204 214 Z" fill="#EF8F9E" stroke="#D4707F" stroke-width="1.1" stroke-linejoin="round"/>
+
+  <!-- The graduated jug: the day's total, measured -->
+  <ellipse cx="356" cy="247" rx="26" ry="5" fill="#E2D2B8"/>
+  <path d="M336 168 L376 168 L372 245 L340 245 Z" fill="#F4F9FC" stroke="#6E8189" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- water body, level a third of the way up -->
+  <path d="M338 190 L374 190 L371 243.6 L341 243.6 Z" fill="#8EC8E8"/>
+  <path d="M338 190 L374 190" stroke="#5E9DBE" stroke-width="1.6"/>
+  <!-- graduations drawn on the glass -->
+  <g stroke="#6F7D8C" stroke-width="1.3" stroke-linecap="round">
+    <path d="M362 176 L371 176"/>
+    <path d="M364 190 L372 190"/>
+    <path d="M362 204 L371 204"/>
+    <path d="M364 218 L372 218"/>
+    <path d="M362 232 L371 232"/>
+  </g>
+  <!-- glass highlight -->
+  <path d="M344 176 L346 236" stroke="#FFFFFF" stroke-width="2.4" opacity="0.75" stroke-linecap="round"/>
+  <!-- rim -->
+  <rect x="334" y="163" width="44" height="7" rx="3.5" fill="#CBD8DE" stroke="#6E8189" stroke-width="2"/>
+
+  <!-- water on its way in: a droplet and its trail -->
+  <path d="M356 112 q-9 13 0 19 q9 -6 0 -19 z" fill="#8EC8E8" stroke="#5E9DBE" stroke-width="1.4"/>
+  <g stroke="#B7D9EC" stroke-width="1.6" stroke-linecap="round">
+    <path d="M356 138 L356 144"/>
+    <path d="M356 150 L356 154"/>
+  </g>
+  </g>
 </svg>
