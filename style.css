@@ -20,7 +20,7 @@
     --text-heading: #1A1A1A;
     --text-body: #4A4A4A;
     --text-muted: #707070;       /* 4.67:1 on --bg-base, 4.95:1 on --bg-surface (WCAG AA small text) */
-    --text-secondary: #5F6F85;   /* 4.83:1 on --bg-base, 5.12:1 on --bg-surface (WCAG AA small text) */
+    --text-secondary: #56647A;   /* 5.6:1 on --bg-base, 6.0:1 on --bg-surface, 4.9:1 on --accent-soft */
     
     --border-light: #EBEBEB;
     --border-focus: #F6851B;
@@ -53,7 +53,7 @@
        the light-theme colour. */
     --accent: var(--brand-accent);
     --accent-soft: var(--brand-soft);
-    --accent-ink: #B45309;          /* 4.73:1 on --bg-base, 5.02:1 on --bg-surface — AA for --accent used as TEXT */
+    --accent-ink: #A84A06;          /* 5.45:1 on --bg-base, 5.75:1 on --bg-surface, 4.99:1 on --accent-soft — AA for --accent used as TEXT */
     --border: var(--border-light);
     --bg: var(--bg-base);
     --bg-secondary: var(--bg-base);  /* recessed panel: tinted in light, deeper slate in dark */
@@ -62,6 +62,16 @@
     --bg-input: var(--bg-surface);
     --text: var(--text-body);
     --success: #15803D;             /* 5.02:1 against the white label of .btn-primary */
+
+    /* ── Semantic ink layer (text only) ──
+       #16A34A / #DC2626 / #E65100 below stay GRAPHIC colours: gauge gradient
+       stops, panel tints, left rules. As TEXT they sit at 3.1–3.6:1 on the pale
+       callouts, so every text use goes through one of these inks instead.
+       Two concepts on purpose — recolouring a gauge stop must never silently
+       move a text colour, and vice versa. */
+    --ok-ink: #166534;      /* 7.04:1 on white, 6.66:1 on the card, 6.27:1 on the #E8F5E9 panel */
+    --bad-ink: #B91C1C;     /* 6.5:1 on white, 6.2:1 on the card */
+    --warn-ink: #9A3412;    /* 6.8:1 on #FFF8E1, 6.1:1 on #EBECDD */
 }
 
 /* ── 2. Base Resets & Global ── */
@@ -82,7 +92,7 @@ p { margin-bottom: 16px; }
 ul, ol { margin-bottom: 16px; padding-left: 24px; }
 
 /* Accessible Skip Link */
-.skip-link { position: absolute; top: -50px; left: 0; background: var(--brand-accent); color: white; padding: 12px 24px; z-index: 10000; font-weight: bold; transition: top 0.2s; }
+.skip-link { position: absolute; top: -50px; left: 0; background: var(--brand-accent); color: #12372A; padding: 12px 24px;   /* 白字压 #F6851B 只有 2.53:1 */ z-index: 10000; font-weight: bold; transition: top 0.2s; }
 .skip-link:focus { top: 0; }
 
 /* Typography Hierarchy */
@@ -103,7 +113,7 @@ h3, h4, h5 { font-family: var(--font-sans); color: var(--text-heading); }
 }
 .nav-inner { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
 .nav-brand { font-size: 1.4rem; font-weight: 800; color: var(--brand-dark); letter-spacing: -0.5px; font-family: var(--font-sans); }
-.nav-brand span { color: var(--brand-accent); }
+.nav-brand span { color: var(--accent-ink); }   /* #F6851B 当文字只有 2.39:1 */
 
 .nav-links { display: flex; gap: 28px; align-items: center; }
 .nav-links a { font-size: 0.95rem; font-weight: 600; color: var(--text-heading); transition: color 0.25s ease; }
@@ -230,8 +240,9 @@ body.dark-theme .gallery-banner { background: linear-gradient(115deg, rgba(246, 
     align-self: flex-start; padding: 6px 12px; font-size: 0.75rem; font-weight: 700; 
     text-transform: uppercase; letter-spacing: 0.5px; border-radius: 6px; margin-bottom: 16px;
 }
-.tag-dog { background: var(--brand-soft); color: var(--brand-accent); }
+.tag-dog { background: var(--brand-soft); color: var(--accent-ink); }   /* 琥珀压琥珀浅底 2.32:1 */
 .tag-cat { background: #E8F4F0; color: var(--brand-dark); }
+body.dark-theme .tag-cat { background: rgba(52, 211, 153, 0.14); color: #6EE7B7; }   /* 浅绿底写死，暗色必须一起换 */
 .tag-calc { background: #F3EEF5; color: #6B4C8A; }
 
 .guide-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--text-heading); margin-bottom: 12px; line-height: 1.4; font-family: var(--font-serif); }
@@ -245,14 +256,14 @@ body.dark-theme .gallery-banner { background: linear-gradient(115deg, rgba(246, 
 .cost-row { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border-light); align-items: baseline; }
 .cost-row:last-child { border-bottom: none; padding-bottom: 0; }
 .cost-label { font-size: 0.95rem; font-weight: 600; color: var(--text-heading); }
-.cost-value { font-family: var(--font-sans); font-size: 1.15rem; font-weight: 800; color: var(--brand-accent); }
+.cost-value { font-family: var(--font-sans); font-size: 1.15rem; font-weight: 800; color: var(--accent-ink); }
 .cost-value span { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
 
 .widget-link { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border-light); transition: padding-left 0.3s ease; }
 .widget-link:last-child { border-bottom: none; padding-bottom: 0; }
 .widget-link:hover { padding-left: 8px; }
 .widget-link-text { font-size: 0.95rem; font-weight: 600; color: var(--text-body); transition: color 0.2s; }
-.widget-link:hover .widget-link-text { color: var(--brand-accent); }
+.widget-link:hover .widget-link-text { color: var(--accent-ink); }
 
 /* ── 7. Inner Article & Tool Pages ── */
 .breadcrumb { font-size: 0.9rem; color: var(--text-muted); margin: 32px 0; font-weight: 500; }
@@ -262,7 +273,7 @@ body.dark-theme .gallery-banner { background: linear-gradient(115deg, rgba(246, 
 
 .tool-hero { text-align: center; margin: 40px 0 60px; }
 .tool-hero h1 { font-size: 3.2rem; margin-bottom: 16px; color: var(--brand-dark); line-height: 1.2; font-family: var(--font-serif); }
-.tool-hero h1 span { color: var(--brand-accent); font-style: italic; }
+.tool-hero h1 span { color: var(--accent-ink); font-style: italic; }   /* #F6851B 作 51px 文字只有 2.39:1，大字也需 3.0 */
 .tool-hero p { font-size: 1.15rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
 
 .article-section { max-width: 800px; margin: 0 auto 48px; }
@@ -312,7 +323,7 @@ body.dark-theme .article-section blockquote {
    "🐾 Small / 50–100 lbs" need ~476px and would otherwise widen the page, and a
    <fieldset> stretch-wraps around its widest child, so the whole tool box grew with it. */
 .size-picker { grid-template-columns: repeat(4, 1fr); }
-.quiz-option { padding: 16px 20px; border: 2px solid var(--border-light); border-radius: var(--radius-md); cursor: pointer; font-weight: 600; font-size: 1.05rem; transition: all 0.2s ease; background: var(--bg-surface); }
+.quiz-option { padding: 16px 20px; border: 2px solid var(--border-light); border-radius: var(--radius-md); cursor: pointer; font-weight: 600; font-size: 1.05rem; transition: all 0.2s ease; background: var(--bg-surface); color: var(--text-heading); }
 .quiz-option:hover { border-color: var(--brand-accent); background: var(--brand-soft); transform: translateY(-2px); }
 .quiz-option.selected { border-color: var(--brand-accent); background: var(--brand-accent); color: #fff; }
 
@@ -385,6 +396,11 @@ body.dark-theme {
     --brand-dark: #34D399; /* Lighter green for visibility on dark */
     --brand-darker: #060E0B; /* Near-black green — anchors footer below dark body */
 
+    /* ink layer, dark values — the light ones land at 2.9–3.4:1 on Deep Slate */
+    --ok-ink: #4ADE80;      /* 8.2:1 on --bg-surface */
+    --bad-ink: #F87171;     /* 5.2:1 */
+    --warn-ink: #FB923C;    /* 7.9:1 */
+
     /* Alias layer, dark values — see the block in :root for why this must be
        repeated here instead of inherited. */
     --accent: var(--brand-accent);              /* amber reads 7.05:1 on --bg-base: identical in both themes */
@@ -433,22 +449,31 @@ body.dark-theme .nav-search { background: #0F172A; color: #fff; border-color: va
  *   text-secondary  9.1:1      text-muted     7.3:1
  *   accent-ink      4.8:1  (the dark --accent-ink #FB923C is only 2.3:1 here)
  * ────────────────────────────────────────────────────────────────────────── */
-body.dark-theme .result-card {
-    /* 必须显式声明 color：body 的 `color: var(--text-body)` 在 body 上就解析成了
-       #CBD5E1，子元素继承的是「计算值」而不是 token —— 只改 token 管不到那些没写
-       color 的裸文字（实测仍 1.41:1）。 */
+/* 浅色孤岛。两块：
+     .result-card —— 计算器结果卡（背景写死 #ecfdf5）
+     .on-light    —— 任何内联写死浅底的块（文章里的对比价提示、表格行、作者框、
+                     BCS 色卡、配方框）。这些块在暗色下仍是浅底，所以卡内文字
+                     token 必须重声明成深色，否则就是「浅灰压浅黄」的 1.4:1。
+   必须显式声明 color：body 的 `color: var(--text-body)` 在 body 上就解析成了
+   #CBD5E1，子元素继承的是「计算值」而不是 token —— 只改 token 管不到那些没写
+   color 的裸文字（实测仍 1.41:1）。 */
+body.dark-theme .result-card,
+body.dark-theme .on-light {
     color: var(--text-body);
     --text-heading: #0B3B2E;    /* 11.9:1 */
     --text-body: #14352A;       /* 12.7:1 */
     --text-secondary: #1F4D3E;  /* 9.1:1 */
     --text-muted: #2E5C4C;      /* 7.3:1 */
-    --accent-ink: #B45309;      /* 4.8:1 — amber for text on a light tint */
-    --brand-accent: #B45309;
+    --accent-ink: #A84A06;      /* 5.4:1 — amber for text on a light tint */
+    --brand-accent: #A84A06;
     --brand-dark: #047857;      /* 5.2:1 */
     --border-light: #C9E8DA;
     --bg-surface: #FFFFFF;
     --bg-input: #FFFFFF;
     --bg-secondary: #F1F9F5;
+    --ok-ink: #166534;      /* 孤岛内永远是浅底 ⇒ 用浅底那套 ink，不能用暗色值 */
+    --bad-ink: #B91C1C;
+    --warn-ink: #9A3412;
 }
 
 /* ── 10. Mobile Navigation ── */
@@ -519,7 +544,7 @@ body.dark-theme .result-card {
 .mobile-nav-section {
     padding: 12px 32px 6px; font-size: 0.75rem; font-weight: 700;
     text-transform: uppercase; letter-spacing: 1.2px;
-    color: var(--brand-accent); margin-top: 12px;
+    color: var(--accent-ink); margin-top: 12px;
 }
 .mobile-nav-section:first-of-type { margin-top: 0; }
 
@@ -570,6 +595,10 @@ body.mobile-nav-open { overflow: hidden; }
 .related-articles .guide-tag {
     background: #E8F4F0;
     color: var(--brand-dark);
+}
+body.dark-theme .related-articles .guide-tag {
+    background: rgba(52, 211, 153, 0.14);   /* 浅绿底写死了，暗色下必须一起换，否则 1.71:1 */
+    color: #6EE7B7;
 }
 
 /* ── 13. Breed Finder Result Guide Link ── */
@@ -1341,7 +1370,7 @@ body.dark-theme .pg-btn-ok, body.dark-theme .pg-btn-danger { background: transpa
     padding-left: 10px;
 }
 .main-grid.content-grid .toc-link.is-active .widget-link-text {
-    color: var(--brand-accent);
+    color: var(--accent-ink);
     font-weight: 800;
 }
 

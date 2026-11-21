@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261121b">
+  <link rel="stylesheet" href="style.css?v=20261121c">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Cat Calorie Calculator: How Much to Feed Your Cat">
@@ -92,7 +92,7 @@
     <article class="article-section">
       <h2 id="the-rer-formula-where-cat-calorie-math-comes-from">The RER Formula: Where Cat Calorie Math Comes From</h2>
       <p>Veterinarians calculate a cat's energy needs in two steps. Step one: <strong>RER (Resting Energy Requirement)</strong> — the calories a cat burns just existing: breathing, circulating blood, maintaining body temperature. The formula, derived from metabolic studies across species:</p>
-      <p style="text-align:center;font-size:1.1rem;font-weight:700;background:#F8F9FA;padding:12px;border-radius:6px;">RER (kcal/day) = 70 × (body weight in kg)<sup>0.75</sup></p>
+      <p class="on-light" style="text-align:center;font-size:1.1rem;font-weight:700;background:#F8F9FA;padding:12px;border-radius:6px;">RER (kcal/day) = 70 × (body weight in kg)<sup>0.75</sup></p>
       <p>Step two: multiply RER by an activity factor to get <strong>DER (Daily Energy Requirement)</strong> — the calories the cat actually needs. For a sedentary indoor cat, the multiplier is 1.2. For weight loss, 0.8. For a growing kitten, 2.5. For a nursing queen with a large litter, up to 6.0. And 0.8 is only half of that calculation: what it gets multiplied by has to be the target weight rather than the current one, which is where most plans quietly stall — worked through in <a href="/how-to-help-your-cat-lose-weight">the feline weight-loss plan</a>.</p>
       <p>A 5 kg (11 lb) cat: RER = 70 × 5<sup>0.75</sup> = 70 × 3.34 ≈ 234 kcal. DER for a sedentary indoor cat = 234 × 1.2 ≈ <strong>280 kcal/day</strong>. That's about 3 cans of average wet food, or ¾ cup of average dry food. The calculator above does this math for your cat's exact weight, then shows you what that looks like in real food.</p>
       <p>The exponent 0.75 isn't arbitrary — it's Kleiber's Law, the observation that metabolic rate scales to the ¾ power of body mass across mammals from mice to elephants. A cat needs more calories per pound than a dog, which needs more per pound than a horse. The smaller the animal, the faster the metabolism per unit of weight.</p>
@@ -221,8 +221,8 @@
     </div>
   </footer>
 
-  <script src="nav.js?v=20261121b"></script>
-  <script defer src="tool-share.js?v=20260807"></script>
+  <script src="nav.js?v=20261121c"></script>
+  <script defer src="tool-share.js?v=20261122"></script>
   <script>
   // Food type calorie densities
   var FOOD = {
@@ -273,9 +273,9 @@
     html += '</div>';
     html += '<div style="display:flex;align-items:center;font-size:1.5rem;color:var(--text-muted);">× ' + act.factor + ' =</div>';
     html += '<div style="background:#E8F5E9;border-radius:8px;padding:14px 20px;flex:1;">';
-    html += '<div style="font-size:0.78rem;color:#2E7D32;margin-bottom:2px;">DER (daily need)</div>';
-    html += '<div style="font-size:2rem;font-weight:800;color:#1B5E20;">' + der + '</div>';
-    html += '<div style="font-size:0.78rem;color:#2E7D32;">kcal/day</div>';
+    html += '<div style="font-size:0.78rem;color:var(--ok-ink);margin-bottom:2px;">DER (daily need)</div>';
+    html += '<div style="font-size:2rem;font-weight:800;color:var(--ok-ink);">' + der + '</div>';
+    html += '<div style="font-size:0.78rem;color:var(--ok-ink);">kcal/day</div>';
     html += '</div>';
     html += '</div>';
 
@@ -288,7 +288,7 @@
       var wetCans = (halfCals / 85).toFixed(1);
       var dryCups = (halfCals / 380).toFixed(2);
       html += '<div style="background:#FFF8E1;border-radius:8px;padding:16px;text-align:left;">';
-      html += '<div style="font-weight:700;margin-bottom:8px;color:#E65100;">🥫 Mixed feeding plan — 50/50 split</div>';
+      html += '<div style="font-weight:700;margin-bottom:8px;color:var(--warn-ink);">🥫 Mixed feeding plan — 50/50 split</div>';
       html += '<div style="display:flex;gap:16px;">';
       html += '<div style="flex:1;font-size:0.9rem;">🟠 <strong>Wet:</strong> ~' + halfCals + ' kcal<br><span style="font-size:0.82rem;color:var(--text-muted);">≈ <strong>' + wetCans + '</strong> cans/day (3 oz)</span></div>';
       html += '<div style="flex:1;font-size:0.9rem;">🟤 <strong>Dry:</strong> ~' + halfCals + ' kcal<br><span style="font-size:0.82rem;color:var(--text-muted);">≈ <strong>' + dryCups + '</strong> cups/day</span></div>';
@@ -296,8 +296,8 @@
     } else {
       var unitsPerDay = (der / food.kcalPerUnit).toFixed(1);
       html += '<div style="background:#FFF8E1;border-radius:8px;padding:16px;text-align:center;">';
-      html += '<div style="font-weight:700;margin-bottom:4px;color:#E65100;">🍽️ Real portion: ' + food.label + '</div>';
-      html += '<div style="font-size:2.2rem;font-weight:800;color:#E65100;">' + unitsPerDay + '</div>';
+      html += '<div style="font-weight:700;margin-bottom:4px;color:var(--warn-ink);">🍽️ Real portion: ' + food.label + '</div>';
+      html += '<div style="font-size:2.2rem;font-weight:800;color:var(--warn-ink);">' + unitsPerDay + '</div>';
       html += '<div style="font-size:0.9rem;color:var(--text-muted);">' + food.unitLabel + '</div>';
       html += '<div style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">per ' + food.unit + ' — split into 2–3 meals</div>';
       html += '</div>';
@@ -306,11 +306,11 @@
     // Weight loss note
     if (activityKey !== 'weight-loss' && der > 250) {
       var lossCals = Math.round(rer * 0.8);
-      html += '<div style="margin-top:12px;padding:10px 14px;background:#FFF0F0;border-radius:6px;font-size:0.82rem;color:#C0392B;">💡 <strong>Weight loss target:</strong> ' + lossCals + ' kcal/day (0.8 × RER). That\'s a ' + Math.round(der - lossCals) + ' kcal/day reduction. Lose 0.5–1 lb/month — safe, sustainable, and far safer than rapid weight loss in cats.</div>';
+      html += '<div style="margin-top:12px;padding:10px 14px;background:#FFF0F0;border-radius:6px;font-size:0.82rem;color:var(--bad-ink);">💡 <strong>Weight loss target:</strong> ' + lossCals + ' kcal/day (0.8 × RER). That\'s a ' + Math.round(der - lossCals) + ' kcal/day reduction. Lose 0.5–1 lb/month — safe, sustainable, and far safer than rapid weight loss in cats.</div>';
     }
 
     if (activityKey === 'weight-loss') {
-      html += '<div style="margin-top:12px;padding:10px 14px;background:#FFF0F0;border-radius:6px;font-size:0.82rem;color:#C0392B;">⚠️ <strong>Important:</strong> Never drop below RER (' + rer + ' kcal/day) without veterinary supervision. Cats who lose weight too fast risk hepatic lipidosis — fatty liver disease — which carries a high mortality rate. Weigh your cat weekly. If weight loss exceeds 2% of body weight per week, increase calories.</div>';
+      html += '<div style="margin-top:12px;padding:10px 14px;background:#FFF0F0;border-radius:6px;font-size:0.82rem;color:var(--bad-ink);">⚠️ <strong>Important:</strong> Never drop below RER (' + rer + ' kcal/day) without veterinary supervision. Cats who lose weight too fast risk hepatic lipidosis — fatty liver disease — which carries a high mortality rate. Weigh your cat weekly. If weight loss exceeds 2% of body weight per week, increase calories.</div>';
     }
 
     html += '</div>';

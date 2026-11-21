@@ -10,7 +10,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261121b">
+  <link rel="stylesheet" href="style.css?v=20261121c">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Cat Food Carbohydrate Calculator — Dry Matter Basis">
@@ -105,9 +105,9 @@
       <h2 id="how-the-math-works-carbs-by-difference">How the Math Works: Carbs by Difference</h2>
       <p>Here's the part food companies don't print on the bag: <strong>carbohydrates are not a required line item on a US pet food label.</strong> You can't read the carbs — you have to calculate them. The formula has two steps.</p>
       <p><strong>Step 1 — remove the water.</strong> Dry matter is everything in the food that isn't moisture. If a food is 10% moisture, it's 90% dry matter:</p>
-      <p style="text-align:center;font-size:1.05rem;font-weight:700;background:#F8F9FA;padding:12px;border-radius:6px;">Dry Matter (DM) % = 100 − Moisture %</p>
+      <p class="on-light" style="text-align:center;font-size:1.05rem;font-weight:700;background:#F8F9FA;padding:12px;border-radius:6px;">Dry Matter (DM) % = 100 − Moisture %</p>
       <p><strong>Step 2 — convert each nutrient to dry matter, then subtract.</strong> Convert protein, fat, fiber, and ash to their dry-matter percentage, then whatever is left over is carbohydrate:</p>
-      <p style="text-align:center;font-size:1.05rem;font-weight:700;background:#F8F9FA;padding:12px;border-radius:6px;">Carbs % (DM) = 100 − Protein(DM) − Fat(DM) − Fiber(DM) − Ash(DM)</p>
+      <p class="on-light" style="text-align:center;font-size:1.05rem;font-weight:700;background:#F8F9FA;padding:12px;border-radius:6px;">Carbs % (DM) = 100 − Protein(DM) − Fat(DM) − Fiber(DM) − Ash(DM)</p>
       <p>Where each nutrient is converted with: <strong>Nutrient(DM) = Nutrient(as-fed) ÷ Dry Matter × 100</strong>.</p>
       <p>Worked example — the dry food pre-filled above: 10% moisture, so DM = 90%. Protein DM = 34 ÷ 90 × 100 = <strong>37.8%</strong>. Fat DM = 16 ÷ 90 × 100 = <strong>17.8%</strong>. Fiber DM = 4 ÷ 90 × 100 = <strong>4.4%</strong>. Ash DM = 7 ÷ 90 × 100 = <strong>7.8%</strong>. Carbs DM = 100 − 37.8 − 17.8 − 4.4 − 7.8 = <strong>32.2%</strong> — a high-carb food for a cat, exactly what the label never tells you. Carb content is one input into that; total calories and the weight you are feeding for are the others, and <a href="/how-to-help-your-cat-lose-weight">the feline weight-loss plan</a> puts the three together using the numbers in the 2014 AAHA guidelines.</p>
     </article>
@@ -124,9 +124,9 @@
       <div class="table-scroll"><table>
         <thead><tr><th>Food Type</th><th>Moisture</th><th>Protein (DM)</th><th>Fat (DM)</th><th>Carbs (DM)</th></tr></thead>
         <tbody>
-        <tr><td>Dry kibble</td><td>~10%</td><td>30–38%</td><td>18–25%</td><td style="color:#DC2626;font-weight:700;">35–45%</td></tr>
-        <tr><td>Canned / wet</td><td>~78%</td><td>40–50%</td><td>40–50%</td><td style="color:#16A34A;font-weight:700;">5–15%</td></tr>
-        <tr><td>Raw / frozen</td><td>~70%</td><td>40–55%</td><td>30–45%</td><td style="color:#16A34A;font-weight:700;">0–5%</td></tr>
+        <tr><td>Dry kibble</td><td>~10%</td><td>30–38%</td><td>18–25%</td><td style="color:var(--bad-ink);font-weight:700;">35–45%</td></tr>
+        <tr><td>Canned / wet</td><td>~78%</td><td>40–50%</td><td>40–50%</td><td style="color:var(--ok-ink);font-weight:700;">5–15%</td></tr>
+        <tr><td>Raw / frozen</td><td>~70%</td><td>40–55%</td><td>30–45%</td><td style="color:var(--ok-ink);font-weight:700;">0–5%</td></tr>
         <tr><td>Cat's natural prey</td><td>~65%</td><td>~50%</td><td>~40%</td><td>~5%</td></tr>
         </tbody>
       </table></div>
@@ -222,12 +222,12 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 MeltPet. All rights reserved. As an Amazon Associate, MeltPet earns from qualifying purchases.</p>
-      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">⚠️ This tool provides estimates for informational purposes only and is not veterinary advice. Always consult your veterinarian before changing your pet's diet.</p>
+      <p style="font-size:0.78rem;color:rgba(255,255,255,0.72);margin-top:6px;">⚠️ This tool provides estimates for informational purposes only and is not veterinary advice. Always consult your veterinarian before changing your pet's diet.</p>
     </div>
   </footer>
 
-  <script src="nav.js?v=20261121b"></script>
-  <script defer src="tool-share.js?v=20260807"></script>
+  <script src="nav.js?v=20261121c"></script>
+  <script defer src="tool-share.js?v=20261122"></script>
   <script>
   var PRESETS = {
     'dry':    {moisture: 10, ash: 7},
@@ -271,7 +271,7 @@
     }
 
     if (moisture >= 100) {
-      resultDiv.innerHTML = '<div style="text-align:center;padding:16px 0;color:#DC2626;font-weight:700;">⚠️ Moisture % must be less than 100%.</div>';
+      resultDiv.innerHTML = '<div style="text-align:center;padding:16px 0;color:var(--bad-ink);font-weight:700;">⚠️ Moisture % must be less than 100%.</div>';
       return;
     }
 
@@ -286,14 +286,14 @@
     // Carb verdict by species
     var color, verdict, detail;
     if (species === 'cat') {
-      if (carbDM < 10)      { color = '#16A34A'; verdict = 'Low carb — ideal for a cat'; detail = 'Matches a cat\'s natural prey diet (~5% carbs).'; }
-      else if (carbDM < 15) { color = '#16A34A'; verdict = 'Low-to-moderate — fine for most cats'; detail = 'Acceptable for a healthy adult cat.'; }
-      else if (carbDM <= 25){ color = '#E65100'; verdict = 'High — caution'; detail = 'Above what a cat\'s body handles well. Common in "grain-free" kibble too.'; }
-      else                  { color = '#DC2626'; verdict = 'Very high — typical dry kibble'; detail = 'This is several times a cat\'s natural carb intake.'; }
+      if (carbDM < 10)      { color = 'var(--ok-ink)'); verdict = 'Low carb — ideal for a cat'; detail = 'Matches a cat\'s natural prey diet (~5% carbs).'; }
+      else if (carbDM < 15) { color = 'var(--ok-ink)'); verdict = 'Low-to-moderate — fine for most cats'; detail = 'Acceptable for a healthy adult cat.'; }
+      else if (carbDM <= 25){ color = 'var(--warn-ink)'); verdict = 'High — caution'; detail = 'Above what a cat\'s body handles well. Common in "grain-free" kibble too.'; }
+      else                  { color = 'var(--bad-ink)'); verdict = 'Very high — typical dry kibble'; detail = 'This is several times a cat\'s natural carb intake.'; }
     } else {
-      if (carbDM < 30)      { color = '#16A34A'; verdict = 'Low carb — good for a dog'; detail = 'Dogs tolerate carbs well, but low is still fine.'; }
-      else if (carbDM <= 45){ color = '#E65100'; verdict = 'Moderate — normal for dog food'; detail = 'Within the typical range for most dog diets.'; }
-      else                  { color = '#DC2626'; verdict = 'High — check the ingredient quality'; detail = 'Above typical; look at whether carbs come from whole grains or fillers.'; }
+      if (carbDM < 30)      { color = 'var(--ok-ink)'); verdict = 'Low carb — good for a dog'; detail = 'Dogs tolerate carbs well, but low is still fine.'; }
+      else if (carbDM <= 45){ color = 'var(--warn-ink)'); verdict = 'Moderate — normal for dog food'; detail = 'Within the typical range for most dog diets.'; }
+      else                  { color = 'var(--bad-ink)'); verdict = 'High — check the ingredient quality'; detail = 'Above typical; look at whether carbs come from whole grains or fillers.'; }
     }
 
     var html = '';
@@ -324,7 +324,7 @@
     html += '<div style="margin-top:14px;padding:10px 12px;background:#F8F9FA;border-radius:8px;font-size:0.8rem;color:var(--text-muted);text-align:center;">Water removed, this food is <strong style="color:var(--text-heading);">' + pDM.toFixed(1) + '% protein · ' + fDM.toFixed(1) + '% fat · ' + carbDM.toFixed(1) + '% carbs</strong>. Dry matter = ' + dm.toFixed(0) + '%.</div>';
 
     if (sumAsFed > 100.5) {
-      html += '<div style="margin-top:10px;padding:10px 14px;background:#FFF0F0;border-radius:8px;font-size:0.8rem;color:#C0392B;">⚠️ <strong>Numbers don\'t add up:</strong> protein + fat + fiber + ash + moisture = ' + sumAsFed.toFixed(1) + '%, over 100%. Recheck the label (protein is a minimum, fiber a maximum).</div>';
+      html += '<div style="margin-top:10px;padding:10px 14px;background:#FFF0F0;border-radius:8px;font-size:0.8rem;color:var(--bad-ink);">⚠️ <strong>Numbers don\'t add up:</strong> protein + fat + fiber + ash + moisture = ' + sumAsFed.toFixed(1) + '%, over 100%. Recheck the label (protein is a minimum, fiber a maximum).</div>';
     }
 
     resultDiv.innerHTML = html;
@@ -355,7 +355,7 @@
     html += '</div>';
     html += '</div>';
     html += '<div style="display:flex;justify-content:space-between;font-size:0.68rem;color:var(--text-muted);margin-top:10px;">';
-    html += '<span>0%</span><span style="color:#16A34A;font-weight:700;">low carb</span><span style="color:#DC2626;font-weight:700;">high carb</span><span>50%</span>';
+    html += '<span>0%</span><span style="color:var(--ok-ink);font-weight:700;">low carb</span><span style="color:var(--bad-ink);font-weight:700;">high carb</span><span>50%</span>';
     html += '</div>';
     html += '</div>';
     return html;

@@ -71,8 +71,8 @@
     function flash(btn, okText) {
         var orig = btn.textContent;
         btn.textContent = okText;
-        btn.style.borderColor = '#16A34A';
-        btn.style.color = '#16A34A';
+        btn.style.borderColor = 'var(--ok-ink, #166534)';
+        btn.style.color = 'var(--ok-ink, #166534)';   // #16A34A 在白底只有 3.3:1
         setTimeout(function() {
             btn.textContent = orig;
             btn.style.borderColor = '';

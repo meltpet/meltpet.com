@@ -9,7 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261121b">
+  <link rel="stylesheet" href="style.css?v=20261121c">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Raw Food Calculator: 80/10/10 Recipe Builder">
@@ -138,7 +138,7 @@
       <p style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;">Doses are general starting points, not prescriptions. Supplement concentration differs by brand. This is why a board-certified veterinary nutritionist review matters.</p>
     </article>
 
-    <div class="article-section" style="background:#FFF8E1;border-left:3px solid #E65100;margin-bottom:24px;"><h2 style="font-size:1rem;" id="before-you-feed-raw-read-this">⚠️ Before You Feed Raw — Read This</h2><ul style="margin-left:18px;line-height:2;font-size:0.92rem;"><li>This is a <strong>planning tool, not veterinary advice</strong>. Have the final recipe reviewed by a <strong>board-certified veterinary nutritionist</strong> before feeding.</li><li>Raw diets are <strong>not recommended</strong> for households with infants, the elderly, pregnant people, or anyone immunocompromised.</li><li><strong>Freeze meat for at least 3 weeks</strong> before feeding to reduce parasite risk (freezing does not reliably kill bacteria).</li><li>Never feed <strong>cooked bones</strong> (splinter hazard). Raw edible bone only, and size it to your pet — a choking hazard if too large or too small.</li></ul></div>
+    <div class="article-section on-light" style="background:#FFF8E1;border-left:3px solid #E65100;margin-bottom:24px;"><h2 style="font-size:1rem;" id="before-you-feed-raw-read-this">⚠️ Before You Feed Raw — Read This</h2><ul style="margin-left:18px;line-height:2;font-size:0.92rem;"><li>This is a <strong>planning tool, not veterinary advice</strong>. Have the final recipe reviewed by a <strong>board-certified veterinary nutritionist</strong> before feeding.</li><li>Raw diets are <strong>not recommended</strong> for households with infants, the elderly, pregnant people, or anyone immunocompromised.</li><li><strong>Freeze meat for at least 3 weeks</strong> before feeding to reduce parasite risk (freezing does not reliably kill bacteria).</li><li>Never feed <strong>cooked bones</strong> (splinter hazard). Raw edible bone only, and size it to your pet — a choking hazard if too large or too small.</li></ul></div>
 
     <article class="article-section">
         <h2>Frequently Asked Questions</h2>
@@ -223,12 +223,12 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 MeltPet. All rights reserved. As an Amazon Associate, MeltPet earns from qualifying purchases.</p>
-      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:6px;">⚠️ This tool provides estimates for informational purposes only and is not veterinary advice. Always consult a veterinarian or board-certified veterinary nutritionist before changing your pet's diet.</p>
+      <p style="font-size:0.78rem;color:rgba(255,255,255,0.72);margin-top:6px;">⚠️ This tool provides estimates for informational purposes only and is not veterinary advice. Always consult a veterinarian or board-certified veterinary nutritionist before changing your pet's diet.</p>
     </div>
   </footer>
 
-  <script src="nav.js?v=20261121b"></script>
-  <script defer src="tool-share.js?v=20260807"></script>
+  <script src="nav.js?v=20261121c"></script>
+  <script defer src="tool-share.js?v=20261122"></script>
   <script>
   // ── Life-stage DER factors (RER multiplier) ──
   var FACTORS = {
@@ -324,7 +324,7 @@
 
     // ── Week shopping list ──
     html += '<div style="margin-top:14px;padding:12px 14px;background:#FFF8E1;border-radius:10px;border:1px solid #F0E0B0;text-align:left;">';
-    html += '<div style="font-size:0.8rem;font-weight:700;color:#E65100;margin-bottom:6px;">🛒 One-week shopping list (×7)</div>';
+    html += '<div style="font-size:0.8rem;font-weight:700;color:var(--warn-ink);margin-bottom:6px;">🛒 One-week shopping list (×7)</div>';
     html += '<div style="font-size:0.82rem;color:var(--text-muted);line-height:1.9;">';
     html += 'Muscle meat: <strong>' + Math.round(muscle*7) + ' g</strong> (' + Math.round(muscle*7/454*10)/10 + ' lb)<br>';
     html += 'Edible bone: <strong>' + Math.round(bone*7) + ' g</strong><br>';
@@ -333,7 +333,7 @@
     html += '</div></div>';
 
     // ── Ca:P guardrail note ──
-    html += '<div style="margin-top:12px;padding:10px 14px;background:#FFF0F0;border-radius:8px;font-size:0.78rem;color:#C0392B;text-align:left;">⚠️ <strong>Bone = calcium.</strong> The 10% bone balances the calcium-to-phosphorus ratio. If you substitute a calcium supplement for bone, or feed ground mixes, have the Ca:P ratio verified — get it wrong and you risk metabolic bone disease.</div>';
+    html += '<div style="margin-top:12px;padding:10px 14px;background:#FFF0F0;border-radius:8px;font-size:0.78rem;color:var(--bad-ink);text-align:left;">⚠️ <strong>Bone = calcium.</strong> The 10% bone balances the calcium-to-phosphorus ratio. If you substitute a calcium supplement for bone, or feed ground mixes, have the Ca:P ratio verified — get it wrong and you risk metabolic bone disease.</div>';
 
     resultDiv.innerHTML = html;
   }

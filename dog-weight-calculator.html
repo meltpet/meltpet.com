@@ -10,7 +10,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261121b">
+  <link rel="stylesheet" href="style.css?v=20261121c">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="MeltPet">
   <meta property="og:title" content="Dog Weight Calculator: Is Your Dog Overweight? BCS Checker">
@@ -90,7 +90,7 @@
         <option value="mixed-giant">Mixed breed — Giant (&gt;90 lbs)</option>
       </select>
 
-      <div id="ideal-range" style="background:#F0F5F0;border-radius:6px;padding:10px 14px;margin-bottom:16px;font-size:0.88rem;display:none;">
+      <div class="on-light" id="ideal-range" style="background:#F0F5F0;border-radius:6px;padding:10px 14px;margin-bottom:16px;font-size:0.88rem;display:none;">
         <span id="range-text">Ideal weight range will appear here</span>
       </div>
 
@@ -118,22 +118,22 @@
       <p>Breed weight charts are a starting point. A Labrador at 80 pounds could be a lean, muscular field-line dog or a fat show-line dog — the scale alone doesn't tell you. The Body Condition Score (BCS) does. It's the system veterinarians use, scored 1–9, and it takes 10 seconds to learn.</p>
 
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin:20px 0;">
-        <div style="flex:1;min-width:100px;background:#FFF5F0;border-radius:8px;padding:14px 10px;text-align:center;border:2px solid #E8967A;">
+        <div class="on-light" style="flex:1;min-width:100px;background:#FFF5F0;border-radius:8px;padding:14px 10px;text-align:center;border:2px solid #E8967A;">
           <div style="font-size:2rem;">1–3</div>
-          <div style="font-weight:700;color:#C0392B;margin:4px 0;">Underweight</div>
+          <div style="font-weight:700;color:var(--bad-ink);margin:4px 0;">Underweight</div>
           <div style="font-size:0.8rem;color:#666;">Ribs, spine, and pelvic bones visible from across the room. No palpable body fat. Severe abdominal tuck. Muscle loss visible.</div>
         </div>
-        <div style="flex:1;min-width:100px;background:#F0F8F0;border-radius:8px;padding:14px 10px;text-align:center;border:2px solid #4CAF50;">
+        <div class="on-light" style="flex:1;min-width:100px;background:#F0F8F0;border-radius:8px;padding:14px 10px;text-align:center;border:2px solid #4CAF50;">
           <div style="font-size:2rem;">4–5</div>
-          <div style="font-weight:700;color:#2E7D32;margin:4px 0;">Ideal ✓</div>
+          <div style="font-weight:700;color:var(--ok-ink);margin:4px 0;">Ideal ✓</div>
           <div style="font-size:0.8rem;color:#666;">Ribs easily felt with light pressure — like the bones on the back of your hand. Visible waist from above. Belly tucks up behind the ribcage.</div>
         </div>
-        <div style="flex:1;min-width:100px;background:#FFF8E8;border-radius:8px;padding:14px 10px;text-align:center;border:2px solid #F0A030;">
+        <div class="on-light" style="flex:1;min-width:100px;background:#FFF8E8;border-radius:8px;padding:14px 10px;text-align:center;border:2px solid #F0A030;">
           <div style="font-size:2rem;">6–7</div>
-          <div style="font-weight:700;color:#E65100;margin:4px 0;">Overweight</div>
+          <div style="font-weight:700;color:var(--warn-ink);margin:4px 0;">Overweight</div>
           <div style="font-size:0.8rem;color:#666;">Ribs difficult to feel — need to press through a fat layer. Waist barely visible or absent. Belly tuck minimal. Fat deposits at tail base.</div>
         </div>
-        <div style="flex:1;min-width:100px;background:#FFF0F0;border-radius:8px;padding:14px 10px;text-align:center;border:2px solid #D04438;">
+        <div class="on-light" style="flex:1;min-width:100px;background:#FFF0F0;border-radius:8px;padding:14px 10px;text-align:center;border:2px solid #D04438;">
           <div style="font-size:2rem;">8–9</div>
           <div style="font-weight:700;color:#8B0000;margin:4px 0;">Obese</div>
           <div style="font-size:0.8rem;color:#666;">Ribs impossible to feel under a thick fat layer. No waist. Belly distended and sagging. Fat pads on hips, neck, and base of tail. Movement visibly labored.</div>
@@ -260,8 +260,8 @@
     </div>
   </footer>
 
-  <script src="nav.js?v=20261121b"></script>
-  <script defer src="tool-share.js?v=20260807"></script>
+  <script src="nav.js?v=20261121c"></script>
+  <script defer src="tool-share.js?v=20261122"></script>
   <script>
   var BREEDS = {
     'labrador':        {male:[65,80], female:[55,70], label:'Labrador Retriever'},
@@ -334,13 +334,13 @@
     var statusColor, statusEmoji, statusLabel, detail;
 
     if (selectedBcs <= 3) {
-      statusColor = '#C0392B'; statusEmoji = '⚠️'; statusLabel = 'Underweight';
+      statusColor = 'var(--bad-ink)'); statusEmoji = '⚠️'; statusLabel = 'Underweight';
       detail = 'Your dog is below ideal body condition. Increase daily calories by 10–15% and recheck in 2 weeks. If weight loss is unintentional — the dog is eating normally but still losing weight — see a vet. Unintentional weight loss can indicate parasites, diabetes, kidney disease, or cancer. Don\'t wait.';
     } else if (selectedBcs <= 5) {
-      statusColor = '#2E7D32'; statusEmoji = '✅'; statusLabel = 'Ideal Weight';
+      statusColor = 'var(--ok-ink)'); statusEmoji = '✅'; statusLabel = 'Ideal Weight';
       detail = 'Your dog is at a healthy body condition. Maintain current feeding and exercise. Weigh every 3 months to catch drift early — most overweight dogs gained it 1–2 lbs per month over 2 years. That\'s slow enough to miss.';
     } else if (selectedBcs <= 7) {
-      statusColor = '#E65100'; statusEmoji = '⚖️'; statusLabel = 'Overweight';
+      statusColor = 'var(--warn-ink)'); statusEmoji = '⚖️'; statusLabel = 'Overweight';
       detail = 'Your dog is carrying extra weight. Target: lose 1–2% of body weight per week. Reduce daily calories by 10% from current intake. Replace high-calorie treats with green beans or carrots. Increase exercise intensity — add 3 minutes of fetch or flirt pole at the end of walks. Recheck weight in 2 weeks.';
     } else {
       statusColor = '#8B0000'; statusEmoji = '🚨'; statusLabel = 'Obese';
