@@ -410,6 +410,47 @@ body.dark-theme .quiz-option:hover { background: rgba(246, 133, 27, 0.1); }
 body.dark-theme .quiz-option.selected { background: var(--brand-accent); color: #fff; }
 body.dark-theme .nav-search { background: #0F172A; color: #fff; border-color: var(--border-light); }
 
+/* ── 9.1 .result-card is a light callout in BOTH themes ───────────────────
+ * .result-card carries a hard-coded #ecfdf5 background (section 7) and the
+ * dark override above never touched it, so in dark mode the card kept a light
+ * green surface while every text token inside flipped to slate. Measured on
+ * 15 of 17 pages that carry the card: body copy sat at 1.41:1 — effectively
+ * invisible, while the page around it looked fine.
+ *
+ * The card is a brand highlight, not a page surface. Keep it light and
+ * re-declare the tokens *inside* it, so anything a calculator injects resolves
+ * against a light background. --bg-input / --bg-surface are included because
+ * pet-name-generator drops an input into the card.
+ *
+ * 🔴 Do NOT "fix" this by darkening the card instead: cat-calorie-calculator,
+ * cat-food-carb-calculator and raw-food-calculator hard-code semantic greens
+ * and reds (#2E7D32 / #1B5E20 / #DC2626 / #C0392B / #16A34A / #E65100) in
+ * their result markup. Those read correctly only on the light surface — a dark
+ * card would push them to 2–3:1 and swap one broken state for another.
+ *
+ * Contrast, all against #ecfdf5:
+ *   text-heading   11.9:1      text-body     12.7:1
+ *   text-secondary  9.1:1      text-muted     7.3:1
+ *   accent-ink      4.8:1  (the dark --accent-ink #FB923C is only 2.3:1 here)
+ * ────────────────────────────────────────────────────────────────────────── */
+body.dark-theme .result-card {
+    /* 必须显式声明 color：body 的 `color: var(--text-body)` 在 body 上就解析成了
+       #CBD5E1，子元素继承的是「计算值」而不是 token —— 只改 token 管不到那些没写
+       color 的裸文字（实测仍 1.41:1）。 */
+    color: var(--text-body);
+    --text-heading: #0B3B2E;    /* 11.9:1 */
+    --text-body: #14352A;       /* 12.7:1 */
+    --text-secondary: #1F4D3E;  /* 9.1:1 */
+    --text-muted: #2E5C4C;      /* 7.3:1 */
+    --accent-ink: #B45309;      /* 4.8:1 — amber for text on a light tint */
+    --brand-accent: #B45309;
+    --brand-dark: #047857;      /* 5.2:1 */
+    --border-light: #C9E8DA;
+    --bg-surface: #FFFFFF;
+    --bg-input: #FFFFFF;
+    --bg-secondary: #F1F9F5;
+}
+
 /* ── 10. Mobile Navigation ── */
 /* Hamburger button — hidden on desktop, visible on mobile */
 .hamburger {
