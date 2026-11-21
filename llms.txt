@@ -45,6 +45,8 @@
 - [Pet Compatibility Quiz](https://www.meltpet.com/pet-compatibility-quiz): Dog or cat? Which pet fits your life.
 - [Cat Water Intake Calculator](https://www.meltpet.com/cat-water-intake-calculator): How much water a cat needs per day, and how much of it the food already supplies.
 - [Dog Exercise Calculator](https://www.meltpet.com/dog-exercise-calculator): How many minutes of daily exercise a dog needs, by breed, plus how to split it.
+- [Cat Litter Cost Calculator](https://www.meltpet.com/cat-litter-cost-calculator): Five litter types and one to four cats, turned into a monthly, annual and five-year figure, plus why a second cat doubles the bill.
+- [Dog Grooming Cost](https://www.meltpet.com/dog-grooming-cost-calculator): Annual DIY and professional grooming costs by coat type, plus how many months a clipper set takes to pay for itself.
 
 ## Dog Breed Guides
 

@@ -58,7 +58,9 @@
             {title: '🥩 Raw Food Calculator',        href: '/raw-food-calculator',          desktop: true, keywords: 'raw food calculator dog cat 80 10 10 prey model raw PMR BARF bone liver organ muscle meat grams supplements taurine recipe'},
             {title: '🧩 Pet Compatibility Quiz',     href: '/pet-compatibility-quiz',      desktop: true, keywords: 'pet compatibility quiz dog or cat which pet is right for me lifestyle match'},
             {title: '💧 Cat Water Intake Calc',      href: '/cat-water-intake-calculator',  desktop: true, keywords: 'cat water intake calculator how much water should a cat drink hydration ml per kilogram dry wet food bowl dehydration drinking not drinking enough'},
-            {title: '🏃 Dog Exercise Calculator',    href: '/dog-exercise-calculator',      desktop: true, keywords: 'dog exercise calculator how much exercise does my dog need per day minutes walk run breed energy level puppy senior high energy'}
+            {title: '🏃 Dog Exercise Calculator',    href: '/dog-exercise-calculator',      desktop: true, keywords: 'dog exercise calculator how much exercise does my dog need per day minutes walk run breed energy level puppy senior high energy'},
+            {title: '🧮 Cat Litter Cost Calc', href: '/cat-litter-cost-calculator', desktop: true, keywords: 'cat litter cost calculator monthly yearly how much does cat litter cost per month multi cat clumping crystal pine paper natural five year budget'},
+            {title: '✂️ Grooming Cost Calculator', href: '/dog-grooming-cost-calculator', desktop: true, keywords: 'dog grooming cost calculator diy vs professional groomer price payback clippers equipment how much does grooming cost per year doodle short hair'}
         ],
         dogs: [
             {title: '🐕 Golden Retriever',          href: '/golden-retriever-guide',          desktop: true, keywords: 'golden retriever dog breed guide cost cancer temperament'},

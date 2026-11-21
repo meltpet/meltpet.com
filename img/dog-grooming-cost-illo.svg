@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Scene: a dog standing on a grooming table, clippers and a brush on the floor to the left, folded towels to the right -->
+  <!-- Wall -->
+  <rect x="0" y="0" width="400" height="188" fill="#FBF3E6"/>
+  <!-- Skirting line -->
+  <line x1="0" y1="188" x2="400" y2="188" stroke="#E3D5BE" stroke-width="2"/>
+  <!-- Floor -->
+  <rect x="0" y="188" width="400" height="92" fill="#EFE1CB"/>
+
+  <!-- Contact shadow under the table -->
+  <ellipse cx="200" cy="264" rx="108" ry="9" fill="#E2D2B8"/>
+
+  <!-- The grooming table -->
+  <rect x="120" y="217" width="11" height="45" rx="2" fill="#B5A184" stroke="#8A7455" stroke-width="2"/>
+  <rect x="277" y="217" width="11" height="45" rx="2" fill="#B5A184" stroke="#8A7455" stroke-width="2"/>
+  <line x1="131" y1="244" x2="277" y2="244" stroke="#8A7455" stroke-width="2.5"/>
+  <!-- table top, its lit near edge, then the rim -->
+  <rect x="104" y="206" width="200" height="11" rx="3" fill="#C9B79A"/>
+  <rect x="104" y="206" width="200" height="4" rx="2" fill="#DCCCB2"/>
+  <rect x="104" y="206" width="200" height="11" rx="3" fill="none" stroke="#8A7455" stroke-width="2.5"/>
+
+  <!-- Contact shadow on the table top -->
+  <ellipse cx="200" cy="210" rx="56" ry="3.5" fill="#AF9877" opacity="0.55"/>
+
+  <!-- Dog, standing, facing right. Four legs at two tones so all four read. -->
+  <g>
+    <!-- tail, drawn first so the haunch sits over its root -->
+    <path d="M144 156 Q118 142 124 112" stroke="#6B4A22" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M144 156 Q118 142 124 112" stroke="#D9A96A" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+    <!-- far hind leg -->
+    <rect x="149" y="172" width="11" height="34" rx="5.5" fill="#C08F55" stroke="#6B4A22" stroke-width="2.2"/>
+    <ellipse cx="154.5" cy="205" rx="7.5" ry="3.4" fill="#C08F55" stroke="#6B4A22" stroke-width="1.8"/>
+    <!-- far foreleg -->
+    <rect x="227" y="172" width="11" height="34" rx="5.5" fill="#C08F55" stroke="#6B4A22" stroke-width="2.2"/>
+    <ellipse cx="232.5" cy="205" rx="7.5" ry="3.4" fill="#C08F55" stroke="#6B4A22" stroke-width="1.8"/>
+
+    <!-- hindquarters and chest, so the barrel of the body has an outline -->
+    <ellipse cx="161" cy="160" rx="22" ry="25" fill="#D9A96A" stroke="#6B4A22" stroke-width="2.5"/>
+    <!-- body -->
+    <ellipse cx="192" cy="158" rx="40" ry="24" fill="#D9A96A" stroke="#6B4A22" stroke-width="2.5"/>
+    <!-- belly highlight -->
+    <ellipse cx="192" cy="171" rx="31" ry="9" fill="#EDCBA0"/>
+    <!-- coat shading along the back -->
+    <path d="M148 143 Q192 132 228 143" stroke="#B8863F" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- near hind leg -->
+    <rect x="166" y="170" width="12" height="36" rx="6" fill="#D9A96A" stroke="#6B4A22" stroke-width="2.4"/>
+    <ellipse cx="172" cy="205" rx="8" ry="3.6" fill="#EDCBA0" stroke="#6B4A22" stroke-width="1.8"/>
+    <!-- near foreleg -->
+    <rect x="243" y="170" width="12" height="36" rx="6" fill="#D9A96A" stroke="#6B4A22" stroke-width="2.4"/>
+    <ellipse cx="249" cy="205" rx="8" ry="3.6" fill="#EDCBA0" stroke="#6B4A22" stroke-width="1.8"/>
+
+    <!-- chest and neck -->
+    <ellipse cx="228" cy="152" rx="15" ry="21" fill="#D9A96A" stroke="#6B4A22" stroke-width="2.4"/>
+    <!-- head -->
+    <circle cx="250" cy="121" r="21" fill="#D9A96A" stroke="#6B4A22" stroke-width="2.5"/>
+    <!-- muzzle -->
+    <ellipse cx="269" cy="132" rx="12.5" ry="9" fill="#EDCBA0" stroke="#6B4A22" stroke-width="2.2"/>
+    <!-- nose -->
+    <ellipse cx="281" cy="128" rx="4.2" ry="3.4" fill="#3A2A18"/>
+    <!-- mouth line -->
+    <path d="M281 132 Q281 138 274 137" stroke="#6B4A22" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <!-- eye -->
+    <circle cx="254" cy="115" r="3.8" fill="#3A2A18"/>
+    <circle cx="252.7" cy="113.7" r="1.3" fill="#FFFFFF"/>
+    <!-- drop ear, hanging behind the eye rather than over the face -->
+    <path d="M236 104 Q224 111 226 127 Q227 137 235 135 Q243 133 243 121 Z" fill="#C08F55" stroke="#6B4A22" stroke-width="2.2" stroke-linejoin="round"/>
+    <!-- head top tuft -->
+    <path d="M243 101 Q250 95 257 102" stroke="#B8863F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Clippers on the floor, left -->
+  <g>
+    <ellipse cx="62" cy="256" rx="36" ry="4.5" fill="#E2D2B8"/>
+    <path d="M30 246 Q18 243 17 252 Q16 262 27 259" stroke="#3C4A50" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <rect x="32" y="238" width="44" height="16" rx="7" fill="#6E8189" stroke="#3C4A50" stroke-width="2.2"/>
+    <rect x="38" y="242" width="14" height="8" rx="2" fill="#A8BCC4" stroke="#3C4A50" stroke-width="1.4"/>
+    <rect x="74" y="241" width="14" height="10" rx="2" fill="#A8BCC4" stroke="#3C4A50" stroke-width="2"/>
+    <g stroke="#3C4A50" stroke-width="1.1">
+      <line x1="77" y1="243" x2="77" y2="249"/>
+      <line x1="80" y1="243" x2="80" y2="249"/>
+      <line x1="83" y1="243" x2="83" y2="249"/>
+      <line x1="86" y1="243" x2="86" y2="249"/>
+    </g>
+  </g>
+
+  <!-- Folded towels, right -->
+  <g>
+    <ellipse cx="342" cy="256" rx="42" ry="5" fill="#E2D2B8"/>
+    <rect x="308" y="240" width="70" height="12" rx="3" fill="#DDC9B2" stroke="#C0A98E" stroke-width="2"/>
+    <rect x="304" y="229" width="76" height="12" rx="3" fill="#E8D7C3" stroke="#C0A98E" stroke-width="2"/>
+    <rect x="308" y="218" width="70" height="12" rx="3" fill="#F0E3D2" stroke="#C0A98E" stroke-width="2"/>
+    <line x1="316" y1="224" x2="316" y2="229" stroke="#C0A98E" stroke-width="1.4"/>
+    <line x1="356" y1="235" x2="356" y2="240" stroke="#C0A98E" stroke-width="1.4"/>
+  </g>
+</svg>

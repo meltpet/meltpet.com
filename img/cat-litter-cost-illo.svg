@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" fill="none">
+  <!-- Scene: a tray on the left, a cat beside it, a wall calendar marking every fourth week, and the bags that calendar consumes -->
+  <!-- Wall -->
+  <rect x="0" y="0" width="400" height="188" fill="#FBF3E6"/>
+  <!-- Skirting line -->
+  <line x1="0" y1="188" x2="400" y2="188" stroke="#E3D5BE" stroke-width="2"/>
+  <!-- Floor -->
+  <rect x="0" y="188" width="400" height="92" fill="#EFE1CB"/>
+
+  <!-- Wall calendar: twelve weeks, the first week of each four marked -->
+  <g>
+    <rect x="296" y="40" width="84" height="96" rx="5" fill="#FFFFFF" stroke="#C9BBA6" stroke-width="2"/>
+    <rect x="296" y="40" width="84" height="16" rx="5" fill="#E9C48A"/>
+    <rect x="296" y="50" width="84" height="6" fill="#E9C48A"/>
+    <line x1="296" y1="56" x2="380" y2="56" stroke="#C9BBA6" stroke-width="1.4"/>
+    <!-- the ring binding -->
+    <circle cx="312" cy="40" r="3.4" fill="#B9A88F" stroke="#8A7455" stroke-width="1.4"/>
+    <circle cx="338" cy="40" r="3.4" fill="#B9A88F" stroke="#8A7455" stroke-width="1.4"/>
+    <circle cx="364" cy="40" r="3.4" fill="#B9A88F" stroke="#8A7455" stroke-width="1.4"/>
+    <!-- 4 columns x 3 rows of weeks -->
+    <g stroke="#E0D6C4" stroke-width="1">
+      <line x1="317" y1="62" x2="317" y2="128"/>
+      <line x1="338" y1="62" x2="338" y2="128"/>
+      <line x1="359" y1="62" x2="359" y2="128"/>
+      <line x1="303" y1="84" x2="373" y2="84"/>
+      <line x1="303" y1="106" x2="373" y2="106"/>
+    </g>
+    <!-- ordinary weeks: small pale dots -->
+    <g fill="#D8CDBA">
+      <circle cx="310" cy="73" r="2.6"/><circle cx="331" cy="73" r="2.6"/><circle cx="352" cy="73" r="2.6"/><circle cx="367" cy="73" r="2.6"/>
+      <circle cx="310" cy="95" r="2.6"/><circle cx="331" cy="95" r="2.6"/><circle cx="352" cy="95" r="2.6"/><circle cx="367" cy="95" r="2.6"/>
+      <circle cx="310" cy="117" r="2.6"/><circle cx="331" cy="117" r="2.6"/><circle cx="352" cy="117" r="2.6"/><circle cx="367" cy="117" r="2.6"/>
+    </g>
+    <!-- weeks 1, 5 and 9: the full change -->
+    <g fill="#F6851B" stroke="#C96A10" stroke-width="1">
+      <circle cx="331" cy="73" r="4.2"/>
+      <circle cx="331" cy="95" r="4.2"/>
+      <circle cx="331" cy="117" r="4.2"/>
+    </g>
+  </g>
+
+  <!-- Contact shadow under the tray -->
+  <ellipse cx="80" cy="248" rx="72" ry="8" fill="#E2D2B8"/>
+
+  <!-- The tray -->
+  <rect x="20" y="196" width="124" height="52" rx="8" fill="#AFC0C8"/>
+  <rect x="29" y="201" width="106" height="34" rx="2" fill="#E6D8C0"/>
+  <g fill="#CFC1A9">
+    <circle cx="42" cy="208" r="1.3"/><circle cx="56" cy="216" r="1.2"/><circle cx="70" cy="206" r="1.3"/>
+    <circle cx="83" cy="219" r="1.2"/><circle cx="96" cy="209" r="1.3"/><circle cx="110" cy="217" r="1.2"/>
+    <circle cx="122" cy="207" r="1.3"/><circle cx="48" cy="224" r="1.2"/><circle cx="88" cy="226" r="1.2"/>
+    <circle cx="126" cy="222" r="1.2"/>
+  </g>
+  <ellipse cx="74" cy="222" rx="8" ry="5.4" fill="#CBBBA2" stroke="#A8977F" stroke-width="1.2"/>
+  <ellipse cx="103" cy="213" rx="6" ry="4" fill="#CBBBA2" stroke="#A8977F" stroke-width="1.2"/>
+  <rect x="29" y="234" width="106" height="7" fill="#CBD8DE"/>
+  <line x1="29" y1="234" x2="135" y2="234" stroke="#55676F" stroke-width="1.4" opacity="0.7"/>
+  <rect x="20" y="196" width="124" height="52" rx="8" fill="none" stroke="#55676F" stroke-width="2.5"/>
+
+  <!-- Contact shadow under the cat -->
+  <ellipse cx="232" cy="244" rx="46" ry="8" fill="#E2D2B8"/>
+
+  <!-- Cat, seated, facing the tray -->
+  <g transform="translate(56,6)">
+    <!-- tail, drawn first so the haunch sits over its root -->
+    <path d="M168 210 Q204 212 212 230 Q218 244 200 244" stroke="#5A4020" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M168 210 Q204 212 212 230 Q218 244 200 244" stroke="#E9C48A" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M206 222 Q211 228 210 234" stroke="#C89840" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- hind haunch -->
+    <ellipse cx="150" cy="200" rx="29" ry="26" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+    <!-- hind foot, tucked forward beside the forelegs -->
+    <ellipse cx="178" cy="228" rx="10" ry="5" fill="#E3BE84" stroke="#5A4020" stroke-width="2"/>
+    <!-- body -->
+    <ellipse cx="152" cy="180" rx="30" ry="38" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+    <!-- chest -->
+    <ellipse cx="136" cy="188" rx="14" ry="22" fill="#F7E7C8" stroke="none"/>
+    <!-- the near foreleg, weight-bearing -->
+    <rect x="160" y="196" width="13" height="34" rx="6" fill="#EED4A0" stroke="#5A4020" stroke-width="2.5"/>
+    <ellipse cx="166.5" cy="230" rx="8" ry="4" fill="#F7E7C8" stroke="#5A4020" stroke-width="2"/>
+    <!-- the far foreleg -->
+    <rect x="144" y="200" width="12" height="31" rx="6" fill="#E3BE84" stroke="#5A4020" stroke-width="2.5"/>
+    <ellipse cx="150" cy="231" rx="7.5" ry="3.8" fill="#EED4A0" stroke="#5A4020" stroke-width="2"/>
+    <!-- body stripes -->
+    <g stroke="#C89840" stroke-width="2.6" stroke-linecap="round" fill="none">
+      <path d="M160 162 Q170 168 168 178"/>
+      <path d="M163 180 Q173 186 171 196"/>
+    </g>
+    <!-- head -->
+    <circle cx="150" cy="131" r="27" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5"/>
+    <!-- head stripes -->
+    <g stroke="#C89840" stroke-width="2.2" stroke-linecap="round" fill="none">
+      <path d="M143 108 L146 118"/>
+      <path d="M152 106 L152 117"/>
+      <path d="M161 108 L158 118"/>
+    </g>
+    <!-- ears -->
+    <path d="M131 122 L122 94 L144 111" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M169 122 L178 94 L156 111" fill="#E9C48A" stroke="#5A4020" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M133 119 L127 101 L140 112" fill="#F2B8B0" stroke="none"/>
+    <path d="M167 119 L173 101 L160 112" fill="#F2B8B0" stroke="none"/>
+    <!-- eyes, angled down-left toward the tray -->
+    <ellipse cx="139" cy="130" rx="6.5" ry="7.5" fill="#FFFFFF" stroke="#5A4020" stroke-width="1.6"/>
+    <ellipse cx="157" cy="130" rx="6.5" ry="7.5" fill="#FFFFFF" stroke="#5A4020" stroke-width="1.6"/>
+    <circle cx="134" cy="131" r="3.6" fill="#4A6A2A"/>
+    <circle cx="152" cy="131" r="3.6" fill="#4A6A2A"/>
+    <ellipse cx="133.5" cy="131.5" rx="1.5" ry="3.4" fill="#1A1A1A"/>
+    <ellipse cx="151.5" cy="131.5" rx="1.5" ry="3.4" fill="#1A1A1A"/>
+    <circle cx="132" cy="129" r="1.3" fill="#FFFFFF"/>
+    <circle cx="150" cy="129" r="1.3" fill="#FFFFFF"/>
+    <!-- nose + mouth -->
+    <path d="M147 141 L150 144 L153 141" fill="#F2A0A0" stroke="#F2A0A0" stroke-width="1"/>
+    <path d="M146 145 Q150 148 150 144" stroke="#5A4020" stroke-width="1" fill="none"/>
+    <path d="M150 144 Q150 148 154 145" stroke="#5A4020" stroke-width="1" fill="none"/>
+    <!-- whiskers -->
+    <g stroke="#C4B09A" stroke-width="1" stroke-linecap="round">
+      <line x1="136" y1="140" x2="112" y2="137"/>
+      <line x1="136" y1="144" x2="111" y2="147"/>
+    </g>
+  </g>
+
+  <!-- Contact shadow under the bags -->
+  <ellipse cx="334" cy="252" rx="48" ry="7" fill="#E2D2B8"/>
+
+  <!-- The bags the calendar consumes: three paper sacks with a folded top edge -->
+  <g>
+    <path d="M286 194 L286 244 Q286 248 290 248 L312 248 Q316 248 316 244 L316 194 Z" fill="#EADCC6" stroke="#A8977F" stroke-width="2" stroke-linejoin="round"/>
+    <rect x="285" y="186" width="32" height="9" rx="2" fill="#F1E6D3" stroke="#A8977F" stroke-width="1.8"/>
+    <line x1="291" y1="206" x2="311" y2="206" stroke="#C7B49A" stroke-width="1.4"/>
+    <line x1="291" y1="234" x2="311" y2="234" stroke="#C7B49A" stroke-width="1.4"/>
+
+    <path d="M318 200 L318 244 Q318 248 322 248 L344 248 Q348 248 348 244 L348 200 Z" fill="#DCCBAE" stroke="#A8977F" stroke-width="2" stroke-linejoin="round"/>
+    <rect x="317" y="192" width="32" height="9" rx="2" fill="#E9DAC2" stroke="#A8977F" stroke-width="1.8"/>
+    <line x1="323" y1="212" x2="343" y2="212" stroke="#BBA88E" stroke-width="1.4"/>
+    <line x1="323" y1="236" x2="343" y2="236" stroke="#BBA88E" stroke-width="1.4"/>
+
+    <path d="M350 206 L350 244 Q350 248 354 248 L376 248 Q380 248 380 244 L380 206 Z" fill="#E4D5BC" stroke="#A8977F" stroke-width="2" stroke-linejoin="round"/>
+    <rect x="349" y="198" width="32" height="9" rx="2" fill="#EFE1CB" stroke="#A8977F" stroke-width="1.8"/>
+    <line x1="355" y1="218" x2="375" y2="218" stroke="#C7B49A" stroke-width="1.4"/>
+    <line x1="355" y1="238" x2="375" y2="238" stroke="#C7B49A" stroke-width="1.4"/>
+  </g>
+</svg>
