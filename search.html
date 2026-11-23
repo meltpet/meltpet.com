@@ -11,7 +11,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20261121c">
+  <link rel="stylesheet" href="style.css?v=20261124a">
 
   <meta property="og:title" content="Search MeltPet — Guides, Tools &amp; Articles">
   <meta property="og:description" content="Instant search across all MeltPet breed guides, cost calculators, behavior explainers, and pet health articles.">
@@ -57,14 +57,15 @@
     <section class="search-hero">
       <div class="container">
         <h1>🔍 Search MeltPet</h1>
-        <p class="search-subtitle">Find breed guides, cost calculators, behavior explainers, and pet health articles.</p>
+        <p class="search-subtitle">Full-text search across 95 guides, calculators, and explainers — including the words inside the articles, not just their titles.</p>
 
         <div class="search-page-input-wrap">
-          <input type="search" id="search-page-input" class="search-page-input" placeholder='Try "cost", "golden retriever", "why does my dog..."' autofocus autocomplete="off" aria-label="Search MeltPet">
-          <div id="search-page-results" class="search-page-results"></div>
+          <input type="search" id="search-page-input" class="search-page-input" placeholder='Try "grapes", "cat litter cost", "why does my dog..."' autofocus autocomplete="off" spellcheck="false" aria-label="Search MeltPet" aria-describedby="search-hint">
+          <div id="search-page-results" class="search-page-results" aria-live="polite"></div>
         </div>
 
-        <p class="search-hint" id="search-hint">Start typing — results appear instantly. Press Enter for a full Google search of meltpet.com.</p>
+        <p class="search-hint" id="search-hint">Results update as you type — ↑ ↓ to move, Enter to open, Esc to clear.</p>
+        <noscript><p class="search-hint">Search needs JavaScript. Every section is also reachable from the categories below.</p></noscript>
       </div>
     </section>
 
@@ -107,138 +108,244 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>🐾 <strong>MeltPet</strong> — Evidence-backed pet intelligence. No AI fluff, no sponsored picks.</p>
-      <p><a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/sitemap-page">Sitemap</a> · <a href="/rss.xml">RSS</a></p>
-    </div>
-  </footer>
-
   <script>
-  (function() {
-    // Inline search index — mirrors nav.js NAV_SECTIONS
-    var INDEX = [
-      {t:'🔍 Breed Finder Hub', h:'/breed-finder', k:'breed finder quiz dog cat match finder hub'},
-      {t:'🐶 Dog Breed Finder', h:'/dog-breed-finder', k:'dog breed finder quiz match what dog should i get puppy breed selector'},
-      {t:'🐱 Cat Breed Finder', h:'/cat-breed-finder', k:'cat breed finder quiz match what cat should i get kitten breed selector'},
-      {t:'💰 Cost Calculator', h:'/monthly-pet-cost', k:'cost calculator monthly pet food vet insurance grooming'},
-      {t:'⚖️ Adopt vs Buy', h:'/adopt-vs-buy', k:'adopt buy cost comparison shelter breeder calculator'},
-      {t:'📅 Age Calculator', h:'/pet-age-calculator', k:'pet age calculator dog cat human years convert old 7 year rule myth'},
-      {t:'🏷️ Name Generator', h:'/pet-name-generator', k:'pet name generator dog cat names food funny classic human name ideas'},
-      {t:'🍽️ Toxic Food Checker', h:'/toxic-food-checker', k:'toxic food checker can my dog eat chocolate grapes onion garlic safe dangerous foods'},
-      {t:'🍖 Dog Food Cost Calculator', h:'/dog-food-cost-calculator', k:'dog food cost calculator monthly annual kibble wet raw dry food budget'},
-      {t:'🧩 Pet Compatibility Quiz', h:'/pet-compatibility-quiz', k:'pet compatibility quiz dog or cat which pet is right for me lifestyle match'},
-      {t:'🐕 Golden Retriever', h:'/golden-retriever-guide', k:'golden retriever dog breed guide cost cancer temperament'},
-      {t:'🇫🇷 French Bulldog', h:'/french-bulldog-guide', k:'french bulldog dog breed guide cost health spine'},
-      {t:'🐺 German Shepherd', h:'/german-shepherd-guide', k:'german shepherd dog breed guide cost temperament'},
-      {t:'🦮 Labrador Retriever', h:'/labrador-retriever-guide', k:'labrador retriever dog breed guide cost temperament'},
-      {t:'🐑 Australian Shepherd', h:'/australian-shepherd-guide', k:'australian shepherd dog breed guide cost intelligence'},
-      {t:'🌭 Dachshund', h:'/dachshund-guide', k:'dachshund dog breed guide IVDD spine back wiener dog cost temperament'},
-      {t:'🦁 Maine Coon Guide', h:'/maine-coon-guide', k:'maine coon cat breed guide cost temperament'},
-      {t:'🐱 Ragdoll Cat Guide', h:'/ragdoll-cat-guide', k:'ragdoll cat breed guide floppy affectionate lap cat blue eyes'},
-      {t:'🐆 Bengal Cat Guide', h:'/bengal-cat-guide', k:'bengal cat breed guide wild spotted energetic leopard'},
-      {t:'🐱 Sphynx Cat Guide', h:'/sphynx-cat-guide', k:'sphynx cat breed guide hairless bald HCM bathing care cost'},
-      {t:'🐱 New Kitten Checklist', h:'/new-kitten-checklist', k:'new kitten checklist supplies first week'},
-      {t:'🐕 Head Tilt Science', h:'/why-does-my-dog-tilt-its-head', k:'dog tilt head behavior why study science'},
-      {t:'🌿 Why Dogs Eat Grass', h:'/why-do-dogs-eat-grass', k:'dog eat grass behavior why sick vomit'},
-      {t:'👣 Why Dogs Follow You', h:'/why-do-dogs-follow-you-everywhere', k:'dog follow everywhere clingy velcro shadow behavior'},
-      {t:'🦨 Why Dogs Roll in Smelly Things', h:'/why-do-dogs-roll-in-smelly-things', k:'dog roll dead things smelly gross behavior scent camouflage'},
-      {t:'👀 Why Dogs Stare at You', h:'/why-does-my-dog-stare-at-me', k:'dog stare at me why gazing behavior oxytocin love eye contact bond'},
-      {t:'🦮 Why Dogs Wag Their Tails', h:'/why-do-dogs-wag-their-tails', k:'dog wag tail why communication happy excited left right asymmetry'},
-      {t:'🐾 Why Cats Knead', h:'/why-does-my-cat-knead-me', k:'cat knead behavior why biscuits paws kneading'},
-      {t:'🌙 Midnight Zoomies', h:'/why-does-my-cat-go-crazy-at-night', k:'cat night crazy zoomies 3am sprint parkour witching hour crepuscular frenetic random activity'},
-      {t:'🪅 Cats Knock Things Over', h:'/why-do-cats-knock-things-off-tables', k:'cat knock things off table behavior why'},
-      {t:'🦷 Dog Dental Care Guide', h:'/dog-dental-care-guide', k:'dog dental care teeth brushing cleaning vet extraction gum disease'},
-      {t:'👂 How to Clean Dog Ears', h:'/how-to-clean-dog-ears', k:'clean dog ears infection wax how to safe without hurting'},
-      {t:'😰 Separation Anxiety Protocol', h:'/separation-anxiety-in-dogs', k:'separation anxiety dog protocol desensitization training destructive behavior'},
-      {t:'📢 Stop Excessive Barking', h:'/how-to-stop-dog-barking', k:'stop dog barking excessive why fix source training no shock collar'},
-      {t:'🦮 Leash Training: Stop Pulling', h:'/leash-training-pulling-dog', k:'leash training pulling dog stop 7 days tree u-turn method'},
-      {t:'☀️ Summer Dog Safety', h:'/summer-dog-safety', k:'summer dog safety hot pavement heatstroke prevention paws water'},
-      {t:'🎆 Calm Dog During Fireworks', h:'/calm-dog-during-fireworks', k:'calm dog fireworks july 4th safe room noise phobia desensitization'},
-      {t:'🐕 Dog Park Etiquette', h:'/dog-park-etiquette', k:'dog park etiquette rules norms behavior first visit'},
-      {t:'✂️ DIY vs Pro Grooming', h:'/diy-dog-grooming-vs-professional', k:'diy dog grooming vs professional cost clippers breed guide doodle double coat shave'},
-      {t:'🐶 New Puppy Checklist', h:'/new-puppy-checklist', k:'new puppy checklist supplies what you need first week'},
-      {t:'🤮 Cat Vomiting Color Guide', h:'/cat-vomiting-color-guide', k:'cat vomiting vomit color yellow bile white foam brown red blood when to worry emergency hairball'},
-      {t:'🫘 Cat Kidney Disease Prevention', h:'/cat-kidney-disease-prevention', k:'cat kidney disease CKD chronic renal failure prevention hydration SDMA creatinine wet food phosphorus'},
-      {t:'💵 How Much Does a Dog Cost Per Month', h:'/how-much-does-a-dog-cost-per-month', k:'dog cost per month food vet insurance small medium large'},
-      {t:'📊 Adopt vs Buy: Full Breakdown', h:'/adopt-vs-buy-full-cost-breakdown', k:'adopt vs buy full cost breakdown health temperament lifetime comparison'},
-      {t:'💸 17 Hidden Costs of Ownership', h:'/hidden-costs-of-dog-ownership', k:'hidden costs dog ownership emergency boarding allergy shots destroyed drywall'},
-      {t:'🧾 First Year Dog Cost: $5,237', h:'/first-year-dog-cost', k:'first year dog cost real receipt tracked expenses puppy supplies'},
-      {t:'💵 Pet Insurance Worth It?', h:'/pet-insurance-worth-it', k:'pet insurance worth it 2026 cost premium vs out of pocket real scenarios'},
-      {t:'🍖 Best Dog Food Guide', h:'/best-dog-food-dry-vs-wet-vs-raw', k:'best dog food dry vs wet vs raw kibble comparison nutrition label'},
-      {t:'🦴 Best Indestructible Dog Toys', h:'/best-indestructible-dog-toys', k:'best indestructible dog toys heavy chewers durable rubber nylon kong goughnuts benebone'},
-      {t:'🐱 Best Cat Litter Comparison', h:'/best-cat-litter-comparison', k:'best cat litter clumping crystal clay natural silica comparison'}
-    ];
+  (function () {
+    'use strict';
+
+    // 索引由 _build_search_index.py 生成（倒排 + BM25 参数），见文件头 _fields 说明。
+    var SRC = '/search-index.json';
+    var MAX = 12;
 
     var input = document.getElementById('search-page-input');
-    var results = document.getElementById('search-page-results');
-    var hint = document.getElementById('search-hint');
+    var out = document.getElementById('search-page-results');
 
-    function doSearch(q) {
-      q = q.toLowerCase().trim();
-      results.innerHTML = '';
-      if (q.length < 2) {
-        results.classList.remove('active');
-        hint.style.display = '';
-        return;
+    var D = null, POST = null, PTOK = null;
+    var ready = false, loading = false;
+    var timer = null, active = -1, lastQuery = '';
+
+    // ── 小工具 ───────────────────────────────────────────────
+    function normQ(q) { return (q || '').toLowerCase().replace(/\s+/g, ' ').trim(); }
+    function words(s) { var m = normQ(s).match(/[a-z0-9]+/g); return m || []; }
+    function esc(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+    function idf(df, n) { return Math.log(1 + (n - df + 0.5) / (df + 0.5)); }
+    function qs(name) {
+      var m = new RegExp('[?&]' + name + '=([^&]*)').exec(location.search);
+      return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')) : '';
+    }
+    function status(msg) { out.innerHTML = '<p class="search-status">' + msg + '</p>'; }
+
+    // 索引里没有做词干化（那会让体积翻倍），查询时试几个常见变形代替
+    function variants(t) {
+      var v = [t];
+      if (t.length > 3) {
+        if (/ies$/.test(t)) v.push(t.slice(0, -3) + 'y');
+        if (/es$/.test(t)) v.push(t.slice(0, -2));
+        if (/s$/.test(t)) v.push(t.slice(0, -1));
+        if (/ing$/.test(t)) v.push(t.slice(0, -3));
+        if (/ed$/.test(t)) v.push(t.slice(0, -2));
+        v.push(t + 's');
       }
-
-      var scored = [];
-      INDEX.forEach(function(item) {
-        var score = 0;
-        var tl = item.t.toLowerCase();
-        var kl = item.k.toLowerCase();
-        if (tl.indexOf(q) !== -1) score += 10;
-        var words = tl.split(/\s+/);
-        words.forEach(function(w) { if (w.indexOf(q) === 0) score += 5; });
-        if (kl.indexOf(q) !== -1) score += 3;
-        if (score > 0) scored.push({item: item, score: score});
-      });
-
-      scored.sort(function(a, b) { return b.score - a.score; });
-
-      if (scored.length === 0) {
-        results.innerHTML = '<div class="search-no-result">No pages match — press Enter to search meltpet.com with Google</div>';
-        hint.style.display = 'none';
-      } else {
-        scored.slice(0, 12).forEach(function(r) {
-          var title = r.item.t;
-          var idx = title.toLowerCase().indexOf(q);
-          if (idx !== -1) {
-            title = title.substring(0, idx) + '<strong>' + title.substring(idx, idx + q.length) + '</strong>' + title.substring(idx + q.length);
-          }
-          var a = document.createElement('a');
-          a.href = r.item.h;
-          a.innerHTML = title;
-          results.appendChild(a);
-        });
-        hint.style.display = 'none';
-      }
-      results.classList.add('active');
+      return v;
     }
 
-    input.addEventListener('input', function() { doSearch(this.value); });
+    // ── 载入与解码 ───────────────────────────────────────────
+    function load() {
+      if (ready || loading) return;
+      loading = true;
+      status('Loading search index…');
+      fetch(SRC, { credentials: 'same-origin' })
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(function (d) {
+          build(d);
+          ready = true;
+          loading = false;
+          if (lastQuery) run(lastQuery); else out.innerHTML = '';
+        })
+        .catch(function () {
+          loading = false;
+          status('Search is temporarily unavailable — every page is still reachable from the categories below.');
+        });
+    }
 
-    input.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') {
-        var q = this.value.trim();
-        if (q) {
-          window.location = 'https://www.google.com/search?q=site:meltpet.com+' + encodeURIComponent(q);
+    function build(d) {
+      D = d;
+      POST = Object.create(null);
+      var recs = d.post.split(';');
+      for (var i = 0; i < recs.length; i++) {
+        var r = recs[i], bar = r.indexOf('|');
+        if (bar < 1) continue;
+        var t = r.slice(0, bar), parts = r.slice(bar + 1).split(',');
+        var ids = new Array(parts.length), prev = 0;
+        for (var k = 0; k < parts.length; k++) {
+          prev += parseInt(parts[k], 36);
+          ids[k] = prev;
+        }
+        POST[t] = ids;
+      }
+      PTOK = [];
+      for (var p = 0; p < d.pages.length; p++) PTOK.push({ t: {}, k: {}, h: {} });
+      for (var c = 0; c < d.chunks.length; c++) {
+        var hs = words(d.chunks[c][2]);
+        var page = d.chunks[c][0];
+        for (var j = 0; j < hs.length; j++) PTOK[page].h[hs[j]] = 1;
+      }
+      for (var q = 0; q < d.pages.length; q++) {
+        var tt = words(d.pages[q][1]), kk = words(d.pages[q][3]);
+        for (var a = 0; a < tt.length; a++) PTOK[q].t[tt[a]] = 1;
+        for (var b2 = 0; b2 < kk.length; b2++) PTOK[q].k[kk[b2]] = 1;
+      }
+    }
+
+    // ── 检索 ────────────────────────────────────────────────
+    function run(q) {
+      lastQuery = q;
+      active = -1;
+      if (!normQ(q)) { out.innerHTML = ''; syncUrl(''); return; }
+      if (!ready) { if (!loading) load(); else status('Loading search index…'); return; }
+
+      var qt = [], seen = {}, raw = words(q);
+      for (var i = 0; i < raw.length; i++) {
+        if (raw[i].length >= 2 && !seen[raw[i]]) { seen[raw[i]] = 1; qt.push(raw[i]); }
+      }
+      if (!qt.length) { out.innerHTML = ''; return; }
+
+      var n = D.n, avgdl = D.avgdl, k1 = D.k1, b = D.b;
+      var hit = Object.create(null), qidf = {};
+
+      for (var ti = 0; ti < qt.length; ti++) {
+        var t = qt[ti], vs = variants(t), pool = Object.create(null);
+        var found = false, dfv = 0;
+        for (var vi = 0; vi < vs.length; vi++) {
+          var pl = POST[vs[vi]];
+          if (!pl) continue;
+          found = true;
+          if (pl.length > dfv) dfv = pl.length;
+          for (var pi = 0; pi < pl.length; pi++) pool[pl[pi]] = 1;
+        }
+        if (!found) continue;
+        var w = idf(dfv, n);
+        qidf[t] = w;
+        for (var idStr in pool) {
+          var id = +idStr, dl = D.chunks[id][4];
+          hit[id] = (hit[id] || 0) + w * (k1 + 1) / (1 + k1 * (1 - b + b * dl / avgdl));
         }
       }
-      if (e.key === 'Escape') {
-        results.classList.remove('active');
-        input.blur();
+
+      var perPage = Object.create(null), order = [];
+      for (var h in hit) {
+        var cid = +h, ch = D.chunks[cid], p = ch[0], sc = hit[h];
+        if (!perPage[p]) { perPage[p] = { p: p, ci: cid, s: sc }; order.push(p); }
+        else if (sc > perPage[p].s) { perPage[p].s = sc; perPage[p].ci = cid; }
+      }
+
+      var phrase = normQ(q);
+      for (var oi = 0; oi < order.length; oi++) {
+        var pid = order[oi], rec = perPage[pid], pg = D.pages[pid];
+        for (var xi = 0; xi < qt.length; xi++) {
+          var ww = (qidf[qt[xi]] || 0) * 1.6;
+          if (!ww) continue;
+          if (PTOK[pid].t[qt[xi]]) rec.s += ww * 1.9;   // 命中标题
+          if (PTOK[pid].k[qt[xi]]) rec.s += ww * 1.1;   // 命中关键词
+          if (PTOK[pid].h[qt[xi]]) rec.s += ww * 0.7;   // 命中小标题
+        }
+        if (phrase.length > 2) {
+          if ((' ' + normQ(pg[1]) + ' ').indexOf(' ' + phrase) > -1) rec.s *= 1.6;
+          else if (normQ(D.chunks[rec.ci][2]).indexOf(phrase) > -1) rec.s *= 1.3;
+          else if (normQ(D.chunks[rec.ci][3]).indexOf(phrase) > -1) rec.s *= 1.12;
+        }
+      }
+
+      order.sort(function (x, y) { return perPage[y].s - perPage[x].s; });
+      var top = [];
+      for (var z = 0; z < order.length && top.length < MAX; z++) top.push(perPage[order[z]]);
+      render(top, qt, q);
+      syncUrl(q);
+    }
+
+    // ── 渲染 ────────────────────────────────────────────────
+    function hl(text, re) {
+      text = String(text || '');
+      if (!re) return esc(text);
+      var parts = text.split(re), s = '';
+      for (var i = 0; i < parts.length; i++) {
+        s += (i % 2) ? '<mark>' + esc(parts[i]) + '</mark>' : esc(parts[i]);
+      }
+      return s;
+    }
+
+    function render(list, qt, q) {
+      if (!list.length) {
+        out.innerHTML = '<div class="search-no-result">No page mentions &ldquo;' + esc(q) +
+          '&rdquo;. Try fewer or different words — or <a href="https://www.google.com/search?q=site:meltpet.com+' +
+          encodeURIComponent(q) + '" rel="nofollow noopener" target="_blank">search meltpet.com on Google</a>.</div>';
+        return;
+      }
+      var re = null;
+      try { re = new RegExp('\\b(' + qt.join('|') + ')[a-z0-9]*', 'gi'); } catch (e) { re = null; }
+      var html = '<p class="search-status">' + list.length +
+                 (list.length === 1 ? ' page matches ' : ' pages match ') +
+                 '&ldquo;' + esc(q) + '&rdquo;</p><ul class="search-hit-list">';
+      for (var i = 0; i < list.length; i++) {
+        var rec = list[i], pg = D.pages[rec.p], ch = D.chunks[rec.ci];
+        html += '<li><a class="search-hit" href="' + esc(pg[0] + (ch[1] || '')) + '">' +
+                '<span class="search-hit-top"><span class="search-hit-title">' + hl(pg[1], re) + '</span>' +
+                (ch[2] ? '<span class="search-hit-sec">' + esc(ch[2]) + '</span>' : '') +
+                '</span><span class="search-hit-snip">' + hl(ch[3], re) + '</span></a></li>';
+      }
+      out.innerHTML = html + '</ul>';
+    }
+
+    // ── 交互 ────────────────────────────────────────────────
+    function syncUrl(q) {
+      if (!window.history || !history.replaceState) return;
+      var u = location.pathname + (q ? '?q=' + encodeURIComponent(q) : '');
+      try { history.replaceState(null, '', u); } catch (e) { /* file:// 等场景忽略 */ }
+    }
+
+    function setActive(i) {
+      var links = out.querySelectorAll('.search-hit');
+      if (!links.length) return;
+      if (i < 0) i = links.length - 1;
+      if (i >= links.length) i = 0;
+      for (var k = 0; k < links.length; k++) {
+        if (k === i) links[k].classList.add('is-active');
+        else links[k].classList.remove('is-active');
+      }
+      active = i;
+      if (links[i].scrollIntoView) links[i].scrollIntoView({ block: 'nearest' });
+    }
+
+    input.addEventListener('input', function () {
+      var q = this.value;
+      lastQuery = q;
+      clearTimeout(timer);
+      timer = setTimeout(function () { run(q); }, 60);
+    });
+
+    input.addEventListener('keydown', function (e) {
+      var links = out.querySelectorAll('.search-hit');
+      if (e.key === 'ArrowDown') { e.preventDefault(); setActive(active + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(active - 1); }
+      else if (e.key === 'Enter') {
+        if (links.length) { e.preventDefault(); links[active > -1 ? active : 0].click(); }
+        else if (normQ(this.value)) {
+          location.href = 'https://www.google.com/search?q=site:meltpet.com+' + encodeURIComponent(this.value.trim());
+        }
+      } else if (e.key === 'Escape') {
+        this.value = '';
+        out.innerHTML = '';
+        active = -1;
+        syncUrl('');
       }
     });
 
-    // Close results on outside click
-    document.addEventListener('click', function(e) {
-      var wrap = document.querySelector('.search-page-input-wrap');
-      if (wrap && !wrap.contains(e.target)) {
-        results.classList.remove('active');
-      }
-    });
+    var q0 = qs('q');
+    if (q0) { input.value = q0; lastQuery = q0; }
+    load();
+    input.focus();
   })();
   </script>
 
@@ -285,6 +392,6 @@
   </div>
 </footer>
 
-<script src="nav.js?v=20261121c"></script>
+<script src="nav.js?v=20261124a"></script>
 </body>
 </html>

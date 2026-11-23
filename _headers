@@ -51,6 +51,15 @@
 /*.xml
   Cache-Control: public, max-age=3600
 
+# 站内检索索引（/search 专用，678 KB）
+# 故意 max-age=0 + must-revalidate：内容由 _build_search_index.py 确定性生成，
+# 没变就是同一个 ETag ⇒ 协商回来只有 304（约 200 字节）。反之若给长缓存，重新
+# 部署后旧索引会继续服务，搜索结果就和页面内容对不上了。
+# 也刻意不带 ?v= 版本号：版本号写进 search.html 会让 kb 的 sha256 校验失效
+# （改 HTML → 改版本号 → kb 过期），形成死循环。
+/search-index.json
+  Cache-Control: public, max-age=0, must-revalidate
+
 # Manifest: 1-day cache
 /manifest.json
   Cache-Control: public, max-age=86400
