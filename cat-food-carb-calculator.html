@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="theme-color" content="#F6851B">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="p:domain_verify" content="ebc3c1111f19ed4521ed65bc8bbd8d02"/>
   <title>Cat Food Carb Calculator: Dry Matter Basis | MeltPet</title>
   <meta name="description" content="Cat food labels don't list carbs. Enter the guaranteed analysis and see the real carbohydrate % on a dry matter basis — compare dry vs wet fairly.">
   <link rel="canonical" href="https://www.meltpet.com/cat-food-carb-calculator">
@@ -286,14 +287,14 @@
     // Carb verdict by species
     var color, verdict, detail;
     if (species === 'cat') {
-      if (carbDM < 10)      { color = 'var(--ok-ink)'); verdict = 'Low carb — ideal for a cat'; detail = 'Matches a cat\'s natural prey diet (~5% carbs).'; }
-      else if (carbDM < 15) { color = 'var(--ok-ink)'); verdict = 'Low-to-moderate — fine for most cats'; detail = 'Acceptable for a healthy adult cat.'; }
-      else if (carbDM <= 25){ color = 'var(--warn-ink)'); verdict = 'High — caution'; detail = 'Above what a cat\'s body handles well. Common in "grain-free" kibble too.'; }
-      else                  { color = 'var(--bad-ink)'); verdict = 'Very high — typical dry kibble'; detail = 'This is several times a cat\'s natural carb intake.'; }
+      if (carbDM < 10)      { color = 'var(--ok-ink)'; verdict = 'Low carb — ideal for a cat'; detail = 'Matches a cat\'s natural prey diet (~5% carbs).'; }
+      else if (carbDM < 15) { color = 'var(--ok-ink)'; verdict = 'Low-to-moderate — fine for most cats'; detail = 'Acceptable for a healthy adult cat.'; }
+      else if (carbDM <= 25){ color = 'var(--warn-ink)'; verdict = 'High — caution'; detail = 'Above what a cat\'s body handles well. Common in "grain-free" kibble too.'; }
+      else                  { color = 'var(--bad-ink)'; verdict = 'Very high — typical dry kibble'; detail = 'This is several times a cat\'s natural carb intake.'; }
     } else {
-      if (carbDM < 30)      { color = 'var(--ok-ink)'); verdict = 'Low carb — good for a dog'; detail = 'Dogs tolerate carbs well, but low is still fine.'; }
-      else if (carbDM <= 45){ color = 'var(--warn-ink)'); verdict = 'Moderate — normal for dog food'; detail = 'Within the typical range for most dog diets.'; }
-      else                  { color = 'var(--bad-ink)'); verdict = 'High — check the ingredient quality'; detail = 'Above typical; look at whether carbs come from whole grains or fillers.'; }
+      if (carbDM < 30)      { color = 'var(--ok-ink)'; verdict = 'Low carb — good for a dog'; detail = 'Dogs tolerate carbs well, but low is still fine.'; }
+      else if (carbDM <= 45){ color = 'var(--warn-ink)'; verdict = 'Moderate — normal for dog food'; detail = 'Within the typical range for most dog diets.'; }
+      else                  { color = 'var(--bad-ink)'; verdict = 'High — check the ingredient quality'; detail = 'Above typical; look at whether carbs come from whole grains or fillers.'; }
     }
 
     var html = '';

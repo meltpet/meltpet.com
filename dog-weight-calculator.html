@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="theme-color" content="#F6851B">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="p:domain_verify" content="ebc3c1111f19ed4521ed65bc8bbd8d02"/>
   <title>Dog Weight Calculator: Is Your Dog Overweight? | MeltPet</title>
   <meta name="description" content="60% of dogs are overweight and most owners can't tell. Enter breed and weight — get the ideal range, a BCS visual guide, and a vet-style calorie plan.">
   <link rel="canonical" href="https://www.meltpet.com/dog-weight-calculator">
@@ -334,13 +335,13 @@
     var statusColor, statusEmoji, statusLabel, detail;
 
     if (selectedBcs <= 3) {
-      statusColor = 'var(--bad-ink)'); statusEmoji = '⚠️'; statusLabel = 'Underweight';
+      statusColor = 'var(--bad-ink)'; statusEmoji = '⚠️'; statusLabel = 'Underweight';
       detail = 'Your dog is below ideal body condition. Increase daily calories by 10–15% and recheck in 2 weeks. If weight loss is unintentional — the dog is eating normally but still losing weight — see a vet. Unintentional weight loss can indicate parasites, diabetes, kidney disease, or cancer. Don\'t wait.';
     } else if (selectedBcs <= 5) {
-      statusColor = 'var(--ok-ink)'); statusEmoji = '✅'; statusLabel = 'Ideal Weight';
+      statusColor = 'var(--ok-ink)'; statusEmoji = '✅'; statusLabel = 'Ideal Weight';
       detail = 'Your dog is at a healthy body condition. Maintain current feeding and exercise. Weigh every 3 months to catch drift early — most overweight dogs gained it 1–2 lbs per month over 2 years. That\'s slow enough to miss.';
     } else if (selectedBcs <= 7) {
-      statusColor = 'var(--warn-ink)'); statusEmoji = '⚖️'; statusLabel = 'Overweight';
+      statusColor = 'var(--warn-ink)'; statusEmoji = '⚖️'; statusLabel = 'Overweight';
       detail = 'Your dog is carrying extra weight. Target: lose 1–2% of body weight per week. Reduce daily calories by 10% from current intake. Replace high-calorie treats with green beans or carrots. Increase exercise intensity — add 3 minutes of fetch or flirt pole at the end of walks. Recheck weight in 2 weeks.';
     } else {
       statusColor = '#8B0000'; statusEmoji = '🚨'; statusLabel = 'Obese';
