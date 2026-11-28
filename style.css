@@ -1487,3 +1487,74 @@ body.dark-theme .pg-btn-ok, body.dark-theme .pg-btn-danger { background: transpa
     .search-category-grid { grid-template-columns: 1fr; }
     .search-browse { padding: 28px 0 48px; }
 }
+
+/* ══ 26 YouTube 门面（2026-11-28）═══════════════════════════════════════════════════════════════════════
+   为什么不用裸 iframe：YouTube 播放器首屏就要拉 ~1MB 脚本，会直接拖垮 LCP。
+   这里默认只渲染缩略图，点击后由 nav.js 换成 iframe（youtube-nocookie 域）。
+   依赖：_headers 的 CSP 必须放行 frame-src（见该文件注释）。
+   色彩一律走 token：--brand-darker / --brand-accent（暗色主题会重定义，硬写会错色）。
+   ═══════════════════════════════════════════════════════════════════════ */
+.yt-embed { margin: 22px 0; }
+.yt-facade {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 9;   /* 与 .yt-iframe 同比例：点击换成 iframe 时零位移 */
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--brand-darker);
+    text-decoration: none;
+    cursor: pointer;
+}
+/* hqdefault 是 480×360，16:9 视频上下带黑边；cover 把黑边裁掉正好铺满 */
+.yt-facade img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.yt-facade::after {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 72px; height: 72px;
+    margin: -36px 0 0 -36px;
+    border-radius: 50%;
+    background: var(--brand-darker);
+    opacity: 0.62;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+    transition: background 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+.yt-facade::before {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    z-index: 1;
+    width: 0; height: 0;
+    margin: -12px 0 0 -6px;
+    border-style: solid;
+    border-width: 12px 0 12px 20px;
+    border-color: transparent transparent transparent #fff;
+}
+.yt-facade:hover::after,
+.yt-facade:focus-visible::after {
+    background: var(--brand-accent);
+    opacity: 0.94;
+    transform: scale(1.06);
+}
+.yt-facade:focus-visible { outline: 3px solid var(--brand-accent); outline-offset: 3px; }
+.yt-iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: var(--radius-lg);
+    background: var(--brand-darker);
+}
+.yt-embed figcaption {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+    text-align: center;
+}
+@media (max-width: 480px) {
+    .yt-facade::after { width: 56px; height: 56px; margin: -28px 0 0 -28px; }
+    .yt-facade::before { margin: -9px 0 0 -5px; border-width: 9px 0 9px 15px; }
+}
+@media print {
+    .yt-embed { display: none; }
+}

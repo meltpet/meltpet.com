@@ -474,3 +474,46 @@
         document.addEventListener('DOMContentLoaded', setupTocSpy);
     } else { setupTocSpy(); }
 })();
+
+/* ── YouTube 门面：点击后才注入 iframe ─────────────────────────────────────
+ * 默认只有缩略图（浏览器自己按 img loading=lazy 处理），点了才创建播放器。
+ * 这样没有视频的页零开销，有视频的页也不会为播放器付出首屏成本。
+ * CSP 需放行 frame-src https://www.youtube-nocookie.com（见 _headers）。
+ */
+(function setupYouTubeFacade() {
+    function closestFacade(node) {
+        while (node && node !== document) {
+            if (node.nodeType === 1 && node.classList && node.classList.contains('yt-facade')) {
+                return node;
+            }
+            node = node.parentNode;
+        }
+        return null;
+    }
+    function activate(a) {
+        var id = a.getAttribute('data-yt');
+        if (!id || !/^[A-Za-z0-9_-]{11}$/.test(id)) { return false; }
+        var ifr = document.createElement('iframe');
+        ifr.className = 'yt-iframe';
+        ifr.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+        ifr.title = a.getAttribute('aria-label') || 'Embedded video';
+        ifr.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        ifr.setAttribute('allowfullscreen', '');
+        ifr.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+        var parent = a.parentNode;
+        if (!parent) { return false; }
+        parent.replaceChild(ifr, a);
+        /* 锚点被换成 iframe 后焦点会掉到 <body>，键盘用户得重新 Tab 一遍。
+           主动把焦点交给播放器，读屏也会读到 title。 */
+        try { ifr.focus({ preventScroll: true }); } catch (err) { ifr.focus(); }
+        return true;
+    }
+    document.addEventListener('click', function (e) {
+        var a = closestFacade(e.target);
+        if (!a) { return; }
+        /* Ctrl/Cmd/Shift/中键 是「开新标签」的意图，别抢；让它走 href（watch 页）。
+           data-yt 非法时也不拦，同样退回 href。 */
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) { return; }
+        if (activate(a)) { e.preventDefault(); }
+    });
+})();
