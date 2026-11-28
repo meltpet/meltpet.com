@@ -149,6 +149,9 @@
         info: [
             {title: 'About MeltPet',                href: '/about',                           desktop: false, keywords: 'about meltpet contact story founder pet food experience'},
             {title: 'Privacy Policy',               href: '/privacy',                         desktop: false, keywords: 'privacy policy cookies tracking data'},
+            {title: 'Cookie Policy',                href: '/cookie-policy',                   desktop: false, keywords: 'cookie policy cookies consent analytics gdpr eprivacy local storage'},
+            {title: 'Terms of Use',                 href: '/terms',                           desktop: false, keywords: 'terms of use conditions liability copyright disclaimer not veterinary advice'},
+            {title: 'Contact',                      href: '/contact',                         desktop: false, keywords: 'contact email support corrections press permissions data request'},
             {title: 'Affiliate Disclosure',         href: '/affiliate-disclosure',            desktop: false, keywords: 'affiliate disclosure affiliate links commission sponsored how we make money amazon associates'},
             {title: '🗺️ Sitemap',                  href: '/sitemap-page',                    desktop: false, keywords: 'sitemap all pages index directory'},
             {title: '📋 Editorial Standards',          href: '/editorial-team',                  desktop: false, keywords: 'editorial standards how we research sources accuracy corrections meltpet'}
