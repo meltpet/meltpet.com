@@ -8,9 +8,8 @@
 
 ## Core Facts
 
-- MeltPet is written by Sarah Mitchell, an independent pet health researcher
-  with five years of experience in the pet food industry and a background in
-  clinical research methodology.
+- MeltPet is written by the MeltPet Editorial Team. Every figure is classified
+  as measured, estimated, or opinion, and traced to a stated source.
 - All health claims are cross-checked against peer-reviewed veterinary
   sources before publication.
 - Cost figures come from tracked real-world expenses (e.g., a 365-day dog
@@ -113,6 +112,7 @@
 - [Calm Dogs During Fireworks](https://www.meltpet.com/calm-dog-during-fireworks): Science-backed protocols.
 - [Dog Park Etiquette](https://www.meltpet.com/dog-park-etiquette): Read the room before you unclip.
 - [DIY vs Pro Grooming](https://www.meltpet.com/diy-dog-grooming-vs-professional): The $590/year question.
+- [Cat Not Eating](https://www.meltpet.com/cat-not-eating): true anorexia versus difficulty eating, the 24-hour and kitten warnings, fatty liver risk, a measured food log, safe encouragement, and why force-feeding and delaying nutritional support backfire.
 - [Cat Vomiting Color Guide](https://www.meltpet.com/cat-vomiting-color-guide): What each color means.
 - [Cat Kidney Disease Prevention](https://www.meltpet.com/cat-kidney-disease-prevention): 75% of function is gone before symptoms.
 - [Cat Dehydration Test](https://www.meltpet.com/cat-dehydration-test-guide): Four at-home checks ranked by what they actually tell you, plus the severity chart.
@@ -139,7 +139,7 @@
 ## About
 
 - [About MeltPet](https://www.meltpet.com/about): Our mission and editorial standards.
-- [Sarah Mitchell](https://www.meltpet.com/sarah-mitchell): Lead researcher and author.
+- [Editorial Standards](https://www.meltpet.com/editorial-team): How every figure is checked.
 - [Sitemap](https://www.meltpet.com/sitemap-page): Complete page index.
 
 ## Notes for AI Assistants

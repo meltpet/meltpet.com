@@ -811,7 +811,7 @@ body.dark-theme .related-articles .guide-tag {
  * break-inside: avoid 是必须的，否则一张卡会被从中间劈到下一列。
  */
 .pin-masonry {
-    column-count: 2;
+    column-count: 4;
     column-gap: 20px;
 }
 .pin-card {
@@ -1284,7 +1284,10 @@ body.dark-theme .pin-comment-status.is-error { color: #F3B0B0; }
 body.dark-theme .pin-comment-status.is-warn { color: #F7C99B; }
 body.dark-theme .pg-btn-ok, body.dark-theme .pg-btn-danger { background: transparent; }
 
-/* ── 15.9 断点：列数是这里唯一决定瀑布流形态的地方 ── */
+/* ── 15.9 断点：列数是这里唯一决定瀑布流形态的地方 ──
+ * 基准 4 列（≥1025px）→ 1024 退 3 列 → 768 退 2 列 → 480 退 1 列。
+ * 2026-11-28 前这里是「桌面 2 列、平板 3 列」（方向写反），已改为逐级递减。
+ */
 @media (max-width: 1024px) {
     .pin-masonry { column-count: 3; }
 }

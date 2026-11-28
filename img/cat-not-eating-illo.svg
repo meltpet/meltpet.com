@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Cat sitting beside an untouched bowl</title>
+  <desc id="desc">A warm editorial illustration in MeltPet green and orange. A cat looks uncertainly at a food bowl, with subtle icons for nausea, mouth pain, and stress.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FBF7ED"/><stop offset="1" stop-color="#F2E9D8"/></linearGradient>
+    <linearGradient id="fur" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#F5A24A"/><stop offset="1" stop-color="#DD7524"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#12372A" flood-opacity=".12"/></filter>
+  </defs>
+  <rect width="760" height="420" rx="26" fill="url(#bg)"/>
+  <path d="M0 334C153 303 272 329 395 320s232-28 365-3v103H0Z" fill="#E7D7BD"/>
+  <ellipse cx="343" cy="360" rx="201" ry="23" fill="#12372A" opacity=".09"/>
+
+  <!-- quiet room details -->
+  <rect x="34" y="42" width="168" height="141" rx="12" fill="#DCE7DB" stroke="#12372A" stroke-width="5"/>
+  <path d="M118 44v137M36 112h164" stroke="#12372A" stroke-width="4" opacity=".65"/>
+  <circle cx="82" cy="80" r="24" fill="#FFF4C9"/>
+  <path d="M151 159c-8-32 5-47 31-62M153 146c20-13 31-13 45-10" fill="none" stroke="#5E8065" stroke-width="7" stroke-linecap="round"/>
+  <path d="M176 106c-13-17-2-30 18-25 4 16-1 25-18 25ZM157 134c-18-9-16-25 0-32 13 10 14 20 0 32ZM178 130c9-16 24-14 30-1-9 12-19 12-30 1Z" fill="#6F946D"/>
+
+  <!-- clue cards, deliberately non-diagnostic -->
+  <g filter="url(#shadow)">
+    <rect x="511" y="42" width="208" height="76" rx="16" fill="#FFFFFF"/>
+    <circle cx="550" cy="80" r="22" fill="#FFF0E4"/>
+    <path d="M538 75c6-9 18-9 24 0 4 8 0 18-12 22-12-4-16-14-12-22Z" fill="#E98943"/>
+    <path d="M539 82c7-4 15 5 23-1" fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round"/>
+    <path d="M588 69h96M588 88h65" stroke="#12372A" stroke-width="8" stroke-linecap="round" opacity=".22"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="542" y="135" width="177" height="76" rx="16" fill="#FFFFFF"/>
+    <circle cx="581" cy="173" r="22" fill="#EDF3EC"/>
+    <path d="M573 158c-6 0-7 8-4 14l5 13c1 4 5 4 7 0l3-8 4 8c2 4 6 3 7-1l4-14c2-7-1-12-7-12-5 0-6 4-10 4s-5-4-9-4Z" fill="#F5FBF8" stroke="#35624B" stroke-width="2.5"/>
+    <path d="M616 162h76M616 181h47" stroke="#12372A" stroke-width="8" stroke-linecap="round" opacity=".22"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="493" y="228" width="226" height="76" rx="16" fill="#FFFFFF"/>
+    <circle cx="532" cy="266" r="22" fill="#FFF4DB"/>
+    <path d="M519 272h27l-3-20h-21Z" fill="#DBA752"/>
+    <path d="m520 252 12-10 13 10M528 249v-13" fill="none" stroke="#805A20" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M569 255h113M569 274h77" stroke="#12372A" stroke-width="8" stroke-linecap="round" opacity=".22"/>
+  </g>
+
+  <!-- cat -->
+  <g filter="url(#shadow)">
+    <path d="M254 342c-39-5-66-28-63-57 2-24 21-35 37-24 14 10 5 27-8 25" fill="none" stroke="#D87829" stroke-width="25" stroke-linecap="round"/>
+    <path d="M265 349c-18-46-14-111 13-143 17-20 49-29 75-16 35 17 50 70 43 119l-5 40Z" fill="url(#fur)"/>
+    <path d="M287 349c-5-35 1-77 21-99 14-15 38-14 52 2 17 22 18 65 12 97Z" fill="#F8D4A3" opacity=".8"/>
+    <path d="m267 202-2-65 50 34M355 168l47-35-3 72" fill="#E78834" stroke="#C76520" stroke-width="4" stroke-linejoin="round"/>
+    <path d="m277 157 28 22-27 11ZM389 157l-25 22 25 12Z" fill="#F5B7A0"/>
+    <path d="M263 201c0-35 32-57 69-55 41 1 72 27 69 64-2 40-34 66-72 64-39-2-66-32-66-73Z" fill="#F29A43"/>
+    <path d="M286 209c11-11 24-11 35 0M348 208c11-11 24-10 33 1" fill="none" stroke="#12372A" stroke-width="5" stroke-linecap="round"/>
+    <path d="M303 213c3 6 8 6 11 0M356 214c3 6 8 6 11 0" fill="none" stroke="#12372A" stroke-width="3" stroke-linecap="round"/>
+    <path d="m327 226 12 0-6 8Z" fill="#8F4E43"/>
+    <path d="M333 234c-1 10-12 12-19 7M333 234c2 10 13 11 20 5" fill="none" stroke="#6E3E2C" stroke-width="3" stroke-linecap="round"/>
+    <path d="M300 231c-25-4-44-3-62 3M300 240c-25 2-42 7-56 15M363 231c25-5 44-4 62 1M362 240c25 1 42 6 56 14" fill="none" stroke="#815231" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M283 181c9-8 18-12 28-13M351 167c12 1 22 5 30 12" fill="none" stroke="#C96D27" stroke-width="7" stroke-linecap="round"/>
+    <path d="M268 293c-10 22-11 42-8 56M384 289c11 23 13 43 10 60" fill="none" stroke="#C96D27" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="276" cy="349" rx="31" ry="12" fill="#F5B66B"/>
+    <ellipse cx="385" cy="349" rx="31" ry="12" fill="#F5B66B"/>
+  </g>
+
+  <!-- bowl and untouched food -->
+  <g filter="url(#shadow)">
+    <ellipse cx="169" cy="321" rx="89" ry="25" fill="#D9E1D8"/>
+    <path d="M80 316h178l-18 57c-3 11-16 17-31 17h-78c-16 0-29-6-32-17Z" fill="#315D49"/>
+    <ellipse cx="169" cy="316" rx="89" ry="25" fill="#F7F3E9" stroke="#315D49" stroke-width="6"/>
+    <g fill="#AA6B3D"><circle cx="131" cy="314" r="10"/><circle cx="153" cy="307" r="11"/><circle cx="177" cy="315" r="12"/><circle cx="199" cy="307" r="10"/><circle cx="213" cy="319" r="8"/><circle cx="145" cy="322" r="9"/></g>
+  </g>
+  <path d="M218 263c-10-10-10-20 0-30M237 259c-10-10-10-20 0-30" fill="none" stroke="#B0A38D" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+  <path d="M445 335h259" stroke="#12372A" stroke-width="3" opacity=".13"/>
+</svg>

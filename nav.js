@@ -118,6 +118,7 @@
             {title: '🐕 Dog Park Etiquette',        href: '/dog-park-etiquette',               desktop: true, keywords: 'dog park etiquette rules norms behavior first visit'},
             {title: '✂️ DIY vs Pro Grooming',       href: '/diy-dog-grooming-vs-professional', desktop: true, keywords: 'diy dog grooming vs professional cost clippers breed guide doodle double coat shave'},
             {title: '🐶 New Puppy Checklist',       href: '/new-puppy-checklist',              desktop: true, keywords: 'new puppy checklist supplies what you need first week'},
+            {title: '🍽️ Cat Not Eating?', href: '/cat-not-eating', desktop: true, keywords: 'cat not eating wont eat stopped eating not eating enough loss of appetite anorexia hyporexia pseudo anorexia hungry but wont eat cat eats treats only fatty liver hepatic lipidosis syringe feeding force feeding feeding tube emergency vet'},
             {title: '🤮 Cat Vomiting Color Guide',  href: '/cat-vomiting-color-guide',         desktop: true, keywords: 'cat vomiting vomit color yellow bile white foam brown red blood when to worry emergency hairball'},
             {title: '🫘 Cat Kidney Disease Prevention', href: '/cat-kidney-disease-prevention',desktop: true, keywords: 'cat kidney disease CKD chronic renal failure prevention hydration SDMA creatinine wet food phosphorus'},
             {title: '🎗️ Dog Cancer Risk by Breed', href: '/dog-breeds-cancer-risk', desktop: true, keywords: 'dog breeds cancer risk ranked most likely to get cancer golden retriever bernese mountain dog flat coated retriever cancer statistics tumor'},
@@ -150,7 +151,7 @@
             {title: 'Privacy Policy',               href: '/privacy',                         desktop: false, keywords: 'privacy policy cookies tracking data'},
             {title: 'Affiliate Disclosure',         href: '/affiliate-disclosure',            desktop: false, keywords: 'affiliate disclosure affiliate links commission sponsored how we make money amazon associates'},
             {title: '🗺️ Sitemap',                  href: '/sitemap-page',                    desktop: false, keywords: 'sitemap all pages index directory'},
-            {title: '👩‍🔬 Sarah Mitchell — Author',     href: '/sarah-mitchell',                  desktop: false, keywords: 'sarah mitchell author pet food researcher meltpet credentials bio'}
+            {title: '📋 Editorial Standards',          href: '/editorial-team',                  desktop: false, keywords: 'editorial standards how we research sources accuracy corrections meltpet'}
         ]
     };
 
